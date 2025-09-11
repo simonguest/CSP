@@ -1,0 +1,52 @@
+# WebRTC
+
+WebRTC (Web Real-Time Communication) is a set of APIs and protocols that enables direct peer-to-peer communication between clients (such as web browsers or mobile apps) without routing all traffic through a central server. It supports real-time transfer of audio, video, and arbitrary data, making it ideal for video conferencing, voice calls, live streaming, and real-time file sharing. Unlike WebSockets, which always rely on a continuous connection with a server, WebRTC establishes a direct connection between peers, often requiring signaling servers and STUN/TURN servers to help with connection setup and NAT/firewall traversal.
+
+```{mermaid}
+flowchart LR
+    subgraph ClientA["Client A (e.g., Browser, Mobile App)"]
+        A1[WebRTC API]
+        A2[App Logic]
+        A2 --> A1
+    end
+
+    subgraph ClientB["Client B (e.g., Browser, Mobile App)"]
+        B1[WebRTC API]
+        B2[App Logic]
+        B2 --> B1
+    end
+
+    subgraph Signaling["Signaling Server"]
+        S1[Exchange Session Descriptions & ICE Candidates]
+    end
+
+    subgraph STUN_TURN["STUN / TURN Servers"]
+        N1[Helps with NAT Traversal / Relay Media if Needed]
+    end
+
+    %% Corrected edges (no parentheses or slashes in text)
+    A1 <--> |"Signaling over WebSocket or HTTP"| S1
+    B1 <--> |"Signaling over WebSocket or HTTP"| S1
+    A1 <--> |"Peer-to-Peer Media & Data"| B1
+    A1 <--> N1
+    B1 <--> N1
+
+    %% Styling
+    style ClientA fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,rounded-corners:5px
+    style ClientB fill:#ede9fe,stroke:#6d28d9,stroke-width:2px,rounded-corners:5px
+    style Signaling fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,rounded-corners:5px
+    style STUN_TURN fill:#dcfce7,stroke:#15803d,stroke-width:2px,rounded-corners:5px
+```
+
+# Python SDK
+
+The most popular Python implementation for WebRTC is [aiortc](https://github.com/aiortc/aiortc). It is a full-featured WebRTC and ORTC implementation built on asyncio, allowing Python developers to work with real-time video, audio, and data channels. It enables both server-side media processing (e.g., recording, transcoding) and peer-to-peer communication, and is widely used in projects such as video conferencing apps and real-time computer vision pipelines.
+
+## Limitations
+
+1. **Signaling Dependency** – WebRTC itself does not specify how peers discover and exchange connection information; a separate signaling mechanism (e.g., WebSockets or HTTP) is always required.
+2. **NAT and Firewall Traversal** – Direct peer-to-peer connections can fail in restrictive network environments, making STUN/TURN servers necessary, which adds complexity and cost.
+3. **Scalability** – Peer-to-peer topologies work well for small groups, but scaling to large calls (e.g., many participants in a video conference) typically requires media servers (SFU/MCU).
+4. **Implementation Complexity** – WebRTC supports multiple codecs, transport mechanisms, and NAT traversal strategies, which can be complex to configure correctly.
+5. **Resource Intensive** – Real-time audio and video encoding/decoding can be CPU and bandwidth heavy, especially on lower-powered devices.
+6. **Limited Server Control** – Since traffic often flows directly between peers, servers have less visibility and control compared to client-server communication models like WebSockets.

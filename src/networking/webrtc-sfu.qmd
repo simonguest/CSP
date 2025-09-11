@@ -1,0 +1,70 @@
+# WebRTC using an SFU (Selective Forwarding Unit)
+
+This shows how you scale beyond the pure peer-to-peer model (where each participant connects to every other participant). SFUs relay streams between peers, reducing load on clients.
+
+```{mermaid}
+flowchart LR
+    subgraph Client1["Client 1"]
+        C1A[WebRTC API]
+        C1B[App Logic]
+        C1B --> C1A
+    end
+
+    subgraph Client2["Client 2"]
+        C2A[WebRTC API]
+        C2B[App Logic]
+        C2B --> C2A
+    end
+
+    subgraph Client3["Client 3"]
+        C3A[WebRTC API]
+        C3B[App Logic]
+        C3B --> C3A
+    end
+
+    subgraph SFU["SFU (Selective Forwarding Unit)"]
+        S1[Media Router / Forwarder]
+    end
+
+    subgraph Signaling["Signaling Server"]
+        Sig[Coordinate Session Setup]
+    end
+
+    subgraph STUN_TURN["STUN / TURN Servers"]
+        N1[NAT Traversal / Relay if Needed]
+    end
+
+    %% Connections
+    C1A <--> |"Signaling"| Sig
+    C2A <--> |"Signaling"| Sig
+    C3A <--> |"Signaling"| Sig
+
+    C1A <--> |"Media / Data"| S1
+    C2A <--> |"Media / Data"| S1
+    C3A <--> |"Media / Data"| S1
+
+    C1A <--> N1
+    C2A <--> N1
+    C3A <--> N1
+
+    %% Styles
+    style Client1 fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,rounded-corners:5px
+    style Client2 fill:#ede9fe,stroke:#6d28d9,stroke-width:2px,rounded-corners:5px
+    style Client3 fill:#fff7ed,stroke:#c2410c,stroke-width:2px,rounded-corners:5px
+    style SFU fill:#fde68a,stroke:#b45309,stroke-width:2px,rounded-corners:5px
+    style Signaling fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,rounded-corners:5px
+    style STUN_TURN fill:#dcfce7,stroke:#15803d,stroke-width:2px,rounded-corners:5px
+```
+
+## SFU-Based WebRTC Architecture (Scalability)
+
+- **Clients (1,2,3...)** send their audio/video streams to the **SFU**.
+- The **SFU** forwards each stream to the other clients, without mixing them (lightweight compared to MCU mixing).
+- **Signaling server** is still used for session setup (e.g., exchanging SDP & ICE candidates).
+- **STUN/TURN servers** may be needed for NAT traversal or relaying in restrictive networks.
+
+### Benefits of SFU:
+
+- Each client **uploads their media once** (instead of N times in pure P2P).
+- SFU handles redistribution, keeping CPU/bandwidth low for clients.
+- Works well for **group calls, webinars, multi-user streaming**.

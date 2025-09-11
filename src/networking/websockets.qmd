@@ -1,0 +1,40 @@
+# WebSockets
+
+WebSockets is a communication protocol that enables full-duplex, bidirectional interaction between a client (such as a web browser) and a server over a single, long-lived connection. Unlike traditional HTTP, which follows a request-response model, WebSockets establish a persistent channel that allows both parties to send and receive data in real time without repeatedly opening new connections. This makes it highly efficient for scenarios where low latency and continuous updates are critical, such as chat applications, live notifications, multiplayer games, and real-time data streaming.
+
+```{mermaid}
+flowchart LR
+    subgraph Client["Client (e.g., Browser, Mobile App)"]
+        C1[WebSocket Client Library]
+        C2[Application Logic]
+        C2 --> C1
+    end
+
+    subgraph Server["Server"]
+        S1[WebSocket Server Endpoint]
+        S2[Application Logic / Handlers]
+        S3[Database / External APIs]
+        S2 --> S3
+        S1 --> S2
+    end
+
+    C1 <--> |Persistent WebSocket Connection| S1
+
+    %% Styling for readability
+    style Client fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,rounded-corners:5px
+    style Server fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,rounded-corners:5px
+```
+
+## Python SDK
+
+The most popular WebSockets library for Python is **`websockets`**, a lightweight, easy-to-use, and widely adopted library that provides both client and server implementations conforming to the WebSocket protocol. It is built on top of Python’s `asyncio`, making it well-suited for asynchronous, real-time applications, and is often recommended as the go-to choice in the Python ecosystem for WebSocket development.
+
+## Limitations
+
+1. **Scalability Challenges** – Since WebSockets keep long-lived persistent connections, managing thousands or millions of concurrent clients requires careful scaling strategies (load balancing, connection sharding, etc.).
+2. **Server Resource Usage** – Each connection consumes memory and file descriptors on the server, so inefficient handling can lead to resource exhaustion.
+3. **Complexity Compared to HTTP** – WebSockets don't have the same mature ecosystem of caching, load balancing, or monitoring that HTTP-based systems do, so debugging and managing them can be harder.
+4. **Firewall and Proxy Compatibility** – Some firewalls, proxies, and enterprise networks may block or disrupt WebSocket traffic since it breaks the traditional request/response model.
+5. **Statelessness Loss** – Unlike HTTP, WebSockets create stateful, continuous connections, which can complicate server restarts, failover, or horizontal scaling.
+6. **Limited Built-in Features** – The protocol is low-level; things like authentication, reconnection logic, and message acknowledgment need to be implemented by the developer (or use a higher-level abstraction like [Socket.IO](http://Socket.IO)).
+

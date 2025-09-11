@@ -1,0 +1,51 @@
+# HTTP/3
+
+HTTP/3 is the latest major revision of the Hypertext Transfer Protocol, designed to make web communication faster, more reliable, and better suited for modern network conditions. Unlike HTTP/1.1 and HTTP/2, which are built on top of TCP, HTTP/3 runs over **QUIC**, a transport protocol based on UDP. By leveraging QUIC, HTTP/3 benefits from features such as built-in encryption (TLS 1.3), multiplexed streams without head-of-line blocking, reduced connection setup time, and graceful handling of network changes (e.g., switching from WiFi to cellular).
+
+HTTP/3 is increasingly used by browsers, CDNs, and backend services to improve page load times, streaming performance, and resilience to packet loss in high-latency networks.
+
+```{mermaid}
+flowchart LR
+    subgraph Client["Client (e.g., Browser, Mobile App)"]
+        C1[HTTP/3 Stack]
+        C2[Application Logic]
+        C2 --> C1
+    end
+
+    subgraph Server["Server"]
+        S1[HTTP/3-capable Web Server / CDN]
+        S2[Application Logic / Handlers]
+        S3[Database / External APIs]
+        S2 --> S3
+        S1 --> S2
+    end
+
+    C1 <--> |"QUIC (UDP-based) Transport"| S1
+
+    %% Styling
+    style Client fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,rounded-corners:5px
+    style Server fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,rounded-corners:5px
+```
+
+---
+
+## Python SDK
+
+The most widely used Python library for HTTP/3 and QUIC is **[`aioquic`](https://github.com/aiortc/aioquic)**.
+
+- It’s an implementation of QUIC and HTTP/3 built on top of `asyncio`.
+- Supports client and server roles, TLS 1.3, and custom protocol experimentation.
+- Useful for both low-level QUIC experiments and HTTP/3 integration with web servers.
+
+Other frameworks are beginning to add **HTTP/3 support** (e.g., Hypercorn or uvicorn with custom workers), but `aioquic` remains the go-to library today.
+
+---
+
+## Limitations
+
+1. **Ecosystem Maturity** – HTTP/3 adoption is growing, but not all clients, servers, proxies, or CDNs support it yet.
+2. **UDP Dependency** – Some networks (corporate firewalls, older routers) may block or throttle UDP traffic, limiting HTTP/3’s performance benefits.
+3. **Resource Usage** – Running on top of UDP requires more aggressive congestion control and buffer handling, which may make server-side scaling more complex.
+4. **Debugging & Monitoring** – Tools for packet inspection and debugging are less mature than for TCP/HTTP/2.
+5. **Fallback Complexity** – Many servers and browsers negotiate between HTTP/1.1, HTTP/2, and HTTP/3, which adds operational complexity.
+6. **Not Always Faster** – For very stable, low-latency connections, HTTP/2 may perform competitively; HTTP/3 shines in lossy or high-latency links.

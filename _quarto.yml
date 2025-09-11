@@ -29,3 +29,13 @@ website:
             target: blank
           - text: "Resources"
             href: src/00/resources.qmd
+      - section: "Networking Protocols"
+        contents:
+          - text: "WebSockets"
+            href: src/networking/websockets.qmd
+          - text: "WebRTC"
+            href: src/networking/webrtc.qmd
+          - text: "WebRTC using an SFU"
+            href: src/networking/webrtc-sfu.qmd
+          - text: "HTTP/3"
+            href: src/networking/http3.qmd
