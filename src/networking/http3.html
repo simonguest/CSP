@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSP-400</title>
+<title>http3 – CSP-400</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-21e246651e1b5bb22b0dbf251f7ee916.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9878d3a715a54774bcbeed431bfdb1d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-21e246651e1b5bb22b0dbf251f7ee916.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/networking/webrtc-sfu.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-21e246651e1b5bb22b0dbf251f7ee916.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9878d3a715a54774bcbeed431bfdb1d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-21e246651e1b5bb22b0dbf251f7ee916.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +72,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -246,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">CSP-400</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/networking/websockets.html">Networking Protocols</a></li><li class="breadcrumb-item"><a href="../../src/networking/http3.html">HTTP/3</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -260,8 +264,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./src/logos/DigiPen_Dragon_Shield_RGB_Black.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../src/logos/DigiPen_Dragon_Shield_RGB_Black.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -276,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CSP-400</span></a>
   </div>
 </li>
@@ -292,13 +296,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./src/00/teaching_lecture.html" class="sidebar-item-text sidebar-link" target="blank">
+  <a href="../../src/00/teaching_lecture.html" class="sidebar-item-text sidebar-link" target="blank">
  <span class="menu-text">Slides</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./src/00/resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/00/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -315,25 +319,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./src/networking/websockets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/networking/websockets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebSockets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./src/networking/webrtc.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/networking/webrtc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebRTC</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./src/networking/webrtc-sfu.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/networking/webrtc-sfu.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebRTC using an SFU</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./src/networking/http3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/networking/http3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">HTTP/3</span></a>
   </div>
 </li>
@@ -346,17 +350,69 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/networking/websockets.html">Networking Protocols</a></li><li class="breadcrumb-item"><a href="../../src/networking/http3.html">HTTP/3</a></li></ol></nav></header>
 
 
 
 
 
-<section id="csp-400" class="level1">
-<h1>CSP-400</h1>
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about">About</h2>
-<p>This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-400 course.</p>
+<section id="http3" class="level1">
+<h1>HTTP/3</h1>
+<p>HTTP/3 is the latest major revision of the Hypertext Transfer Protocol, designed to make web communication faster, more reliable, and better suited for modern network conditions. Unlike HTTP/1.1 and HTTP/2, which are built on top of TCP, HTTP/3 runs over&nbsp;<strong>QUIC</strong>, a transport protocol based on UDP. By leveraging QUIC, HTTP/3 benefits from features such as built-in encryption (TLS 1.3), multiplexed streams without head-of-line blocking, reduced connection setup time, and graceful handling of network changes (e.g., switching from WiFi to cellular).</p>
+<p>HTTP/3 is increasingly used by browsers, CDNs, and backend services to improve page load times, streaming performance, and resilience to packet loss in high-latency networks.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    subgraph Client["Client (e.g., Browser, Mobile App)"]
+        C1[HTTP/3 Stack]
+        C2[Application Logic]
+        C2 --&gt; C1
+    end
+
+    subgraph Server["Server"]
+        S1[HTTP/3-capable Web Server / CDN]
+        S2[Application Logic / Handlers]
+        S3[Database / External APIs]
+        S2 --&gt; S3
+        S1 --&gt; S2
+    end
+
+    C1 &lt;--&gt; |"QUIC (UDP-based) Transport"| S1
+
+    %% Styling
+    style Client fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,rounded-corners:5px
+    style Server fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,rounded-corners:5px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<hr>
+<section id="python-sdk" class="level2">
+<h2 class="anchored" data-anchor-id="python-sdk">Python SDK</h2>
+<p>The most widely used Python library for HTTP/3 and QUIC is&nbsp;<strong><a href="https://github.com/aiortc/aioquic"><code>aioquic</code></a></strong>.</p>
+<ul>
+<li>It’s an implementation of QUIC and HTTP/3 built on top of&nbsp;<code>asyncio</code>.</li>
+<li>Supports client and server roles, TLS 1.3, and custom protocol experimentation.</li>
+<li>Useful for both low-level QUIC experiments and HTTP/3 integration with web servers.</li>
+</ul>
+<p>Other frameworks are beginning to add&nbsp;<strong>HTTP/3 support</strong>&nbsp;(e.g., Hypercorn or uvicorn with custom workers), but&nbsp;<code>aioquic</code>&nbsp;remains the go-to library today.</p>
+<hr>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ol type="1">
+<li><strong>Ecosystem Maturity</strong>&nbsp;– HTTP/3 adoption is growing, but not all clients, servers, proxies, or CDNs support it yet.</li>
+<li><strong>UDP Dependency</strong>&nbsp;– Some networks (corporate firewalls, older routers) may block or throttle UDP traffic, limiting HTTP/3’s performance benefits.</li>
+<li><strong>Resource Usage</strong>&nbsp;– Running on top of UDP requires more aggressive congestion control and buffer handling, which may make server-side scaling more complex.</li>
+<li><strong>Debugging &amp; Monitoring</strong>&nbsp;– Tools for packet inspection and debugging are less mature than for TCP/HTTP/2.</li>
+<li><strong>Fallback Complexity</strong>&nbsp;– Many servers and browsers negotiate between HTTP/1.1, HTTP/2, and HTTP/3, which adds operational complexity.</li>
+<li><strong>Not Always Faster</strong>&nbsp;– For very stable, low-latency connections, HTTP/2 may perform competitively; HTTP/3 shines in lossy or high-latency links.</li>
+</ol>
 
 
 </section>
@@ -775,6 +831,15 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../src/networking/webrtc-sfu.html" class="pagination-link" aria-label="WebRTC using an SFU">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">WebRTC using an SFU</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
