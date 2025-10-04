@@ -9,29 +9,21 @@ format:
 logo: ../../src/logos/DigiPen_RGB_Red.png
 ---
 
-## Recap of Last Lecture
+## Check for Understanding
 
-We used the OpenAI SDK to build our first AI-powered chatbot!
+- How many have used ChatGPT/Claude?
+- How many have built their own chatbot / interacted with OpenAI/Claude APIs?
+- How many have gone beyond this?
 
-::: {.fragment}
-![Last Lesson](./images/last-lesson.png)
-:::
+## Limitations with Chatbots
 
-## What Did We Learn?
-
-- How to use OpenAI API and SDK
-- Context windows and conversation structure
-- Available models, features, and costs
-
-## But We Discovered Limitations
-
-Our simple chatbot had several...
+Many of today's chatbots have limitations...
 
 - Needs constant human input every turn; No ability to plan beyond a single interaction
 - Single model with single context
 - No interaction with external systems
 
-# Introducing Agents!
+# Introducing AI Agents!
 
 ## What Is an Agent?
 
@@ -51,7 +43,7 @@ Our simple chatbot had several...
 
 ## What Is an Agent?
 
-Imagine the DigiPen Campus Assistant... An AI Agent that can help you navigate anything and everything at DigiPen!
+Imagine a DigiPen Campus Assistant: An AI Agent that can help you navigate anything and everything at DigiPen!
 
 - "Where can I find the 'Hopper' room?"
 - "Can you tell me more about FLM201?"

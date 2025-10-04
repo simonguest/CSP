@@ -22,10 +22,10 @@ website:
       - text: "CSP-400"
         href: index.qmd
       - text: "---"
-      - section: "Teaching Module: Introducing AI Agents"
+      - section: "Lecture: Introducing AI Agents"
         contents:
           - text: "Slides"
-            href: src/00/teaching_lecture.qmd
+            href: src/00/ai_agents.qmd
             target: blank
           - text: "Resources"
             href: src/00/resources.qmd
