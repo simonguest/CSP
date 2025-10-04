@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://simonguest.github.io/CSP-400/src/networking/websockets.html</loc>
-    <lastmod>2025-09-11T00:12:00.649Z</lastmod>
+    <lastmod>2025-10-04T23:15:10.579Z</lastmod>
   </url>
   <url>
     <loc>https://simonguest.github.io/CSP-400/src/networking/webrtc-sfu.html</loc>
-    <lastmod>2025-09-11T00:12:00.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://simonguest.github.io/CSP-400/src/00/teaching_lecture.html</loc>
-    <lastmod>2025-09-11T00:12:00.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://simonguest.github.io/CSP-400/index.html</loc>
-    <lastmod>2025-09-11T00:12:00.596Z</lastmod>
+    <lastmod>2025-10-04T23:15:10.579Z</lastmod>
   </url>
   <url>
     <loc>https://simonguest.github.io/CSP-400/src/00/resources.html</loc>
-    <lastmod>2025-09-11T00:12:00.648Z</lastmod>
+    <lastmod>2025-10-04T23:15:10.578Z</lastmod>
+  </url>
+  <url>
+    <loc>https://simonguest.github.io/CSP-400/index.html</loc>
+    <lastmod>2025-10-04T23:15:10.526Z</lastmod>
+  </url>
+  <url>
+    <loc>https://simonguest.github.io/CSP-400/src/00/ai_agents.html</loc>
+    <lastmod>2025-10-04T23:15:10.526Z</lastmod>
   </url>
   <url>
     <loc>https://simonguest.github.io/CSP-400/src/networking/http3.html</loc>
-    <lastmod>2025-09-11T00:12:00.649Z</lastmod>
+    <lastmod>2025-10-04T23:15:10.578Z</lastmod>
   </url>
   <url>
     <loc>https://simonguest.github.io/CSP-400/src/networking/webrtc.html</loc>
-    <lastmod>2025-09-11T00:12:00.649Z</lastmod>
+    <lastmod>2025-10-04T23:15:10.579Z</lastmod>
   </url>
 </urlset>

@@ -55,487 +55,80 @@
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#recap-of-last-lecture",
-    "href": "src/00/teaching_lecture.html#recap-of-last-lecture",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Recap of Last Lecture",
-    "text": "Recap of Last Lecture\nWe used the OpenAI SDK to build our first AI-powered chatbot!\n\n\n\n\nLast Lesson",
+    "objectID": "src/00/resources.html",
+    "href": "src/00/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "This document contains all the external resources, links, and references mentioned in the “Introducing AI Agents” lecture.",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#what-did-we-learn",
-    "href": "src/00/teaching_lecture.html#what-did-we-learn",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Did We Learn?",
-    "text": "What Did We Learn?\n\nHow to use OpenAI API and SDK\nContext windows and conversation structure\nAvailable models, features, and costs",
+    "objectID": "src/00/resources.html#demo-agent",
+    "href": "src/00/resources.html#demo-agent",
+    "title": "Resources",
+    "section": "Demo Agent",
+    "text": "Demo Agent\n\nCampus Agent Demo: https://simonguest-campus-agent.hf.space/\n\nInteractive demo of the DigiPen Campus Assistant agent\n\nCampus Agent Source Code: https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent\n\nComplete source code for the DigiPen Campus Assistant demo",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#but-we-discovered-limitations",
-    "href": "src/00/teaching_lecture.html#but-we-discovered-limitations",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "But We Discovered Limitations",
-    "text": "But We Discovered Limitations\nOur simple chatbot had several…\n\nNeeds constant human input every turn; No ability to plan beyond a single interaction\nSingle model with single context\nNo interaction with external systems",
+    "objectID": "src/00/resources.html#development-tools-and-platforms",
+    "href": "src/00/resources.html#development-tools-and-platforms",
+    "title": "Resources",
+    "section": "Development Tools and Platforms",
+    "text": "Development Tools and Platforms\n\nUI Frameworks\n\nGradio: https://www.gradio.app/\n\nPython library for building machine learning web interfaces\n\nGradio Documentation: https://gradio.app\n\nOfficial Gradio documentation and tutorials\n\nHugging Face Spaces: https://huggingface.co/spaces\n\nHost and share Gradio-based apps on Hugging Face\n\n\n\n\nAgent Frameworks\n\nOpenAI\n\nOpenAI Agents SDK (Python): https://openai.github.io/openai-agents-python/\n\nOfficial OpenAI agents framework for Python\n\nOpenAI Agents Visualization: https://openai.github.io/openai-agents-python/visualization/#showing-the-graph\n\nTool for visualizing agent graphs and interactions\n\n\n\n\nLangChain\n\nLangGraph: https://langchain-ai.github.io/langgraph/\n\nPython framework for building stateful, multi-actor applications with LLMs\n\n\n\n\nCrew AI\n\nCrew.ai: https://github.com/crewaiinc/crewai\n\nFramework for orchestrating role-playing, autonomous AI agents\n\n\n\n\nMicrosoft\n\nAutoGen: https://microsoft.github.io/autogen/stable/\n\nMicrosoft’s framework for building conversational AI systems\n\nMicrosoft Semantic Kernel: https://github.com/microsoft/semantic-kernel\n\nSDK for integrating AI services with conventional programming languages",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#what-is-an-agent",
-    "href": "src/00/teaching_lecture.html#what-is-an-agent",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.youtube.com/watch?v=bwXaJXgezf4",
+    "objectID": "src/00/resources.html#protocols-and-standards",
+    "href": "src/00/resources.html#protocols-and-standards",
+    "title": "Resources",
+    "section": "Protocols and Standards",
+    "text": "Protocols and Standards\n\nModel Context Protocol (MCP): https://modelcontextprototcol.io\n\nStandardized protocol for connecting AI models with external tools and data sources",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#what-is-an-agent-1",
-    "href": "src/00/teaching_lecture.html#what-is-an-agent-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/",
+    "objectID": "src/00/resources.html#license-information",
+    "href": "src/00/resources.html#license-information",
+    "title": "Resources",
+    "section": "License Information",
+    "text": "License Information\nMost of the agent frameworks mentioned use the MIT License, making them suitable for both academic and commercial use: - OpenAI Agents SDK - LangGraph - Crew.ai - Microsoft AutoGen - Microsoft Semantic Kernel",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#what-is-an-agent-2",
-    "href": "src/00/teaching_lecture.html#what-is-an-agent-2",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far",
+    "objectID": "src/00/resources.html#sidebars",
+    "href": "src/00/resources.html#sidebars",
+    "title": "Resources",
+    "section": "Sidebars",
+    "text": "Sidebars\n\nSimple Made Easy: https://www.youtube.com/watch?v=SxdOUGdseq4\n\nRich Hickey’s talk on the difference between “easy” and “simple”",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
-    "objectID": "src/00/teaching_lecture.html#what-is-an-agent-3",
-    "href": "src/00/teaching_lecture.html#what-is-an-agent-3",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+    "objectID": "src/00/resources.html#articles-and-industry-reports",
+    "href": "src/00/resources.html#articles-and-industry-reports",
+    "title": "Resources",
+    "section": "Articles and Industry Reports",
+    "text": "Articles and Industry Reports\n\nWorld Economic Forum - Cognitive Enterprise: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/\n\nArticle on the agentic business revolution\n\nCRN - Hottest Agentic AI Tools: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far\n\nOverview of the top agentic AI tools of 2025\n\nGartner Press Release: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027\n\nGartner’s predictions about agentic AI project success rates\n\nAnthropic - Building Effective Agents: https://www.anthropic.com/engineering/building-effective-agents\n\nEngineering guide on building effective AI agents and patterns\n\nE2B - AI Agents Landscape: https://e2b.dev\n\nOverview of the AI agents ecosystem and available frameworks",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#what-is-an-agent-4",
-    "href": "src/00/teaching_lecture.html#what-is-an-agent-4",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\nImagine the DigiPen Campus Assistant… An AI Agent that can help you navigate anything and everything at DigiPen!\n\n“Where can I find the ‘Hopper’ room?”\n“Can you tell me more about FLM201?”\n“Oh, and what’s today’s vegetarian option at the Bytes Cafe?”",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#five-characteristics-of-agents",
-    "href": "src/00/teaching_lecture.html#five-characteristics-of-agents",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Five Characteristics of Agents",
-    "text": "Five Characteristics of Agents\n\nAgents are Proactive\n\n\nAgents are driven by goals\nAnd they can put together a plan for the steps to complete that goal.\n\n“First, I will discover where course information is located”\n“Then I will search for any courses that reference FLM201”\n“Then I summarize all of the key points for the student”",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#five-characteristics-of-agents-1",
-    "href": "src/00/teaching_lecture.html#five-characteristics-of-agents-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Five Characteristics of Agents",
-    "text": "Five Characteristics of Agents\n\nAgents are Autonomous\n\n\nAgents can then go off and execute the plan, independent of human input\nThe concept of “human in the loop” still applies for confirmation\n\ne.g. “Do you really want to place this order at the Bytes Cafe?”",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#five-characteristics-of-agents-2",
-    "href": "src/00/teaching_lecture.html#five-characteristics-of-agents-2",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Five Characteristics of Agents",
-    "text": "Five Characteristics of Agents\n\nAgents are Reactive\n\n\nAgents can change mid-course depending on what they find and/or the environment.\n\ne.g. “I couldn’t find any course information on FLM201. I’m going to whether there are other 200-level FLM courses before responding to the student.”",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#five-characteristics-of-agents-3",
-    "href": "src/00/teaching_lecture.html#five-characteristics-of-agents-3",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Five Characteristics of Agents",
-    "text": "Five Characteristics of Agents\n\nAgents have Persistence\n\n\nAgents often have memory systems beyond the current conversation\nBroadly classified as short and long term memory\n\nShort term memory could be the options at the Bytes Cafe\nLong term memory could be your food preferences",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#five-characteristics-of-agents-4",
-    "href": "src/00/teaching_lecture.html#five-characteristics-of-agents-4",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Five Characteristics of Agents",
-    "text": "Five Characteristics of Agents\n\nAgents are Interactive\n\n\nAgents can delegate to other agents for complex tasks\n\n(Or for tasks where other agents are better suited for.)\ne.g., Campus Agent -&gt; delegating to a Course Agent\n\nAgents can also be given access to external tools\n\ne.g., File search, Web search, access to the Bytes Cafe API",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#lets-try-this-1",
-    "href": "src/00/teaching_lecture.html#lets-try-this-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Let’s Try This!",
-    "text": "Let’s Try This!\n\n\n\n\nhttps://simonguest-campus-agent.hf.space/",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#lets-try-this-2",
-    "href": "src/00/teaching_lecture.html#lets-try-this-2",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Let’s Try This!",
-    "text": "Let’s Try This!\n\n\n\n\nhttps://simonguest-campus-agent.hf.space/",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#observations-and-questions",
-    "href": "src/00/teaching_lecture.html#observations-and-questions",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Observations and Questions",
-    "text": "Observations and Questions\nGet into groups of 2 or 3\n\nQ: What worked? What surprised you?\nQ: What didn’t work? Where did the agent fail?\nQ: What other examples of agents can you think of?",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#other-examples-for-agents",
-    "href": "src/00/teaching_lecture.html#other-examples-for-agents",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Other Examples for Agents",
-    "text": "Other Examples for Agents\n\nCustomer service agent\nTravel booking agent\nResearch assistant\nCode generation agent (very popular right now)\nAgents within games\n\nTraditional NPCs are pre-written dialogue trees\nWhereas agents can be more independent within the game environment",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#gradio-based-ui",
-    "href": "src/00/teaching_lecture.html#gradio-based-ui",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Gradio-Based UI",
-    "text": "Gradio-Based UI\n\nSource: https://www.gradio.app/",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#gradio-based-ui-1",
-    "href": "src/00/teaching_lecture.html#gradio-based-ui-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Gradio-Based UI",
-    "text": "Gradio-Based UI\nimport time\nimport gradio as gr\n\ndef slow_echo(message, history):\n    for i in range(len(message)):\n        time.sleep(0.05)\n        yield \"You typed: \" + message[: i + 1]\n\ndemo = gr.ChatInterface(\n    slow_echo,\n    flagging_mode=\"manual\",\n    flagging_options=[\"Like\", \"Spam\", \"Inappropriate\", \"Other\"],\n    save_history=True,\n)\n\nif __name__ == \"__main__\":\n    demo.launch()",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#gradio-based-ui-2",
-    "href": "src/00/teaching_lecture.html#gradio-based-ui-2",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Gradio-Based UI",
-    "text": "Gradio-Based UI\n\nSource: https://gradio.app",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#hosted-on-hugging-face-spaces",
-    "href": "src/00/teaching_lecture.html#hosted-on-hugging-face-spaces",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Hosted on Hugging Face Spaces",
-    "text": "Hosted on Hugging Face Spaces\n\nSource: https://huggingface.co/spaces",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#agent-structure",
-    "href": "src/00/teaching_lecture.html#agent-structure",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Agent Structure",
-    "text": "Agent Structure\n\nAgents and tools for the DigiPen Campus Assistant",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#so-many-agent-frameworks",
-    "href": "src/00/teaching_lecture.html#so-many-agent-frameworks",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "So Many Agent Frameworks…",
-    "text": "So Many Agent Frameworks…\n\nSource: https://e2b.dev",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#openai-agents-sdk",
-    "href": "src/00/teaching_lecture.html#openai-agents-sdk",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "OpenAI Agents SDK",
-    "text": "OpenAI Agents SDK\n\nUsed for our demo\nhttps://openai.github.io/openai-agents-python/\nPython and JavaScript/TypeScript\nMIT License",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#langgraph",
-    "href": "src/00/teaching_lecture.html#langgraph",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "LangGraph",
-    "text": "LangGraph\n\nhttps://langchain-ai.github.io/langgraph/\nPython only\nMIT License",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#crew.ai",
-    "href": "src/00/teaching_lecture.html#crew.ai",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Crew.ai",
-    "text": "Crew.ai\n\nhttps://github.com/crewaiinc/crewai\nPython only\nMIT License",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#microsoft",
-    "href": "src/00/teaching_lecture.html#microsoft",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Microsoft",
-    "text": "Microsoft\n\nAutoGen\n\nhttps://microsoft.github.io/autogen/stable/\nPython (.NET coming soon)\nMIT License\n\nMicrosoft Semantic Kernel\n\nhttps://github.com/microsoft/semantic-kernel\nPython, .NET, Java\nMIT License",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#what-should-you-be-considering",
-    "href": "src/00/teaching_lecture.html#what-should-you-be-considering",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Should You Be Considering?",
-    "text": "What Should You Be Considering?\n\nQuestion: If most agents run in the browser, why are many of the agent frameworks written in Python? 🤔",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#what-should-you-be-considering-1",
-    "href": "src/00/teaching_lecture.html#what-should-you-be-considering-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "What Should You Be Considering?",
-    "text": "What Should You Be Considering?\n\nWhere will your agent run?\n\nServer or client? On the web? In game?\nThis will likely determine the language\nHow will you manage API keys?\n\nSupport\n\nWill this agent framework be around in 3-5 years?\nIs there a cost/hosting component to it?\n\nEasy vs. Simple\n\nIs your choice “easy” or “simple”?",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#sidebar-easy-vs.-simple",
-    "href": "src/00/teaching_lecture.html#sidebar-easy-vs.-simple",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Sidebar: Easy vs. Simple",
-    "text": "Sidebar: Easy vs. Simple\n\nhttps://www.youtube.com/watch?v=SxdOUGdseq4",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#openai-agents-sdk-python",
-    "href": "src/00/teaching_lecture.html#openai-agents-sdk-python",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "OpenAI Agents SDK (Python)",
-    "text": "OpenAI Agents SDK (Python)\nCreating and running a new agent\nfrom agents import Agent, Runner\n\nagent = Agent(\n    name=\"DigiPen Campus Assistant\",\n    instructions=\"You are a helpful campus assistant that can plan and execute tasks for students at DigiPen. Please be concise and accurate in handing off tasks to other agents as needed.\",\n    handoffs=[building_agent, course_agent, handbook_agent, cafe_agent],\n)\n\nmessages.append({\"role\": \"user\", \"content\": user_msg})\nresult = Runner.run_streamed(agent, messages)",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#openai-agents-sdk-python-1",
-    "href": "src/00/teaching_lecture.html#openai-agents-sdk-python-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "OpenAI Agents SDK (Python)",
-    "text": "OpenAI Agents SDK (Python)\nSpecifying handoffs\nfrom agents import Agent, Runner\n\nagent = Agent(\n    name=\"DigiPen Campus Assistant\",\n    instructions=\"You are a helpful campus assistant that can plan and execute tasks for students at DigiPen. Please be concise and accurate in handing off tasks to other agents as needed.\",\n    handoffs=[building_agent, course_agent, handbook_agent, cafe_agent],\n)\n\nmessages.append({\"role\": \"user\", \"content\": user_msg})\nresult = Runner.run_streamed(agent, messages)",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#why-multiple-agents",
-    "href": "src/00/teaching_lecture.html#why-multiple-agents",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Why Multiple Agents?",
-    "text": "Why Multiple Agents?\n\nContext window limitations\nEach agent can have a different system prompt (instructions)\nEach agent can have a different underlying model\n\nSpecialized models (e.g., a vision encoder)\nOr to blend cost\n\nMakes tool separation cleaner and more accurate",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#example-of-multiple-agents",
-    "href": "src/00/teaching_lecture.html#example-of-multiple-agents",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Example of Multiple Agents",
-    "text": "Example of Multiple Agents\n\nCode generation\n\nAgents for ‘architect’, code writer, tester, debugger, etc.\n\nContent generation\n\nAgent to create content, other agents to generate images, translate content, etc.\n\nTravel booking\n\nAgent to book flights, hotels, cars, etc. for packages",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#patterns-for-agents",
-    "href": "src/00/teaching_lecture.html#patterns-for-agents",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Patterns for Agents",
-    "text": "Patterns for Agents\n\nAs you get deeper into building agents, patterns start to emerge\n\ne.g., router (which is what we used in our demo), orchestrator (using other agents as tools), parallel agents",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#patterns-for-agents-1",
-    "href": "src/00/teaching_lecture.html#patterns-for-agents-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Patterns for Agents",
-    "text": "Patterns for Agents\n\nSource: https://www.anthropic.com/engineering/building-effective-agents",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#why-do-agents-need-tools",
-    "href": "src/00/teaching_lecture.html#why-do-agents-need-tools",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Why Do Agents Need Tools?",
-    "text": "Why Do Agents Need Tools?\n\nThe scope of the agents ability is contained within the model\nTools enable the agent to reach out to systems beyond the model\nExamples\n\nRead a file from disk or search the web (built in)\nCalculator (because LLMs aren’t great at math)\nCode interpreter (running code on the fly)\nWhat potential tools can you think of? 🤔",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#openai-tool-calling",
-    "href": "src/00/teaching_lecture.html#openai-tool-calling",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "OpenAI Tool Calling",
-    "text": "OpenAI Tool Calling\n\nIntroduced by OpenAI in June 2023\nOriginally called Function Calling\nModels are fine-tuned to return a structured function_call JSON object, specifying which function to call and with what arguments.\nTools are provided as functions\nOption for the LLM to decide when to call the tool (always, never, auto)",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#openai-tool-calling-1",
-    "href": "src/00/teaching_lecture.html#openai-tool-calling-1",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "OpenAI Tool Calling",
-    "text": "OpenAI Tool Calling\nfrom agents import Agent, function_tool\n\n@function_tool\ndef get_bytes_cafe_menu(date: str) -&gt; any:\n    \"\"\"Returns the menu for the Bytes Cafe for the date provided.\"\"\"\n    return { f\"{date}\": {\n            \"daily byte\": {\n                \"name\": \"Steak Quesadilla\", \"price\": 12, \"description\": \"Flank steak, mixed cheese in a flour tortilla served with air fried potatoes, sour cream and salsa\",\n            },\n        } }\n\ncafe_agent = Agent(\n    name=\"Cafe Agent\",\n    instructions=\"You help students locate and provide information about the Bytes Cafe.\",\n    tools=[\n        get_bytes_cafe_menu,\n    ])",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#openai-tool-calling-2",
-    "href": "src/00/teaching_lecture.html#openai-tool-calling-2",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "OpenAI Tool Calling",
-    "text": "OpenAI Tool Calling\nfrom agents import Agent, FileSearchTool\n\nVECTOR_STORE_ID = \"vs_6896d8c959008191981d645850b42313\"\n\nbuilding_agent = Agent(\n    name=\"Building Agent\",\n    instructions=\"You help students locate and provide information about buildings and rooms on campus. Be descriptive when giving locations.\",\n    tools=[\n        FileSearchTool(\n            max_num_results=3,\n            vector_store_ids=[VECTOR_STORE_ID],\n            include_search_results=True,\n        )\n    ],\n)",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#mcp-model-context-protocol",
-    "href": "src/00/teaching_lecture.html#mcp-model-context-protocol",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "MCP (Model Context Protocol)",
-    "text": "MCP (Model Context Protocol)\n\nOpenAI’s tool/function calling works if you have local access to the tools\nBut how about external systems?\n\ne.g., Access to calendar, other systems, hardware, etc.\n\nYou could build local tools to call APIs\nMCP: Model Context Protocol\nStandardized tooling interface, released by Anthropic in March 2024\nMore details: https://modelcontextprototcol.io",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#using-an-agent-for-your-project",
-    "href": "src/00/teaching_lecture.html#using-an-agent-for-your-project",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Using an Agent for Your Project",
-    "text": "Using an Agent for Your Project\n\nHow could your project benefit from agents?\nOne or more agents?\nHow would agents interact with the user?\nWhat might be some of the challenges to overcome?",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#resources-12",
-    "href": "src/00/teaching_lecture.html#resources-12",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Resources (1/2)",
-    "text": "Resources (1/2)\n\nCampus agent code:\n\nhttps://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent\nClone the repo, get it running locally\nModify by adding a new agent to it\nCreate your own use case/agent in the Gradio interface",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/00/teaching_lecture.html#resources-22",
-    "href": "src/00/teaching_lecture.html#resources-22",
-    "title": "CSP-400 Lecture: Introducing AI Agents",
-    "section": "Resources (2/2)",
-    "text": "Resources (2/2)\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400",
-    "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Slides"
+      "Lecture: Introducing AI Agents",
+      "Resources"
     ]
   },
   {
@@ -559,80 +152,476 @@
     ]
   },
   {
-    "objectID": "src/00/resources.html",
-    "href": "src/00/resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "This document contains all the external resources, links, and references mentioned in the “Introducing AI Agents” lecture.",
+    "objectID": "src/00/ai_agents.html#check-for-understanding",
+    "href": "src/00/ai_agents.html#check-for-understanding",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Check for Understanding",
+    "text": "Check for Understanding\n\nHow many have used ChatGPT/Claude?\nHow many have built their own chatbot / interacted with OpenAI/Claude APIs?\nHow many have gone beyond this?",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
-    "objectID": "src/00/resources.html#demo-agent",
-    "href": "src/00/resources.html#demo-agent",
-    "title": "Resources",
-    "section": "Demo Agent",
-    "text": "Demo Agent\n\nCampus Agent Demo: https://simonguest-campus-agent.hf.space/\n\nInteractive demo of the DigiPen Campus Assistant agent\n\nCampus Agent Source Code: https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent\n\nComplete source code for the DigiPen Campus Assistant demo",
+    "objectID": "src/00/ai_agents.html#limitations-with-chatbots",
+    "href": "src/00/ai_agents.html#limitations-with-chatbots",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Limitations with Chatbots",
+    "text": "Limitations with Chatbots\nMany of today’s chatbots have limitations…\n\nNeeds constant human input every turn; No ability to plan beyond a single interaction\nSingle model with single context\nNo interaction with external systems",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
-    "objectID": "src/00/resources.html#development-tools-and-platforms",
-    "href": "src/00/resources.html#development-tools-and-platforms",
-    "title": "Resources",
-    "section": "Development Tools and Platforms",
-    "text": "Development Tools and Platforms\n\nUI Frameworks\n\nGradio: https://www.gradio.app/\n\nPython library for building machine learning web interfaces\n\nGradio Documentation: https://gradio.app\n\nOfficial Gradio documentation and tutorials\n\nHugging Face Spaces: https://huggingface.co/spaces\n\nHost and share Gradio-based apps on Hugging Face\n\n\n\n\nAgent Frameworks\n\nOpenAI\n\nOpenAI Agents SDK (Python): https://openai.github.io/openai-agents-python/\n\nOfficial OpenAI agents framework for Python\n\nOpenAI Agents Visualization: https://openai.github.io/openai-agents-python/visualization/#showing-the-graph\n\nTool for visualizing agent graphs and interactions\n\n\n\n\nLangChain\n\nLangGraph: https://langchain-ai.github.io/langgraph/\n\nPython framework for building stateful, multi-actor applications with LLMs\n\n\n\n\nCrew AI\n\nCrew.ai: https://github.com/crewaiinc/crewai\n\nFramework for orchestrating role-playing, autonomous AI agents\n\n\n\n\nMicrosoft\n\nAutoGen: https://microsoft.github.io/autogen/stable/\n\nMicrosoft’s framework for building conversational AI systems\n\nMicrosoft Semantic Kernel: https://github.com/microsoft/semantic-kernel\n\nSDK for integrating AI services with conventional programming languages",
+    "objectID": "src/00/ai_agents.html#what-is-an-agent",
+    "href": "src/00/ai_agents.html#what-is-an-agent",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Is an Agent?",
+    "text": "What Is an Agent?\n\nSource: https://www.youtube.com/watch?v=bwXaJXgezf4",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
-    "objectID": "src/00/resources.html#protocols-and-standards",
-    "href": "src/00/resources.html#protocols-and-standards",
-    "title": "Resources",
-    "section": "Protocols and Standards",
-    "text": "Protocols and Standards\n\nModel Context Protocol (MCP): https://modelcontextprototcol.io\n\nStandardized protocol for connecting AI models with external tools and data sources",
+    "objectID": "src/00/ai_agents.html#what-is-an-agent-1",
+    "href": "src/00/ai_agents.html#what-is-an-agent-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Is an Agent?",
+    "text": "What Is an Agent?\n\nSource: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
-    "objectID": "src/00/resources.html#license-information",
-    "href": "src/00/resources.html#license-information",
-    "title": "Resources",
-    "section": "License Information",
-    "text": "License Information\nMost of the agent frameworks mentioned use the MIT License, making them suitable for both academic and commercial use: - OpenAI Agents SDK - LangGraph - Crew.ai - Microsoft AutoGen - Microsoft Semantic Kernel",
+    "objectID": "src/00/ai_agents.html#what-is-an-agent-2",
+    "href": "src/00/ai_agents.html#what-is-an-agent-2",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Is an Agent?",
+    "text": "What Is an Agent?\n\nSource: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
-    "objectID": "src/00/resources.html#sidebars",
-    "href": "src/00/resources.html#sidebars",
-    "title": "Resources",
-    "section": "Sidebars",
-    "text": "Sidebars\n\nSimple Made Easy: https://www.youtube.com/watch?v=SxdOUGdseq4\n\nRich Hickey’s talk on the difference between “easy” and “simple”",
+    "objectID": "src/00/ai_agents.html#what-is-an-agent-3",
+    "href": "src/00/ai_agents.html#what-is-an-agent-3",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Is an Agent?",
+    "text": "What Is an Agent?\n\nSource: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
-    "objectID": "src/00/resources.html#articles-and-industry-reports",
-    "href": "src/00/resources.html#articles-and-industry-reports",
-    "title": "Resources",
-    "section": "Articles and Industry Reports",
-    "text": "Articles and Industry Reports\n\nWorld Economic Forum - Cognitive Enterprise: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/\n\nArticle on the agentic business revolution\n\nCRN - Hottest Agentic AI Tools: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far\n\nOverview of the top agentic AI tools of 2025\n\nGartner Press Release: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027\n\nGartner’s predictions about agentic AI project success rates\n\nAnthropic - Building Effective Agents: https://www.anthropic.com/engineering/building-effective-agents\n\nEngineering guide on building effective AI agents and patterns\n\nE2B - AI Agents Landscape: https://e2b.dev\n\nOverview of the AI agents ecosystem and available frameworks",
+    "objectID": "src/00/ai_agents.html#what-is-an-agent-4",
+    "href": "src/00/ai_agents.html#what-is-an-agent-4",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Is an Agent?",
+    "text": "What Is an Agent?\nImagine a DigiPen Campus Assistant: An AI Agent that can help you navigate anything and everything at DigiPen!\n\n“Where can I find the ‘Hopper’ room?”\n“Can you tell me more about FLM201?”\n“Oh, and what’s today’s vegetarian option at the Bytes Cafe?”",
     "crumbs": [
-      "Teaching Module: Introducing AI Agents",
-      "Resources"
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#five-characteristics-of-agents",
+    "href": "src/00/ai_agents.html#five-characteristics-of-agents",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Five Characteristics of Agents",
+    "text": "Five Characteristics of Agents\n\nAgents are Proactive\n\n\nAgents are driven by goals\nAnd they can put together a plan for the steps to complete that goal.\n\n“First, I will discover where course information is located”\n“Then I will search for any courses that reference FLM201”\n“Then I summarize all of the key points for the student”",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#five-characteristics-of-agents-1",
+    "href": "src/00/ai_agents.html#five-characteristics-of-agents-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Five Characteristics of Agents",
+    "text": "Five Characteristics of Agents\n\nAgents are Autonomous\n\n\nAgents can then go off and execute the plan, independent of human input\nThe concept of “human in the loop” still applies for confirmation\n\ne.g. “Do you really want to place this order at the Bytes Cafe?”",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#five-characteristics-of-agents-2",
+    "href": "src/00/ai_agents.html#five-characteristics-of-agents-2",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Five Characteristics of Agents",
+    "text": "Five Characteristics of Agents\n\nAgents are Reactive\n\n\nAgents can change mid-course depending on what they find and/or the environment.\n\ne.g. “I couldn’t find any course information on FLM201. I’m going to whether there are other 200-level FLM courses before responding to the student.”",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#five-characteristics-of-agents-3",
+    "href": "src/00/ai_agents.html#five-characteristics-of-agents-3",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Five Characteristics of Agents",
+    "text": "Five Characteristics of Agents\n\nAgents have Persistence\n\n\nAgents often have memory systems beyond the current conversation\nBroadly classified as short and long term memory\n\nShort term memory could be the options at the Bytes Cafe\nLong term memory could be your food preferences",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#five-characteristics-of-agents-4",
+    "href": "src/00/ai_agents.html#five-characteristics-of-agents-4",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Five Characteristics of Agents",
+    "text": "Five Characteristics of Agents\n\nAgents are Interactive\n\n\nAgents can delegate to other agents for complex tasks\n\n(Or for tasks where other agents are better suited for.)\ne.g., Campus Agent -&gt; delegating to a Course Agent\n\nAgents can also be given access to external tools\n\ne.g., File search, Web search, access to the Bytes Cafe API",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#lets-try-this-1",
+    "href": "src/00/ai_agents.html#lets-try-this-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Let’s Try This!",
+    "text": "Let’s Try This!\n\n\n\n\nhttps://simonguest-campus-agent.hf.space/",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#lets-try-this-2",
+    "href": "src/00/ai_agents.html#lets-try-this-2",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Let’s Try This!",
+    "text": "Let’s Try This!\n\n\n\n\nhttps://simonguest-campus-agent.hf.space/",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#observations-and-questions",
+    "href": "src/00/ai_agents.html#observations-and-questions",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Observations and Questions",
+    "text": "Observations and Questions\nGet into groups of 2 or 3\n\nQ: What worked? What surprised you?\nQ: What didn’t work? Where did the agent fail?\nQ: What other examples of agents can you think of?",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#other-examples-for-agents",
+    "href": "src/00/ai_agents.html#other-examples-for-agents",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Other Examples for Agents",
+    "text": "Other Examples for Agents\n\nCustomer service agent\nTravel booking agent\nResearch assistant\nCode generation agent (very popular right now)\nAgents within games\n\nTraditional NPCs are pre-written dialogue trees\nWhereas agents can be more independent within the game environment",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#gradio-based-ui",
+    "href": "src/00/ai_agents.html#gradio-based-ui",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Gradio-Based UI",
+    "text": "Gradio-Based UI\n\nSource: https://www.gradio.app/",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#gradio-based-ui-1",
+    "href": "src/00/ai_agents.html#gradio-based-ui-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Gradio-Based UI",
+    "text": "Gradio-Based UI\nimport time\nimport gradio as gr\n\ndef slow_echo(message, history):\n    for i in range(len(message)):\n        time.sleep(0.05)\n        yield \"You typed: \" + message[: i + 1]\n\ndemo = gr.ChatInterface(\n    slow_echo,\n    flagging_mode=\"manual\",\n    flagging_options=[\"Like\", \"Spam\", \"Inappropriate\", \"Other\"],\n    save_history=True,\n)\n\nif __name__ == \"__main__\":\n    demo.launch()",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#gradio-based-ui-2",
+    "href": "src/00/ai_agents.html#gradio-based-ui-2",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Gradio-Based UI",
+    "text": "Gradio-Based UI\n\nSource: https://gradio.app",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#hosted-on-hugging-face-spaces",
+    "href": "src/00/ai_agents.html#hosted-on-hugging-face-spaces",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Hosted on Hugging Face Spaces",
+    "text": "Hosted on Hugging Face Spaces\n\nSource: https://huggingface.co/spaces",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#agent-structure",
+    "href": "src/00/ai_agents.html#agent-structure",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Agent Structure",
+    "text": "Agent Structure\n\nAgents and tools for the DigiPen Campus Assistant",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#so-many-agent-frameworks",
+    "href": "src/00/ai_agents.html#so-many-agent-frameworks",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "So Many Agent Frameworks…",
+    "text": "So Many Agent Frameworks…\n\nSource: https://e2b.dev",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#openai-agents-sdk",
+    "href": "src/00/ai_agents.html#openai-agents-sdk",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "OpenAI Agents SDK",
+    "text": "OpenAI Agents SDK\n\nUsed for our demo\nhttps://openai.github.io/openai-agents-python/\nPython and JavaScript/TypeScript\nMIT License",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#langgraph",
+    "href": "src/00/ai_agents.html#langgraph",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "LangGraph",
+    "text": "LangGraph\n\nhttps://langchain-ai.github.io/langgraph/\nPython only\nMIT License",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#crew.ai",
+    "href": "src/00/ai_agents.html#crew.ai",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Crew.ai",
+    "text": "Crew.ai\n\nhttps://github.com/crewaiinc/crewai\nPython only\nMIT License",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#microsoft",
+    "href": "src/00/ai_agents.html#microsoft",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Microsoft",
+    "text": "Microsoft\n\nAutoGen\n\nhttps://microsoft.github.io/autogen/stable/\nPython (.NET coming soon)\nMIT License\n\nMicrosoft Semantic Kernel\n\nhttps://github.com/microsoft/semantic-kernel\nPython, .NET, Java\nMIT License",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#what-should-you-be-considering",
+    "href": "src/00/ai_agents.html#what-should-you-be-considering",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Should You Be Considering?",
+    "text": "What Should You Be Considering?\n\nQuestion: If most agents run in the browser, why are many of the agent frameworks written in Python? 🤔",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#what-should-you-be-considering-1",
+    "href": "src/00/ai_agents.html#what-should-you-be-considering-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "What Should You Be Considering?",
+    "text": "What Should You Be Considering?\n\nWhere will your agent run?\n\nServer or client? On the web? In game?\nThis will likely determine the language\nHow will you manage API keys?\n\nSupport\n\nWill this agent framework be around in 3-5 years?\nIs there a cost/hosting component to it?\n\nEasy vs. Simple\n\nIs your choice “easy” or “simple”?",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#sidebar-easy-vs.-simple",
+    "href": "src/00/ai_agents.html#sidebar-easy-vs.-simple",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Sidebar: Easy vs. Simple",
+    "text": "Sidebar: Easy vs. Simple\n\nhttps://www.youtube.com/watch?v=SxdOUGdseq4",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#openai-agents-sdk-python",
+    "href": "src/00/ai_agents.html#openai-agents-sdk-python",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "OpenAI Agents SDK (Python)",
+    "text": "OpenAI Agents SDK (Python)\nCreating and running a new agent\nfrom agents import Agent, Runner\n\nagent = Agent(\n    name=\"DigiPen Campus Assistant\",\n    instructions=\"You are a helpful campus assistant that can plan and execute tasks for students at DigiPen. Please be concise and accurate in handing off tasks to other agents as needed.\",\n    handoffs=[building_agent, course_agent, handbook_agent, cafe_agent],\n)\n\nmessages.append({\"role\": \"user\", \"content\": user_msg})\nresult = Runner.run_streamed(agent, messages)",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#openai-agents-sdk-python-1",
+    "href": "src/00/ai_agents.html#openai-agents-sdk-python-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "OpenAI Agents SDK (Python)",
+    "text": "OpenAI Agents SDK (Python)\nSpecifying handoffs\nfrom agents import Agent, Runner\n\nagent = Agent(\n    name=\"DigiPen Campus Assistant\",\n    instructions=\"You are a helpful campus assistant that can plan and execute tasks for students at DigiPen. Please be concise and accurate in handing off tasks to other agents as needed.\",\n    handoffs=[building_agent, course_agent, handbook_agent, cafe_agent],\n)\n\nmessages.append({\"role\": \"user\", \"content\": user_msg})\nresult = Runner.run_streamed(agent, messages)",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#why-multiple-agents",
+    "href": "src/00/ai_agents.html#why-multiple-agents",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Why Multiple Agents?",
+    "text": "Why Multiple Agents?\n\nContext window limitations\nEach agent can have a different system prompt (instructions)\nEach agent can have a different underlying model\n\nSpecialized models (e.g., a vision encoder)\nOr to blend cost\n\nMakes tool separation cleaner and more accurate",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#example-of-multiple-agents",
+    "href": "src/00/ai_agents.html#example-of-multiple-agents",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Example of Multiple Agents",
+    "text": "Example of Multiple Agents\n\nCode generation\n\nAgents for ‘architect’, code writer, tester, debugger, etc.\n\nContent generation\n\nAgent to create content, other agents to generate images, translate content, etc.\n\nTravel booking\n\nAgent to book flights, hotels, cars, etc. for packages",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#patterns-for-agents",
+    "href": "src/00/ai_agents.html#patterns-for-agents",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Patterns for Agents",
+    "text": "Patterns for Agents\n\nAs you get deeper into building agents, patterns start to emerge\n\ne.g., router (which is what we used in our demo), orchestrator (using other agents as tools), parallel agents",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#patterns-for-agents-1",
+    "href": "src/00/ai_agents.html#patterns-for-agents-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Patterns for Agents",
+    "text": "Patterns for Agents\n\nSource: https://www.anthropic.com/engineering/building-effective-agents",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#why-do-agents-need-tools",
+    "href": "src/00/ai_agents.html#why-do-agents-need-tools",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Why Do Agents Need Tools?",
+    "text": "Why Do Agents Need Tools?\n\nThe scope of the agents ability is contained within the model\nTools enable the agent to reach out to systems beyond the model\nExamples\n\nRead a file from disk or search the web (built in)\nCalculator (because LLMs aren’t great at math)\nCode interpreter (running code on the fly)\nWhat potential tools can you think of? 🤔",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#openai-tool-calling",
+    "href": "src/00/ai_agents.html#openai-tool-calling",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "OpenAI Tool Calling",
+    "text": "OpenAI Tool Calling\n\nIntroduced by OpenAI in June 2023\nOriginally called Function Calling\nModels are fine-tuned to return a structured function_call JSON object, specifying which function to call and with what arguments.\nTools are provided as functions\nOption for the LLM to decide when to call the tool (always, never, auto)",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#openai-tool-calling-1",
+    "href": "src/00/ai_agents.html#openai-tool-calling-1",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "OpenAI Tool Calling",
+    "text": "OpenAI Tool Calling\nfrom agents import Agent, function_tool\n\n@function_tool\ndef get_bytes_cafe_menu(date: str) -&gt; any:\n    \"\"\"Returns the menu for the Bytes Cafe for the date provided.\"\"\"\n    return { f\"{date}\": {\n            \"daily byte\": {\n                \"name\": \"Steak Quesadilla\", \"price\": 12, \"description\": \"Flank steak, mixed cheese in a flour tortilla served with air fried potatoes, sour cream and salsa\",\n            },\n        } }\n\ncafe_agent = Agent(\n    name=\"Cafe Agent\",\n    instructions=\"You help students locate and provide information about the Bytes Cafe.\",\n    tools=[\n        get_bytes_cafe_menu,\n    ])",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#openai-tool-calling-2",
+    "href": "src/00/ai_agents.html#openai-tool-calling-2",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "OpenAI Tool Calling",
+    "text": "OpenAI Tool Calling\nfrom agents import Agent, FileSearchTool\n\nVECTOR_STORE_ID = \"vs_6896d8c959008191981d645850b42313\"\n\nbuilding_agent = Agent(\n    name=\"Building Agent\",\n    instructions=\"You help students locate and provide information about buildings and rooms on campus. Be descriptive when giving locations.\",\n    tools=[\n        FileSearchTool(\n            max_num_results=3,\n            vector_store_ids=[VECTOR_STORE_ID],\n            include_search_results=True,\n        )\n    ],\n)",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#mcp-model-context-protocol",
+    "href": "src/00/ai_agents.html#mcp-model-context-protocol",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "MCP (Model Context Protocol)",
+    "text": "MCP (Model Context Protocol)\n\nOpenAI’s tool/function calling works if you have local access to the tools\nBut how about external systems?\n\ne.g., Access to calendar, other systems, hardware, etc.\n\nYou could build local tools to call APIs\nMCP: Model Context Protocol\nStandardized tooling interface, released by Anthropic in March 2024\nMore details: https://modelcontextprototcol.io",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#using-an-agent-for-your-project",
+    "href": "src/00/ai_agents.html#using-an-agent-for-your-project",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Using an Agent for Your Project",
+    "text": "Using an Agent for Your Project\n\nHow could your project benefit from agents?\nOne or more agents?\nHow would agents interact with the user?\nWhat might be some of the challenges to overcome?",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#resources-12",
+    "href": "src/00/ai_agents.html#resources-12",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Resources (1/2)",
+    "text": "Resources (1/2)\n\nCampus agent code:\n\nhttps://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent\nClone the repo, get it running locally\nModify by adding a new agent to it\nCreate your own use case/agent in the Gradio interface",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/00/ai_agents.html#resources-22",
+    "href": "src/00/ai_agents.html#resources-22",
+    "title": "CSP-400 Lecture: Introducing AI Agents",
+    "section": "Resources (2/2)",
+    "text": "Resources (2/2)\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400",
+    "crumbs": [
+      "Lecture: Introducing AI Agents",
+      "Slides"
     ]
   },
   {
