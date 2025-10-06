@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>http3 – CSP-400</title>
+<title>Resources – CSP-400</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/networking/webrtc-sfu.html" rel="prev">
+<link href="../../src/networking/websockets.html" rel="next">
+<link href="../../src/01/exploring_genai.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -73,9 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -251,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/networking/websockets.html">Networking Protocols</a></li><li class="breadcrumb-item"><a href="../../src/networking/http3.html">HTTP/3</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/01/exploring_genai.html">Lecture: Exploring Generative AI Models</a></li><li class="breadcrumb-item"><a href="../../src/01/resources.html">Resources</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -327,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/01/resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/01/resources.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -362,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/networking/http3.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/networking/http3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HTTP/3</span></a>
   </div>
 </li>
@@ -375,73 +373,31 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/networking/websockets.html">Networking Protocols</a></li><li class="breadcrumb-item"><a href="../../src/networking/http3.html">HTTP/3</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-<section id="http3" class="level1">
-<h1>HTTP/3</h1>
-<p>HTTP/3 is the latest major revision of the Hypertext Transfer Protocol, designed to make web communication faster, more reliable, and better suited for modern network conditions. Unlike HTTP/1.1 and HTTP/2, which are built on top of TCP, HTTP/3 runs over&nbsp;<strong>QUIC</strong>, a transport protocol based on UDP. By leveraging QUIC, HTTP/3 benefits from features such as built-in encryption (TLS 1.3), multiplexed streams without head-of-line blocking, reduced connection setup time, and graceful handling of network changes (e.g., switching from WiFi to cellular).</p>
-<p>HTTP/3 is increasingly used by browsers, CDNs, and backend services to improve page load times, streaming performance, and resilience to packet loss in high-latency networks.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    subgraph Client["Client (e.g., Browser, Mobile App)"]
-        C1[HTTP/3 Stack]
-        C2[Application Logic]
-        C2 --&gt; C1
-    end
-
-    subgraph Server["Server"]
-        S1[HTTP/3-capable Web Server / CDN]
-        S2[Application Logic / Handlers]
-        S3[Database / External APIs]
-        S2 --&gt; S3
-        S1 --&gt; S2
-    end
-
-    C1 &lt;--&gt; |"QUIC (UDP-based) Transport"| S1
-
-    %% Styling
-    style Client fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,rounded-corners:5px
-    style Server fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,rounded-corners:5px
-</pre>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/01/exploring_genai.html">Lecture: Exploring Generative AI Models</a></li><li class="breadcrumb-item"><a href="../../src/01/resources.html">Resources</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Resources</h1>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<hr>
-<section id="python-sdk" class="level2">
-<h2 class="anchored" data-anchor-id="python-sdk">Python SDK</h2>
-<p>The most widely used Python library for HTTP/3 and QUIC is&nbsp;<strong><a href="https://github.com/aiortc/aioquic"><code>aioquic</code></a></strong>.</p>
-<ul>
-<li>It’s an implementation of QUIC and HTTP/3 built on top of&nbsp;<code>asyncio</code>.</li>
-<li>Supports client and server roles, TLS 1.3, and custom protocol experimentation.</li>
-<li>Useful for both low-level QUIC experiments and HTTP/3 integration with web servers.</li>
-</ul>
-<p>Other frameworks are beginning to add&nbsp;<strong>HTTP/3 support</strong>&nbsp;(e.g., Hypercorn or uvicorn with custom workers), but&nbsp;<code>aioquic</code>&nbsp;remains the go-to library today.</p>
-<hr>
-</section>
-<section id="limitations" class="level2">
-<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
-<ol type="1">
-<li><strong>Ecosystem Maturity</strong>&nbsp;– HTTP/3 adoption is growing, but not all clients, servers, proxies, or CDNs support it yet.</li>
-<li><strong>UDP Dependency</strong>&nbsp;– Some networks (corporate firewalls, older routers) may block or throttle UDP traffic, limiting HTTP/3’s performance benefits.</li>
-<li><strong>Resource Usage</strong>&nbsp;– Running on top of UDP requires more aggressive congestion control and buffer handling, which may make server-side scaling more complex.</li>
-<li><strong>Debugging &amp; Monitoring</strong>&nbsp;– Tools for packet inspection and debugging are less mature than for TCP/HTTP/2.</li>
-<li><strong>Fallback Complexity</strong>&nbsp;– Many servers and browsers negotiate between HTTP/1.1, HTTP/2, and HTTP/3, which adds operational complexity.</li>
-<li><strong>Not Always Faster</strong>&nbsp;– For very stable, low-latency connections, HTTP/2 may perform competitively; HTTP/3 shines in lossy or high-latency links.</li>
-</ol>
 
 
-</section>
-</section>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This document contains all the external resources, links, and references mentioned in the “Exploring Generative AI Models” lecture.</p>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -859,11 +815,14 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/networking/webrtc-sfu.html" class="pagination-link" aria-label="WebRTC using an SFU">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">WebRTC using an SFU</span>
+      <a href="../../src/01/exploring_genai.html" class="pagination-link" aria-label="Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Slides</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../src/networking/websockets.html" class="pagination-link" aria-label="WebSockets">
+        <span class="nav-page-text">WebSockets</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
