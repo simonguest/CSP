@@ -1,5 +1,5 @@
 ---
-title: "CSP-400 Lecture: Introducing AI Agents"
+title: "Introducing AI Agents"
 format: 
   revealjs:
     slide-number: true
@@ -9,13 +9,13 @@ format:
 logo: ../../src/logos/DigiPen_RGB_Red.png
 ---
 
-## Check for Understanding
+## Before We Get Started
 
 - How many have used ChatGPT/Claude?
-- How many have built their own chatbot / interacted with OpenAI/Claude APIs?
-- How many have gone beyond this?
+- How many have built their own chatbot and/or used the OpenAI/Claude APIs?
+- How many have created something beyond this?
 
-## Limitations with Chatbots
+## Chatbots are not that Smart
 
 Many of today's chatbots have limitations...
 

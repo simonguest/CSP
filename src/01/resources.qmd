@@ -1,0 +1,6 @@
+---
+title: "Resources"
+format: html
+---
+
+This document contains all the external resources, links, and references mentioned in the "Exploring Generative AI Models" lecture.

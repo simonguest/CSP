@@ -1,0 +1,46 @@
+---
+title: "Exploring Generative AI Models"
+format: 
+  revealjs:
+    slide-number: true
+    incremental: true
+    center-title-slide: true
+    theme: default
+logo: ../../src/logos/DigiPen_RGB_Red.png
+---
+
+## In the Next Hour...
+
+- TBD - An overview of what students will learn
+
+# A Brief History of Transformer Models
+
+## A Brief History of Transformer Models
+
+```{mermaid}
+timeline
+    June 2017 : Google researchers publish "Attention is all you need" paper
+              : Introduces self-attention mechanism and transformer architecture
+              : Eliminates the need for recurrent neural networks in sequence processing
+    
+    June 2018 : OpenAI releases GPT-1
+              : 117M parameters
+              : Demonstrates pre-training on large text corpora followed by fine-tuning works effectively
+    
+    Feb 2019 : OpenAI releases GPT-2
+             : 1.5B parameters
+             : Initially withheld full model due to concerns about misuse
+             : Demonstrates impressive text generation capabilities with minimal fine-tuning
+    
+    May 2020 : OpenAI releases GPT-3
+             : 175B parameters
+             : Demonstrates strong few-shot learning capabilities
+             : Marks a significant leap in model capabilities and scale
+    
+    June 2020 : GPT-3 available through OpenAI API
+              : Still a completion model, not instruction-tuned
+```
+
+## Completion vs. Instruction-Tuned
+
+- TBD
