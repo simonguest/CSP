@@ -17,7 +17,7 @@ logo: ../../src/logos/DigiPen_RGB_Red.png
 
 ## Chatbots are not that Smart
 
-Many of today's chatbots have limitations...
+There are many limitations...
 
 - Needs constant human input every turn; No ability to plan beyond a single interaction
 - Single model with single context
@@ -25,25 +25,25 @@ Many of today's chatbots have limitations...
 
 # Introducing AI Agents!
 
-## What Is an Agent?
+## What is an Agent?
 
 ![Source: https://www.youtube.com/watch?v=bwXaJXgezf4](./images/quote-1.png)
 
-## What Is an Agent?
+## What is an Agent?
 
 ![Source: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/](./images/quote-2.png)
 
-## What Is an Agent?
+## What is an Agent?
 
 ![Source: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far](./images/quote-3.png)
 
-## What Is an Agent?
+## What is an Agent?
 
 ![Source: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027](./images/quote-4.png)
 
-## What Is an Agent?
+## What is an Agent?
 
-Imagine a DigiPen Campus Assistant: An AI Agent that can help you navigate anything and everything at DigiPen!
+Imagine a __DigiPen Campus Assistant__: An agent that can help you navigate anything and everything at DigiPen!
 
 - "Where can I find the 'Hopper' room?"
 - "Can you tell me more about FLM201?"
@@ -51,7 +51,7 @@ Imagine a DigiPen Campus Assistant: An AI Agent that can help you navigate anyth
 
 ## Five Characteristics of Agents
 
-1. Agents are **Proactive**
+1. Agents are **Planners**
 
 - Agents are driven by goals
 - And they can put together a plan for the steps to complete that goal.
@@ -178,6 +178,7 @@ if __name__ == "__main__":
 - https://openai.github.io/openai-agents-python/
 - Python and JavaScript/TypeScript
 - MIT License
+- Works with models that support OpenAI's Responses API
 
 ## LangGraph 
 - https://langchain-ai.github.io/langgraph/
@@ -356,26 +357,26 @@ building_agent = Agent(
 - Standardized tooling interface, released by Anthropic in March 2024
 - More details: https://modelcontextprototcol.io
 
-# Next Steps
+# What Next?
 
 ## Using an Agent for Your Project
 
-- How could your project benefit from agents?
+- Could your project benefit from agents?
 - One or more agents?
 - How would agents interact with the user?
 - What might be some of the challenges to overcome?
 
 ## Resources (1/2)
 
-- Campus agent code: 
-  - [https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent](https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent){.external target="_blank"}
-  - Clone the repo, get it running locally
-  - Modify by adding a new agent to it
-  - Create your own use case/agent in the Gradio interface
+- This slide deck, resources, links, everything: 
+  - [https://simonguest.github.io/CSP-400](https://simonguest.github.io/CSP-400){.external target="_blank"}
 
 ## Resources (2/2)
 
-- This slide deck, resources, links, everything: 
-  - [https://simonguest.github.io/CSP-400](https://simonguest.github.io/CSP-400){.external target="_blank"}
+- Campus agent code: 
+  - [https://github.com/simonguest/CSP-400/tree/main/demos/00/campus-agent](https://github.com/simonguest/CSP-400/tree/main/demos/00/campus-agent){.external target="_blank"}
+  - Clone the repo, get it running locally
+  - Modify by adding a new agent to it
+  - Create your own use case/agent in the Gradio interface
 
 # Q&A
