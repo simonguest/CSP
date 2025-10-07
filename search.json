@@ -178,7 +178,7 @@
     "href": "src/00/ai_agents.html#chatbots-are-not-that-smart",
     "title": "Introducing AI Agents",
     "section": "Chatbots are not that Smart",
-    "text": "Chatbots are not that Smart\nMany of today’s chatbots have limitations…\n\nNeeds constant human input every turn; No ability to plan beyond a single interaction\nSingle model with single context\nNo interaction with external systems",
+    "text": "Chatbots are not that Smart\nThere are many limitations…\n\nNeeds constant human input every turn; No ability to plan beyond a single interaction\nSingle model with single context\nNo interaction with external systems",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -188,8 +188,8 @@
     "objectID": "src/00/ai_agents.html#what-is-an-agent",
     "href": "src/00/ai_agents.html#what-is-an-agent",
     "title": "Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.youtube.com/watch?v=bwXaJXgezf4",
+    "section": "What is an Agent?",
+    "text": "What is an Agent?\n\nSource: https://www.youtube.com/watch?v=bwXaJXgezf4",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -199,8 +199,8 @@
     "objectID": "src/00/ai_agents.html#what-is-an-agent-1",
     "href": "src/00/ai_agents.html#what-is-an-agent-1",
     "title": "Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/",
+    "section": "What is an Agent?",
+    "text": "What is an Agent?\n\nSource: https://www.weforum.org/stories/2025/06/cognitive-enterprise-agentic-business-revolution/",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -210,8 +210,8 @@
     "objectID": "src/00/ai_agents.html#what-is-an-agent-2",
     "href": "src/00/ai_agents.html#what-is-an-agent-2",
     "title": "Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far",
+    "section": "What is an Agent?",
+    "text": "What is an Agent?\n\nSource: https://www.crn.com/news/ai/2025/10-hottest-agentic-ai-tools-and-agents-of-2025-so-far",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -221,8 +221,8 @@
     "objectID": "src/00/ai_agents.html#what-is-an-agent-3",
     "href": "src/00/ai_agents.html#what-is-an-agent-3",
     "title": "Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\n\nSource: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+    "section": "What is an Agent?",
+    "text": "What is an Agent?\n\nSource: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -232,8 +232,8 @@
     "objectID": "src/00/ai_agents.html#what-is-an-agent-4",
     "href": "src/00/ai_agents.html#what-is-an-agent-4",
     "title": "Introducing AI Agents",
-    "section": "What Is an Agent?",
-    "text": "What Is an Agent?\nImagine a DigiPen Campus Assistant: An AI Agent that can help you navigate anything and everything at DigiPen!\n\n“Where can I find the ‘Hopper’ room?”\n“Can you tell me more about FLM201?”\n“Oh, and what’s today’s vegetarian option at the Bytes Cafe?”",
+    "section": "What is an Agent?",
+    "text": "What is an Agent?\nImagine a DigiPen Campus Assistant: An agent that can help you navigate anything and everything at DigiPen!\n\n“Where can I find the ‘Hopper’ room?”\n“Can you tell me more about FLM201?”\n“Oh, and what’s today’s vegetarian option at the Bytes Cafe?”",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -244,7 +244,7 @@
     "href": "src/00/ai_agents.html#five-characteristics-of-agents",
     "title": "Introducing AI Agents",
     "section": "Five Characteristics of Agents",
-    "text": "Five Characteristics of Agents\n\nAgents are Proactive\n\n\nAgents are driven by goals\nAnd they can put together a plan for the steps to complete that goal.\n\n“First, I will discover where course information is located”\n“Then I will search for any courses that reference FLM201”\n“Then I summarize all of the key points for the student”",
+    "text": "Five Characteristics of Agents\n\nAgents are Planners\n\n\nAgents are driven by goals\nAnd they can put together a plan for the steps to complete that goal.\n\n“First, I will discover where course information is located”\n“Then I will search for any courses that reference FLM201”\n“Then I summarize all of the key points for the student”",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -409,7 +409,7 @@
     "href": "src/00/ai_agents.html#openai-agents-sdk",
     "title": "Introducing AI Agents",
     "section": "OpenAI Agents SDK",
-    "text": "OpenAI Agents SDK\n\nUsed for our demo\nhttps://openai.github.io/openai-agents-python/\nPython and JavaScript/TypeScript\nMIT License",
+    "text": "OpenAI Agents SDK\n\nUsed for our demo\nhttps://openai.github.io/openai-agents-python/\nPython and JavaScript/TypeScript\nMIT License\nWorks with models that support OpenAI’s Responses API",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -607,7 +607,7 @@
     "href": "src/00/ai_agents.html#using-an-agent-for-your-project",
     "title": "Introducing AI Agents",
     "section": "Using an Agent for Your Project",
-    "text": "Using an Agent for Your Project\n\nHow could your project benefit from agents?\nOne or more agents?\nHow would agents interact with the user?\nWhat might be some of the challenges to overcome?",
+    "text": "Using an Agent for Your Project\n\nCould your project benefit from agents?\nOne or more agents?\nHow would agents interact with the user?\nWhat might be some of the challenges to overcome?",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -618,7 +618,7 @@
     "href": "src/00/ai_agents.html#resources-12",
     "title": "Introducing AI Agents",
     "section": "Resources (1/2)",
-    "text": "Resources (1/2)\n\nCampus agent code:\n\nhttps://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent\nClone the repo, get it running locally\nModify by adding a new agent to it\nCreate your own use case/agent in the Gradio interface",
+    "text": "Resources (1/2)\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -629,7 +629,7 @@
     "href": "src/00/ai_agents.html#resources-22",
     "title": "Introducing AI Agents",
     "section": "Resources (2/2)",
-    "text": "Resources (2/2)\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400",
+    "text": "Resources (2/2)\n\nCampus agent code:\n\nhttps://github.com/simonguest/CSP-400/tree/main/demos/00/campus-agent\nClone the repo, get it running locally\nModify by adding a new agent to it\nCreate your own use case/agent in the Gradio interface",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
