@@ -135,8 +135,8 @@
 </div>
 
 </section>
-<section id="in-the-next-hour" class="slide level2">
-<h2>In the Next Hour…</h2>
+<section id="recap-of-agents-lecture-in-the-next-hour" class="slide level2">
+<h2>Recap of Agents lecture / In the Next Hour…</h2>
 <ul>
 <li class="fragment">TBD - An overview of what students will learn</li>
 </ul>
@@ -184,7 +184,107 @@
 <section id="completion-vs.-instruction-tuned" class="slide level2">
 <h2>Completion vs.&nbsp;Instruction-Tuned</h2>
 <ul>
+<li class="fragment">Introducing CoLab - student question on how many have used CoLab before</li>
+<li class="fragment">TBD and demo of GPT-2</li>
+</ul>
+</section>
+<section id="a-brief-history-of-transformer-models-2" class="slide level2">
+<h2>A Brief History of Transformer Models</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">timeline
+    2021 : InstructGPT Development
+          : Built on GPT-3 with RLHF fine-tuning
+          : Trained to follow instructions and understand user intent
+          : Key innovation enabling ChatGPT
+    
+    Jan 2021 : Anthropic Founded
+             : Founded by Dario &amp; Daniela Amodei with ~7 senior OpenAI employees
+            : Dario led GPT-2/3 development and co-invented RLHF
+
+    Nov 2022 : ChatGPT Launch
+                  : Built on GPT-3.5 using RLHF
+                  : 1M+ users in 5 days
+                  : Demonstrated AI to mainstream audiences
+                  : Sparked widespread interest in generative AI
+
+    Feb 2023 : Llama 1 Released
+                  : Meta's LLaMA (7B, 13B, 33B, 65B parameters)
+                  : 13B model exceeded GPT-3 (175B) on most benchmarks
+                  : Limited researcher access
+                  : Text completion only (Alpaca fine-tune added instructions)
+
+    Jul 2023 : Llama 2 Released
+              : Available in 7B, 13B, 70B sizes
+              : Trained on 40% more data than Llama 1
+              : First open-weights Llama for commercial use
+              : Meta's commitment to open-source AI
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="closed-vs.-open-source-vs.-open-weight" class="slide level2">
+<h2>Closed vs.&nbsp;Open Source vs.&nbsp;Open Weight</h2>
+<ul>
 <li class="fragment">TBD</li>
+</ul>
+</section>
+<section id="accessing-models-via-apis" class="slide level2">
+<h2>Accessing Models via APIs</h2>
+<ul>
+<li class="fragment">HTTP-based APIs
+<ul>
+<li class="fragment">LLM runs on server (in cloud)</li>
+<li class="fragment">Client makes HTTP API calls to invoke/access the model</li>
+<li class="fragment">(Normally use an SDK to wrap the HTTP API calls)</li>
+<li class="fragment">Client passes Authorization token as part of the call</li>
+<li class="fragment">Default way of accesing OpenAI, Claude, other large, closed-source models</li>
+</ul></li>
+</ul>
+</section>
+<section id="accessing-models-via-apis-1" class="slide level2">
+<h2>Accessing Models via APIs</h2>
+<ul>
+<li class="fragment">TBD: Some kind of simple diagram</li>
+</ul>
+</section>
+<section id="accessing-models-via-apis-2" class="slide level2">
+<h2>Accessing Models via APIs</h2>
+<ul>
+<li class="fragment">TBD: Talk about the v1 chat completions API here</li>
+</ul>
+</section>
+<section id="accessing-models-via-apis-3" class="slide level2">
+<h2>Accessing Models via APIs</h2>
+<ul>
+<li class="fragment">CoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format</li>
+</ul>
+</section>
+<section id="accessing-models-via-apis-4" class="slide level2">
+<h2>Accessing Models via APIs</h2>
+<ul>
+<li class="fragment">How about if you want to access/test different models from different providers?
+<ul>
+<li class="fragment">Need to setup separate authentication/access tokens for each?</li>
+</ul></li>
+</ul>
+</section>
+<section id="introducing-openrouter" class="slide level2">
+<h2>Introducing OpenRouter</h2>
+<ul>
+<li class="fragment">Overview of OpenRouter</li>
+</ul>
+</section>
+<section id="introducing-openrouter-1" class="slide level2">
+<h2>Introducing OpenRouter</h2>
+<ul>
+<li class="fragment">CoLab DEMO: Calling multiple models through OpenRouter</li>
 </ul>
 
 

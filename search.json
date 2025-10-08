@@ -636,11 +636,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#in-the-next-hour",
-    "href": "src/01/exploring_genai.html#in-the-next-hour",
+    "objectID": "src/01/exploring_genai.html#recap-of-agents-lecture-in-the-next-hour",
+    "href": "src/01/exploring_genai.html#recap-of-agents-lecture-in-the-next-hour",
     "title": "Exploring Generative AI Models",
-    "section": "In the Next Hour…",
-    "text": "In the Next Hour…\n\nTBD - An overview of what students will learn",
+    "section": "Recap of Agents lecture / In the Next Hour…",
+    "text": "Recap of Agents lecture / In the Next Hour…\n\nTBD - An overview of what students will learn",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -662,7 +662,106 @@
     "href": "src/01/exploring_genai.html#completion-vs.-instruction-tuned",
     "title": "Exploring Generative AI Models",
     "section": "Completion vs. Instruction-Tuned",
-    "text": "Completion vs. Instruction-Tuned\n\nTBD",
+    "text": "Completion vs. Instruction-Tuned\n\nIntroducing CoLab - student question on how many have used CoLab before\nTBD and demo of GPT-2",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#a-brief-history-of-transformer-models-2",
+    "href": "src/01/exploring_genai.html#a-brief-history-of-transformer-models-2",
+    "title": "Exploring Generative AI Models",
+    "section": "A Brief History of Transformer Models",
+    "text": "A Brief History of Transformer Models\n\n\n\n\n\ntimeline\n    2021 : InstructGPT Development\n          : Built on GPT-3 with RLHF fine-tuning\n          : Trained to follow instructions and understand user intent\n          : Key innovation enabling ChatGPT\n    \n    Jan 2021 : Anthropic Founded\n             : Founded by Dario & Daniela Amodei with ~7 senior OpenAI employees\n            : Dario led GPT-2/3 development and co-invented RLHF\n\n    Nov 2022 : ChatGPT Launch\n                  : Built on GPT-3.5 using RLHF\n                  : 1M+ users in 5 days\n                  : Demonstrated AI to mainstream audiences\n                  : Sparked widespread interest in generative AI\n\n    Feb 2023 : Llama 1 Released\n                  : Meta's LLaMA (7B, 13B, 33B, 65B parameters)\n                  : 13B model exceeded GPT-3 (175B) on most benchmarks\n                  : Limited researcher access\n                  : Text completion only (Alpaca fine-tune added instructions)\n\n    Jul 2023 : Llama 2 Released\n              : Available in 7B, 13B, 70B sizes\n              : Trained on 40% more data than Llama 1\n              : First open-weights Llama for commercial use\n              : Meta's commitment to open-source AI",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#closed-vs.-open-source-vs.-open-weight",
+    "href": "src/01/exploring_genai.html#closed-vs.-open-source-vs.-open-weight",
+    "title": "Exploring Generative AI Models",
+    "section": "Closed vs. Open Source vs. Open Weight",
+    "text": "Closed vs. Open Source vs. Open Weight\n\nTBD",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis",
+    "href": "src/01/exploring_genai.html#accessing-models-via-apis",
+    "title": "Exploring Generative AI Models",
+    "section": "Accessing Models via APIs",
+    "text": "Accessing Models via APIs\n\nHTTP-based APIs\n\nLLM runs on server (in cloud)\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accesing OpenAI, Claude, other large, closed-source models",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-1",
+    "href": "src/01/exploring_genai.html#accessing-models-via-apis-1",
+    "title": "Exploring Generative AI Models",
+    "section": "Accessing Models via APIs",
+    "text": "Accessing Models via APIs\n\nTBD: Some kind of simple diagram",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-2",
+    "href": "src/01/exploring_genai.html#accessing-models-via-apis-2",
+    "title": "Exploring Generative AI Models",
+    "section": "Accessing Models via APIs",
+    "text": "Accessing Models via APIs\n\nTBD: Talk about the v1 chat completions API here",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-3",
+    "href": "src/01/exploring_genai.html#accessing-models-via-apis-3",
+    "title": "Exploring Generative AI Models",
+    "section": "Accessing Models via APIs",
+    "text": "Accessing Models via APIs\n\nCoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-4",
+    "href": "src/01/exploring_genai.html#accessing-models-via-apis-4",
+    "title": "Exploring Generative AI Models",
+    "section": "Accessing Models via APIs",
+    "text": "Accessing Models via APIs\n\nHow about if you want to access/test different models from different providers?\n\nNeed to setup separate authentication/access tokens for each?",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#introducing-openrouter",
+    "href": "src/01/exploring_genai.html#introducing-openrouter",
+    "title": "Exploring Generative AI Models",
+    "section": "Introducing OpenRouter",
+    "text": "Introducing OpenRouter\n\nOverview of OpenRouter",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#introducing-openrouter-1",
+    "href": "src/01/exploring_genai.html#introducing-openrouter-1",
+    "title": "Exploring Generative AI Models",
+    "section": "Introducing OpenRouter",
+    "text": "Introducing OpenRouter\n\nCoLab DEMO: Calling multiple models through OpenRouter",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
