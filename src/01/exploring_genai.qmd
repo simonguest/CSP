@@ -9,7 +9,7 @@ format:
 logo: ../../src/logos/DigiPen_RGB_Red.png
 ---
 
-## In the Next Hour...
+## Recap of Agents lecture / In the Next Hour...
 
 - TBD - An overview of what students will learn
 
@@ -43,4 +43,75 @@ timeline
 
 ## Completion vs. Instruction-Tuned
 
+- Introducing CoLab - student question on how many have used CoLab before
+- TBD and demo of GPT-2
+
+## A Brief History of Transformer Models
+
+```{mermaid}
+timeline
+    2021 : InstructGPT Development
+          : Built on GPT-3 with RLHF fine-tuning
+          : Trained to follow instructions and understand user intent
+          : Key innovation enabling ChatGPT
+    
+    Jan 2021 : Anthropic Founded
+             : Founded by Dario & Daniela Amodei with ~7 senior OpenAI employees
+            : Dario led GPT-2/3 development and co-invented RLHF
+
+    Nov 2022 : ChatGPT Launch
+                  : Built on GPT-3.5 using RLHF
+                  : 1M+ users in 5 days
+                  : Demonstrated AI to mainstream audiences
+                  : Sparked widespread interest in generative AI
+
+    Feb 2023 : Llama 1 Released
+                  : Meta's LLaMA (7B, 13B, 33B, 65B parameters)
+                  : 13B model exceeded GPT-3 (175B) on most benchmarks
+                  : Limited researcher access
+                  : Text completion only (Alpaca fine-tune added instructions)
+
+    Jul 2023 : Llama 2 Released
+              : Available in 7B, 13B, 70B sizes
+              : Trained on 40% more data than Llama 1
+              : First open-weights Llama for commercial use
+              : Meta's commitment to open-source AI
+```
+
+## Closed vs. Open Source vs. Open Weight
+
 - TBD
+
+## Accessing Models via APIs
+
+- HTTP-based APIs
+  - LLM runs on server (in cloud)
+  - Client makes HTTP API calls to invoke/access the model
+  - (Normally use an SDK to wrap the HTTP API calls)
+  - Client passes Authorization token as part of the call
+  - Default way of accesing OpenAI, Claude, other large, closed-source models
+
+## Accessing Models via APIs
+
+- TBD: Some kind of simple diagram
+
+## Accessing Models via APIs
+
+- TBD: Talk about the v1 chat completions API here
+
+## Accessing Models via APIs
+
+- CoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format
+
+## Accessing Models via APIs
+
+- How about if you want to access/test different models from different providers?
+  - Need to setup separate authentication/access tokens for each?
+
+## Introducing OpenRouter
+
+- Overview of OpenRouter
+
+## Introducing OpenRouter
+
+- CoLab DEMO: Calling multiple models through OpenRouter
