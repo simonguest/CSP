@@ -12,6 +12,7 @@ logo: ../../src/logos/DigiPen_RGB_Red.png
 ## Recap of Agents lecture / In the Next Hour...
 
 - TBD - An overview of what students will learn
+- Very demo heavy!
 
 # A Brief History of Transformer Models
 
@@ -81,6 +82,7 @@ timeline
 ## Closed vs. Open Source vs. Open Weight
 
 - TBD
+- Should also include OpenAI's oss releases
 
 ## Accessing Models via APIs
 
@@ -98,6 +100,7 @@ timeline
 ## Accessing Models via APIs
 
 - TBD: Talk about the v1 chat completions API here
+- And the differences between the responses API maybe?
 
 ## Accessing Models via APIs
 
@@ -115,3 +118,253 @@ timeline
 ## Introducing OpenRouter
 
 - CoLab DEMO: Calling multiple models through OpenRouter
+
+## Downloading and Running Models
+
+- So far, we've seen how to call APIs
+- How about downloading and running models on our own hardware?
+- (Obviously they need to be open-weight models)
+
+## Downloading and Running Models
+
+Why would you want to do this?
+
+- Offline access to models (no Internet required)
+- Potential cost savings (if many API calls and already own hardware)
+  - e.g., running a small model within a game on a Gaming PC
+- Want to fine-tune your own model and have the hardware to do it
+- Don't want others to see what types of conversations you are having :)
+
+## Introducing Hugging Face
+
+- TBD Hugging Face
+
+## Exploring Models on Hugging Face
+
+- Model card and model tree
+- Files and versions (safetensors vs. pickle)
+- Model size, Tensor type
+- Chat template
+- Using this model drop down / code / colab
+
+## Hugging Face Transformers
+
+- TBD: What is/history of HFT library
+
+## Hugging Face Transformers
+
+- DEMO: Using Hugging Face Transformers to run the gemma-3-1b-it model
+
+## VRAM Envy
+
+One challenge of running moels on your own hardware is VRAM availability
+
+- Roughly speaking, the size of the model will determine how much VRAM you need
+- Gemma 3 Open Weight models
+  - gemma-3-1b-it = 2Gb
+  - gemma-3-4b-it = 8.6Gb
+  - gemma-3-12b-it = 23.37Gb
+- Colab Tiers
+  - Colab Free T4 = 16Gb VRAM (15Gb usable)
+  - Colab Pro V100 = 16Gb VRAM
+  - Colab Pro A100 = 40Gb VRAM 
+- Your Hardware
+  - Probably 8Gb VRAM :)
+
+## VRAM Envy
+
+You could run smaller models, but they are less accurate / more prone to hallucination.
+
+- How do we fix this?
+
+## Quantization
+
+- TBD: Slide overview of quantization / very useful in offline scenarios such as running models on phones
+- GGUF and MLX formats
+- Include details on llama.cpp and a slide on history of this
+
+## Quantization
+
+DEMO: Running Gemma 3 12B GGUF on my laptop in LMStudio
+
+https://huggingface.co/google/gemma-3-12b-it-qat-q4_0-gguf - 16.87Gb
+
+# Going Beyond Text
+
+## Going Beyond Text
+
+Up to now, we've concentrated on NLP (text generation) models. Other categories emerging for generative models:
+
+- Image Models
+  - Generation
+  - Vision Transformers
+- Multimodal Models
+- Audio Models
+- RL Models
+
+For the rest of this presentation, introduction into image models
+
+## Images Models - Generation
+
+Text-to-Image: "A photograph of an astronaut riding a horse."
+
+- Based on a concept called a diffuser
+- Two stage process, inspired by thermodynamics
+- Training
+  - During training, random noise is adding to images in steps
+  - Model learns to predict what noise what added (forward diffusion process)
+- Inference
+  - To generate new images, the process runs in reverse
+  - Start with pure random noise (known as a seed)
+  - Model estimates what noise should be removed to create a realistic image
+  - Using the text prompt, the model steers the process towards images that match the description
+
+TBD: sources (don't forget sources throughout)
+
+2015 - Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al.)
+2019 - Generative Modeling by Estimating Gradients of the Data Distribution (Song & Ermon)
+2020 - Denoising Diffusion Probabilistic Models (DDPM) (Ho et al., UC Berkeley)
+
+## Image Diffusion Models in 2022
+
+```{mermaid}
+timeline
+  August 2022 : Stable Diffusion v1.4
+              : First open-source high-quality model
+  September 2022 : Stable Diffusion v1.5
+                  : Refined version
+  October 2022 : eDiff-I (NVIDIA)
+                : Ensemble approach
+  November 2022 : Stable Diffusion v2.0/2.1
+                : Higher resolution (768x768)
+```
+
+## Image Diffusion Models in 2023
+
+```{mermaid}
+timeline
+  March 2023 : Midjourney v5
+              : Exceptional artistic quality
+  April 2023 : ControlNet
+        : Precise spatial control
+        : AnimateDiff - Video generation
+  July 2023 : SDXL (Stable Diffusion XL)
+            : 1024x1024 native resolution
+  August 2023 : SDXL Turbo
+              : Real-time capable generation
+```
+
+## Image Diffusion Models in 2024
+
+```{mermaid}
+timeline
+  February 2024 : Sora (OpenAI)
+                : Text-to-video up to 60 seconds
+                : Stable Diffusion 3
+                : Improved text understanding
+  June 2024 : Stable Diffusion 3.5
+            : Multiple model sizes
+  2024 : FLUX.1 (Black Forest Labs)
+        : State-of-the-art open model
+        : Imagen 3 (Google DeepMind)
+        : Photorealistic quality
+```
+
+## Image Models - Generation
+
+TBD: Insert image from Diffusion Process notebook
+
+## Image Models - Generation
+
+Image-to-Image: "Make this image different"
+
+- Originally solved by GAN approaches, but evolved into extension of the diffusion concept
+  - Add noise to the original image (partial denoising)
+  - Regenerate it with modifications based on the prompt
+  - The original image heavily influences the output structure
+
+## Image Models - Image-to-Image example
+
+Stable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The "strength" parameter controls how much the original image influences the result.
+
+TBD: Link to Colab Demo
+
+## ControlNet
+
+Text-to-Image and Image-to-Image are interesting, but you don't really have that much control.
+
+There are a lot of fine-tuning techniques, but it's expensive and risk degrading quality.
+
+ControlNet was developed by Lvmin Zhang and Maneesh Agrawala at Stanford University, published in February 2023 in the paper "Adding Conditional Control to Text-to-Image Diffusion Models." 
+
+ControlNet represented a paradigm shift from "describe what you want" to "show the structure you want."
+
+## How ControlNet Works
+
+- Stable Diffusion's U-Net has an encoder and decoder
+- Create a trainable copy of the encoder blocks
+- Train the copy of the encoder alongside the frozen SD model
+  - During training: use paired data (e.g., pose skeleton → original image)
+  - During inference: both encoders run together - original processes noisy latent, copy processes control input
+  - Features from both are combined via zero convolutions
+- Key: The weights in the original SD model doesn't change
+- Analogous to ControlNet being a "Plug in" model
+
+## ControlNet
+
+Demo: ControlNet with human pose detection
+
+## ControlNet
+
+Exmaples of conditioning types
+
+- Canny edges - line drawings and edge detection
+- Depth maps - 3D structure information
+- Normal maps - surface orientation
+- Human pose (OpenPose) - skeleton/keypoint detection
+- Semantic segmentation - labeled regions
+- Scribbles - rough user drawings
+- HED boundaries - soft edge detection
+
+## ControlNet-Based Methods
+
+- Advanced Editing Techniques
+  - Scribble to image / QR code to image
+  - Inpainting (better at large variations vs. other inpainting techniques).
+  - Image Alteration - e.g., Weather and Environmental Enhancement
+- Structural and Geometric Transformation
+  - Pose Estimation
+  - Normal Map Generation
+  - Sematic Segmentation
+- Neural Style Transfer
+  - Ghibli images, anyone?
+
+## Tools for Exploring Image Models
+
+There are lots of image models that we didn't cover.
+
+- Replicate
+- ComfyUI
+- WeavyUI
+
+## Image Models - Vision Transformers
+
+How about the other way?
+
+- Classic models are typically supervised classification tasks
+  - Is this a cat?
+  - End up taking lots of pictures of cats, human annotation, etc.
+- Introducing the Vision Transformer (ViT)
+  - "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+  - More on this in the next lecture!
+
+## Resources
+
+TBD
+
+## Q&A
+
+
+
+
+
