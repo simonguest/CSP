@@ -139,6 +139,7 @@
 <h2>Recap of Agents lecture / In the Next Hour…</h2>
 <ul>
 <li class="fragment">TBD - An overview of what students will learn</li>
+<li class="fragment">Very demo heavy!</li>
 </ul>
 </section>
 <section>
@@ -233,6 +234,7 @@
 <h2>Closed vs.&nbsp;Open Source vs.&nbsp;Open Weight</h2>
 <ul>
 <li class="fragment">TBD</li>
+<li class="fragment">Should also include OpenAI’s oss releases</li>
 </ul>
 </section>
 <section id="accessing-models-via-apis" class="slide level2">
@@ -258,6 +260,7 @@
 <h2>Accessing Models via APIs</h2>
 <ul>
 <li class="fragment">TBD: Talk about the v1 chat completions API here</li>
+<li class="fragment">And the differences between the responses API maybe?</li>
 </ul>
 </section>
 <section id="accessing-models-via-apis-3" class="slide level2">
@@ -286,6 +289,325 @@
 <ul>
 <li class="fragment">CoLab DEMO: Calling multiple models through OpenRouter</li>
 </ul>
+</section>
+<section id="downloading-and-running-models" class="slide level2">
+<h2>Downloading and Running Models</h2>
+<ul>
+<li class="fragment">So far, we’ve seen how to call APIs</li>
+<li class="fragment">How about downloading and running models on our own hardware?</li>
+<li class="fragment">(Obviously they need to be open-weight models)</li>
+</ul>
+</section>
+<section id="downloading-and-running-models-1" class="slide level2">
+<h2>Downloading and Running Models</h2>
+<p>Why would you want to do this?</p>
+<ul>
+<li class="fragment">Offline access to models (no Internet required)</li>
+<li class="fragment">Potential cost savings (if many API calls and already own hardware)
+<ul>
+<li class="fragment">e.g., running a small model within a game on a Gaming PC</li>
+</ul></li>
+<li class="fragment">Want to fine-tune your own model and have the hardware to do it</li>
+<li class="fragment">Don’t want others to see what types of conversations you are having :)</li>
+</ul>
+</section>
+<section id="introducing-hugging-face" class="slide level2">
+<h2>Introducing Hugging Face</h2>
+<ul>
+<li class="fragment">TBD Hugging Face</li>
+</ul>
+</section>
+<section id="exploring-models-on-hugging-face" class="slide level2">
+<h2>Exploring Models on Hugging Face</h2>
+<ul>
+<li class="fragment">Model card and model tree</li>
+<li class="fragment">Files and versions (safetensors vs.&nbsp;pickle)</li>
+<li class="fragment">Model size, Tensor type</li>
+<li class="fragment">Chat template</li>
+<li class="fragment">Using this model drop down / code / colab</li>
+</ul>
+</section>
+<section id="hugging-face-transformers" class="slide level2">
+<h2>Hugging Face Transformers</h2>
+<ul>
+<li class="fragment">TBD: What is/history of HFT library</li>
+</ul>
+</section>
+<section id="hugging-face-transformers-1" class="slide level2">
+<h2>Hugging Face Transformers</h2>
+<ul>
+<li class="fragment">DEMO: Using Hugging Face Transformers to run the gemma-3-1b-it model</li>
+</ul>
+</section>
+<section id="vram-envy" class="slide level2">
+<h2>VRAM Envy</h2>
+<p>One challenge of running moels on your own hardware is VRAM availability</p>
+<ul>
+<li class="fragment">Roughly speaking, the size of the model will determine how much VRAM you need</li>
+<li class="fragment">Gemma 3 Open Weight models
+<ul>
+<li class="fragment">gemma-3-1b-it = 2Gb</li>
+<li class="fragment">gemma-3-4b-it = 8.6Gb</li>
+<li class="fragment">gemma-3-12b-it = 23.37Gb</li>
+</ul></li>
+<li class="fragment">Colab Tiers
+<ul>
+<li class="fragment">Colab Free T4 = 16Gb VRAM (15Gb usable)</li>
+<li class="fragment">Colab Pro V100 = 16Gb VRAM</li>
+<li class="fragment">Colab Pro A100 = 40Gb VRAM</li>
+</ul></li>
+<li class="fragment">Your Hardware
+<ul>
+<li class="fragment">Probably 8Gb VRAM :)</li>
+</ul></li>
+</ul>
+</section>
+<section id="vram-envy-1" class="slide level2">
+<h2>VRAM Envy</h2>
+<p>You could run smaller models, but they are less accurate / more prone to hallucination.</p>
+<ul>
+<li class="fragment">How do we fix this?</li>
+</ul>
+</section>
+<section id="quantization" class="slide level2">
+<h2>Quantization</h2>
+<ul>
+<li class="fragment">TBD: Slide overview of quantization / very useful in offline scenarios such as running models on phones</li>
+<li class="fragment">GGUF and MLX formats</li>
+<li class="fragment">Include details on llama.cpp and a slide on history of this</li>
+</ul>
+</section>
+<section id="quantization-1" class="slide level2">
+<h2>Quantization</h2>
+<p>DEMO: Running Gemma 3 12B GGUF on my laptop in LMStudio</p>
+<p>https://huggingface.co/google/gemma-3-12b-it-qat-q4_0-gguf - 16.87Gb</p>
+</section></section>
+<section>
+<section id="going-beyond-text" class="title-slide slide level1 center">
+<h1>Going Beyond Text</h1>
+
+</section>
+<section id="going-beyond-text-1" class="slide level2">
+<h2>Going Beyond Text</h2>
+<p>Up to now, we’ve concentrated on NLP (text generation) models. Other categories emerging for generative models:</p>
+<ul>
+<li class="fragment">Image Models
+<ul>
+<li class="fragment">Generation</li>
+<li class="fragment">Vision Transformers</li>
+</ul></li>
+<li class="fragment">Multimodal Models</li>
+<li class="fragment">Audio Models</li>
+<li class="fragment">RL Models</li>
+</ul>
+<p>For the rest of this presentation, introduction into image models</p>
+</section>
+<section id="images-models---generation" class="slide level2">
+<h2>Images Models - Generation</h2>
+<p>Text-to-Image: “A photograph of an astronaut riding a horse.”</p>
+<ul>
+<li class="fragment">Based on a concept called a diffuser</li>
+<li class="fragment">Two stage process, inspired by thermodynamics</li>
+<li class="fragment">Training
+<ul>
+<li class="fragment">During training, random noise is adding to images in steps</li>
+<li class="fragment">Model learns to predict what noise what added (forward diffusion process)</li>
+</ul></li>
+<li class="fragment">Inference
+<ul>
+<li class="fragment">To generate new images, the process runs in reverse</li>
+<li class="fragment">Start with pure random noise (known as a seed)</li>
+<li class="fragment">Model estimates what noise should be removed to create a realistic image</li>
+<li class="fragment">Using the text prompt, the model steers the process towards images that match the description</li>
+</ul></li>
+</ul>
+<p>TBD: sources (don’t forget sources throughout)</p>
+<p>2015 - Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al.) 2019 - Generative Modeling by Estimating Gradients of the Data Distribution (Song &amp; Ermon) 2020 - Denoising Diffusion Probabilistic Models (DDPM) (Ho et al., UC Berkeley)</p>
+</section>
+<section id="image-diffusion-models-in-2022" class="slide level2">
+<h2>Image Diffusion Models in 2022</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">timeline
+  August 2022 : Stable Diffusion v1.4
+              : First open-source high-quality model
+  September 2022 : Stable Diffusion v1.5
+                  : Refined version
+  October 2022 : eDiff-I (NVIDIA)
+                : Ensemble approach
+  November 2022 : Stable Diffusion v2.0/2.1
+                : Higher resolution (768x768)
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="image-diffusion-models-in-2023" class="slide level2">
+<h2>Image Diffusion Models in 2023</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">timeline
+  March 2023 : Midjourney v5
+              : Exceptional artistic quality
+  April 2023 : ControlNet
+        : Precise spatial control
+        : AnimateDiff - Video generation
+  July 2023 : SDXL (Stable Diffusion XL)
+            : 1024x1024 native resolution
+  August 2023 : SDXL Turbo
+              : Real-time capable generation
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="image-diffusion-models-in-2024" class="slide level2">
+<h2>Image Diffusion Models in 2024</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">timeline
+  February 2024 : Sora (OpenAI)
+                : Text-to-video up to 60 seconds
+                : Stable Diffusion 3
+                : Improved text understanding
+  June 2024 : Stable Diffusion 3.5
+            : Multiple model sizes
+  2024 : FLUX.1 (Black Forest Labs)
+        : State-of-the-art open model
+        : Imagen 3 (Google DeepMind)
+        : Photorealistic quality
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="image-models---generation" class="slide level2">
+<h2>Image Models - Generation</h2>
+<p>TBD: Insert image from Diffusion Process notebook</p>
+</section>
+<section id="image-models---generation-1" class="slide level2">
+<h2>Image Models - Generation</h2>
+<p>Image-to-Image: “Make this image different”</p>
+<ul>
+<li class="fragment">Originally solved by GAN approaches, but evolved into extension of the diffusion concept
+<ul>
+<li class="fragment">Add noise to the original image (partial denoising)</li>
+<li class="fragment">Regenerate it with modifications based on the prompt</li>
+<li class="fragment">The original image heavily influences the output structure</li>
+</ul></li>
+</ul>
+</section>
+<section id="image-models---image-to-image-example" class="slide level2">
+<h2>Image Models - Image-to-Image example</h2>
+<p>Stable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.</p>
+<p>TBD: Link to Colab Demo</p>
+</section>
+<section id="controlnet" class="slide level2">
+<h2>ControlNet</h2>
+<p>Text-to-Image and Image-to-Image are interesting, but you don’t really have that much control.</p>
+<p>There are a lot of fine-tuning techniques, but it’s expensive and risk degrading quality.</p>
+<p>ControlNet was developed by Lvmin Zhang and Maneesh Agrawala at Stanford University, published in February 2023 in the paper “Adding Conditional Control to Text-to-Image Diffusion Models.”</p>
+<p>ControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”</p>
+</section>
+<section id="how-controlnet-works" class="slide level2">
+<h2>How ControlNet Works</h2>
+<ul>
+<li class="fragment">Stable Diffusion’s U-Net has an encoder and decoder</li>
+<li class="fragment">Create a trainable copy of the encoder blocks</li>
+<li class="fragment">Train the copy of the encoder alongside the frozen SD model
+<ul>
+<li class="fragment">During training: use paired data (e.g., pose skeleton → original image)</li>
+<li class="fragment">During inference: both encoders run together - original processes noisy latent, copy processes control input</li>
+<li class="fragment">Features from both are combined via zero convolutions</li>
+</ul></li>
+<li class="fragment">Key: The weights in the original SD model doesn’t change</li>
+<li class="fragment">Analogous to ControlNet being a “Plug in” model</li>
+</ul>
+</section>
+<section id="controlnet-1" class="slide level2">
+<h2>ControlNet</h2>
+<p>Demo: ControlNet with human pose detection</p>
+</section>
+<section id="controlnet-2" class="slide level2">
+<h2>ControlNet</h2>
+<p>Exmaples of conditioning types</p>
+<ul>
+<li class="fragment">Canny edges - line drawings and edge detection</li>
+<li class="fragment">Depth maps - 3D structure information</li>
+<li class="fragment">Normal maps - surface orientation</li>
+<li class="fragment">Human pose (OpenPose) - skeleton/keypoint detection</li>
+<li class="fragment">Semantic segmentation - labeled regions</li>
+<li class="fragment">Scribbles - rough user drawings</li>
+<li class="fragment">HED boundaries - soft edge detection</li>
+</ul>
+</section>
+<section id="controlnet-based-methods" class="slide level2">
+<h2>ControlNet-Based Methods</h2>
+<ul>
+<li class="fragment">Advanced Editing Techniques
+<ul>
+<li class="fragment">Scribble to image / QR code to image</li>
+<li class="fragment">Inpainting (better at large variations vs.&nbsp;other inpainting techniques).</li>
+<li class="fragment">Image Alteration - e.g., Weather and Environmental Enhancement</li>
+</ul></li>
+<li class="fragment">Structural and Geometric Transformation
+<ul>
+<li class="fragment">Pose Estimation</li>
+<li class="fragment">Normal Map Generation</li>
+<li class="fragment">Sematic Segmentation</li>
+</ul></li>
+<li class="fragment">Neural Style Transfer
+<ul>
+<li class="fragment">Ghibli images, anyone?</li>
+</ul></li>
+</ul>
+</section>
+<section id="tools-for-exploring-image-models" class="slide level2">
+<h2>Tools for Exploring Image Models</h2>
+<p>There are lots of image models that we didn’t cover.</p>
+<ul>
+<li class="fragment">Replicate</li>
+<li class="fragment">ComfyUI</li>
+<li class="fragment">WeavyUI</li>
+</ul>
+</section>
+<section id="image-models---vision-transformers" class="slide level2">
+<h2>Image Models - Vision Transformers</h2>
+<p>How about the other way?</p>
+<ul>
+<li class="fragment">Classic models are typically supervised classification tasks
+<ul>
+<li class="fragment">Is this a cat?</li>
+<li class="fragment">End up taking lots of pictures of cats, human annotation, etc.</li>
+</ul></li>
+<li class="fragment">Introducing the Vision Transformer (ViT)
+<ul>
+<li class="fragment">“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”</li>
+<li class="fragment">More on this in the next lecture!</li>
+</ul></li>
+</ul>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<p>TBD</p>
+</section>
+<section id="qa" class="slide level2">
+<h2>Q&amp;A</h2>
 
 
 </section></section>
