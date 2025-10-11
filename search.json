@@ -636,11 +636,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#recap-of-agents-lecture-in-the-next-hour",
-    "href": "src/01/exploring_genai.html#recap-of-agents-lecture-in-the-next-hour",
+    "objectID": "src/01/exploring_genai.html#recap",
+    "href": "src/01/exploring_genai.html#recap",
     "title": "Exploring Generative AI Models",
-    "section": "Recap of Agents lecture / In the Next Hour…",
-    "text": "Recap of Agents lecture / In the Next Hour…\n\nTBD - An overview of what students will learn\nVery demo heavy!",
+    "section": "Recap",
+    "text": "Recap\n\nLast Week’s Lecture\n\nIntroduced AI Agents, their uses, how to create\nAbout 50% had used some kind of API\nOne or two beyond this\n\nThis Week\n\nExplore text and image-based models\nModel evolution, API access, running locally\nDemos!",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -662,7 +662,40 @@
     "href": "src/01/exploring_genai.html#completion-vs.-instruction-tuned",
     "title": "Exploring Generative AI Models",
     "section": "Completion vs. Instruction-Tuned",
-    "text": "Completion vs. Instruction-Tuned\n\nIntroducing CoLab - student question on how many have used CoLab before\nTBD and demo of GPT-2",
+    "text": "Completion vs. Instruction-Tuned\n\nCompletion Model just predicts the next token\n\nInput prompt - Mary had a little\nMax total tokens - 50\nTemperature - 0 - 1.0\ntop_k - consider only the top k tokens in the response\ntop_p - Nucleus sampling (probability cut off - 0 and 1.0)\n\nOutput\n\nMary had a little lamb, its fleece was white as snow... (up to max tokens)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#completion-vs.-instruction-tuned-1",
+    "href": "src/01/exploring_genai.html#completion-vs.-instruction-tuned-1",
+    "title": "Exploring Generative AI Models",
+    "section": "Completion vs. Instruction-Tuned",
+    "text": "Completion vs. Instruction-Tuned\n\nYou can’t really converse with it\nWhat is the capital of France? (max tokens = 50)\nWhat is the capital of France? Paris. What is the capital of Spain? Madrid. What is the capital of",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#introducing-google-colab",
+    "href": "src/01/exploring_genai.html#introducing-google-colab",
+    "title": "Exploring Generative AI Models",
+    "section": "Introducing Google Colab",
+    "text": "Introducing Google Colab\n\nSource: https://colab.research.google.com/signup",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#instruction-tuned-models",
+    "href": "src/01/exploring_genai.html#instruction-tuned-models",
+    "title": "Exploring Generative AI Models",
+    "section": "Instruction-Tuned Models",
+    "text": "Instruction-Tuned Models\n\nSupervised Fine-Tuning\n\nLarge datasets of questions/answers, tasks/completions, demonstrating helpful assistant behavior\n\nRLHF (Reinforcement Learning from Human Feedback)\n\nHuman raters rank different model responses, training a reward model\n\nChat Templates\n\nStructured formats to distinguish speakers in a dialog: Typically system, user, and assistant",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -673,18 +706,18 @@
     "href": "src/01/exploring_genai.html#a-brief-history-of-transformer-models-2",
     "title": "Exploring Generative AI Models",
     "section": "A Brief History of Transformer Models",
-    "text": "A Brief History of Transformer Models\n\n\n\n\n\ntimeline\n    2021 : InstructGPT Development\n          : Built on GPT-3 with RLHF fine-tuning\n          : Trained to follow instructions and understand user intent\n          : Key innovation enabling ChatGPT\n    \n    Jan 2021 : Anthropic Founded\n             : Founded by Dario & Daniela Amodei with ~7 senior OpenAI employees\n            : Dario led GPT-2/3 development and co-invented RLHF\n\n    Nov 2022 : ChatGPT Launch\n                  : Built on GPT-3.5 using RLHF\n                  : 1M+ users in 5 days\n                  : Demonstrated AI to mainstream audiences\n                  : Sparked widespread interest in generative AI\n\n    Feb 2023 : Llama 1 Released\n                  : Meta's LLaMA (7B, 13B, 33B, 65B parameters)\n                  : 13B model exceeded GPT-3 (175B) on most benchmarks\n                  : Limited researcher access\n                  : Text completion only (Alpaca fine-tune added instructions)\n\n    Jul 2023 : Llama 2 Released\n              : Available in 7B, 13B, 70B sizes\n              : Trained on 40% more data than Llama 1\n              : First open-weights Llama for commercial use\n              : Meta's commitment to open-source AI",
+    "text": "A Brief History of Transformer Models\n\n\n\n\n\ntimeline\n    2021 : InstructGPT Development\n          : Built on GPT-3 with RLHF fine-tuning\n          : Trained to follow instructions and understand user intent\n          : Key innovation enabling ChatGPT\n    \n    Jan 2021 : Anthropic Founded\n             : Founded by Dario & Daniela Amodei with ~7 senior OpenAI employees\n            : Dario led GPT-2/3 development and co-invented RLHF\n\n    Nov 2022 : ChatGPT Launch\n                  : Built on GPT-3.5 using RLHF\n                  : 1M+ users in 5 days\n                  : Sparked widespread interest in generative AI\n\n    Feb 2023 : Llama 1 Released\n                  : Meta's LLaMA (7B, 13B, 33B, 65B parameters)\n                  : 13B model exceeded GPT-3 (175B) on most benchmarks\n                  : Limited researcher access\n                  : Text completion only (Alpaca fine-tune added instructions)\n\n    Jul 2023 : Llama 2 Released\n              : Available in 7B, 13B, 70B sizes\n              : Trained on 40% more data than Llama 1\n              : First open-weights Llama for commercial use",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#closed-vs.-open-source-vs.-open-weight",
-    "href": "src/01/exploring_genai.html#closed-vs.-open-source-vs.-open-weight",
+    "objectID": "src/01/exploring_genai.html#closed-vs.-open-models",
+    "href": "src/01/exploring_genai.html#closed-vs.-open-models",
     "title": "Exploring Generative AI Models",
-    "section": "Closed vs. Open Source vs. Open Weight",
-    "text": "Closed vs. Open Source vs. Open Weight\n\nTBD\nShould also include OpenAI’s oss releases",
+    "section": "Closed vs. Open Models",
+    "text": "Closed vs. Open Models\n\nClosed Source: Hosted models; no ability to inspect the weights of the models. Accessed via an API (or UI).\n\nExamples: OpenAI GPT-5, Claude Sonnet 4.5\n\nOpen Weight: Model files with pretrained weights, but no training data. Host on your own hardware.\n\nExamples: Meta’s Llama (and derivatives), Mistral\n\nOpen Source Models: Models with access to the training data set. Create from scratch.\n\nExamples: OLMo from AI2",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -695,7 +728,7 @@
     "href": "src/01/exploring_genai.html#accessing-models-via-apis",
     "title": "Exploring Generative AI Models",
     "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nHTTP-based APIs\n\nLLM runs on server (in cloud)\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accesing OpenAI, Claude, other large, closed-source models",
+    "text": "Accessing Models via APIs\n\nHTTP-based APIs\n\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accesing OpenAI, Claude, other large, closed-source models",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -706,7 +739,7 @@
     "href": "src/01/exploring_genai.html#accessing-models-via-apis-1",
     "title": "Exploring Generative AI Models",
     "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nTBD: Some kind of simple diagram",
+    "text": "Accessing Models via APIs\n\nCoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -717,29 +750,18 @@
     "href": "src/01/exploring_genai.html#accessing-models-via-apis-2",
     "title": "Exploring Generative AI Models",
     "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nTBD: Talk about the v1 chat completions API here\nAnd the differences between the responses API maybe?",
+    "text": "Accessing Models via APIs",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-3",
-    "href": "src/01/exploring_genai.html#accessing-models-via-apis-3",
+    "objectID": "src/01/exploring_genai.html#openais-chat-completions-api",
+    "href": "src/01/exploring_genai.html#openais-chat-completions-api",
     "title": "Exploring Generative AI Models",
-    "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nCoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-4",
-    "href": "src/01/exploring_genai.html#accessing-models-via-apis-4",
-    "title": "Exploring Generative AI Models",
-    "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nHow about if you want to access/test different models from different providers?\n\nNeed to setup separate authentication/access tokens for each?",
+    "section": "OpenAI’s Chat Completions API",
+    "text": "OpenAI’s Chat Completions API\n\nDebuted in March 2023, together with the ChatGPT API\nStructure\n\nMessages array (system, assistant, user)\nStreaming support (using SSE)\nSimple parameters\nFunction calling (added mid-2023)\n\nWidespread Adoption\n\nLangchain, other SDKs\nAnthropic, Azure, TogetherAI\nLocal hosting: vLLM, LM Studio",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -750,18 +772,18 @@
     "href": "src/01/exploring_genai.html#introducing-openrouter",
     "title": "Exploring Generative AI Models",
     "section": "Introducing OpenRouter",
-    "text": "Introducing OpenRouter\n\nOverview of OpenRouter",
+    "text": "Introducing OpenRouter\nHow about creating a client that consumes different models from multiple providers?\n\nIntroducing OpenRouter (https://openrouter.ai)\n\nA unified API to hundreds of AI models through a single endpoint\nOpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen and many others.\nOpenAI Chat Completions compatible",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#introducing-openrouter-1",
-    "href": "src/01/exploring_genai.html#introducing-openrouter-1",
+    "objectID": "src/01/exploring_genai.html#demo-openrouter",
+    "href": "src/01/exploring_genai.html#demo-openrouter",
     "title": "Exploring Generative AI Models",
-    "section": "Introducing OpenRouter",
-    "text": "Introducing OpenRouter\n\nCoLab DEMO: Calling multiple models through OpenRouter",
+    "section": "Demo: OpenRouter",
+    "text": "Demo: OpenRouter\nOpenRouter.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -772,7 +794,7 @@
     "href": "src/01/exploring_genai.html#downloading-and-running-models",
     "title": "Exploring Generative AI Models",
     "section": "Downloading and Running Models",
-    "text": "Downloading and Running Models\n\nSo far, we’ve seen how to call APIs\nHow about downloading and running models on our own hardware?\n(Obviously they need to be open-weight models)",
+    "text": "Downloading and Running Models\n\nSo far, we’ve called hosted models via APIs\nHow about downloading and running models on your own hardware?\n\n(Obviously they need to be open-weight models)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -783,7 +805,7 @@
     "href": "src/01/exploring_genai.html#downloading-and-running-models-1",
     "title": "Exploring Generative AI Models",
     "section": "Downloading and Running Models",
-    "text": "Downloading and Running Models\nWhy would you want to do this?\n\nOffline access to models (no Internet required)\nPotential cost savings (if many API calls and already own hardware)\n\ne.g., running a small model within a game on a Gaming PC\n\nWant to fine-tune your own model and have the hardware to do it\nDon’t want others to see what types of conversations you are having :)",
+    "text": "Downloading and Running Models\nWhy would you want to do this?\n\nOffline access to models (no Internet required)\nPotential cost savings (if many API calls and already own hardware)\n\ne.g., running a small model embedded within a game\n\nWant to fine-tune your own model and have the hardware to do it\nDon’t want others to see what types of conversations you are having :)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -794,18 +816,29 @@
     "href": "src/01/exploring_genai.html#introducing-hugging-face",
     "title": "Exploring Generative AI Models",
     "section": "Introducing Hugging Face",
-    "text": "Introducing Hugging Face\n\nTBD Hugging Face",
+    "text": "Introducing Hugging Face\n\nSource: https://huggingface.co",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#exploring-models-on-hugging-face",
-    "href": "src/01/exploring_genai.html#exploring-models-on-hugging-face",
+    "objectID": "src/01/exploring_genai.html#what-is-hugging-face",
+    "href": "src/01/exploring_genai.html#what-is-hugging-face",
     "title": "Exploring Generative AI Models",
-    "section": "Exploring Models on Hugging Face",
-    "text": "Exploring Models on Hugging Face\n\nModel card and model tree\nFiles and versions (safetensors vs. pickle)\nModel size, Tensor type\nChat template\nUsing this model drop down / code / colab",
+    "section": "What is Hugging Face?",
+    "text": "What is Hugging Face?\nIt is to AI models what GitHub is to source code\n\nExplore, download models to run on local hardware\nUpload and share your own trained/fine-tuned models and datasets\nCreate “Spaces” - web-based apps for accessing models",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-exploring-a-model-on-hugging-face",
+    "href": "src/01/exploring_genai.html#demo-exploring-a-model-on-hugging-face",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: Exploring a Model on Hugging Face",
+    "text": "Demo: Exploring a Model on Hugging Face\nGoogle’s gemma-3-1b-it on Hugging Face",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -816,7 +849,7 @@
     "href": "src/01/exploring_genai.html#hugging-face-transformers",
     "title": "Exploring Generative AI Models",
     "section": "Hugging Face Transformers",
-    "text": "Hugging Face Transformers\n\nTBD: What is/history of HFT library",
+    "text": "Hugging Face Transformers\n\nSource: https://huggingface.co/docs/transformers",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -827,7 +860,18 @@
     "href": "src/01/exploring_genai.html#hugging-face-transformers-1",
     "title": "Exploring Generative AI Models",
     "section": "Hugging Face Transformers",
-    "text": "Hugging Face Transformers\n\nDEMO: Using Hugging Face Transformers to run the gemma-3-1b-it model",
+    "text": "Hugging Face Transformers\nWhat is the Hugging Face Transformers Library?\n\nOpen-source Python library to provide easy access to using various types of pre-trained transformer models\nBrings together all of the different formats under one interface.\n\nDifferent models, vendors, types, chat templates\nDifferent implementations: PyTorch, TensorFlow, JAX\n\nA few lines of code to download and run the model",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-using-transformers-lib-to-download-and-use-gemma-3-1b",
+    "href": "src/01/exploring_genai.html#demo-using-transformers-lib-to-download-and-use-gemma-3-1b",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: Using Transformers Lib to download and use Gemma 3 1B",
+    "text": "Demo: Using Transformers Lib to download and use Gemma 3 1B\ngemma-3-1b-it via transformers.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -838,7 +882,7 @@
     "href": "src/01/exploring_genai.html#vram-envy",
     "title": "Exploring Generative AI Models",
     "section": "VRAM Envy",
-    "text": "VRAM Envy\nOne challenge of running moels on your own hardware is VRAM availability\n\nRoughly speaking, the size of the model will determine how much VRAM you need\nGemma 3 Open Weight models\n\ngemma-3-1b-it = 2Gb\ngemma-3-4b-it = 8.6Gb\ngemma-3-12b-it = 23.37Gb\n\nColab Tiers\n\nColab Free T4 = 16Gb VRAM (15Gb usable)\nColab Pro V100 = 16Gb VRAM\nColab Pro A100 = 40Gb VRAM\n\nYour Hardware\n\nProbably 8Gb VRAM :)",
+    "text": "VRAM Envy\nOne challenge of running moels on your own hardware is VRAM availability!\n\nRoughly speaking, the size of the model will determine how much VRAM you need\nGemma 3 models\n\ngemma-3-1b-it = 2Gb\ngemma-3-4b-it = 8.6Gb\ngemma-3-12b-it = 23.37Gb\n\nColab Tiers\n\nColab Free T4 = 16Gb VRAM (15Gb usable)\nColab Pro V100 = 16Gb VRAM\nColab Pro A100 = 40Gb VRAM\n\nYour Hardware\n\nProbably 8Gb VRAM :)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -849,7 +893,7 @@
     "href": "src/01/exploring_genai.html#vram-envy-1",
     "title": "Exploring Generative AI Models",
     "section": "VRAM Envy",
-    "text": "VRAM Envy\nYou could run smaller models, but they are less accurate / more prone to hallucination.\n\nHow do we fix this?",
+    "text": "VRAM Envy\nYou can select smaller models, but they are less accurate / more prone to hallucination.\n\nHow do we fix this?\n\nQuantization",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -860,18 +904,29 @@
     "href": "src/01/exploring_genai.html#quantization",
     "title": "Exploring Generative AI Models",
     "section": "Quantization",
-    "text": "Quantization\n\nTBD: Slide overview of quantization / very useful in offline scenarios such as running models on phones\nGGUF and MLX formats\nInclude details on llama.cpp and a slide on history of this",
+    "text": "Quantization\nProcess of reducing the precision of a model’s weights and activations. For example, 16-bit numbers to 4-bit.\n\nParameter count matters more than precision\n\nA 70B parameter model at 4-bit often beats a 13B model at b16\nThe models knowledge remains largely intact\nOften the extra precision doesn’t meaningfully improve outputs",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#quantization-1",
-    "href": "src/01/exploring_genai.html#quantization-1",
+    "objectID": "src/01/exploring_genai.html#quantization-formats",
+    "href": "src/01/exploring_genai.html#quantization-formats",
     "title": "Exploring Generative AI Models",
-    "section": "Quantization",
-    "text": "Quantization\nDEMO: Running Gemma 3 12B GGUF on my laptop in LMStudio\nhttps://huggingface.co/google/gemma-3-12b-it-qat-q4_0-gguf - 16.87Gb",
+    "section": "Quantization Formats",
+    "text": "Quantization Formats\nThe llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization\n\nGGUF (GPT-Generated Unifed Format)\n\nSingle file architecture\nModel format supporting multiple quantization levels (2-bit through 8-bit)\n\nMLX (Apple’s ML framework and format for Apple Silicon)\n\nDebuted in late 2023\nSupports 4 and 8 bit quantization schemes\n\nTools built upon llama.cpp\n\nOllama, LM Studio, koboldcpp",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-running-gemma-3-27b-gguf-on-my-laptop",
+    "href": "src/01/exploring_genai.html#demo-running-gemma-3-27b-gguf-on-my-laptop",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: Running Gemma 3 27B GGUF on my laptop",
+    "text": "Demo: Running Gemma 3 27B GGUF on my laptop\n\nLMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf\n55Gb at b16, 16Gb quantized",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"

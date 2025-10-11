@@ -135,11 +135,21 @@
 </div>
 
 </section>
-<section id="recap-of-agents-lecture-in-the-next-hour" class="slide level2">
-<h2>Recap of Agents lecture / In the Next Hour…</h2>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
 <ul>
-<li class="fragment">TBD - An overview of what students will learn</li>
-<li class="fragment">Very demo heavy!</li>
+<li class="fragment">Last Week’s Lecture
+<ul>
+<li class="fragment">Introduced AI Agents, their uses, how to create</li>
+<li class="fragment">About 50% had used some kind of API</li>
+<li class="fragment">One or two beyond this</li>
+</ul></li>
+<li class="fragment">This Week
+<ul>
+<li class="fragment">Explore text and image-based models</li>
+<li class="fragment">Model evolution, API access, running locally</li>
+<li class="fragment">Demos!</li>
+</ul></li>
 </ul>
 </section>
 <section>
@@ -185,8 +195,52 @@
 <section id="completion-vs.-instruction-tuned" class="slide level2">
 <h2>Completion vs.&nbsp;Instruction-Tuned</h2>
 <ul>
-<li class="fragment">Introducing CoLab - student question on how many have used CoLab before</li>
-<li class="fragment">TBD and demo of GPT-2</li>
+<li class="fragment">Completion Model just predicts the next token
+<ul>
+<li class="fragment">Input prompt - <code>Mary had a little</code></li>
+<li class="fragment">Max total tokens - <code>50</code></li>
+<li class="fragment">Temperature - <code>0 - 1.0</code></li>
+<li class="fragment">top_k - consider only the top k tokens in the response</li>
+<li class="fragment">top_p - Nucleus sampling (probability cut off - 0 and 1.0)</li>
+</ul></li>
+<li class="fragment">Output
+<ul>
+<li class="fragment"><code>Mary had a little lamb, its fleece was white as snow...</code> (up to max tokens)</li>
+</ul></li>
+</ul>
+</section>
+<section id="completion-vs.-instruction-tuned-1" class="slide level2">
+<h2>Completion vs.&nbsp;Instruction-Tuned</h2>
+<ul>
+<li class="fragment">You can’t really converse with it</li>
+<li class="fragment"><code>What is the capital of France?</code> (max tokens = 50)</li>
+<li class="fragment"><code>What is the capital of France? Paris. What is the capital of Spain? Madrid. What is the capital of</code></li>
+</ul>
+</section>
+<section id="introducing-google-colab" class="slide level2">
+<h2>Introducing Google Colab</h2>
+
+<img data-src="./images/colab-signup.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://colab.research.google.com/signup</p></section></section>
+<section>
+<section id="demo-gpt-2" class="title-slide slide level1 center">
+<h1>Demo: GPT-2</h1>
+<p><a href="https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing" class="external" target="_blank">GPT-2.ipynb</a></p>
+</section>
+<section id="instruction-tuned-models" class="slide level2">
+<h2>Instruction-Tuned Models</h2>
+<ul>
+<li class="fragment">Supervised Fine-Tuning
+<ul>
+<li class="fragment">Large datasets of questions/answers, tasks/completions, demonstrating helpful assistant behavior</li>
+</ul></li>
+<li class="fragment">RLHF (Reinforcement Learning from Human Feedback)
+<ul>
+<li class="fragment">Human raters rank different model responses, training a reward model</li>
+</ul></li>
+<li class="fragment">Chat Templates
+<ul>
+<li class="fragment">Structured formats to distinguish speakers in a dialog: Typically system, user, and assistant</li>
+</ul></li>
 </ul>
 </section>
 <section id="a-brief-history-of-transformer-models-2" class="slide level2">
@@ -209,7 +263,6 @@
     Nov 2022 : ChatGPT Launch
                   : Built on GPT-3.5 using RLHF
                   : 1M+ users in 5 days
-                  : Demonstrated AI to mainstream audiences
                   : Sparked widespread interest in generative AI
 
     Feb 2023 : Llama 1 Released
@@ -222,7 +275,6 @@
               : Available in 7B, 13B, 70B sizes
               : Trained on 40% more data than Llama 1
               : First open-weights Llama for commercial use
-              : Meta's commitment to open-source AI
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -230,11 +282,21 @@
 </div>
 </div>
 </section>
-<section id="closed-vs.-open-source-vs.-open-weight" class="slide level2">
-<h2>Closed vs.&nbsp;Open Source vs.&nbsp;Open Weight</h2>
+<section id="closed-vs.-open-models" class="slide level2">
+<h2>Closed vs.&nbsp;Open Models</h2>
 <ul>
-<li class="fragment">TBD</li>
-<li class="fragment">Should also include OpenAI’s oss releases</li>
+<li class="fragment"><strong>Closed Source:</strong> Hosted models; no ability to inspect the weights of the models. Accessed via an API (or UI).
+<ul>
+<li class="fragment">Examples: OpenAI GPT-5, Claude Sonnet 4.5</li>
+</ul></li>
+<li class="fragment"><strong>Open Weight:</strong> Model files with pretrained weights, but no training data. Host on your own hardware.
+<ul>
+<li class="fragment">Examples: Meta’s Llama (and derivatives), Mistral</li>
+</ul></li>
+<li class="fragment"><strong>Open Source Models:</strong> Models with access to the training data set. Create from scratch.
+<ul>
+<li class="fragment">Examples: OLMo from AI2</li>
+</ul></li>
 </ul>
 </section>
 <section id="accessing-models-via-apis" class="slide level2">
@@ -242,7 +304,6 @@
 <ul>
 <li class="fragment">HTTP-based APIs
 <ul>
-<li class="fragment">LLM runs on server (in cloud)</li>
 <li class="fragment">Client makes HTTP API calls to invoke/access the model</li>
 <li class="fragment">(Normally use an SDK to wrap the HTTP API calls)</li>
 <li class="fragment">Client passes Authorization token as part of the call</li>
@@ -253,49 +314,66 @@
 <section id="accessing-models-via-apis-1" class="slide level2">
 <h2>Accessing Models via APIs</h2>
 <ul>
-<li class="fragment">TBD: Some kind of simple diagram</li>
+<li class="fragment">CoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format</li>
 </ul>
 </section>
 <section id="accessing-models-via-apis-2" class="slide level2">
 <h2>Accessing Models via APIs</h2>
-<ul>
-<li class="fragment">TBD: Talk about the v1 chat completions API here</li>
-<li class="fragment">And the differences between the responses API maybe?</li>
-</ul>
 </section>
-<section id="accessing-models-via-apis-3" class="slide level2">
-<h2>Accessing Models via APIs</h2>
+<section class="slide level2">
+
 <ul>
-<li class="fragment">CoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format</li>
+<li class="fragment">TBD: Some kind of simple diagram</li>
 </ul>
+</section></section>
+<section>
+<section id="demo-openai-sdkapi-call" class="title-slide slide level1 center">
+<h1>Demo: OpenAI SDK/API call</h1>
+<p><a href="https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing" class="external" target="_blank">OpenAI.ipynb</a></p>
 </section>
-<section id="accessing-models-via-apis-4" class="slide level2">
-<h2>Accessing Models via APIs</h2>
+<section id="openais-chat-completions-api" class="slide level2">
+<h2>OpenAI’s Chat Completions API</h2>
 <ul>
-<li class="fragment">How about if you want to access/test different models from different providers?
+<li class="fragment">Debuted in March 2023, together with the ChatGPT API</li>
+<li class="fragment">Structure
 <ul>
-<li class="fragment">Need to setup separate authentication/access tokens for each?</li>
+<li class="fragment">Messages array (system, assistant, user)</li>
+<li class="fragment">Streaming support (using SSE)</li>
+<li class="fragment">Simple parameters</li>
+<li class="fragment">Function calling (added mid-2023)</li>
+</ul></li>
+<li class="fragment">Widespread Adoption
+<ul>
+<li class="fragment">Langchain, other SDKs</li>
+<li class="fragment">Anthropic, Azure, TogetherAI</li>
+<li class="fragment">Local hosting: vLLM, LM Studio</li>
 </ul></li>
 </ul>
 </section>
 <section id="introducing-openrouter" class="slide level2">
 <h2>Introducing OpenRouter</h2>
+<p>How about creating a client that consumes different models from multiple providers?</p>
 <ul>
-<li class="fragment">Overview of OpenRouter</li>
+<li class="fragment">Introducing OpenRouter (https://openrouter.ai)
+<ul>
+<li class="fragment">A unified API to hundreds of AI models through a single endpoint</li>
+<li class="fragment">OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen and many others.</li>
+<li class="fragment">OpenAI Chat Completions compatible</li>
+</ul></li>
 </ul>
 </section>
-<section id="introducing-openrouter-1" class="slide level2">
-<h2>Introducing OpenRouter</h2>
-<ul>
-<li class="fragment">CoLab DEMO: Calling multiple models through OpenRouter</li>
-</ul>
+<section id="demo-openrouter" class="slide level2">
+<h2>Demo: OpenRouter</h2>
+<p><a href="https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing" class="external" target="_blank">OpenRouter.ipynb</a></p>
 </section>
 <section id="downloading-and-running-models" class="slide level2">
 <h2>Downloading and Running Models</h2>
 <ul>
-<li class="fragment">So far, we’ve seen how to call APIs</li>
-<li class="fragment">How about downloading and running models on our own hardware?</li>
+<li class="fragment">So far, we’ve called hosted models via APIs</li>
+<li class="fragment">How about downloading and running models on your own hardware?
+<ul>
 <li class="fragment">(Obviously they need to be open-weight models)</li>
+</ul></li>
 </ul>
 </section>
 <section id="downloading-and-running-models-1" class="slide level2">
@@ -305,7 +383,7 @@
 <li class="fragment">Offline access to models (no Internet required)</li>
 <li class="fragment">Potential cost savings (if many API calls and already own hardware)
 <ul>
-<li class="fragment">e.g., running a small model within a game on a Gaming PC</li>
+<li class="fragment">e.g., running a small model embedded within a game</li>
 </ul></li>
 <li class="fragment">Want to fine-tune your own model and have the hardware to do it</li>
 <li class="fragment">Don’t want others to see what types of conversations you are having :)</li>
@@ -313,38 +391,48 @@
 </section>
 <section id="introducing-hugging-face" class="slide level2">
 <h2>Introducing Hugging Face</h2>
+
+<img data-src="./images/huggingface.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://huggingface.co</p></section>
+<section id="what-is-hugging-face" class="slide level2">
+<h2>What is Hugging Face?</h2>
+<p>It is to AI models what GitHub is to source code</p>
 <ul>
-<li class="fragment">TBD Hugging Face</li>
+<li class="fragment">Explore, download models to run on local hardware</li>
+<li class="fragment">Upload and share your own trained/fine-tuned models and datasets</li>
+<li class="fragment">Create “Spaces” - web-based apps for accessing models</li>
 </ul>
 </section>
-<section id="exploring-models-on-hugging-face" class="slide level2">
-<h2>Exploring Models on Hugging Face</h2>
-<ul>
-<li class="fragment">Model card and model tree</li>
-<li class="fragment">Files and versions (safetensors vs.&nbsp;pickle)</li>
-<li class="fragment">Model size, Tensor type</li>
-<li class="fragment">Chat template</li>
-<li class="fragment">Using this model drop down / code / colab</li>
-</ul>
+<section id="demo-exploring-a-model-on-hugging-face" class="slide level2">
+<h2>Demo: Exploring a Model on Hugging Face</h2>
+<p><a href="https://huggingface.co/google/gemma-3-1b-it" class="external" target="_blank">Google’s gemma-3-1b-it on Hugging Face</a></p>
 </section>
 <section id="hugging-face-transformers" class="slide level2">
 <h2>Hugging Face Transformers</h2>
-<ul>
-<li class="fragment">TBD: What is/history of HFT library</li>
-</ul>
-</section>
+
+<img data-src="./images/transformers.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://huggingface.co/docs/transformers</p></section>
 <section id="hugging-face-transformers-1" class="slide level2">
 <h2>Hugging Face Transformers</h2>
+<p>What is the Hugging Face Transformers Library?</p>
 <ul>
-<li class="fragment">DEMO: Using Hugging Face Transformers to run the gemma-3-1b-it model</li>
+<li class="fragment">Open-source Python library to provide easy access to using various types of pre-trained transformer models</li>
+<li class="fragment">Brings together all of the different formats under one interface.
+<ul>
+<li class="fragment">Different models, vendors, types, chat templates</li>
+<li class="fragment">Different implementations: PyTorch, TensorFlow, JAX</li>
+</ul></li>
+<li class="fragment">A few lines of code to download and run the model</li>
 </ul>
+</section>
+<section id="demo-using-transformers-lib-to-download-and-use-gemma-3-1b" class="slide level2">
+<h2>Demo: Using Transformers Lib to download and use Gemma 3 1B</h2>
+<p><a href="https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing" class="external" target="_blank">gemma-3-1b-it via transformers.ipynb</a></p>
 </section>
 <section id="vram-envy" class="slide level2">
 <h2>VRAM Envy</h2>
-<p>One challenge of running moels on your own hardware is VRAM availability</p>
+<p>One challenge of running moels on your own hardware is VRAM availability!</p>
 <ul>
 <li class="fragment">Roughly speaking, the size of the model will determine how much VRAM you need</li>
-<li class="fragment">Gemma 3 Open Weight models
+<li class="fragment">Gemma 3 models
 <ul>
 <li class="fragment">gemma-3-1b-it = 2Gb</li>
 <li class="fragment">gemma-3-4b-it = 8.6Gb</li>
@@ -364,27 +452,56 @@
 </section>
 <section id="vram-envy-1" class="slide level2">
 <h2>VRAM Envy</h2>
-<p>You could run smaller models, but they are less accurate / more prone to hallucination.</p>
+<p>You can select smaller models, but they are less accurate / more prone to hallucination.</p>
 <ul>
-<li class="fragment">How do we fix this?</li>
+<li class="fragment">How do we fix this?
+<ul>
+<li class="fragment">Quantization</li>
+</ul></li>
 </ul>
 </section>
 <section id="quantization" class="slide level2">
 <h2>Quantization</h2>
+<p>Process of reducing the precision of a model’s weights and activations. For example, 16-bit numbers to 4-bit.</p>
 <ul>
-<li class="fragment">TBD: Slide overview of quantization / very useful in offline scenarios such as running models on phones</li>
-<li class="fragment">GGUF and MLX formats</li>
-<li class="fragment">Include details on llama.cpp and a slide on history of this</li>
+<li class="fragment">Parameter count matters more than precision
+<ul>
+<li class="fragment">A 70B parameter model at 4-bit often beats a 13B model at b16</li>
+<li class="fragment">The models knowledge remains largely intact</li>
+<li class="fragment">Often the extra precision doesn’t meaningfully improve outputs</li>
+</ul></li>
 </ul>
 </section>
-<section id="quantization-1" class="slide level2">
-<h2>Quantization</h2>
-<p>DEMO: Running Gemma 3 12B GGUF on my laptop in LMStudio</p>
-<p>https://huggingface.co/google/gemma-3-12b-it-qat-q4_0-gguf - 16.87Gb</p>
+<section id="quantization-formats" class="slide level2">
+<h2>Quantization Formats</h2>
+<p>The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization</p>
+<ul>
+<li class="fragment">GGUF (GPT-Generated Unifed Format)
+<ul>
+<li class="fragment">Single file architecture</li>
+<li class="fragment">Model format supporting multiple quantization levels (2-bit through 8-bit)</li>
+</ul></li>
+<li class="fragment">MLX (Apple’s ML framework and format for Apple Silicon)
+<ul>
+<li class="fragment">Debuted in late 2023</li>
+<li class="fragment">Supports 4 and 8 bit quantization schemes</li>
+</ul></li>
+<li class="fragment">Tools built upon llama.cpp
+<ul>
+<li class="fragment">Ollama, LM Studio, koboldcpp</li>
+</ul></li>
+</ul>
+</section>
+<section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="slide level2">
+<h2>Demo: Running Gemma 3 27B GGUF on my laptop</h2>
+<ul>
+<li class="fragment">LMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf</li>
+<li class="fragment">55Gb at b16, 16Gb quantized</li>
+</ul>
 </section></section>
 <section>
 <section id="going-beyond-text" class="title-slide slide level1 center">
-<h1>Going Beyond Text</h1>
+<h1>Going Beyond Text ***</h1>
 
 </section>
 <section id="going-beyond-text-1" class="slide level2">
