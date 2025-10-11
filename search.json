@@ -651,7 +651,7 @@
     "href": "src/01/exploring_genai.html#a-brief-history-of-transformer-models-1",
     "title": "Exploring Generative AI Models",
     "section": "A Brief History of Transformer Models",
-    "text": "A Brief History of Transformer Models\n\n\n\n\n\ntimeline\n    June 2017 : Google researchers publish \"Attention is all you need\" paper\n              : Introduces self-attention mechanism and transformer architecture\n              : Eliminates the need for recurrent neural networks in sequence processing\n    \n    June 2018 : OpenAI releases GPT-1\n              : 117M parameters\n              : Demonstrates pre-training on large text corpora followed by fine-tuning works effectively\n    \n    Feb 2019 : OpenAI releases GPT-2\n             : 1.5B parameters\n             : Initially withheld full model due to concerns about misuse\n             : Demonstrates impressive text generation capabilities with minimal fine-tuning\n    \n    May 2020 : OpenAI releases GPT-3\n             : 175B parameters\n             : Demonstrates strong few-shot learning capabilities\n             : Marks a significant leap in model capabilities and scale\n    \n    June 2020 : GPT-3 available through OpenAI API\n              : Still a completion model, not instruction-tuned",
+    "text": "A Brief History of Transformer Models\n\n\n\n\n\ntimeline\n    June 2017 : Google researchers publish \"Attention is all you need\" paper [1]\n              : Introduces self-attention mechanism and transformer architecture\n              : Eliminates the need for recurrent neural networks in sequence processing\n\n    June 2018 : OpenAI releases GPT-1\n              : 117M parameters\n              : Demonstrates pre-training on large text corpora followed by fine-tuning works effectively\n\n    Feb 2019 : OpenAI releases GPT-2\n             : 1.5B parameters\n             : Initially withheld full model due to concerns about misuse\n             : Demonstrates impressive text generation capabilities with minimal fine-tuning\n\n    May 2020 : OpenAI releases GPT-3\n             : 175B parameters\n             : Demonstrates strong few-shot learning capabilities\n             : Marks a significant leap in model capabilities and scale\n\n    June 2020 : GPT-3 available through OpenAI API\n              : Still a completion model, not instruction-tuned\n\n\n\n\n\n\n[1] Vaswani et al. (2017)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -691,6 +691,17 @@
     ]
   },
   {
+    "objectID": "src/01/exploring_genai.html#demo-gpt-2",
+    "href": "src/01/exploring_genai.html#demo-gpt-2",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: GPT-2",
+    "text": "Demo: GPT-2\nGPT-2.ipynb",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/01/exploring_genai.html#instruction-tuned-models",
     "href": "src/01/exploring_genai.html#instruction-tuned-models",
     "title": "Exploring Generative AI Models",
@@ -724,11 +735,22 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis",
-    "href": "src/01/exploring_genai.html#accessing-models-via-apis",
+    "objectID": "src/01/exploring_genai.html#calling-models-via-apis-1",
+    "href": "src/01/exploring_genai.html#calling-models-via-apis-1",
     "title": "Exploring Generative AI Models",
-    "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nHTTP-based APIs\n\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accesing OpenAI, Claude, other large, closed-source models",
+    "section": "Calling Models via APIs",
+    "text": "Calling Models via APIs\n\nHTTP-based APIs\n\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accesing OpenAI, Claude, other large, closed-source models",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-openai-sdkapi-call",
+    "href": "src/01/exploring_genai.html#demo-openai-sdkapi-call",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: OpenAI SDK/API call",
+    "text": "Demo: OpenAI SDK/API call\nOpenAI.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -768,8 +790,8 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#downloading-and-running-models",
-    "href": "src/01/exploring_genai.html#downloading-and-running-models",
+    "objectID": "src/01/exploring_genai.html#downloading-and-running-models-1",
+    "href": "src/01/exploring_genai.html#downloading-and-running-models-1",
     "title": "Exploring Generative AI Models",
     "section": "Downloading and Running Models",
     "text": "Downloading and Running Models\n\nSo far, we’ve called hosted models via APIs\nHow about downloading and running models on your own hardware?\n\n(Obviously they need to be open-weight models)",
@@ -779,8 +801,8 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#downloading-and-running-models-1",
-    "href": "src/01/exploring_genai.html#downloading-and-running-models-1",
+    "objectID": "src/01/exploring_genai.html#downloading-and-running-models-2",
+    "href": "src/01/exploring_genai.html#downloading-and-running-models-2",
     "title": "Exploring Generative AI Models",
     "section": "Downloading and Running Models",
     "text": "Downloading and Running Models\nWhy would you want to do this?\n\nOffline access to models (no Internet required)\nPotential cost savings (if many API calls and already own hardware)\n\ne.g., running a small model embedded within a game\n\nWant to fine-tune your own model and have the hardware to do it\nDon’t want others to see what types of conversations you are having :)",
@@ -812,11 +834,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#demo-exploring-a-model-on-hugging-face",
-    "href": "src/01/exploring_genai.html#demo-exploring-a-model-on-hugging-face",
+    "objectID": "src/01/exploring_genai.html#demo-exploring-a-model",
+    "href": "src/01/exploring_genai.html#demo-exploring-a-model",
     "title": "Exploring Generative AI Models",
-    "section": "Demo: Exploring a Model on Hugging Face",
-    "text": "Demo: Exploring a Model on Hugging Face\nGoogle’s gemma-3-1b-it on Hugging Face",
+    "section": "Demo: Exploring a Model",
+    "text": "Demo: Exploring a Model\nGoogle’s gemma-3-1b-it on Hugging Face",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -845,33 +867,33 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#demo-using-transformers-lib-to-download-and-use-gemma-3-1b",
-    "href": "src/01/exploring_genai.html#demo-using-transformers-lib-to-download-and-use-gemma-3-1b",
+    "objectID": "src/01/exploring_genai.html#demo-using-hf-transformers-to-download-and-use-gemma-3-1b",
+    "href": "src/01/exploring_genai.html#demo-using-hf-transformers-to-download-and-use-gemma-3-1b",
     "title": "Exploring Generative AI Models",
-    "section": "Demo: Using Transformers Lib to download and use Gemma 3 1B",
-    "text": "Demo: Using Transformers Lib to download and use Gemma 3 1B\ngemma-3-1b-it via transformers.ipynb",
+    "section": "Demo: Using HF Transformers to download and use Gemma 3 1B",
+    "text": "Demo: Using HF Transformers to download and use Gemma 3 1B\ngemma-3-1b-it via transformers.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#vram-envy",
-    "href": "src/01/exploring_genai.html#vram-envy",
+    "objectID": "src/01/exploring_genai.html#out-of-vram",
+    "href": "src/01/exploring_genai.html#out-of-vram",
     "title": "Exploring Generative AI Models",
-    "section": "VRAM Envy",
-    "text": "VRAM Envy\nOne challenge of running moels on your own hardware is VRAM availability!\n\nRoughly speaking, the size of the model will determine how much VRAM you need\nGemma 3 models\n\ngemma-3-1b-it = 2Gb\ngemma-3-4b-it = 8.6Gb\ngemma-3-12b-it = 23.37Gb\n\nColab Tiers\n\nColab Free T4 = 16Gb VRAM (15Gb usable)\nColab Pro V100 = 16Gb VRAM\nColab Pro A100 = 40Gb VRAM\n\nYour Hardware\n\nProbably 8Gb VRAM :)",
+    "section": "“Out of VRAM”",
+    "text": "“Out of VRAM”\nOne challenge of running moels on your own hardware is VRAM availability!\n\nRoughly speaking, the size of the model will determine how much VRAM you need\nGemma 3 models\n\ngemma-3-1b-it = 2Gb\ngemma-3-4b-it = 8.6Gb\ngemma-3-12b-it = 23.37Gb\n\nColab Tiers\n\nColab Free T4 = 16Gb VRAM (15Gb usable)\nColab Pro V100 = 16Gb VRAM\nColab Pro A100 = 40Gb VRAM\n\nYour Hardware\n\nProbably 8Gb VRAM :)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#vram-envy-1",
-    "href": "src/01/exploring_genai.html#vram-envy-1",
+    "objectID": "src/01/exploring_genai.html#out-of-vram-1",
+    "href": "src/01/exploring_genai.html#out-of-vram-1",
     "title": "Exploring Generative AI Models",
-    "section": "VRAM Envy",
-    "text": "VRAM Envy\nYou can select smaller models, but they are less accurate / more prone to hallucination.\n\nHow do we fix this?\n\nQuantization",
+    "section": "“Out of VRAM”",
+    "text": "“Out of VRAM”\nYou can select smaller models, but they are less accurate / more prone to hallucination.\n\nHow do we fix this?\n\nQuantization",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -894,6 +916,17 @@
     "title": "Exploring Generative AI Models",
     "section": "Quantization Formats",
     "text": "Quantization Formats\nThe llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization\n\nGGUF (GPT-Generated Unifed Format)\n\nSingle file architecture\nModel format supporting multiple quantization levels (2-bit through 8-bit)\n\nMLX (Apple’s ML framework and format for Apple Silicon)\n\nDebuted in late 2023\nSupports 4 and 8 bit quantization schemes\n\nTools built upon llama.cpp\n\nOllama, LM Studio, koboldcpp",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-running-gemma-3-27b-gguf-on-my-laptop",
+    "href": "src/01/exploring_genai.html#demo-running-gemma-3-27b-gguf-on-my-laptop",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: Running Gemma 3 27B GGUF on my laptop",
+    "text": "Demo: Running Gemma 3 27B GGUF on my laptop\n\nLMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf\n55Gb at b16, 16Gb quantized",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -944,11 +977,33 @@
     ]
   },
   {
+    "objectID": "src/01/exploring_genai.html#demo-text-to-image-diffusion-process",
+    "href": "src/01/exploring_genai.html#demo-text-to-image-diffusion-process",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: Text to Image Diffusion Process",
+    "text": "Demo: Text to Image Diffusion Process\nDiffusion Text-to-Image.ipynb",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/01/exploring_genai.html#image-models---generation",
     "href": "src/01/exploring_genai.html#image-models---generation",
     "title": "Exploring Generative AI Models",
     "section": "Image Models - Generation",
     "text": "Image Models - Generation\nImage-to-Image: “Make this image different”\n\nOriginally solved by GAN approaches, but evolved into extension of the diffusion concept\n\nAdd noise to the original image (partial denoising)\nRegenerate it with modifications based on the prompt\nThe original image heavily influences the output structure\n\n\nStable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-image-to-image-process",
+    "href": "src/01/exploring_genai.html#demo-image-to-image-process",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: Image to Image Process",
+    "text": "Demo: Image to Image Process\nDiffusion Image-to-Image.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -982,6 +1037,17 @@
     "title": "Exploring Generative AI Models",
     "section": "How ControlNet Works",
     "text": "How ControlNet Works\n\nStable Diffusion’s U-Net has an encoder and decoder\nCreate a trainable copy of the encoder blocks\nTrain the copy of the encoder alongside the frozen SD model\n\nDuring training: use paired data (e.g., pose skeleton → original image)\nDuring inference: both encoders run together - original processes noisy latent, copy processes control input\nFeatures from both are combined via zero convolutions\n\nKey: The weights in the original SD model doesn’t change\nAnalogous to ControlNet being a “Plug in” model",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#demo-controlnet-human-pose",
+    "href": "src/01/exploring_genai.html#demo-controlnet-human-pose",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: ControlNet Human Pose",
+    "text": "Demo: ControlNet Human Pose\nControlNet Human Pose.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1032,8 +1098,8 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#resources",
-    "href": "src/01/exploring_genai.html#resources",
+    "objectID": "src/01/exploring_genai.html#resources-1",
+    "href": "src/01/exploring_genai.html#resources-1",
     "title": "Exploring Generative AI Models",
     "section": "Resources",
     "text": "Resources\nTBD",
@@ -1043,11 +1109,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#before-we-go",
-    "href": "src/01/exploring_genai.html#before-we-go",
+    "objectID": "src/01/exploring_genai.html#next-lecture",
+    "href": "src/01/exploring_genai.html#next-lecture",
     "title": "Exploring Generative AI Models",
-    "section": "Before we go…",
-    "text": "Before we go…\nHow about the other way?\n\nClassic models are typically supervised classification tasks\n\n“Is this a cat?”\nEnd up taking lots of pictures of cats, human annotation, etc.\n\nIntroducing the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”\nMore on this in the next lecture!",
+    "section": "Next Lecture",
+    "text": "Next Lecture\nHow about the other way?\n\nClassic models are typically supervised classification tasks\n\n“Is this a cat?”\nEnd up taking lots of pictures of cats, human annotation, etc.\n\nIntroducing the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”\nMore on this in the next lecture!",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"

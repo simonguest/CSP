@@ -27,7 +27,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -165,24 +185,24 @@
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">timeline
-    June 2017 : Google researchers publish "Attention is all you need" paper
+    June 2017 : Google researchers publish "Attention is all you need" paper [1]
               : Introduces self-attention mechanism and transformer architecture
               : Eliminates the need for recurrent neural networks in sequence processing
-    
+
     June 2018 : OpenAI releases GPT-1
               : 117M parameters
               : Demonstrates pre-training on large text corpora followed by fine-tuning works effectively
-    
+
     Feb 2019 : OpenAI releases GPT-2
              : 1.5B parameters
              : Initially withheld full model due to concerns about misuse
              : Demonstrates impressive text generation capabilities with minimal fine-tuning
-    
+
     May 2020 : OpenAI releases GPT-3
              : 175B parameters
              : Demonstrates strong few-shot learning capabilities
              : Marks a significant leap in model capabilities and scale
-    
+
     June 2020 : GPT-3 available through OpenAI API
               : Still a completion model, not instruction-tuned
 </pre>
@@ -191,6 +211,7 @@
 </div>
 </div>
 </div>
+<p>[1] <span class="citation" data-cites="vaswani2017attention">Vaswani et al. (<a href="#/qa" role="doc-biblioref" onclick="">2017</a>)</span></p>
 </section>
 <section id="completion-vs.-instruction-tuned" class="slide level2">
 <h2>Completion vs.&nbsp;Instruction-Tuned</h2>
@@ -220,10 +241,9 @@
 <section id="introducing-google-colab" class="slide level2">
 <h2>Introducing Google Colab</h2>
 
-<img data-src="./images/colab-signup.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://colab.research.google.com/signup</p></section></section>
-<section>
-<section id="demo-gpt-2" class="title-slide slide level1 center">
-<h1>Demo: GPT-2</h1>
+<img data-src="./images/colab-signup.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://colab.research.google.com/signup</p></section>
+<section id="demo-gpt-2" class="slide level2 center">
+<h2>Demo: GPT-2</h2>
 <p><a href="https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing" class="external" target="_blank">GPT-2.ipynb</a></p>
 </section>
 <section id="instruction-tuned-models" class="slide level2">
@@ -298,9 +318,14 @@
 <li class="fragment">Examples: OLMo from AI2</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="calling-models-via-apis" class="title-slide slide level1 center">
+<h1>Calling Models via APIs</h1>
+
 </section>
-<section id="accessing-models-via-apis" class="slide level2">
-<h2>Accessing Models via APIs</h2>
+<section id="calling-models-via-apis-1" class="slide level2">
+<h2>Calling Models via APIs</h2>
 <ul>
 <li class="fragment">HTTP-based APIs
 <ul>
@@ -310,10 +335,9 @@
 <li class="fragment">Default way of accesing OpenAI, Claude, other large, closed-source models</li>
 </ul></li>
 </ul>
-</section></section>
-<section>
-<section id="demo-openai-sdkapi-call" class="title-slide slide level1 center">
-<h1>Demo: OpenAI SDK/API call</h1>
+</section>
+<section id="demo-openai-sdkapi-call" class="slide level2 center">
+<h2>Demo: OpenAI SDK/API call</h2>
 <p><a href="https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing" class="external" target="_blank">OpenAI.ipynb</a></p>
 </section>
 <section id="openais-chat-completions-api" class="slide level2">
@@ -347,11 +371,16 @@
 </ul></li>
 </ul>
 </section>
-<section id="demo-openrouter" class="slide level2">
+<section id="demo-openrouter" class="slide level2 center">
 <h2>Demo: OpenRouter</h2>
 <p><a href="https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing" class="external" target="_blank">OpenRouter.ipynb</a></p>
+</section></section>
+<section>
+<section id="downloading-and-running-models" class="title-slide slide level1 center">
+<h1>Downloading and Running Models</h1>
+
 </section>
-<section id="downloading-and-running-models" class="slide level2">
+<section id="downloading-and-running-models-1" class="slide level2">
 <h2>Downloading and Running Models</h2>
 <ul>
 <li class="fragment">So far, we’ve called hosted models via APIs</li>
@@ -361,7 +390,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="downloading-and-running-models-1" class="slide level2">
+<section id="downloading-and-running-models-2" class="slide level2">
 <h2>Downloading and Running Models</h2>
 <p>Why would you want to do this?</p>
 <ul>
@@ -387,8 +416,8 @@
 <li class="fragment">Create “Spaces” - web-based apps for accessing models</li>
 </ul>
 </section>
-<section id="demo-exploring-a-model-on-hugging-face" class="slide level2">
-<h2>Demo: Exploring a Model on Hugging Face</h2>
+<section id="demo-exploring-a-model" class="slide level2 center">
+<h2>Demo: Exploring a Model</h2>
 <p><a href="https://huggingface.co/google/gemma-3-1b-it" class="external" target="_blank">Google’s gemma-3-1b-it on Hugging Face</a></p>
 </section>
 <section id="hugging-face-transformers" class="slide level2">
@@ -408,12 +437,12 @@
 <li class="fragment">A few lines of code to download and run the model</li>
 </ul>
 </section>
-<section id="demo-using-transformers-lib-to-download-and-use-gemma-3-1b" class="slide level2">
-<h2>Demo: Using Transformers Lib to download and use Gemma 3 1B</h2>
+<section id="demo-using-hf-transformers-to-download-and-use-gemma-3-1b" class="slide level2 center">
+<h2>Demo: Using HF Transformers to download and use Gemma 3 1B</h2>
 <p><a href="https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing" class="external" target="_blank">gemma-3-1b-it via transformers.ipynb</a></p>
 </section>
-<section id="vram-envy" class="slide level2">
-<h2>VRAM Envy</h2>
+<section id="out-of-vram" class="slide level2">
+<h2>“Out of VRAM”</h2>
 <p>One challenge of running moels on your own hardware is VRAM availability!</p>
 <ul>
 <li class="fragment">Roughly speaking, the size of the model will determine how much VRAM you need</li>
@@ -435,8 +464,8 @@
 </ul></li>
 </ul>
 </section>
-<section id="vram-envy-1" class="slide level2">
-<h2>VRAM Envy</h2>
+<section id="out-of-vram-1" class="slide level2">
+<h2>“Out of VRAM”</h2>
 <p>You can select smaller models, but they are less accurate / more prone to hallucination.</p>
 <ul>
 <li class="fragment">How do we fix this?
@@ -476,18 +505,17 @@
 <li class="fragment">Ollama, LM Studio, koboldcpp</li>
 </ul></li>
 </ul>
-</section></section>
-<section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="title-slide slide level1 center">
-<h1>Demo: Running Gemma 3 27B GGUF on my laptop</h1>
+</section>
+<section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="slide level2 center">
+<h2>Demo: Running Gemma 3 27B GGUF on my laptop</h2>
 <ul>
 <li class="fragment">LMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf</li>
 <li class="fragment">55Gb at b16, 16Gb quantized</li>
 </ul>
-</section>
-
+</section></section>
 <section>
-<section id="going-beyond-text" class="title-slide slide level1 center">
-<h1>Going Beyond Text</h1>
+<section id="going-beyond-text-images" class="title-slide slide level1 center">
+<h1>Going Beyond Text: Images</h1>
 
 </section>
 <section id="images-models---generation" class="slide level2">
@@ -583,10 +611,9 @@
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="demo-text-to-image-diffusion-process" class="title-slide slide level1 center">
-<h1>Demo: Text to Image Diffusion Process</h1>
+</section>
+<section id="demo-text-to-image-diffusion-process" class="slide level2 center">
+<h2>Demo: Text to Image Diffusion Process</h2>
 <p><a href="https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing" class="external" target="_blank">Diffusion Text-to-Image.ipynb</a></p>
 </section>
 <section id="image-models---generation" class="slide level2">
@@ -601,10 +628,9 @@
 </ul></li>
 </ul>
 <p>Stable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.</p>
-</section></section>
-<section>
-<section id="demo-image-to-image-process" class="title-slide slide level1 center">
-<h1>Demo: Image to Image Process</h1>
+</section>
+<section id="demo-image-to-image-process" class="slide level2 center">
+<h2>Demo: Image to Image Process</h2>
 <p><a href="https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing" class="external" target="_blank">Diffusion Image-to-Image.ipynb</a></p>
 </section>
 <section id="controlnet" class="slide level2">
@@ -637,10 +663,9 @@
 <li class="fragment">Key: The weights in the original SD model doesn’t change</li>
 <li class="fragment">Analogous to ControlNet being a “Plug in” model</li>
 </ul>
-</section></section>
-<section>
-<section id="demo-controlnet-human-pose" class="title-slide slide level1 center">
-<h1>Demo: ControlNet Human Pose</h1>
+</section>
+<section id="demo-controlnet-human-pose" class="slide level2 center">
+<h2>Demo: ControlNet Human Pose</h2>
 <p><a href="https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing" class="external" target="_blank">ControlNet Human Pose.ipynb</a></p>
 </section>
 <section id="controlnet-2" class="slide level2">
@@ -677,8 +702,8 @@
 </ul>
 </section></section>
 <section>
-<section id="further-tools-to-explore" class="title-slide slide level1 center">
-<h1>Further Tools To Explore</h1>
+<section id="further-exploration" class="title-slide slide level1 center">
+<h1>Further Exploration</h1>
 <p>For the many image models that we didn’t cover…</p>
 </section>
 <section id="replicate" class="slide level2">
@@ -688,13 +713,18 @@
 <section id="comfyui" class="slide level2">
 <h2>ComfyUI</h2>
 
-<img data-src="./images/comfyui.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://comfy.org</p></section>
-<section id="resources" class="slide level2">
+<img data-src="./images/comfyui.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://comfy.org</p></section></section>
+<section>
+<section id="resources" class="title-slide slide level1 center">
+<h1>Resources</h1>
+
+</section>
+<section id="resources-1" class="slide level2">
 <h2>Resources</h2>
 <p>TBD</p>
 </section>
-<section id="before-we-go" class="slide level2">
-<h2>Before we go…</h2>
+<section id="next-lecture" class="slide level2">
+<h2>Next Lecture</h2>
 <p>How about the other way?</p>
 <ul>
 <li class="fragment">Classic models are typically supervised classification tasks
@@ -709,10 +739,15 @@
 </ul></li>
 </ul>
 </section></section>
-<section id="qa" class="title-slide slide level1 center">
+<section id="qa" class="title-slide slide level1 smaller scrollable">
 <h1>Q&amp;A</h1>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-vaswani2017attention" class="csl-entry" role="listitem">
+Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. <span>“Attention Is All You Need.”</span> In <em>Advances in Neural Information Processing Systems</em>. Vol. 30.
+</div>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
