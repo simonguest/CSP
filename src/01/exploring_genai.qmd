@@ -1,12 +1,13 @@
 ---
 title: "Exploring Generative AI Models"
-format: 
+format:
   revealjs:
     slide-number: true
     incremental: true
     center-title-slide: true
     theme: default
 logo: ../../src/logos/DigiPen_RGB_Red.png
+bibliography: references.bib
 ---
 
 ## Recap
@@ -26,27 +27,28 @@ logo: ../../src/logos/DigiPen_RGB_Red.png
 
 ```{mermaid}
 timeline
-    June 2017 : Google researchers publish "Attention is all you need" paper
+    June 2017 : Google researchers publish "Attention is all you need" paper [1]
               : Introduces self-attention mechanism and transformer architecture
               : Eliminates the need for recurrent neural networks in sequence processing
-    
+
     June 2018 : OpenAI releases GPT-1
               : 117M parameters
               : Demonstrates pre-training on large text corpora followed by fine-tuning works effectively
-    
+
     Feb 2019 : OpenAI releases GPT-2
              : 1.5B parameters
              : Initially withheld full model due to concerns about misuse
              : Demonstrates impressive text generation capabilities with minimal fine-tuning
-    
+
     May 2020 : OpenAI releases GPT-3
              : 175B parameters
              : Demonstrates strong few-shot learning capabilities
              : Marks a significant leap in model capabilities and scale
-    
+
     June 2020 : GPT-3 available through OpenAI API
               : Still a completion model, not instruction-tuned
 ```
+[1] @vaswani2017attention
 
 ## Completion vs. Instruction-Tuned
 
@@ -69,7 +71,7 @@ timeline
 
 ![Source: https://colab.research.google.com/signup](./images/colab-signup.png)
 
-# Demo: GPT-2
+## Demo: GPT-2 {.center}
 
 [GPT-2.ipynb](https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing){.external target="_blank"}
 
@@ -121,7 +123,9 @@ timeline
 - **Open Source Models:** Models with access to the training data set. Create from scratch.
   - Examples: OLMo from AI2
 
-## Accessing Models via APIs
+# Calling Models via APIs
+
+## Calling Models via APIs
 
 - HTTP-based APIs
   - Client makes HTTP API calls to invoke/access the model
@@ -129,7 +133,7 @@ timeline
   - Client passes Authorization token as part of the call
   - Default way of accesing OpenAI, Claude, other large, closed-source models
 
-# Demo: OpenAI SDK/API call
+## Demo: OpenAI SDK/API call {.center}
 
 [OpenAI.ipynb](https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing){.external target="_blank"}
 
@@ -155,9 +159,11 @@ How about creating a client that consumes different models from multiple provide
   - OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen and many others.
   - OpenAI Chat Completions compatible
 
-## Demo: OpenRouter
+## Demo: OpenRouter {.center}
 
 [OpenRouter.ipynb](https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing){.external target="_blank"}
+
+# Downloading and Running Models
 
 ## Downloading and Running Models
 
@@ -187,7 +193,7 @@ It is to AI models what GitHub is to source code
 - Upload and share your own trained/fine-tuned models and datasets
 - Create "Spaces" - web-based apps for accessing models
 
-## Demo: Exploring a Model on Hugging Face
+## Demo: Exploring a Model {.center}
 
 [Google's gemma-3-1b-it on Hugging Face](https://huggingface.co/google/gemma-3-1b-it){.external target="_blank"}
 
@@ -205,11 +211,11 @@ What is the Hugging Face Transformers Library?
    - Different implementations: PyTorch, TensorFlow, JAX
 - A few lines of code to download and run the model
 
-## Demo: Using Transformers Lib to download and use Gemma 3 1B
+## Demo: Using HF Transformers to download and use Gemma 3 1B {.center}
 
 [gemma-3-1b-it via transformers.ipynb](https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing){.external target="_blank"}
 
-## VRAM Envy
+## "Out of VRAM"
 
 One challenge of running moels on your own hardware is VRAM availability!
 
@@ -225,7 +231,7 @@ One challenge of running moels on your own hardware is VRAM availability!
 - Your Hardware
   - Probably 8Gb VRAM :)
 
-## VRAM Envy
+## "Out of VRAM"
 
 You can select smaller models, but they are less accurate / more prone to hallucination.
 
@@ -254,12 +260,12 @@ The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements 
 - Tools built upon llama.cpp
   - Ollama, LM Studio, koboldcpp
 
-# Demo: Running Gemma 3 27B GGUF on my laptop
+## Demo: Running Gemma 3 27B GGUF on my laptop {.center}
 
 - LMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf
 - 55Gb at b16, 16Gb quantized
 
-# Going Beyond Text
+# Going Beyond Text: Images
 
 ## Images Models - Generation
 
@@ -327,7 +333,7 @@ timeline
         : Photorealistic quality
 ```
 
-# Demo: Text to Image Diffusion Process
+## Demo: Text to Image Diffusion Process {.center}
 
 [Diffusion Text-to-Image.ipynb](https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing){.external target="_blank"}
 
@@ -342,7 +348,7 @@ Image-to-Image: "Make this image different"
 
 Stable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The "strength" parameter controls how much the original image influences the result.
 
-# Demo: Image to Image Process
+## Demo: Image to Image Process {.center}
 
 [Diffusion Image-to-Image.ipynb](https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing){.external target="_blank"}
 
@@ -371,7 +377,7 @@ Introducing ControlNet
 - Key: The weights in the original SD model doesn't change
 - Analogous to ControlNet being a "Plug in" model
 
-# Demo: ControlNet Human Pose
+## Demo: ControlNet Human Pose {.center}
 
 [ControlNet Human Pose.ipynb](https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing){.external target="_blank"}
 
@@ -399,7 +405,7 @@ Exmaples of conditioning types
 - Neural Style Transfer
   - Ghibli images, anyone?
 
-# Further Tools To Explore
+# Further Exploration
 
 For the many image models that we didn't cover...
 
@@ -411,11 +417,13 @@ For the many image models that we didn't cover...
 
 ![Source: https://comfy.org](./images/comfyui.png)
 
+# Resources
+
 ## Resources
 
 TBD
 
-## Before we go...
+## Next Lecture
 
 How about the other way?
 
