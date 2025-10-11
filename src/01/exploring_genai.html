@@ -310,21 +310,6 @@
 <li class="fragment">Default way of accesing OpenAI, Claude, other large, closed-source models</li>
 </ul></li>
 </ul>
-</section>
-<section id="accessing-models-via-apis-1" class="slide level2">
-<h2>Accessing Models via APIs</h2>
-<ul>
-<li class="fragment">CoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format</li>
-</ul>
-</section>
-<section id="accessing-models-via-apis-2" class="slide level2">
-<h2>Accessing Models via APIs</h2>
-</section>
-<section class="slide level2">
-
-<ul>
-<li class="fragment">TBD: Some kind of simple diagram</li>
-</ul>
 </section></section>
 <section>
 <section id="demo-openai-sdkapi-call" class="title-slide slide level1 center">
@@ -491,33 +476,19 @@
 <li class="fragment">Ollama, LM Studio, koboldcpp</li>
 </ul></li>
 </ul>
-</section>
-<section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="slide level2">
-<h2>Demo: Running Gemma 3 27B GGUF on my laptop</h2>
+</section></section>
+<section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="title-slide slide level1 center">
+<h1>Demo: Running Gemma 3 27B GGUF on my laptop</h1>
 <ul>
 <li class="fragment">LMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf</li>
 <li class="fragment">55Gb at b16, 16Gb quantized</li>
 </ul>
-</section></section>
+</section>
+
 <section>
 <section id="going-beyond-text" class="title-slide slide level1 center">
-<h1>Going Beyond Text ***</h1>
+<h1>Going Beyond Text</h1>
 
-</section>
-<section id="going-beyond-text-1" class="slide level2">
-<h2>Going Beyond Text</h2>
-<p>Up to now, we’ve concentrated on NLP (text generation) models. Other categories emerging for generative models:</p>
-<ul>
-<li class="fragment">Image Models
-<ul>
-<li class="fragment">Generation</li>
-<li class="fragment">Vision Transformers</li>
-</ul></li>
-<li class="fragment">Multimodal Models</li>
-<li class="fragment">Audio Models</li>
-<li class="fragment">RL Models</li>
-</ul>
-<p>For the rest of this presentation, introduction into image models</p>
 </section>
 <section id="images-models---generation" class="slide level2">
 <h2>Images Models - Generation</h2>
@@ -538,7 +509,7 @@
 <li class="fragment">Using the text prompt, the model steers the process towards images that match the description</li>
 </ul></li>
 </ul>
-<p>TBD: sources (don’t forget sources throughout)</p>
+<p>TBD: add sources (don’t forget sources throughout)</p>
 <p>2015 - Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al.) 2019 - Generative Modeling by Estimating Gradients of the Data Distribution (Song &amp; Ermon) 2020 - Denoising Diffusion Probabilistic Models (DDPM) (Ho et al., UC Berkeley)</p>
 </section>
 <section id="image-diffusion-models-in-2022" class="slide level2">
@@ -612,12 +583,13 @@
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="demo-text-to-image-diffusion-process" class="title-slide slide level1 center">
+<h1>Demo: Text to Image Diffusion Process</h1>
+<p><a href="https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing" class="external" target="_blank">Diffusion Text-to-Image.ipynb</a></p>
 </section>
 <section id="image-models---generation" class="slide level2">
-<h2>Image Models - Generation</h2>
-<p>TBD: Insert image from Diffusion Process notebook</p>
-</section>
-<section id="image-models---generation-1" class="slide level2">
 <h2>Image Models - Generation</h2>
 <p>Image-to-Image: “Make this image different”</p>
 <ul>
@@ -628,18 +600,28 @@
 <li class="fragment">The original image heavily influences the output structure</li>
 </ul></li>
 </ul>
-</section>
-<section id="image-models---image-to-image-example" class="slide level2">
-<h2>Image Models - Image-to-Image example</h2>
 <p>Stable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.</p>
-<p>TBD: Link to Colab Demo</p>
+</section></section>
+<section>
+<section id="demo-image-to-image-process" class="title-slide slide level1 center">
+<h1>Demo: Image to Image Process</h1>
+<p><a href="https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing" class="external" target="_blank">Diffusion Image-to-Image.ipynb</a></p>
 </section>
 <section id="controlnet" class="slide level2">
 <h2>ControlNet</h2>
 <p>Text-to-Image and Image-to-Image are interesting, but you don’t really have that much control.</p>
-<p>There are a lot of fine-tuning techniques, but it’s expensive and risk degrading quality.</p>
-<p>ControlNet was developed by Lvmin Zhang and Maneesh Agrawala at Stanford University, published in February 2023 in the paper “Adding Conditional Control to Text-to-Image Diffusion Models.”</p>
-<p>ControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”</p>
+<ul>
+<li class="fragment">Fine-tuning techniques, but expensive and risk degrading quality</li>
+</ul>
+</section>
+<section id="controlnet-1" class="slide level2">
+<h2>ControlNet</h2>
+<p>Introducing ControlNet</p>
+<ul>
+<li class="fragment">Developed by Lvmin Zhang and Maneesh Agrawala at Stanford University</li>
+<li class="fragment">Published in February 2023 in the paper “Adding Conditional Control to Text-to-Image Diffusion Models.”</li>
+<li class="fragment">ControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”</li>
+</ul>
 </section>
 <section id="how-controlnet-works" class="slide level2">
 <h2>How ControlNet Works</h2>
@@ -655,10 +637,11 @@
 <li class="fragment">Key: The weights in the original SD model doesn’t change</li>
 <li class="fragment">Analogous to ControlNet being a “Plug in” model</li>
 </ul>
-</section>
-<section id="controlnet-1" class="slide level2">
-<h2>ControlNet</h2>
-<p>Demo: ControlNet with human pose detection</p>
+</section></section>
+<section>
+<section id="demo-controlnet-human-pose" class="title-slide slide level1 center">
+<h1>Demo: ControlNet Human Pose</h1>
+<p><a href="https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing" class="external" target="_blank">ControlNet Human Pose.ipynb</a></p>
 </section>
 <section id="controlnet-2" class="slide level2">
 <h2>ControlNet</h2>
@@ -670,7 +653,6 @@
 <li class="fragment">Human pose (OpenPose) - skeleton/keypoint detection</li>
 <li class="fragment">Semantic segmentation - labeled regions</li>
 <li class="fragment">Scribbles - rough user drawings</li>
-<li class="fragment">HED boundaries - soft edge detection</li>
 </ul>
 </section>
 <section id="controlnet-based-methods" class="slide level2">
@@ -693,23 +675,31 @@
 <li class="fragment">Ghibli images, anyone?</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="further-tools-to-explore" class="title-slide slide level1 center">
+<h1>Further Tools To Explore</h1>
+<p>For the many image models that we didn’t cover…</p>
 </section>
-<section id="tools-for-exploring-image-models" class="slide level2">
-<h2>Tools for Exploring Image Models</h2>
-<p>There are lots of image models that we didn’t cover.</p>
-<ul>
-<li class="fragment">Replicate</li>
-<li class="fragment">ComfyUI</li>
-<li class="fragment">WeavyUI</li>
-</ul>
+<section id="replicate" class="slide level2">
+<h2>Replicate</h2>
+
+<img data-src="./images/replicate.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com</p></section>
+<section id="comfyui" class="slide level2">
+<h2>ComfyUI</h2>
+
+<img data-src="./images/comfyui.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://comfy.org</p></section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<p>TBD</p>
 </section>
-<section id="image-models---vision-transformers" class="slide level2">
-<h2>Image Models - Vision Transformers</h2>
+<section id="before-we-go" class="slide level2">
+<h2>Before we go…</h2>
 <p>How about the other way?</p>
 <ul>
 <li class="fragment">Classic models are typically supervised classification tasks
 <ul>
-<li class="fragment">Is this a cat?</li>
+<li class="fragment">“Is this a cat?”</li>
 <li class="fragment">End up taking lots of pictures of cats, human annotation, etc.</li>
 </ul></li>
 <li class="fragment">Introducing the Vision Transformer (ViT)
@@ -718,16 +708,12 @@
 <li class="fragment">More on this in the next lecture!</li>
 </ul></li>
 </ul>
-</section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-<p>TBD</p>
-</section>
-<section id="qa" class="slide level2">
-<h2>Q&amp;A</h2>
-
-
 </section></section>
+<section id="qa" class="title-slide slide level1 center">
+<h1>Q&amp;A</h1>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../src/logos/DigiPen_RGB_Red.png" class="slide-logo"></p>

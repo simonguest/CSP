@@ -735,28 +735,6 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-1",
-    "href": "src/01/exploring_genai.html#accessing-models-via-apis-1",
-    "title": "Exploring Generative AI Models",
-    "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs\n\nCoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/01/exploring_genai.html#accessing-models-via-apis-2",
-    "href": "src/01/exploring_genai.html#accessing-models-via-apis-2",
-    "title": "Exploring Generative AI Models",
-    "section": "Accessing Models via APIs",
-    "text": "Accessing Models via APIs",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
     "objectID": "src/01/exploring_genai.html#openais-chat-completions-api",
     "href": "src/01/exploring_genai.html#openais-chat-completions-api",
     "title": "Exploring Generative AI Models",
@@ -922,33 +900,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#demo-running-gemma-3-27b-gguf-on-my-laptop",
-    "href": "src/01/exploring_genai.html#demo-running-gemma-3-27b-gguf-on-my-laptop",
-    "title": "Exploring Generative AI Models",
-    "section": "Demo: Running Gemma 3 27B GGUF on my laptop",
-    "text": "Demo: Running Gemma 3 27B GGUF on my laptop\n\nLMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf\n55Gb at b16, 16Gb quantized",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/01/exploring_genai.html#going-beyond-text-1",
-    "href": "src/01/exploring_genai.html#going-beyond-text-1",
-    "title": "Exploring Generative AI Models",
-    "section": "Going Beyond Text",
-    "text": "Going Beyond Text\nUp to now, we’ve concentrated on NLP (text generation) models. Other categories emerging for generative models:\n\nImage Models\n\nGeneration\nVision Transformers\n\nMultimodal Models\nAudio Models\nRL Models\n\nFor the rest of this presentation, introduction into image models",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
     "objectID": "src/01/exploring_genai.html#images-models---generation",
     "href": "src/01/exploring_genai.html#images-models---generation",
     "title": "Exploring Generative AI Models",
     "section": "Images Models - Generation",
-    "text": "Images Models - Generation\nText-to-Image: “A photograph of an astronaut riding a horse.”\n\nBased on a concept called a diffuser\nTwo stage process, inspired by thermodynamics\nTraining\n\nDuring training, random noise is adding to images in steps\nModel learns to predict what noise what added (forward diffusion process)\n\nInference\n\nTo generate new images, the process runs in reverse\nStart with pure random noise (known as a seed)\nModel estimates what noise should be removed to create a realistic image\nUsing the text prompt, the model steers the process towards images that match the description\n\n\nTBD: sources (don’t forget sources throughout)\n2015 - Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al.) 2019 - Generative Modeling by Estimating Gradients of the Data Distribution (Song & Ermon) 2020 - Denoising Diffusion Probabilistic Models (DDPM) (Ho et al., UC Berkeley)",
+    "text": "Images Models - Generation\nText-to-Image: “A photograph of an astronaut riding a horse.”\n\nBased on a concept called a diffuser\nTwo stage process, inspired by thermodynamics\nTraining\n\nDuring training, random noise is adding to images in steps\nModel learns to predict what noise what added (forward diffusion process)\n\nInference\n\nTo generate new images, the process runs in reverse\nStart with pure random noise (known as a seed)\nModel estimates what noise should be removed to create a realistic image\nUsing the text prompt, the model steers the process towards images that match the description\n\n\nTBD: add sources (don’t forget sources throughout)\n2015 - Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al.) 2019 - Generative Modeling by Estimating Gradients of the Data Distribution (Song & Ermon) 2020 - Denoising Diffusion Probabilistic Models (DDPM) (Ho et al., UC Berkeley)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -992,29 +948,7 @@
     "href": "src/01/exploring_genai.html#image-models---generation",
     "title": "Exploring Generative AI Models",
     "section": "Image Models - Generation",
-    "text": "Image Models - Generation\nTBD: Insert image from Diffusion Process notebook",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/01/exploring_genai.html#image-models---generation-1",
-    "href": "src/01/exploring_genai.html#image-models---generation-1",
-    "title": "Exploring Generative AI Models",
-    "section": "Image Models - Generation",
-    "text": "Image Models - Generation\nImage-to-Image: “Make this image different”\n\nOriginally solved by GAN approaches, but evolved into extension of the diffusion concept\n\nAdd noise to the original image (partial denoising)\nRegenerate it with modifications based on the prompt\nThe original image heavily influences the output structure",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/01/exploring_genai.html#image-models---image-to-image-example",
-    "href": "src/01/exploring_genai.html#image-models---image-to-image-example",
-    "title": "Exploring Generative AI Models",
-    "section": "Image Models - Image-to-Image example",
-    "text": "Image Models - Image-to-Image example\nStable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.\nTBD: Link to Colab Demo",
+    "text": "Image Models - Generation\nImage-to-Image: “Make this image different”\n\nOriginally solved by GAN approaches, but evolved into extension of the diffusion concept\n\nAdd noise to the original image (partial denoising)\nRegenerate it with modifications based on the prompt\nThe original image heavily influences the output structure\n\n\nStable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1025,7 +959,18 @@
     "href": "src/01/exploring_genai.html#controlnet",
     "title": "Exploring Generative AI Models",
     "section": "ControlNet",
-    "text": "ControlNet\nText-to-Image and Image-to-Image are interesting, but you don’t really have that much control.\nThere are a lot of fine-tuning techniques, but it’s expensive and risk degrading quality.\nControlNet was developed by Lvmin Zhang and Maneesh Agrawala at Stanford University, published in February 2023 in the paper “Adding Conditional Control to Text-to-Image Diffusion Models.”\nControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”",
+    "text": "ControlNet\nText-to-Image and Image-to-Image are interesting, but you don’t really have that much control.\n\nFine-tuning techniques, but expensive and risk degrading quality",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#controlnet-1",
+    "href": "src/01/exploring_genai.html#controlnet-1",
+    "title": "Exploring Generative AI Models",
+    "section": "ControlNet",
+    "text": "ControlNet\nIntroducing ControlNet\n\nDeveloped by Lvmin Zhang and Maneesh Agrawala at Stanford University\nPublished in February 2023 in the paper “Adding Conditional Control to Text-to-Image Diffusion Models.”\nControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1043,22 +988,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#controlnet-1",
-    "href": "src/01/exploring_genai.html#controlnet-1",
-    "title": "Exploring Generative AI Models",
-    "section": "ControlNet",
-    "text": "ControlNet\nDemo: ControlNet with human pose detection",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
     "objectID": "src/01/exploring_genai.html#controlnet-2",
     "href": "src/01/exploring_genai.html#controlnet-2",
     "title": "Exploring Generative AI Models",
     "section": "ControlNet",
-    "text": "ControlNet\nExmaples of conditioning types\n\nCanny edges - line drawings and edge detection\nDepth maps - 3D structure information\nNormal maps - surface orientation\nHuman pose (OpenPose) - skeleton/keypoint detection\nSemantic segmentation - labeled regions\nScribbles - rough user drawings\nHED boundaries - soft edge detection",
+    "text": "ControlNet\nExmaples of conditioning types\n\nCanny edges - line drawings and edge detection\nDepth maps - 3D structure information\nNormal maps - surface orientation\nHuman pose (OpenPose) - skeleton/keypoint detection\nSemantic segmentation - labeled regions\nScribbles - rough user drawings",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1076,22 +1010,22 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#tools-for-exploring-image-models",
-    "href": "src/01/exploring_genai.html#tools-for-exploring-image-models",
+    "objectID": "src/01/exploring_genai.html#replicate",
+    "href": "src/01/exploring_genai.html#replicate",
     "title": "Exploring Generative AI Models",
-    "section": "Tools for Exploring Image Models",
-    "text": "Tools for Exploring Image Models\nThere are lots of image models that we didn’t cover.\n\nReplicate\nComfyUI\nWeavyUI",
+    "section": "Replicate",
+    "text": "Replicate\n\nSource: https://replicate.com",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#image-models---vision-transformers",
-    "href": "src/01/exploring_genai.html#image-models---vision-transformers",
+    "objectID": "src/01/exploring_genai.html#comfyui",
+    "href": "src/01/exploring_genai.html#comfyui",
     "title": "Exploring Generative AI Models",
-    "section": "Image Models - Vision Transformers",
-    "text": "Image Models - Vision Transformers\nHow about the other way?\n\nClassic models are typically supervised classification tasks\n\nIs this a cat?\nEnd up taking lots of pictures of cats, human annotation, etc.\n\nIntroducing the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”\nMore on this in the next lecture!",
+    "section": "ComfyUI",
+    "text": "ComfyUI\n\nSource: https://comfy.org",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1109,11 +1043,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#qa",
-    "href": "src/01/exploring_genai.html#qa",
+    "objectID": "src/01/exploring_genai.html#before-we-go",
+    "href": "src/01/exploring_genai.html#before-we-go",
     "title": "Exploring Generative AI Models",
-    "section": "Q&A",
-    "text": "Q&A",
+    "section": "Before we go…",
+    "text": "Before we go…\nHow about the other way?\n\nClassic models are typically supervised classification tasks\n\n“Is this a cat?”\nEnd up taking lots of pictures of cats, human annotation, etc.\n\nIntroducing the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”\nMore on this in the next lecture!",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
