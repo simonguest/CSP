@@ -9,10 +9,16 @@ format:
 logo: ../../src/logos/DigiPen_RGB_Red.png
 ---
 
-## Recap of Agents lecture / In the Next Hour...
+## Recap
 
-- TBD - An overview of what students will learn
-- Very demo heavy!
+- Last Week's Lecture
+  - Introduced AI Agents, their uses, how to create
+  - About 50% had used some kind of API
+  - One or two beyond this
+- This Week
+  - Explore text and image-based models
+  - Model evolution, API access, running locally
+  - Demos!
 
 # A Brief History of Transformer Models
 
@@ -44,8 +50,37 @@ timeline
 
 ## Completion vs. Instruction-Tuned
 
-- Introducing CoLab - student question on how many have used CoLab before
-- TBD and demo of GPT-2
+- Completion Model just predicts the next token
+  - Input prompt - `Mary had a little`
+  - Max total tokens - `50`
+  - Temperature - `0 - 1.0`
+  - top_k - consider only the top k tokens in the response
+  - top_p - Nucleus sampling (probability cut off - 0 and 1.0)
+- Output
+  - `Mary had a little lamb, its fleece was white as snow...`  (up to max tokens)
+
+## Completion vs. Instruction-Tuned
+
+- You can't really converse with it
+- `What is the capital of France?` (max tokens = 50)
+- `What is the capital of France? Paris. What is the capital of Spain? Madrid. What is the capital of`
+
+## Introducing Google Colab
+
+![Source: https://colab.research.google.com/signup](./images/colab-signup.png)
+
+# Demo: GPT-2
+
+[GPT-2.ipynb](https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing){.external target="_blank"}
+
+## Instruction-Tuned Models
+
+- Supervised Fine-Tuning
+  - Large datasets of questions/answers, tasks/completions, demonstrating helpful assistant behavior
+- RLHF (Reinforcement Learning from Human Feedback)
+  - Human raters rank different model responses, training a reward model
+- Chat Templates
+  - Structured formats to distinguish speakers in a dialog: Typically system, user, and assistant
 
 ## A Brief History of Transformer Models
 
@@ -63,7 +98,6 @@ timeline
     Nov 2022 : ChatGPT Launch
                   : Built on GPT-3.5 using RLHF
                   : 1M+ users in 5 days
-                  : Demonstrated AI to mainstream audiences
                   : Sparked widespread interest in generative AI
 
     Feb 2023 : Llama 1 Released
@@ -76,18 +110,20 @@ timeline
               : Available in 7B, 13B, 70B sizes
               : Trained on 40% more data than Llama 1
               : First open-weights Llama for commercial use
-              : Meta's commitment to open-source AI
 ```
 
-## Closed vs. Open Source vs. Open Weight
+## Closed vs. Open Models
 
-- TBD
-- Should also include OpenAI's oss releases
+- **Closed Source:** Hosted models; no ability to inspect the weights of the models. Accessed via an API (or UI).
+  - Examples: OpenAI GPT-5, Claude Sonnet 4.5
+- **Open Weight:** Model files with pretrained weights, but no training data. Host on your own hardware.
+  - Examples: Meta's Llama (and derivatives), Mistral 
+- **Open Source Models:** Models with access to the training data set. Create from scratch.
+  - Examples: OLMo from AI2
 
 ## Accessing Models via APIs
 
 - HTTP-based APIs
-  - LLM runs on server (in cloud)
   - Client makes HTTP API calls to invoke/access the model
   - (Normally use an SDK to wrap the HTTP API calls)
   - Client passes Authorization token as part of the call
@@ -95,35 +131,47 @@ timeline
 
 ## Accessing Models via APIs
 
-- TBD: Some kind of simple diagram
-
-## Accessing Models via APIs
-
-- TBD: Talk about the v1 chat completions API here
-- And the differences between the responses API maybe?
-
-## Accessing Models via APIs
-
 - CoLab DEMO: Using the OpenAI SDK to access ChatGPT, explore the OpenAI chat format
 
 ## Accessing Models via APIs
+***
+- TBD: Some kind of simple diagram
 
-- How about if you want to access/test different models from different providers?
-  - Need to setup separate authentication/access tokens for each?
+# Demo: OpenAI SDK/API call
+
+[OpenAI.ipynb](https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing){.external target="_blank"}
+
+## OpenAI's Chat Completions API
+
+- Debuted in March 2023, together with the ChatGPT API
+- Structure
+  - Messages array (system, assistant, user)
+  - Streaming support (using SSE)
+  - Simple parameters
+  - Function calling (added mid-2023)
+- Widespread Adoption
+  - Langchain, other SDKs
+  - Anthropic, Azure, TogetherAI
+  - Local hosting: vLLM, LM Studio
 
 ## Introducing OpenRouter
 
-- Overview of OpenRouter
+How about creating a client that consumes different models from multiple providers?
 
-## Introducing OpenRouter
+- Introducing OpenRouter (https://openrouter.ai)
+  - A unified API to hundreds of AI models through a single endpoint
+  - OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen and many others.
+  - OpenAI Chat Completions compatible
 
-- CoLab DEMO: Calling multiple models through OpenRouter
+## Demo: OpenRouter
+
+[OpenRouter.ipynb](https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing){.external target="_blank"}
 
 ## Downloading and Running Models
 
-- So far, we've seen how to call APIs
-- How about downloading and running models on our own hardware?
-- (Obviously they need to be open-weight models)
+- So far, we've called hosted models via APIs
+- How about downloading and running models on your own hardware?
+  - (Obviously they need to be open-weight models)
 
 ## Downloading and Running Models
 
@@ -131,36 +179,50 @@ Why would you want to do this?
 
 - Offline access to models (no Internet required)
 - Potential cost savings (if many API calls and already own hardware)
-  - e.g., running a small model within a game on a Gaming PC
+  - e.g., running a small model embedded within a game
 - Want to fine-tune your own model and have the hardware to do it
 - Don't want others to see what types of conversations you are having :)
 
 ## Introducing Hugging Face
 
-- TBD Hugging Face
+![Source: https://huggingface.co](./images/huggingface.png)
 
-## Exploring Models on Hugging Face
+## What is Hugging Face?
 
-- Model card and model tree
-- Files and versions (safetensors vs. pickle)
-- Model size, Tensor type
-- Chat template
-- Using this model drop down / code / colab
+It is to AI models what GitHub is to source code
+
+- Explore, download models to run on local hardware
+- Upload and share your own trained/fine-tuned models and datasets
+- Create "Spaces" - web-based apps for accessing models
+
+## Demo: Exploring a Model on Hugging Face
+
+[Google's gemma-3-1b-it on Hugging Face](https://huggingface.co/google/gemma-3-1b-it){.external target="_blank"}
 
 ## Hugging Face Transformers
 
-- TBD: What is/history of HFT library
+![Source: https://huggingface.co/docs/transformers](./images/transformers.png)
 
 ## Hugging Face Transformers
 
-- DEMO: Using Hugging Face Transformers to run the gemma-3-1b-it model
+What is the Hugging Face Transformers Library?
+
+- Open-source Python library to provide easy access to using various types of pre-trained transformer models
+- Brings together all of the different formats under one interface.
+   - Different models, vendors, types, chat templates
+   - Different implementations: PyTorch, TensorFlow, JAX
+- A few lines of code to download and run the model
+
+## Demo: Using Transformers Lib to download and use Gemma 3 1B
+
+[gemma-3-1b-it via transformers.ipynb](https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing){.external target="_blank"}
 
 ## VRAM Envy
 
-One challenge of running moels on your own hardware is VRAM availability
+One challenge of running moels on your own hardware is VRAM availability!
 
 - Roughly speaking, the size of the model will determine how much VRAM you need
-- Gemma 3 Open Weight models
+- Gemma 3 models
   - gemma-3-1b-it = 2Gb
   - gemma-3-4b-it = 8.6Gb
   - gemma-3-12b-it = 23.37Gb
@@ -173,23 +235,39 @@ One challenge of running moels on your own hardware is VRAM availability
 
 ## VRAM Envy
 
-You could run smaller models, but they are less accurate / more prone to hallucination.
+You can select smaller models, but they are less accurate / more prone to hallucination.
 
 - How do we fix this?
+  - Quantization
 
 ## Quantization
 
-- TBD: Slide overview of quantization / very useful in offline scenarios such as running models on phones
-- GGUF and MLX formats
-- Include details on llama.cpp and a slide on history of this
+Process of reducing the precision of a model's weights and activations. For example, 16-bit numbers to 4-bit.
 
-## Quantization
+- Parameter count matters more than precision
+  - A 70B parameter model at 4-bit often beats a 13B model at b16
+  - The models knowledge remains largely intact
+  - Often the extra precision doesn't meaningfully improve outputs
 
-DEMO: Running Gemma 3 12B GGUF on my laptop in LMStudio
+## Quantization Formats
 
-https://huggingface.co/google/gemma-3-12b-it-qat-q4_0-gguf - 16.87Gb
+The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization
 
-# Going Beyond Text
+- GGUF (GPT-Generated Unifed Format)
+  - Single file architecture
+  - Model format supporting multiple quantization levels (2-bit through 8-bit)
+- MLX (Apple's ML framework and format for Apple Silicon)
+  - Debuted in late 2023
+  - Supports 4 and 8 bit quantization schemes
+- Tools built upon llama.cpp
+  - Ollama, LM Studio, koboldcpp
+
+## Demo: Running Gemma 3 27B GGUF on my laptop
+
+- LMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf
+- 55Gb at b16, 16Gb quantized
+
+# Going Beyond Text ***
 
 ## Going Beyond Text
 
