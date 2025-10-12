@@ -66,6 +66,127 @@
     ]
   },
   {
+    "objectID": "src/01/resources.html#foundational-papers",
+    "href": "src/01/resources.html#foundational-papers",
+    "title": "Resources",
+    "section": "Foundational Papers",
+    "text": "Foundational Papers\n\nAttention Is All You Need (2017) - Vaswani et al.\n\nOriginal transformer paper from Google Research\nhttps://arxiv.org/abs/1706.03762\n\nAdding Conditional Control to Text-to-Image Diffusion Models (2023) - Zhang & Agrawala\n\nControlNet paper from Stanford University\nhttps://arxiv.org/abs/2302.05543",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#google-colab-notebooks",
+    "href": "src/01/resources.html#google-colab-notebooks",
+    "title": "Resources",
+    "section": "Google Colab Notebooks",
+    "text": "Google Colab Notebooks\nAll demo notebooks from the presentation:\n\nGPT-2 Demo\n\nhttps://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing\n\nOpenAI SDK/API Call\n\nhttps://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing\n\nOpenRouter Demo\n\nhttps://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing\n\nGemma 3 1B via Transformers\n\nhttps://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing\n\nDiffusion Text-to-Image\n\nhttps://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing\n\nDiffusion Image-to-Image\n\nhttps://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing\n\nControlNet Human Pose\n\nhttps://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#development-platforms-tools",
+    "href": "src/01/resources.html#development-platforms-tools",
+    "title": "Resources",
+    "section": "Development Platforms & Tools",
+    "text": "Development Platforms & Tools\n\nGoogle Colab\n\nWebsite: https://colab.research.google.com\nSignup: https://colab.research.google.com/signup\nFree Jupyter notebook environment with GPU access\nTiers: Free (T4, 16GB VRAM), Pro (V100, 16GB), Pro+ (A100, 40GB)\n\n\n\nHugging Face\n\nMain Site: https://huggingface.co\nModels: https://huggingface.co/models\nTransformers Docs: https://huggingface.co/docs/transformers\nGemma 3 1B Model: https://huggingface.co/google/gemma-3-1b-it\nThe GitHub of AI models - explore, download, and share models and datasets",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#api-providers-model-access",
+    "href": "src/01/resources.html#api-providers-model-access",
+    "title": "Resources",
+    "section": "API Providers & Model Access",
+    "text": "API Providers & Model Access\n\nOpenAI\n\nWebsite: https://openai.com\nAPI Docs: https://platform.openai.com/docs\nProvides access to GPT models (GPT-3.5, GPT-4, GPT-4o, etc.)\nChat Completions API launched March 2023\n\n\n\nAnthropic\n\nWebsite: https://anthropic.com\nAPI Docs: https://docs.anthropic.com\nClaude models (Sonnet, Opus, Haiku)\nFounded January 2021 by former OpenAI researchers\n\n\n\nOpenRouter\n\nWebsite: https://openrouter.ai\nUnified API to hundreds of AI models through a single endpoint\nCompatible with OpenAI’s Chat Completions API format\nAccess to OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen, and more",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#local-model-hosting-tools",
+    "href": "src/01/resources.html#local-model-hosting-tools",
+    "title": "Resources",
+    "section": "Local Model Hosting Tools",
+    "text": "Local Model Hosting Tools\n\nLM Studio\n\nWebsite: https://lmstudio.ai\nDesktop application for running LLMs locally\nSupports GGUF quantized models\nBuilt on llama.cpp\n\n\n\nOllama\n\nWebsite: https://ollama.ai\nCommand-line tool for running LLMs locally\nSimple model management and deployment\n\n\n\nllama.cpp\n\nGitHub: https://github.com/ggerganov/llama.cpp\nPure C/C++ implementation of LLM inference\nFoundation for GGUF quantization format\nPowers many local hosting tools",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#major-language-models",
+    "href": "src/01/resources.html#major-language-models",
+    "title": "Resources",
+    "section": "Major Language Models",
+    "text": "Major Language Models\n\nGPT Series (OpenAI)\n\nGPT-1 (June 2018): 117M parameters\nGPT-2 (Feb 2019): 1.5B parameters\nGPT-3 (May 2020): 175B parameters\nGPT-3.5 / ChatGPT (Nov 2022): RLHF-tuned\nGPT-4 series (2023+): Multimodal capabilities\n\n\n\nLlama Series (Meta)\n\nLlama 1 (Feb 2023): 7B-65B parameters, researcher access only\nLlama 2 (Jul 2023): First open-weights commercial license\nLlama 3 series (2024+): Improved performance and scale\n\n\n\nGemma Series (Google)\n\nGemma 3 1B-IT: https://huggingface.co/google/gemma-3-1b-it\nAvailable in 1B, 4B, 12B, and 27B sizes\nInstruction-tuned variants for chat applications\n\n\n\nOther Notable Models\n\nMistral: Open-weight models from Mistral AI\nOLMo: Fully open-source model from AI2 (Allen Institute for AI)\nDeepSeek, Qwen: Chinese open-weight models",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#image-generation-models-tools",
+    "href": "src/01/resources.html#image-generation-models-tools",
+    "title": "Resources",
+    "section": "Image Generation Models & Tools",
+    "text": "Image Generation Models & Tools\n\nStable Diffusion\n\nStability AI: https://stability.ai\nOpen-source text-to-image diffusion models\nTimeline: v1.4 (Aug 2022) → v1.5 → v2.0/2.1 → SDXL (Jul 2023) → v3.5 (Jun 2024)\n\n\n\nMidjourney\n\nWebsite: https://midjourney.com\nDiscord-based image generation service\nKnown for exceptional artistic quality\nv5 launched March 2023\n\n\n\nFLUX.1\n\nBlack Forest Labs: https://blackforestlabs.ai\nState-of-the-art open image generation model (2024)\n\n\n\nDALL-E / Sora (OpenAI)\n\nDALL-E: Text-to-image generation\nSora (Feb 2024): Text-to-video up to 60 seconds\n\n\n\nImagen 3 (Google DeepMind)\n\nPhotorealistic image generation\n2024 release",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#image-model-platforms-resources",
+    "href": "src/01/resources.html#image-model-platforms-resources",
+    "title": "Resources",
+    "section": "Image Model Platforms & Resources",
+    "text": "Image Model Platforms & Resources\n\nReplicate\n\nWebsite: https://replicate.com\nCloud platform for running AI models via API\nExtensive library of image generation models\n\n\n\nComfyUI\n\nWebsite: https://comfy.org\nNode-based UI for Stable Diffusion workflows\nPowerful tool for complex image generation pipelines\n\n\n\nHugging Face Diffusers\n\nDocs: https://huggingface.co/docs/diffusers\nPython library for diffusion models\nEasy access to text-to-image, image-to-image, and ControlNet",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#key-concepts-techniques",
+    "href": "src/01/resources.html#key-concepts-techniques",
+    "title": "Resources",
+    "section": "Key Concepts & Techniques",
+    "text": "Key Concepts & Techniques\n\nRLHF (Reinforcement Learning from Human Feedback)\n\nTechnique for fine-tuning models to follow instructions\nUsed in InstructGPT, ChatGPT, and Claude\nHuman raters rank model responses to train a reward model\n\n\n\nQuantization\n\nGGUF Format: GPT-Generated Unified Format\n\nSingle-file architecture supporting 2-bit to 8-bit quantization\nDeveloped by llama.cpp community\n\nMLX Format: Apple’s ML framework for Apple Silicon\n\nSupports 4-bit and 8-bit quantization\nReleased late 2023\n\n\n\n\nControlNet\n\nAdd-on models for Stable Diffusion providing precise spatial control\nConditioning types: pose, edges, depth, normal maps, segmentation, scribbles\nPublished February 2023 by Stanford researchers\n\n\n\nDiffusion Models\n\nTwo-stage process inspired by thermodynamics\nTraining: Learn to predict noise added to images\nInference: Start with random noise, iteratively denoise guided by text prompt",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#additional-learning-resources",
+    "href": "src/01/resources.html#additional-learning-resources",
+    "title": "Resources",
+    "section": "Additional Learning Resources",
+    "text": "Additional Learning Resources\n\nAPI Documentation\n\nOpenAI Chat Completions: https://platform.openai.com/docs/api-reference/chat\nAnthropic Messages API: https://docs.anthropic.com/claude/reference/messages_post\n\n\n\nModel Hubs\n\nHugging Face Model Hub: Browse and download thousands of models\nCivitAI: https://civitai.com - Community for Stable Diffusion models\n\n\n\nCommunities\n\nHugging Face Forums: https://discuss.huggingface.co\nr/LocalLLaMA: Reddit community for running models locally\nr/StableDiffusion: Reddit community for image generation",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "src/01/resources.html#model-parameter-comparison",
+    "href": "src/01/resources.html#model-parameter-comparison",
+    "title": "Resources",
+    "section": "Model Parameter Comparison",
+    "text": "Model Parameter Comparison\n\nText Models (Approximate Sizes)\n\n1B parameters: ~2GB\n4B parameters: ~8.6GB\n12B parameters: ~23GB\n70B parameters: ~140GB (full precision)\n175B parameters (GPT-3): ~350GB (full precision)\n\nNote: Quantization can reduce these sizes by 50-75% with minimal quality loss",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Resources"
+    ]
+  },
+  {
     "objectID": "src/00/resources.html",
     "href": "src/00/resources.html",
     "title": "Resources",
