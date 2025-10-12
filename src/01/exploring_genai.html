@@ -211,18 +211,18 @@
 </div>
 </div>
 </div>
-<p>[1] <span class="citation" data-cites="vaswani2017attention">Vaswani et al. (<a href="#/qa" role="doc-biblioref" onclick="">2017</a>)</span></p>
+<p>[1] <span class="citation" data-cites="vaswani2017attention">Vaswani et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2017</a>)</span></p>
 </section>
 <section id="completion-vs.-instruction-tuned" class="slide level2">
 <h2>Completion vs.&nbsp;Instruction-Tuned</h2>
 <ul>
 <li class="fragment">Completion Model just predicts the next token
 <ul>
-<li class="fragment">Input prompt - <code>Mary had a little</code></li>
-<li class="fragment">Max total tokens - <code>50</code></li>
-<li class="fragment">Temperature - <code>0 - 1.0</code></li>
-<li class="fragment">top_k - consider only the top k tokens in the response</li>
-<li class="fragment">top_p - Nucleus sampling (probability cut off - 0 and 1.0)</li>
+<li class="fragment">Input prompt: <code>Mary had a little</code></li>
+<li class="fragment">Max total tokens: <code>50</code></li>
+<li class="fragment">Temperature: <code>0 - 1.0</code></li>
+<li class="fragment">top_k: consider only the top k tokens in the response</li>
+<li class="fragment">top_p: Nucleus sampling (probability cut off - 0 and 1.0)</li>
 </ul></li>
 <li class="fragment">Output
 <ul>
@@ -347,32 +347,33 @@
 <li class="fragment">Structure
 <ul>
 <li class="fragment">Messages array (system, assistant, user)</li>
-<li class="fragment">Streaming support (using SSE)</li>
+<li class="fragment">Streaming support (using SSE - Server Side Events)</li>
 <li class="fragment">Simple parameters</li>
 <li class="fragment">Function calling (added mid-2023)</li>
 </ul></li>
 <li class="fragment">Widespread Adoption
 <ul>
-<li class="fragment">Langchain, other SDKs</li>
 <li class="fragment">Anthropic, Azure, TogetherAI</li>
 <li class="fragment">Local hosting: vLLM, LM Studio</li>
 </ul></li>
 </ul>
 </section>
-<section id="introducing-openrouter" class="slide level2">
-<h2>Introducing OpenRouter</h2>
-<p>How about creating a client that consumes different models from multiple providers?</p>
+<section id="openais-chat-completions-api-1" class="slide level2">
+<h2>OpenAI’s Chat Completions API</h2>
+<p>How do we consume different models from multiple providers?</p>
 <ul>
 <li class="fragment">Introducing OpenRouter (https://openrouter.ai)
 <ul>
 <li class="fragment">A unified API to hundreds of AI models through a single endpoint</li>
-<li class="fragment">OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen and many others.</li>
-<li class="fragment">OpenAI Chat Completions compatible</li>
+<li class="fragment">(Using OpenAI’s Chat Completion API)</li>
+<li class="fragment">OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen, and many others.</li>
+<li class="fragment">Pay per API call, often same cost as the provider</li>
 </ul></li>
 </ul>
 </section>
 <section id="demo-openrouter" class="slide level2 center">
 <h2>Demo: OpenRouter</h2>
+<p><a href="https://openrouter.ai" class="external" target="_blank">https://openrouter.ai</a></p>
 <p><a href="https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing" class="external" target="_blank">OpenRouter.ipynb</a></p>
 </section></section>
 <section>
@@ -400,7 +401,7 @@
 <li class="fragment">e.g., running a small model embedded within a game</li>
 </ul></li>
 <li class="fragment">Want to fine-tune your own model and have the hardware to do it</li>
-<li class="fragment">Don’t want others to see what types of conversations you are having :)</li>
+<li class="fragment">Don’t want others to see the conversations you are having :)</li>
 </ul>
 </section>
 <section id="introducing-hugging-face" class="slide level2">
@@ -429,7 +430,7 @@
 <p>What is the Hugging Face Transformers Library?</p>
 <ul>
 <li class="fragment">Open-source Python library to provide easy access to using various types of pre-trained transformer models</li>
-<li class="fragment">Brings together all of the different formats under one interface.
+<li class="fragment">Brings together all of the different formats under one interface
 <ul>
 <li class="fragment">Different models, vendors, types, chat templates</li>
 <li class="fragment">Different implementations: PyTorch, TensorFlow, JAX</li>
@@ -443,7 +444,7 @@
 </section>
 <section id="out-of-vram" class="slide level2">
 <h2>“Out of VRAM”</h2>
-<p>One challenge of running moels on your own hardware is VRAM availability!</p>
+<p>One challenge of running moels on your own hardware is VRAM</p>
 <ul>
 <li class="fragment">Roughly speaking, the size of the model will determine how much VRAM you need</li>
 <li class="fragment">Gemma 3 models
@@ -451,20 +452,30 @@
 <li class="fragment">gemma-3-1b-it = 2Gb</li>
 <li class="fragment">gemma-3-4b-it = 8.6Gb</li>
 <li class="fragment">gemma-3-12b-it = 23.37Gb</li>
+<li class="fragment">Qwen3-VL-235B-A22B-Thinking = ~475Gb</li>
 </ul></li>
-<li class="fragment">Colab Tiers
+</ul>
+</section>
+<section id="out-of-vram-1" class="slide level2">
+<h2>“Out of VRAM”</h2>
+<ul>
+<li class="fragment">Google Colab Tiers
 <ul>
 <li class="fragment">Colab Free T4 = 16Gb VRAM (15Gb usable)</li>
 <li class="fragment">Colab Pro V100 = 16Gb VRAM</li>
 <li class="fragment">Colab Pro A100 = 40Gb VRAM</li>
 </ul></li>
-<li class="fragment">Your Hardware
+<li class="fragment">Your Gaming PC
 <ul>
-<li class="fragment">Probably 8Gb VRAM :)</li>
+<li class="fragment">Probably 8Gb VRAM</li>
+</ul></li>
+<li class="fragment">Your Phone
+<ul>
+<li class="fragment">V-what? :)</li>
 </ul></li>
 </ul>
 </section>
-<section id="out-of-vram-1" class="slide level2">
+<section id="out-of-vram-2" class="slide level2">
 <h2>“Out of VRAM”</h2>
 <p>You can select smaller models, but they are less accurate / more prone to hallucination.</p>
 <ul>
@@ -493,13 +504,18 @@
 <li class="fragment">GGUF (GPT-Generated Unifed Format)
 <ul>
 <li class="fragment">Single file architecture</li>
-<li class="fragment">Model format supporting multiple quantization levels (2-bit through 8-bit)</li>
+<li class="fragment">Model format supporting multiple quantization levels (2-bit through 8-bit) with CPU and GPU handoff</li>
 </ul></li>
 <li class="fragment">MLX (Apple’s ML framework and format for Apple Silicon)
 <ul>
 <li class="fragment">Debuted in late 2023</li>
 <li class="fragment">Supports 4 and 8 bit quantization schemes</li>
 </ul></li>
+</ul>
+</section>
+<section id="running-quantized-models" class="slide level2">
+<h2>Running Quantized Models</h2>
+<ul>
 <li class="fragment">Tools built upon llama.cpp
 <ul>
 <li class="fragment">Ollama, LM Studio, koboldcpp</li>
@@ -508,37 +524,36 @@
 </section>
 <section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="slide level2 center">
 <h2>Demo: Running Gemma 3 27B GGUF on my laptop</h2>
-<ul>
-<li class="fragment">LMStudio: https://huggingface.co/google/gemma-3-27b-it-qat-q4_0-gguf</li>
-<li class="fragment">55Gb at b16, 16Gb quantized</li>
-</ul>
+<p><a href="https://lmstudio.ai" class="external" target="_blank">LMStudio</a>: gemma-3-27b-it-qat-q4_0-gguf</p>
 </section></section>
 <section>
 <section id="going-beyond-text-images" class="title-slide slide level1 center">
 <h1>Going Beyond Text: Images</h1>
 
 </section>
-<section id="images-models---generation" class="slide level2">
-<h2>Images Models - Generation</h2>
+<section id="images-models-text-to-image" class="slide level2">
+<h2>Images Models: Text-to-Image</h2>
 <p>Text-to-Image: “A photograph of an astronaut riding a horse.”</p>
 <ul>
-<li class="fragment">Based on a concept called a diffuser</li>
+<li class="fragment">Based on a concept called a <strong>diffuser</strong></li>
 <li class="fragment">Two stage process, inspired by thermodynamics</li>
+</ul>
+</section>
+<section id="image-models-diffuser" class="slide level2">
+<h2>Image Models: Diffuser</h2>
+<ul>
 <li class="fragment">Training
 <ul>
 <li class="fragment">During training, random noise is adding to images in steps</li>
 <li class="fragment">Model learns to predict what noise what added (forward diffusion process)</li>
 </ul></li>
-<li class="fragment">Inference
+<li class="fragment">Inference (process runs in reverse)
 <ul>
-<li class="fragment">To generate new images, the process runs in reverse</li>
 <li class="fragment">Start with pure random noise (known as a seed)</li>
 <li class="fragment">Model estimates what noise should be removed to create a realistic image</li>
 <li class="fragment">Using the text prompt, the model steers the process towards images that match the description</li>
 </ul></li>
 </ul>
-<p>TBD: add sources (don’t forget sources throughout)</p>
-<p>2015 - Deep Unsupervised Learning using Nonequilibrium Thermodynamics (Sohl-Dickstein et al.) 2019 - Generative Modeling by Estimating Gradients of the Data Distribution (Song &amp; Ermon) 2020 - Denoising Diffusion Probabilistic Models (DDPM) (Ho et al., UC Berkeley)</p>
 </section>
 <section id="image-diffusion-models-in-2022" class="slide level2">
 <h2>Image Diffusion Models in 2022</h2>
@@ -616,8 +631,8 @@
 <h2>Demo: Text to Image Diffusion Process</h2>
 <p><a href="https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing" class="external" target="_blank">Diffusion Text-to-Image.ipynb</a></p>
 </section>
-<section id="image-models---generation" class="slide level2">
-<h2>Image Models - Generation</h2>
+<section id="images-models-image-to-image" class="slide level2">
+<h2>Images Models: Image-to-Image</h2>
 <p>Image-to-Image: “Make this image different”</p>
 <ul>
 <li class="fragment">Originally solved by GAN approaches, but evolved into extension of the diffusion concept
@@ -627,7 +642,6 @@
 <li class="fragment">The original image heavily influences the output structure</li>
 </ul></li>
 </ul>
-<p>Stable Diffusion with img2img (2022) - Popularized diffusion-based image-to-image for the masses. It works by encoding the input image to latent space, adding noise, then denoising with text conditioning. The “strength” parameter controls how much the original image influences the result.</p>
 </section>
 <section id="demo-image-to-image-process" class="slide level2 center">
 <h2>Demo: Image to Image Process</h2>
@@ -635,8 +649,9 @@
 </section>
 <section id="controlnet" class="slide level2">
 <h2>ControlNet</h2>
-<p>Text-to-Image and Image-to-Image are interesting, but you don’t really have that much control.</p>
+<p>Text-to-Image and Image-to-Image are interesting, but you don’t have that much control</p>
 <ul>
+<li class="fragment">Extensive prompts (both positive and negative) can help, but only so far</li>
 <li class="fragment">Fine-tuning techniques, but expensive and risk degrading quality</li>
 </ul>
 </section>
@@ -645,7 +660,7 @@
 <p>Introducing ControlNet</p>
 <ul>
 <li class="fragment">Developed by Lvmin Zhang and Maneesh Agrawala at Stanford University</li>
-<li class="fragment">Published in February 2023 in the paper “Adding Conditional Control to Text-to-Image Diffusion Models.”</li>
+<li class="fragment">Published in February 2023 <span class="citation" data-cites="zhang2023controlnet">(<a href="#/bibliography" role="doc-biblioref" onclick="">Zhang, Rao, and Agrawala 2023</a>)</span></li>
 <li class="fragment">ControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”</li>
 </ul>
 </section>
@@ -657,7 +672,7 @@
 <li class="fragment">Train the copy of the encoder alongside the frozen SD model
 <ul>
 <li class="fragment">During training: use paired data (e.g., pose skeleton → original image)</li>
-<li class="fragment">During inference: both encoders run together - original processes noisy latent, copy processes control input</li>
+<li class="fragment">During inference: both encoders run together</li>
 <li class="fragment">Features from both are combined via zero convolutions</li>
 </ul></li>
 <li class="fragment">Key: The weights in the original SD model doesn’t change</li>
@@ -670,35 +685,15 @@
 </section>
 <section id="controlnet-2" class="slide level2">
 <h2>ControlNet</h2>
-<p>Exmaples of conditioning types</p>
+<p>Examples of conditioning types:</p>
 <ul>
+<li class="fragment">Human pose (OpenPose) - skeleton/keypoint detection</li>
+<li class="fragment">QR codes - codes blended into images</li>
 <li class="fragment">Canny edges - line drawings and edge detection</li>
 <li class="fragment">Depth maps - 3D structure information</li>
 <li class="fragment">Normal maps - surface orientation</li>
-<li class="fragment">Human pose (OpenPose) - skeleton/keypoint detection</li>
 <li class="fragment">Semantic segmentation - labeled regions</li>
 <li class="fragment">Scribbles - rough user drawings</li>
-</ul>
-</section>
-<section id="controlnet-based-methods" class="slide level2">
-<h2>ControlNet-Based Methods</h2>
-<ul>
-<li class="fragment">Advanced Editing Techniques
-<ul>
-<li class="fragment">Scribble to image / QR code to image</li>
-<li class="fragment">Inpainting (better at large variations vs.&nbsp;other inpainting techniques).</li>
-<li class="fragment">Image Alteration - e.g., Weather and Environmental Enhancement</li>
-</ul></li>
-<li class="fragment">Structural and Geometric Transformation
-<ul>
-<li class="fragment">Pose Estimation</li>
-<li class="fragment">Normal Map Generation</li>
-<li class="fragment">Sematic Segmentation</li>
-</ul></li>
-<li class="fragment">Neural Style Transfer
-<ul>
-<li class="fragment">Ghibli images, anyone?</li>
-</ul></li>
 </ul>
 </section></section>
 <section>
@@ -706,6 +701,10 @@
 <h1>Further Exploration</h1>
 <p>For the many image models that we didn’t cover…</p>
 </section>
+<section id="hugging-face-image-models" class="slide level2">
+<h2>Hugging Face Image Models</h2>
+
+<img data-src="./images/imagemodels.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://huggingface.co/models</p></section>
 <section id="replicate" class="slide level2">
 <h2>Replicate</h2>
 
@@ -721,11 +720,16 @@
 </section>
 <section id="resources-1" class="slide level2">
 <h2>Resources</h2>
-<p>TBD</p>
+<ul>
+<li class="fragment">This slide deck, resources, links, everything:
+<ul>
+<li class="fragment"><a href="https://simonguest.github.io/CSP-400" class="external" target="_blank">https://simonguest.github.io/CSP-400</a></li>
+<li class="fragment">(I’ll also post to the GAM-400 and CSP-300/400 channels)</li>
+</ul></li>
+</ul>
 </section>
-<section id="next-lecture" class="slide level2">
-<h2>Next Lecture</h2>
-<p>How about the other way?</p>
+<section id="next-lecture-vision-language-models" class="slide level2">
+<h2>Next Lecture: Vision Language Models</h2>
 <ul>
 <li class="fragment">Classic models are typically supervised classification tasks
 <ul>
@@ -739,13 +743,21 @@
 </ul></li>
 </ul>
 </section></section>
-<section id="qa" class="title-slide slide level1 smaller scrollable">
+<section id="qa" class="title-slide slide level1 center">
 <h1>Q&amp;A</h1>
+
+</section>
+
+<section id="bibliography" class="title-slide slide level1 smaller scrollable">
+<h1>Bibliography</h1>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-vaswani2017attention" class="csl-entry" role="listitem">
 Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. <span>“Attention Is All You Need.”</span> In <em>Advances in Neural Information Processing Systems</em>. Vol. 30.
+</div>
+<div id="ref-zhang2023controlnet" class="csl-entry" role="listitem">
+Zhang, Lvmin, Anyi Rao, and Maneesh Agrawala. 2023. <span>“Adding Conditional Control to Text-to-Image Diffusion Models.”</span> <em>arXiv Preprint arXiv:2302.05543</em>.
 </div>
 </div>
 </section>
