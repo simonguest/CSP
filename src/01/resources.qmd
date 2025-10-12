@@ -4,3 +4,209 @@ format: html
 ---
 
 This document contains all the external resources, links, and references mentioned in the "Exploring Generative AI Models" lecture.
+
+## Foundational Papers
+
+- **Attention Is All You Need** (2017) - Vaswani et al.
+  - Original transformer paper from Google Research
+  - [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+
+- **Adding Conditional Control to Text-to-Image Diffusion Models** (2023) - Zhang & Agrawala
+  - ControlNet paper from Stanford University
+  - [https://arxiv.org/abs/2302.05543](https://arxiv.org/abs/2302.05543)
+
+## Google Colab Notebooks
+
+All demo notebooks from the presentation:
+
+- **GPT-2 Demo**
+  - [https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing](https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing)
+
+- **OpenAI SDK/API Call**
+  - [https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing](https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing)
+
+- **OpenRouter Demo**
+  - [https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing](https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing)
+
+- **Gemma 3 1B via Transformers**
+  - [https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing](https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing)
+
+- **Diffusion Text-to-Image**
+  - [https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing](https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing)
+
+- **Diffusion Image-to-Image**
+  - [https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing](https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing)
+
+- **ControlNet Human Pose**
+  - [https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing](https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing)
+
+## Development Platforms & Tools
+
+### Google Colab
+- **Website:** [https://colab.research.google.com](https://colab.research.google.com)
+- **Signup:** [https://colab.research.google.com/signup](https://colab.research.google.com/signup)
+- Free Jupyter notebook environment with GPU access
+- Tiers: Free (T4, 16GB VRAM), Pro (V100, 16GB), Pro+ (A100, 40GB)
+
+### Hugging Face
+- **Main Site:** [https://huggingface.co](https://huggingface.co)
+- **Models:** [https://huggingface.co/models](https://huggingface.co/models)
+- **Transformers Docs:** [https://huggingface.co/docs/transformers](https://huggingface.co/docs/transformers)
+- **Gemma 3 1B Model:** [https://huggingface.co/google/gemma-3-1b-it](https://huggingface.co/google/gemma-3-1b-it)
+- The GitHub of AI models - explore, download, and share models and datasets
+
+## API Providers & Model Access
+
+### OpenAI
+- **Website:** [https://openai.com](https://openai.com)
+- **API Docs:** [https://platform.openai.com/docs](https://platform.openai.com/docs)
+- Provides access to GPT models (GPT-3.5, GPT-4, GPT-4o, etc.)
+- Chat Completions API launched March 2023
+
+### Anthropic
+- **Website:** [https://anthropic.com](https://anthropic.com)
+- **API Docs:** [https://docs.anthropic.com](https://docs.anthropic.com)
+- Claude models (Sonnet, Opus, Haiku)
+- Founded January 2021 by former OpenAI researchers
+
+### OpenRouter
+- **Website:** [https://openrouter.ai](https://openrouter.ai)
+- Unified API to hundreds of AI models through a single endpoint
+- Compatible with OpenAI's Chat Completions API format
+- Access to OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen, and more
+
+## Local Model Hosting Tools
+
+### LM Studio
+- **Website:** [https://lmstudio.ai](https://lmstudio.ai)
+- Desktop application for running LLMs locally
+- Supports GGUF quantized models
+- Built on llama.cpp
+
+### Ollama
+- **Website:** [https://ollama.ai](https://ollama.ai)
+- Command-line tool for running LLMs locally
+- Simple model management and deployment
+
+### llama.cpp
+- **GitHub:** [https://github.com/ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
+- Pure C/C++ implementation of LLM inference
+- Foundation for GGUF quantization format
+- Powers many local hosting tools
+
+## Major Language Models
+
+### GPT Series (OpenAI)
+- **GPT-1** (June 2018): 117M parameters
+- **GPT-2** (Feb 2019): 1.5B parameters
+- **GPT-3** (May 2020): 175B parameters
+- **GPT-3.5 / ChatGPT** (Nov 2022): RLHF-tuned
+- **GPT-4** series (2023+): Multimodal capabilities
+
+### Llama Series (Meta)
+- **Llama 1** (Feb 2023): 7B-65B parameters, researcher access only
+- **Llama 2** (Jul 2023): First open-weights commercial license
+- **Llama 3** series (2024+): Improved performance and scale
+
+### Gemma Series (Google)
+- **Gemma 3 1B-IT:** [https://huggingface.co/google/gemma-3-1b-it](https://huggingface.co/google/gemma-3-1b-it)
+- Available in 1B, 4B, 12B, and 27B sizes
+- Instruction-tuned variants for chat applications
+
+### Other Notable Models
+- **Mistral:** Open-weight models from Mistral AI
+- **OLMo:** Fully open-source model from AI2 (Allen Institute for AI)
+- **DeepSeek, Qwen:** Chinese open-weight models
+
+## Image Generation Models & Tools
+
+### Stable Diffusion
+- **Stability AI:** [https://stability.ai](https://stability.ai)
+- Open-source text-to-image diffusion models
+- Timeline: v1.4 (Aug 2022) → v1.5 → v2.0/2.1 → SDXL (Jul 2023) → v3.5 (Jun 2024)
+
+### Midjourney
+- **Website:** [https://midjourney.com](https://midjourney.com)
+- Discord-based image generation service
+- Known for exceptional artistic quality
+- v5 launched March 2023
+
+### FLUX.1
+- **Black Forest Labs:** [https://blackforestlabs.ai](https://blackforestlabs.ai)
+- State-of-the-art open image generation model (2024)
+
+### DALL-E / Sora (OpenAI)
+- **DALL-E:** Text-to-image generation
+- **Sora** (Feb 2024): Text-to-video up to 60 seconds
+
+### Imagen 3 (Google DeepMind)
+- Photorealistic image generation
+- 2024 release
+
+## Image Model Platforms & Resources
+
+### Replicate
+- **Website:** [https://replicate.com](https://replicate.com)
+- Cloud platform for running AI models via API
+- Extensive library of image generation models
+
+### ComfyUI
+- **Website:** [https://comfy.org](https://comfy.org)
+- Node-based UI for Stable Diffusion workflows
+- Powerful tool for complex image generation pipelines
+
+### Hugging Face Diffusers
+- **Docs:** [https://huggingface.co/docs/diffusers](https://huggingface.co/docs/diffusers)
+- Python library for diffusion models
+- Easy access to text-to-image, image-to-image, and ControlNet
+
+## Key Concepts & Techniques
+
+### RLHF (Reinforcement Learning from Human Feedback)
+- Technique for fine-tuning models to follow instructions
+- Used in InstructGPT, ChatGPT, and Claude
+- Human raters rank model responses to train a reward model
+
+### Quantization
+- **GGUF Format:** GPT-Generated Unified Format
+  - Single-file architecture supporting 2-bit to 8-bit quantization
+  - Developed by llama.cpp community
+- **MLX Format:** Apple's ML framework for Apple Silicon
+  - Supports 4-bit and 8-bit quantization
+  - Released late 2023
+
+### ControlNet
+- Add-on models for Stable Diffusion providing precise spatial control
+- Conditioning types: pose, edges, depth, normal maps, segmentation, scribbles
+- Published February 2023 by Stanford researchers
+
+### Diffusion Models
+- Two-stage process inspired by thermodynamics
+- Training: Learn to predict noise added to images
+- Inference: Start with random noise, iteratively denoise guided by text prompt
+
+## Additional Learning Resources
+
+### API Documentation
+- **OpenAI Chat Completions:** [https://platform.openai.com/docs/api-reference/chat](https://platform.openai.com/docs/api-reference/chat)
+- **Anthropic Messages API:** [https://docs.anthropic.com/claude/reference/messages_post](https://docs.anthropic.com/claude/reference/messages_post)
+
+### Model Hubs
+- **Hugging Face Model Hub:** Browse and download thousands of models
+- **CivitAI:** [https://civitai.com](https://civitai.com) - Community for Stable Diffusion models
+
+### Communities
+- **Hugging Face Forums:** [https://discuss.huggingface.co](https://discuss.huggingface.co)
+- **r/LocalLLaMA:** Reddit community for running models locally
+- **r/StableDiffusion:** Reddit community for image generation
+
+## Model Parameter Comparison
+
+### Text Models (Approximate Sizes)
+- 1B parameters: ~2GB
+- 4B parameters: ~8.6GB
+- 12B parameters: ~23GB
+- 70B parameters: ~140GB (full precision)
+- 175B parameters (GPT-3): ~350GB (full precision)
+
+Note: Quantization can reduce these sizes by 50-75% with minimal quality loss
