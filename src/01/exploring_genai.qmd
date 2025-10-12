@@ -1,5 +1,6 @@
 ---
 title: "Exploring Generative AI Models"
+author: "Simon Guest"
 format:
   revealjs:
     slide-number: true
@@ -131,7 +132,7 @@ timeline
   - Client makes HTTP API calls to invoke/access the model
   - (Normally use an SDK to wrap the HTTP API calls)
   - Client passes Authorization token as part of the call
-  - Default way of accesing OpenAI, Claude, other large, closed-source models
+  - Default way of accessing OpenAI, Claude, other large, closed-source models
 
 ## Demo: OpenAI SDK/API call {.center}
 
@@ -219,7 +220,7 @@ What is the Hugging Face Transformers Library?
 
 ## "Out of VRAM"
 
-One challenge of running moels on your own hardware is VRAM
+One challenge of running models on your own hardware is VRAM
 
 - Roughly speaking, the size of the model will determine how much VRAM you need
 - Gemma 3 models
@@ -260,7 +261,7 @@ Process of reducing the precision of a model's weights and activations. For exam
 
 The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization
 
-- GGUF (GPT-Generated Unifed Format)
+- GGUF (GPT-Generated Unified Format)
   - Single file architecture
   - Model format supporting multiple quantization levels (2-bit through 8-bit) with CPU and GPU handoff
 - MLX (Apple's ML framework and format for Apple Silicon)
@@ -289,7 +290,7 @@ Text-to-Image: "A photograph of an astronaut riding a horse."
 
 - Training
   - During training, random noise is adding to images in steps
-  - Model learns to predict what noise what added (forward diffusion process)
+  - Model learns to predict what noise was added (forward diffusion process)
 - Inference (process runs in reverse)
   - Start with pure random noise (known as a seed)
   - Model estimates what noise should be removed to create a realistic image
@@ -380,8 +381,8 @@ Introducing ControlNet
   - During training: use paired data (e.g., pose skeleton → original image)
   - During inference: both encoders run together
   - Features from both are combined via zero convolutions
-- Key: The weights in the original SD model doesn't change
-- Analogous to ControlNet being a "Plug in" model
+- Key: The weights in the original SD model don't change
+- ControlNet is analogous to a "Plug in" model
 
 ## Demo: ControlNet Human Pose {.center}
 
