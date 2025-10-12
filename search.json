@@ -860,7 +860,7 @@
     "href": "src/01/exploring_genai.html#calling-models-via-apis-1",
     "title": "Exploring Generative AI Models",
     "section": "Calling Models via APIs",
-    "text": "Calling Models via APIs\n\nHTTP-based APIs\n\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accesing OpenAI, Claude, other large, closed-source models",
+    "text": "Calling Models via APIs\n\nHTTP-based APIs\n\nClient makes HTTP API calls to invoke/access the model\n(Normally use an SDK to wrap the HTTP API calls)\nClient passes Authorization token as part of the call\nDefault way of accessing OpenAI, Claude, other large, closed-source models",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1003,7 +1003,7 @@
     "href": "src/01/exploring_genai.html#out-of-vram",
     "title": "Exploring Generative AI Models",
     "section": "“Out of VRAM”",
-    "text": "“Out of VRAM”\nOne challenge of running moels on your own hardware is VRAM\n\nRoughly speaking, the size of the model will determine how much VRAM you need\nGemma 3 models\n\ngemma-3-1b-it = 2Gb\ngemma-3-4b-it = 8.6Gb\ngemma-3-12b-it = 23.37Gb\nQwen3-VL-235B-A22B-Thinking = ~475Gb",
+    "text": "“Out of VRAM”\nOne challenge of running models on your own hardware is VRAM\n\nRoughly speaking, the size of the model will determine how much VRAM you need\nGemma 3 models\n\ngemma-3-1b-it = 2Gb\ngemma-3-4b-it = 8.6Gb\ngemma-3-12b-it = 23.37Gb\nQwen3-VL-235B-A22B-Thinking = ~475Gb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1047,7 +1047,7 @@
     "href": "src/01/exploring_genai.html#quantization-formats",
     "title": "Exploring Generative AI Models",
     "section": "Quantization Formats",
-    "text": "Quantization Formats\nThe llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization\n\nGGUF (GPT-Generated Unifed Format)\n\nSingle file architecture\nModel format supporting multiple quantization levels (2-bit through 8-bit) with CPU and GPU handoff\n\nMLX (Apple’s ML framework and format for Apple Silicon)\n\nDebuted in late 2023\nSupports 4 and 8 bit quantization schemes",
+    "text": "Quantization Formats\nThe llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization\n\nGGUF (GPT-Generated Unified Format)\n\nSingle file architecture\nModel format supporting multiple quantization levels (2-bit through 8-bit) with CPU and GPU handoff\n\nMLX (Apple’s ML framework and format for Apple Silicon)\n\nDebuted in late 2023\nSupports 4 and 8 bit quantization schemes",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1091,7 +1091,7 @@
     "href": "src/01/exploring_genai.html#image-models-diffuser",
     "title": "Exploring Generative AI Models",
     "section": "Image Models: Diffuser",
-    "text": "Image Models: Diffuser\n\nTraining\n\nDuring training, random noise is adding to images in steps\nModel learns to predict what noise what added (forward diffusion process)\n\nInference (process runs in reverse)\n\nStart with pure random noise (known as a seed)\nModel estimates what noise should be removed to create a realistic image\nUsing the text prompt, the model steers the process towards images that match the description",
+    "text": "Image Models: Diffuser\n\nTraining\n\nDuring training, random noise is adding to images in steps\nModel learns to predict what noise was added (forward diffusion process)\n\nInference (process runs in reverse)\n\nStart with pure random noise (known as a seed)\nModel estimates what noise should be removed to create a realistic image\nUsing the text prompt, the model steers the process towards images that match the description",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1190,7 +1190,7 @@
     "href": "src/01/exploring_genai.html#how-controlnet-works",
     "title": "Exploring Generative AI Models",
     "section": "How ControlNet Works",
-    "text": "How ControlNet Works\n\nStable Diffusion’s U-Net has an encoder and decoder\nCreate a trainable copy of the encoder blocks\nTrain the copy of the encoder alongside the frozen SD model\n\nDuring training: use paired data (e.g., pose skeleton → original image)\nDuring inference: both encoders run together\nFeatures from both are combined via zero convolutions\n\nKey: The weights in the original SD model doesn’t change\nAnalogous to ControlNet being a “Plug in” model",
+    "text": "How ControlNet Works\n\nStable Diffusion’s U-Net has an encoder and decoder\nCreate a trainable copy of the encoder blocks\nTrain the copy of the encoder alongside the frozen SD model\n\nDuring training: use paired data (e.g., pose skeleton → original image)\nDuring inference: both encoders run together\nFeatures from both are combined via zero convolutions\n\nKey: The weights in the original SD model don’t change\nControlNet is analogous to a “Plug in” model",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"

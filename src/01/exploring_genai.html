@@ -9,6 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
+  <meta name="author" content="Simon Guest">
   <title>CSP-400 – Exploring Generative AI Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -152,6 +153,11 @@
   <h1 class="title">Exploring Generative AI Models</h1>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Simon Guest 
+</div>
+</div>
 </div>
 
 </section>
@@ -332,7 +338,7 @@
 <li class="fragment">Client makes HTTP API calls to invoke/access the model</li>
 <li class="fragment">(Normally use an SDK to wrap the HTTP API calls)</li>
 <li class="fragment">Client passes Authorization token as part of the call</li>
-<li class="fragment">Default way of accesing OpenAI, Claude, other large, closed-source models</li>
+<li class="fragment">Default way of accessing OpenAI, Claude, other large, closed-source models</li>
 </ul></li>
 </ul>
 </section>
@@ -444,7 +450,7 @@
 </section>
 <section id="out-of-vram" class="slide level2">
 <h2>“Out of VRAM”</h2>
-<p>One challenge of running moels on your own hardware is VRAM</p>
+<p>One challenge of running models on your own hardware is VRAM</p>
 <ul>
 <li class="fragment">Roughly speaking, the size of the model will determine how much VRAM you need</li>
 <li class="fragment">Gemma 3 models
@@ -501,7 +507,7 @@
 <h2>Quantization Formats</h2>
 <p>The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization</p>
 <ul>
-<li class="fragment">GGUF (GPT-Generated Unifed Format)
+<li class="fragment">GGUF (GPT-Generated Unified Format)
 <ul>
 <li class="fragment">Single file architecture</li>
 <li class="fragment">Model format supporting multiple quantization levels (2-bit through 8-bit) with CPU and GPU handoff</li>
@@ -545,7 +551,7 @@
 <li class="fragment">Training
 <ul>
 <li class="fragment">During training, random noise is adding to images in steps</li>
-<li class="fragment">Model learns to predict what noise what added (forward diffusion process)</li>
+<li class="fragment">Model learns to predict what noise was added (forward diffusion process)</li>
 </ul></li>
 <li class="fragment">Inference (process runs in reverse)
 <ul>
@@ -675,8 +681,8 @@
 <li class="fragment">During inference: both encoders run together</li>
 <li class="fragment">Features from both are combined via zero convolutions</li>
 </ul></li>
-<li class="fragment">Key: The weights in the original SD model doesn’t change</li>
-<li class="fragment">Analogous to ControlNet being a “Plug in” model</li>
+<li class="fragment">Key: The weights in the original SD model don’t change</li>
+<li class="fragment">ControlNet is analogous to a “Plug in” model</li>
 </ul>
 </section>
 <section id="demo-controlnet-human-pose" class="slide level2 center">
