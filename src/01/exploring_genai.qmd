@@ -284,6 +284,19 @@ The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements 
 
 [LMStudio](https://lmstudio.ai){.external target="_blank"}: gemma-3-27b-it-qat-q4_0-gguf
 
+## Demo: C# Client <-> Gemma 3 27B Local {.center}
+
+demos/01/lmstudio-client/LMStudioClient.csproj
+
+## Hosting Models in Unity
+
+- Download the GGUF model locally to Assets/StreamingAssets folder
+- Use llama.cpp bindings for C# to host
+  - LLAMASharp: https://github.com/SciSharp/LLamaSharp
+- Use OpenAI SDK (or similar) as client
+- Unity Demo
+  - https://github.com/eublefar/LLAMASharpUnityDemo
+
 # Resources
 
 ## Resources
