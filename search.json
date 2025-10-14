@@ -1087,6 +1087,28 @@
     ]
   },
   {
+    "objectID": "src/01/exploring_genai.html#demo-c-client---gemma-3-27b-local",
+    "href": "src/01/exploring_genai.html#demo-c-client---gemma-3-27b-local",
+    "title": "Exploring Generative AI Models",
+    "section": "Demo: C# Client <-> Gemma 3 27B Local",
+    "text": "Demo: C# Client &lt;-&gt; Gemma 3 27B Local\ndemos/01/lmstudio-client/LMStudioClient.csproj",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#hosting-models-in-unity",
+    "href": "src/01/exploring_genai.html#hosting-models-in-unity",
+    "title": "Exploring Generative AI Models",
+    "section": "Hosting Models in Unity",
+    "text": "Hosting Models in Unity\n\nDownload the GGUF model locally to Assets/StreamingAssets folder\nUse llama.cpp bindings for C# to host\n\nLLAMASharp: https://github.com/SciSharp/LLamaSharp\n\nUse OpenAI SDK (or similar) as client\nUnity Demo\n\nhttps://github.com/eublefar/LLAMASharpUnityDemo",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/01/exploring_genai.html#resources-1",
     "href": "src/01/exploring_genai.html#resources-1",
     "title": "Exploring Generative AI Models",
