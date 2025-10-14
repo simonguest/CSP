@@ -893,7 +893,7 @@
     "href": "src/01/exploring_genai.html#openais-chat-completions-api",
     "title": "Exploring Generative AI Models",
     "section": "OpenAI’s Chat Completions API",
-    "text": "OpenAI’s Chat Completions API\n\nDebuted in March 2023, together with the ChatGPT API\nStructure\n\nMessages array (system, assistant, user)\nStreaming support (using SSE - Server Side Events)\nSimple parameters\nFunction calling (added mid-2023)\n\nWidespread Adoption\n\nAnthropic, Azure, TogetherAI\nLocal hosting: vLLM, LM Studio",
+    "text": "OpenAI’s Chat Completions API\n\nDebuted in March 2023, together with the ChatGPT API\nStructure\n\nMessages array (system, assistant, user)\nStreaming support (using SSE - Server Side Events)\nFunction calling (added mid-2023)\nStructured output (added Aug 2024)\n\nWidespread Adoption\n\nAnthropic, Azure, TogetherAI\nLocal hosting: vLLM, LM Studio",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
