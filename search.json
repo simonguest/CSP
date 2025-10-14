@@ -757,11 +757,22 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#recap",
-    "href": "src/01/exploring_genai.html#recap",
+    "objectID": "src/01/exploring_genai.html#recap-of-last-weeks-lecture",
+    "href": "src/01/exploring_genai.html#recap-of-last-weeks-lecture",
     "title": "Exploring Generative AI Models",
-    "section": "Recap",
-    "text": "Recap\n\nLast Week’s Lecture\n\nIntroduced AI Agents, their uses, how to create\nAbout 50% had used some kind of API\nOne or two beyond this\n\nThis Week\n\nExplore text and image-based models\nModel evolution, API access, running locally\nDemos!",
+    "section": "Recap of Last Week’s Lecture",
+    "text": "Recap of Last Week’s Lecture\n\nIntroduced AI Agents, their uses, how to create them\nAbout 50% had used an API to call AI Model\nOne or two beyond this",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/01/exploring_genai.html#this-week",
+    "href": "src/01/exploring_genai.html#this-week",
+    "title": "Exploring Generative AI Models",
+    "section": "This Week",
+    "text": "This Week\n\nTwo Part Lecture on AI Models\n\nThis Week\n\nExplore text-to-text models\nModel evolution, API access, running locally\nFive Demos!\n\nNext Week\n\nExplore image models\nDiffuser, ControlNet, and VLMs\nMore Demos!",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -794,7 +805,7 @@
     "href": "src/01/exploring_genai.html#completion-vs.-instruction-tuned-1",
     "title": "Exploring Generative AI Models",
     "section": "Completion vs. Instruction-Tuned",
-    "text": "Completion vs. Instruction-Tuned\n\nYou can’t really converse with it\nWhat is the capital of France? (max tokens = 50)\nWhat is the capital of France? Paris. What is the capital of Spain? Madrid. What is the capital of",
+    "text": "Completion vs. Instruction-Tuned\n\nYou can’t really converse with it\nWhat is the capital of France? (max tokens = 50)\nWhat is the capital of France? Paris. What is the capital of Spain? Madrid. What is the capital of\nBut it’s the foundation of today’s text models, and fun to play with…",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -849,7 +860,7 @@
     "href": "src/01/exploring_genai.html#closed-vs.-open-models",
     "title": "Exploring Generative AI Models",
     "section": "Closed vs. Open Models",
-    "text": "Closed vs. Open Models\n\nClosed Source: Hosted models; no ability to inspect the weights of the models. Accessed via an API (or UI).\n\nExamples: OpenAI GPT-5, Claude Sonnet 4.5\n\nOpen Weight: Model files with pretrained weights, but no training data. Host on your own hardware.\n\nExamples: Meta’s Llama (and derivatives), Mistral\n\nOpen Source Models: Models with access to the training data set. Create from scratch.\n\nExamples: OLMo from AI2",
+    "text": "Closed vs. Open Models\n\nClosed Source: Hosted models; no ability to inspect the weights of the models. Accessed via an API (or UI).\n\nExamples: OpenAI GPT-5, Claude Sonnet 4.5\n\nOpen Weight: Model files with pretrained weights, but no training data. Host on your own hardware.\n\nExamples: Meta’s Llama (and derivatives), Gemma\n\nOpen Source: Models with access to the training data set. Create from scratch.\n\nExamples: OLMo from AI2",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
@@ -1076,6 +1087,17 @@
     ]
   },
   {
+    "objectID": "src/01/exploring_genai.html#resources-1",
+    "href": "src/01/exploring_genai.html#resources-1",
+    "title": "Exploring Generative AI Models",
+    "section": "Resources",
+    "text": "Resources\n\nThis slide deck, resources, links, notebooks, everything:\n\nhttps://simonguest.github.io/CSP-400\n(I’ll also post to the GAM-400 and CSP-300/400 channels)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/01/exploring_genai.html#images-models-text-to-image",
     "href": "src/01/exploring_genai.html#images-models-text-to-image",
     "title": "Exploring Generative AI Models",
@@ -1252,22 +1274,11 @@
     ]
   },
   {
-    "objectID": "src/01/exploring_genai.html#resources-1",
-    "href": "src/01/exploring_genai.html#resources-1",
+    "objectID": "src/01/exploring_genai.html#resources-3",
+    "href": "src/01/exploring_genai.html#resources-3",
     "title": "Exploring Generative AI Models",
     "section": "Resources",
     "text": "Resources\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400\n(I’ll also post to the GAM-400 and CSP-300/400 channels)",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/01/exploring_genai.html#next-lecture-vision-language-models",
-    "href": "src/01/exploring_genai.html#next-lecture-vision-language-models",
-    "title": "Exploring Generative AI Models",
-    "section": "Next Lecture: Vision Language Models",
-    "text": "Next Lecture: Vision Language Models\n\nClassic models are typically supervised classification tasks\n\n“Is this a cat?”\nEnd up taking lots of pictures of cats, human annotation, etc.\n\nIntroducing the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”\nMore on this in the next lecture!",
     "crumbs": [
       "Lecture: Exploring Generative AI Models",
       "Slides"
