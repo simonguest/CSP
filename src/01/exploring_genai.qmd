@@ -151,8 +151,8 @@ timeline
 - Structure
   - Messages array (system, assistant, user)
   - Streaming support (using SSE - Server Side Events)
-  - Simple parameters
   - Function calling (added mid-2023)
+  - Structured output (added Aug 2024)
 - Widespread Adoption
   - Anthropic, Azure, TogetherAI
   - Local hosting: vLLM, LM Studio
