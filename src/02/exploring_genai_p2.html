@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Simon Guest">
-  <title>CSP-400 – Exploring Generative AI Models</title>
+  <title>CSP-400 – Exploring Generative AI Models: Part 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -150,7 +150,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Exploring Generative AI Models</h1>
+  <h1 class="title">Exploring Generative AI Models: Part 2</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -164,429 +164,8 @@ Simon Guest
 <section id="recap-of-last-weeks-lecture" class="slide level2">
 <h2>Recap of Last Week’s Lecture</h2>
 <ul>
-<li class="fragment">Introduced AI Agents, their uses, how to create them</li>
-<li class="fragment">About 50% had used an API to call AI Model</li>
-<li class="fragment">One or two beyond this</li>
+<li class="fragment">TBD</li>
 </ul>
-</section>
-<section id="this-week" class="slide level2">
-<h2>This Week</h2>
-<ul>
-<li class="fragment">Two Part Lecture on AI Models
-<ul>
-<li class="fragment">This Week
-<ul>
-<li class="fragment">Explore text-to-text models</li>
-<li class="fragment">Model evolution, API access, running locally</li>
-<li class="fragment">Five Demos!</li>
-</ul></li>
-<li class="fragment">Next Week
-<ul>
-<li class="fragment">Explore image models</li>
-<li class="fragment">Diffuser, ControlNet, and VLMs</li>
-<li class="fragment">More Demos!</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section>
-<section id="a-brief-history-of-transformer-models" class="title-slide slide level1 center">
-<h1>A Brief History of Transformer Models</h1>
-
-</section>
-<section id="a-brief-history-of-transformer-models-1" class="slide level2">
-<h2>A Brief History of Transformer Models</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">timeline
-    June 2017 : Google researchers publish "Attention is all you need" paper [1]
-              : Introduces self-attention mechanism and transformer architecture
-              : Eliminates the need for recurrent neural networks in sequence processing
-
-    June 2018 : OpenAI releases GPT-1
-              : 117M parameters
-              : Demonstrates pre-training on large text corpora followed by fine-tuning works effectively
-
-    Feb 2019 : OpenAI releases GPT-2
-             : 1.5B parameters
-             : Initially withheld full model due to concerns about misuse
-             : Demonstrates impressive text generation capabilities with minimal fine-tuning
-
-    May 2020 : OpenAI releases GPT-3
-             : 175B parameters
-             : Demonstrates strong few-shot learning capabilities
-             : Marks a significant leap in model capabilities and scale
-
-    June 2020 : GPT-3 available through OpenAI API
-              : Still a completion model, not instruction-tuned
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>[1] <span class="citation" data-cites="vaswani2017attention">Vaswani et al. (<a href="#/bibliography" role="doc-biblioref" onclick="">2017</a>)</span></p>
-</section>
-<section id="completion-vs.-instruction-tuned" class="slide level2">
-<h2>Completion vs.&nbsp;Instruction-Tuned</h2>
-<ul>
-<li class="fragment">Completion Model just predicts the next token
-<ul>
-<li class="fragment">Input prompt: <code>Mary had a little</code></li>
-<li class="fragment">Max total tokens: <code>50</code></li>
-<li class="fragment">Temperature: <code>0 - 1.0</code></li>
-<li class="fragment">top_k: consider only the top k tokens in the response</li>
-<li class="fragment">top_p: Nucleus sampling (probability cut off - 0 and 1.0)</li>
-</ul></li>
-<li class="fragment">Output
-<ul>
-<li class="fragment"><code>Mary had a little lamb, its fleece was white as snow...</code> (up to max tokens)</li>
-</ul></li>
-</ul>
-</section>
-<section id="completion-vs.-instruction-tuned-1" class="slide level2">
-<h2>Completion vs.&nbsp;Instruction-Tuned</h2>
-<ul>
-<li class="fragment">You can’t really converse with it</li>
-<li class="fragment"><code>What is the capital of France?</code> (max tokens = 50)</li>
-<li class="fragment"><code>What is the capital of France? Paris. What is the capital of Spain? Madrid. What is the capital of</code></li>
-<li class="fragment">But it’s the foundation of today’s text models, and fun to play with…</li>
-</ul>
-</section>
-<section id="introducing-google-colab" class="slide level2">
-<h2>Introducing Google Colab</h2>
-
-<img data-src="./images/colab-signup.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://colab.research.google.com/signup</p></section>
-<section id="demo-gpt-2" class="slide level2 center">
-<h2>Demo: GPT-2</h2>
-<p><a href="https://colab.research.google.com/drive/1H0NZYU-U3BmTS2bUqrVw9ssuFsp5mr8n?usp=sharing" class="external" target="_blank">GPT-2.ipynb</a></p>
-</section>
-<section id="instruction-tuned-models" class="slide level2">
-<h2>Instruction-Tuned Models</h2>
-<ul>
-<li class="fragment">Supervised Fine-Tuning
-<ul>
-<li class="fragment">Large datasets of questions/answers, tasks/completions, demonstrating helpful assistant behavior</li>
-</ul></li>
-<li class="fragment">RLHF (Reinforcement Learning from Human Feedback)
-<ul>
-<li class="fragment">Human raters rank different model responses, training a reward model</li>
-</ul></li>
-<li class="fragment">Chat Templates
-<ul>
-<li class="fragment">Structured formats to distinguish speakers in a dialog: Typically system, user, and assistant</li>
-</ul></li>
-</ul>
-</section>
-<section id="a-brief-history-of-transformer-models-2" class="slide level2">
-<h2>A Brief History of Transformer Models</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">timeline
-    2021 : InstructGPT Development
-          : Built on GPT-3 with RLHF fine-tuning
-          : Trained to follow instructions and understand user intent
-          : Key innovation enabling ChatGPT
-    
-    Jan 2021 : Anthropic Founded
-             : Founded by Dario &amp; Daniela Amodei with ~7 senior OpenAI employees
-            : Dario led GPT-2/3 development and co-invented RLHF
-
-    Nov 2022 : ChatGPT Launch
-                  : Built on GPT-3.5 using RLHF
-                  : 1M+ users in 5 days
-                  : Sparked widespread interest in generative AI
-
-    Feb 2023 : Llama 1 Released
-                  : Meta's LLaMA (7B, 13B, 33B, 65B parameters)
-                  : 13B model exceeded GPT-3 (175B) on most benchmarks
-                  : Limited researcher access
-                  : Text completion only (Alpaca fine-tune added instructions)
-
-    Jul 2023 : Llama 2 Released
-              : Available in 7B, 13B, 70B sizes
-              : Trained on 40% more data than Llama 1
-              : First open-weights Llama for commercial use
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="closed-vs.-open-models" class="slide level2">
-<h2>Closed vs.&nbsp;Open Models</h2>
-<ul>
-<li class="fragment"><strong>Closed Source:</strong> Hosted models; no ability to inspect the weights of the models. Accessed via an API (or UI).
-<ul>
-<li class="fragment">Examples: OpenAI GPT-5, Claude Sonnet 4.5</li>
-</ul></li>
-<li class="fragment"><strong>Open Weight:</strong> Model files with pretrained weights, but no training data. Host on your own hardware.
-<ul>
-<li class="fragment">Examples: Meta’s Llama (and derivatives), Gemma</li>
-</ul></li>
-<li class="fragment"><strong>Open Source:</strong> Models with access to the training data set. Create from scratch.
-<ul>
-<li class="fragment">Examples: OLMo from AI2</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="calling-models-via-apis" class="title-slide slide level1 center">
-<h1>Calling Models via APIs</h1>
-
-</section>
-<section id="calling-models-via-apis-1" class="slide level2">
-<h2>Calling Models via APIs</h2>
-<ul>
-<li class="fragment">HTTP-based APIs
-<ul>
-<li class="fragment">Client makes HTTP API calls to invoke/access the model</li>
-<li class="fragment">(Normally use an SDK to wrap the HTTP API calls)</li>
-<li class="fragment">Client passes Authorization token as part of the call</li>
-<li class="fragment">Default way of accessing OpenAI, Claude, other large, closed-source models</li>
-</ul></li>
-</ul>
-</section>
-<section id="demo-openai-sdkapi-call" class="slide level2 center">
-<h2>Demo: OpenAI SDK/API call</h2>
-<p><a href="https://colab.research.google.com/drive/1ktzdxJUcHQ6yEY8tJSeikTXjVgwG9DLc?usp=sharing" class="external" target="_blank">OpenAI.ipynb</a></p>
-</section>
-<section id="openais-chat-completions-api" class="slide level2">
-<h2>OpenAI’s Chat Completions API</h2>
-<ul>
-<li class="fragment">Debuted in March 2023, together with the ChatGPT API</li>
-<li class="fragment">Structure
-<ul>
-<li class="fragment">Messages array (system, assistant, user)</li>
-<li class="fragment">Streaming support (using SSE - Server Side Events)</li>
-<li class="fragment">Function calling (added mid-2023)</li>
-<li class="fragment">Structured output (added Aug 2024)</li>
-</ul></li>
-<li class="fragment">Widespread Adoption
-<ul>
-<li class="fragment">Anthropic, Azure, TogetherAI</li>
-<li class="fragment">Local hosting: vLLM, LM Studio</li>
-</ul></li>
-</ul>
-</section>
-<section id="openais-chat-completions-api-1" class="slide level2">
-<h2>OpenAI’s Chat Completions API</h2>
-<p>How do we consume different models from multiple providers?</p>
-<ul>
-<li class="fragment">Introducing OpenRouter (https://openrouter.ai)
-<ul>
-<li class="fragment">A unified API to hundreds of AI models through a single endpoint</li>
-<li class="fragment">(Using OpenAI’s Chat Completion API)</li>
-<li class="fragment">OpenAI, Claude, Gemini, Grok, Nova, Llama, DeepSeek, Qwen, and many others.</li>
-<li class="fragment">Pay per API call, often same cost as the provider</li>
-</ul></li>
-</ul>
-</section>
-<section id="demo-openrouter" class="slide level2 center">
-<h2>Demo: OpenRouter</h2>
-<p><a href="https://openrouter.ai" class="external" target="_blank">https://openrouter.ai</a></p>
-<p><a href="https://colab.research.google.com/drive/16HB_vtFl5QkSrkGhb5onBgC0Cjx59K9S?usp=sharing" class="external" target="_blank">OpenRouter.ipynb</a></p>
-</section></section>
-<section>
-<section id="downloading-and-running-models" class="title-slide slide level1 center">
-<h1>Downloading and Running Models</h1>
-
-</section>
-<section id="downloading-and-running-models-1" class="slide level2">
-<h2>Downloading and Running Models</h2>
-<ul>
-<li class="fragment">So far, we’ve called hosted models via APIs</li>
-<li class="fragment">How about downloading and running models on your own hardware?
-<ul>
-<li class="fragment">(Obviously they need to be open-weight models)</li>
-</ul></li>
-</ul>
-</section>
-<section id="downloading-and-running-models-2" class="slide level2">
-<h2>Downloading and Running Models</h2>
-<p>Why would you want to do this?</p>
-<ul>
-<li class="fragment">Offline access to models (no Internet required)</li>
-<li class="fragment">Potential cost savings (if many API calls and already own hardware)
-<ul>
-<li class="fragment">e.g., running a small model embedded within a game</li>
-</ul></li>
-<li class="fragment">Want to fine-tune your own model and have the hardware to do it</li>
-<li class="fragment">Don’t want others to see the conversations you are having :)</li>
-</ul>
-</section>
-<section id="introducing-hugging-face" class="slide level2">
-<h2>Introducing Hugging Face</h2>
-
-<img data-src="./images/huggingface.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://huggingface.co</p></section>
-<section id="what-is-hugging-face" class="slide level2">
-<h2>What is Hugging Face?</h2>
-<p>It is to AI models what GitHub is to source code</p>
-<ul>
-<li class="fragment">Explore, download models to run on local hardware</li>
-<li class="fragment">Upload and share your own trained/fine-tuned models and datasets</li>
-<li class="fragment">Create “Spaces” - web-based apps for accessing models</li>
-</ul>
-</section>
-<section id="demo-exploring-a-model" class="slide level2 center">
-<h2>Demo: Exploring a Model</h2>
-<p><a href="https://huggingface.co/google/gemma-3-1b-it" class="external" target="_blank">Google’s gemma-3-1b-it on Hugging Face</a></p>
-</section>
-<section id="hugging-face-transformers" class="slide level2">
-<h2>Hugging Face Transformers</h2>
-
-<img data-src="./images/transformers.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://huggingface.co/docs/transformers</p></section>
-<section id="hugging-face-transformers-1" class="slide level2">
-<h2>Hugging Face Transformers</h2>
-<p>What is the Hugging Face Transformers Library?</p>
-<ul>
-<li class="fragment">Open-source Python library to provide easy access to using various types of pre-trained transformer models</li>
-<li class="fragment">Brings together all of the different formats under one interface
-<ul>
-<li class="fragment">Different models, vendors, types, chat templates</li>
-<li class="fragment">Different implementations: PyTorch, TensorFlow, JAX</li>
-</ul></li>
-<li class="fragment">A few lines of code to download and run the model</li>
-</ul>
-</section>
-<section id="demo-using-hf-transformers-to-download-and-use-gemma-3-1b" class="slide level2 center">
-<h2>Demo: Using HF Transformers to download and use Gemma 3 1B</h2>
-<p><a href="https://colab.research.google.com/drive/1-2515Fku_5vtgUx7zRF0o0QdZgOTGZk2?usp=sharing" class="external" target="_blank">gemma-3-1b-it via transformers.ipynb</a></p>
-</section>
-<section id="out-of-vram" class="slide level2">
-<h2>“Out of VRAM”</h2>
-<p>One challenge of running models on your own hardware is VRAM</p>
-<ul>
-<li class="fragment">Roughly speaking, the size of the model will determine how much VRAM you need</li>
-<li class="fragment">Gemma 3 models
-<ul>
-<li class="fragment">gemma-3-1b-it = 2Gb</li>
-<li class="fragment">gemma-3-4b-it = 8.6Gb</li>
-<li class="fragment">gemma-3-12b-it = 23.37Gb</li>
-<li class="fragment">Qwen3-VL-235B-A22B-Thinking = ~475Gb</li>
-</ul></li>
-</ul>
-</section>
-<section id="out-of-vram-1" class="slide level2">
-<h2>“Out of VRAM”</h2>
-<ul>
-<li class="fragment">Google Colab Tiers
-<ul>
-<li class="fragment">Colab Free T4 = 16Gb VRAM (15Gb usable)</li>
-<li class="fragment">Colab Pro V100 = 16Gb VRAM</li>
-<li class="fragment">Colab Pro A100 = 40Gb VRAM</li>
-</ul></li>
-<li class="fragment">Your Gaming PC
-<ul>
-<li class="fragment">Probably 8Gb VRAM</li>
-</ul></li>
-<li class="fragment">Your Phone
-<ul>
-<li class="fragment">V-what? :)</li>
-</ul></li>
-</ul>
-</section>
-<section id="out-of-vram-2" class="slide level2">
-<h2>“Out of VRAM”</h2>
-<p>You can select smaller models, but they are less accurate / more prone to hallucination.</p>
-<ul>
-<li class="fragment">How do we fix this?
-<ul>
-<li class="fragment">Quantization</li>
-</ul></li>
-</ul>
-</section>
-<section id="quantization" class="slide level2">
-<h2>Quantization</h2>
-<p>Process of reducing the precision of a model’s weights and activations. For example, 16-bit numbers to 4-bit.</p>
-<ul>
-<li class="fragment">Parameter count matters more than precision
-<ul>
-<li class="fragment">A 70B parameter model at 4-bit often beats a 13B model at b16</li>
-<li class="fragment">The models knowledge remains largely intact</li>
-<li class="fragment">Often the extra precision doesn’t meaningfully improve outputs</li>
-</ul></li>
-</ul>
-</section>
-<section id="quantization-formats" class="slide level2">
-<h2>Quantization Formats</h2>
-<p>The llama.cpp project (implementing LLMs in pure C/C++) has driven advancements in quantization</p>
-<ul>
-<li class="fragment">GGUF (GPT-Generated Unified Format)
-<ul>
-<li class="fragment">Single file architecture</li>
-<li class="fragment">Model format supporting multiple quantization levels (2-bit through 8-bit) with CPU and GPU handoff</li>
-</ul></li>
-<li class="fragment">MLX (Apple’s ML framework and format for Apple Silicon)
-<ul>
-<li class="fragment">Debuted in late 2023</li>
-<li class="fragment">Supports 4 and 8 bit quantization schemes</li>
-</ul></li>
-</ul>
-</section>
-<section id="running-quantized-models" class="slide level2">
-<h2>Running Quantized Models</h2>
-<ul>
-<li class="fragment">Tools built upon llama.cpp
-<ul>
-<li class="fragment">Ollama, LM Studio, koboldcpp</li>
-</ul></li>
-</ul>
-</section>
-<section id="demo-running-gemma-3-27b-gguf-on-my-laptop" class="slide level2 center">
-<h2>Demo: Running Gemma 3 27B GGUF on my laptop</h2>
-<p><a href="https://lmstudio.ai" class="external" target="_blank">LMStudio</a>: gemma-3-27b-it-qat-q4_0-gguf</p>
-</section>
-<section id="demo-c-client---gemma-3-27b-local" class="slide level2 center">
-<h2>Demo: C# Client &lt;-&gt; Gemma 3 27B Local</h2>
-<p>demos/01/lmstudio-client/LMStudioClient.csproj</p>
-</section>
-<section id="hosting-models-in-unity" class="slide level2">
-<h2>Hosting Models in Unity</h2>
-<ul>
-<li class="fragment">Download the GGUF model locally to Assets/StreamingAssets folder</li>
-<li class="fragment">Use llama.cpp bindings for C# to host
-<ul>
-<li class="fragment">LLAMASharp: https://github.com/SciSharp/LLamaSharp</li>
-</ul></li>
-<li class="fragment">Use OpenAI SDK (or similar) as client</li>
-<li class="fragment">Unity Demo
-<ul>
-<li class="fragment">https://github.com/eublefar/LLAMASharpUnityDemo</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="resources" class="title-slide slide level1 center">
-<h1>Resources</h1>
-
-</section>
-<section id="resources-1" class="slide level2">
-<h2>Resources</h2>
-<ul>
-<li class="fragment">This slide deck, resources, links, notebooks, everything:
-<ul>
-<li class="fragment"><a href="https://simonguest.github.io/CSP-400" class="external" target="_blank">https://simonguest.github.io/CSP-400</a></li>
-<li class="fragment">(I’ll also post to the GAM-400 and CSP-300/400 channels)</li>
-</ul></li>
-</ul>
-</section></section>
-<section id="qa" class="title-slide slide level1 center">
-<h1>Q&amp;A</h1>
-
-</section>
-
-<section>
-<section id="part-2-going-beyond-text---images" class="title-slide slide level1 center">
-<h1>Part 2: Going Beyond Text - Images</h1>
-
 </section>
 <section id="images-models-text-to-image" class="slide level2">
 <h2>Images Models: Text-to-Image</h2>
@@ -752,7 +331,7 @@ Simon Guest
 <li class="fragment">Semantic segmentation - labeled regions</li>
 <li class="fragment">Scribbles - rough user drawings</li>
 </ul>
-</section></section>
+</section>
 <section>
 <section id="further-exploration" class="title-slide slide level1 center">
 <h1>Further Exploration</h1>
@@ -771,11 +350,11 @@ Simon Guest
 
 <img data-src="./images/comfyui.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://comfy.org</p></section></section>
 <section>
-<section id="resources-2" class="title-slide slide level1 center">
+<section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
 </section>
-<section id="resources-3" class="slide level2">
+<section id="resources-1" class="slide level2">
 <h2>Resources</h2>
 <ul>
 <li class="fragment">This slide deck, resources, links, everything:
@@ -785,7 +364,7 @@ Simon Guest
 </ul></li>
 </ul>
 </section></section>
-<section id="qa-1" class="title-slide slide level1 center">
+<section id="qa" class="title-slide slide level1 center">
 <h1>Q&amp;A</h1>
 
 </section>
@@ -795,9 +374,6 @@ Simon Guest
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-vaswani2017attention" class="csl-entry" role="listitem">
-Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. <span>“Attention Is All You Need.”</span> In <em>Advances in Neural Information Processing Systems</em>. Vol. 30.
-</div>
 <div id="ref-zhang2023controlnet" class="csl-entry" role="listitem">
 Zhang, Lvmin, Anyi Rao, and Maneesh Agrawala. 2023. <span>“Adding Conditional Control to Text-to-Image Diffusion Models.”</span> <em>arXiv Preprint arXiv:2302.05543</em>.
 </div>
