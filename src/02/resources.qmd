@@ -1,0 +1,86 @@
+---
+title: "Resources"
+format: html
+---
+
+This document contains all the external resources, links, and references mentioned in the "Exploring Generative AI Models (Part 2)" lecture.
+
+## Foundational Papers
+
+- **Adding Conditional Control to Text-to-Image Diffusion Models** (2023) - Zhang & Agrawala
+  - ControlNet paper from Stanford University
+  - [https://arxiv.org/abs/2302.05543](https://arxiv.org/abs/2302.05543)
+
+## Google Colab Notebooks
+
+All demo notebooks from the presentation:
+
+- **Diffusion Text-to-Image**
+  - [https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing](https://colab.research.google.com/drive/1YZYskU2laocx2dNpyYSjcTZZuVQBb4xX?usp=sharing)
+
+- **Diffusion Image-to-Image**
+  - [https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing](https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing)
+
+- **ControlNet Human Pose**
+  - [https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing](https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing)
+
+## Image Generation Models & Tools
+
+### Stable Diffusion
+- **Stability AI:** [https://stability.ai](https://stability.ai)
+- Open-source text-to-image diffusion models
+- Timeline: v1.4 (Aug 2022) → v1.5 → v2.0/2.1 → SDXL (Jul 2023) → v3.5 (Jun 2024)
+
+### Midjourney
+- **Website:** [https://midjourney.com](https://midjourney.com)
+- Discord-based image generation service
+- Known for exceptional artistic quality
+- v5 launched March 2023
+
+### FLUX.1
+- **Black Forest Labs:** [https://blackforestlabs.ai](https://blackforestlabs.ai)
+- State-of-the-art open image generation model (2024)
+
+### DALL-E / Sora (OpenAI)
+- **DALL-E:** Text-to-image generation
+- **Sora** (Feb 2024): Text-to-video up to 60 seconds
+
+### Imagen 3 (Google DeepMind)
+- Photorealistic image generation
+- 2024 release
+
+## Image Model Platforms & Resources
+
+### Replicate
+- **Website:** [https://replicate.com](https://replicate.com)
+- Cloud platform for running AI models via API
+- Extensive library of image generation models
+
+### ComfyUI
+- **Website:** [https://comfy.org](https://comfy.org)
+- Node-based UI for Stable Diffusion workflows
+- Powerful tool for complex image generation pipelines
+
+### Hugging Face Diffusers
+- **Docs:** [https://huggingface.co/docs/diffusers](https://huggingface.co/docs/diffusers)
+- Python library for diffusion models
+- Easy access to text-to-image, image-to-image, and ControlNet
+
+## Key Concepts & Techniques
+
+### ControlNet
+- Add-on models for Stable Diffusion providing precise spatial control
+- Conditioning types: pose, edges, depth, normal maps, segmentation, scribbles
+- Published February 2023 by Stanford researchers
+
+### Diffusion Models
+- Two-stage process inspired by thermodynamics
+- Training: Learn to predict noise added to images
+- Inference: Start with random noise, iteratively denoise guided by text prompt
+
+### Model Hubs
+- **Hugging Face Model Hub:** Browse and download thousands of models
+- **CivitAI:** [https://civitai.com](https://civitai.com) - Community for Stable Diffusion models
+
+### Communities
+- **r/StableDiffusion:** Reddit community for image generation

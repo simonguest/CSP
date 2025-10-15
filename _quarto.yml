@@ -29,13 +29,20 @@ website:
             target: blank
           - text: "Resources"
             href: src/00/resources.qmd
-      - section: "Lecture: Exploring Generative AI Models"
+      - section: "Lecture: Exploring Generative AI Models (Part 1)"
         contents:
           - text: "Slides"
-            href: src/01/exploring_genai.qmd
+            href: src/01/exploring_genai_p1.qmd
             target: blank
           - text: "Resources"
             href: src/01/resources.qmd
+      - section: "Lecture: Exploring Generative AI Models (Part 2)"
+        contents:
+          - text: "Slides"
+            href: src/02/exploring_genai_p2.qmd
+            target: blank
+          - text: "Resources"
+            href: src/02/resources.qmd
       - section: "Networking Protocols"
         contents:
           - text: "WebSockets"
