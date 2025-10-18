@@ -164,6 +164,14 @@ Simon Guest
 <section id="recap-of-last-weeks-lecture" class="slide level2">
 <h2>Recap of Last Week’s Lecture</h2>
 <ul>
+<li class="fragment">Brief History of the Transformer</li>
+<li class="fragment">Model evolution, explored text-to-text models</li>
+<li class="fragment">API access, quantization, running locally</li>
+</ul>
+</section>
+<section id="this-week" class="slide level2">
+<h2>This Week</h2>
+<ul>
 <li class="fragment">TBD</li>
 </ul>
 </section>
@@ -283,21 +291,84 @@ Simon Guest
 <h2>Demo: Image to Image Process</h2>
 <p><a href="https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing" class="external" target="_blank">Diffusion Image-to-Image.ipynb</a></p>
 </section>
-<section id="controlnet" class="slide level2">
-<h2>ControlNet</h2>
-<p>Text-to-Image and Image-to-Image are interesting, but you don’t have that much control</p>
+<section id="adding-more-control" class="slide level2">
+<h2>Adding More Control</h2>
+<ul>
+<li class="fragment">Text-to-Image and Image-to-Image are don’t give you that much control
 <ul>
 <li class="fragment">Extensive prompts (both positive and negative) can help, but only so far</li>
-<li class="fragment">Fine-tuning techniques, but expensive and risk degrading quality</li>
+<li class="fragment">Fine-tuning, but expensive and risk degrading quality</li>
+</ul></li>
+<li class="fragment">Two methods for adding more control
+<ul>
+<li class="fragment">Inpainting (and Outpainting)</li>
+<li class="fragment">ControlNet</li>
+</ul></li>
 </ul>
 </section>
-<section id="controlnet-1" class="slide level2">
+<section id="inpainting" class="slide level2">
+<h2>Inpainting</h2>
+<p>Filling in missing or masked regions of an image in a realistic way.</p>
+<ul>
+<li class="fragment">How do you use it?
+<ul>
+<li class="fragment">Model is given an image with certain areas masked out</li>
+<li class="fragment">Generates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)</li>
+</ul></li>
+<li class="fragment">Challenging
+<ul>
+<li class="fragment">Model needs to understand context around the area</li>
+<li class="fragment">Generate content that matches the style, lighting, and perspective</li>
+<li class="fragment">Follow a text prompt that was likely different from the original</li>
+</ul></li>
+</ul>
+</section>
+<section id="outpainting" class="slide level2">
+<h2>Outpainting</h2>
+<p>Inpainting applied to the edges of an image to extend it beyond it’s original size.</p>
+<ul>
+<li class="fragment">How do you use it?
+<ul>
+<li class="fragment">Expand / resize the image</li>
+<li class="fragment">Treat the new empty regions around the image as masked areas</li>
+<li class="fragment">Use impainting technique to fill in the regions</li>
+</ul></li>
+<li class="fragment">More challenging
+<ul>
+<li class="fragment">Less context at the edges of the image vs.&nbsp;center/surrounded</li>
+<li class="fragment">Needs to maintain the style, lighting, and perspective</li>
+<li class="fragment">Has to be creative. Can’t just be a repetitive pattern.</li>
+</ul></li>
+</ul>
+</section>
+<section id="inpainting-1" class="slide level2">
+<h2>Inpainting</h2>
+<p>Popular models</p>
+<ul>
+<li class="fragment">Stable Diffusion (Many inpainting variants)</li>
+<li class="fragment">Flux Fill from Black Forest Labs</li>
+<li class="fragment">LaMa: Large Mask inpainting</li>
+<li class="fragment">Ideogram</li>
+</ul>
+</section>
+<section id="replicate" class="slide level2">
+<h2>Replicate</h2>
+
+<img data-src="./images/replicate.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com</p></section>
+<section id="demo-inpaintingoutpainting" class="slide level2 center">
+<h2>Demo: Inpainting/Outpainting</h2>
+<p><a href="" class="external" target="_blank">Inpainting.ipynb</a></p>
+</section>
+<section id="controlnet" class="slide level2">
 <h2>ControlNet</h2>
-<p>Introducing ControlNet</p>
+<p>Inpainting helps finer editing of images, but still “hoping that the model guesses what I mean”</p>
+<ul>
+<li class="fragment">Introducing ControlNet
 <ul>
 <li class="fragment">Developed by Lvmin Zhang and Maneesh Agrawala at Stanford University</li>
 <li class="fragment">Published in February 2023 <span class="citation" data-cites="zhang2023controlnet">(<a href="#/bibliography" role="doc-biblioref" onclick="">Zhang, Rao, and Agrawala 2023</a>)</span></li>
-<li class="fragment">ControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”</li>
+<li class="fragment">ControlNet represented a paradigm shift from “describe what you want” to “show the structure you want”.</li>
+</ul></li>
 </ul>
 </section>
 <section id="how-controlnet-works" class="slide level2">
@@ -319,36 +390,160 @@ Simon Guest
 <h2>Demo: ControlNet Human Pose</h2>
 <p><a href="https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing" class="external" target="_blank">ControlNet Human Pose.ipynb</a></p>
 </section>
-<section id="controlnet-2" class="slide level2">
+<section id="controlnet-1" class="slide level2">
 <h2>ControlNet</h2>
 <p>Examples of conditioning types:</p>
 <ul>
 <li class="fragment">Human pose (OpenPose) - skeleton/keypoint detection</li>
-<li class="fragment">QR codes - codes blended into images</li>
 <li class="fragment">Canny edges - line drawings and edge detection</li>
+<li class="fragment">QR codes - blended into images</li>
 <li class="fragment">Depth maps - 3D structure information</li>
 <li class="fragment">Normal maps - surface orientation</li>
 <li class="fragment">Semantic segmentation - labeled regions</li>
 <li class="fragment">Scribbles - rough user drawings</li>
 </ul>
 </section>
+<section id="putting-this-all-together" class="slide level2">
+<h2>Putting this all together</h2>
+<ul>
+<li class="fragment">TBD</li>
+</ul>
+</section>
 <section>
 <section id="further-exploration" class="title-slide slide level1 center">
 <h1>Further Exploration</h1>
+
+</section>
+<section id="depth-images" class="slide level2">
+<h2>Depth Images</h2>
+</section>
+<section id="albedo2bprmaps-model" class="slide level2">
+<h2>Albedo2bprmaps model</h2>
 <p>For the many image models that we didn’t cover…</p>
 </section>
-<section id="hugging-face-image-models" class="slide level2">
-<h2>Hugging Face Image Models</h2>
-
-<img data-src="./images/imagemodels.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://huggingface.co/models</p></section>
-<section id="replicate" class="slide level2">
-<h2>Replicate</h2>
-
-<img data-src="./images/replicate.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com</p></section>
+<section id="running-image-models-offline" class="slide level2">
+<h2>Running Image Models Offline</h2>
+<ul>
+<li class="fragment">Talk about GGUF models and running in Comfy</li>
+</ul>
+</section>
 <section id="comfyui" class="slide level2">
 <h2>ComfyUI</h2>
 
 <img data-src="./images/comfyui.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://comfy.org</p></section></section>
+<section>
+<section id="using-transformers-for-computer-vision" class="title-slide slide level1 center">
+<h1>Using Transformers for Computer Vision</h1>
+
+</section>
+<section id="cnns-to-vision-transformer" class="slide level2">
+<h2>CNNs to Vision Transformer</h2>
+<p>Historically, computer vision has used classification models called CNNs (Convolutional Neural Networks)</p>
+<ul>
+<li class="fragment">Enter the Vision Transformer (ViT)
+<ul>
+<li class="fragment">“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.” The key authors included Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, and others.</li>
+</ul></li>
+<li class="fragment">Tipping Point
+<ul>
+<li class="fragment">Initially, ViT didn’t outperform CNNs</li>
+<li class="fragment">But exceeded SOTA CNNs on larger datasets (such as Google’s JFT-300M)</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-vision-transformers-work" class="slide level2">
+<h2>How Vision Transformers Work</h2>
+<ul>
+<li class="fragment">Splits images into patches (16x16)</li>
+<li class="fragment">Flatten and embed each patch</li>
+<li class="fragment">Add positional encodings</li>
+<li class="fragment">Process through transformer layers</li>
+<li class="fragment">Model learns global relationships across the entire image vs.&nbsp;local convolutional layers</li>
+</ul>
+</section>
+<section id="popular-vision-transformers" class="slide level2">
+<h2>Popular Vision Transformers</h2>
+<ul>
+<li class="fragment">OpenAI’s CLIP
+<ul>
+<li class="fragment">Trained on 400M image-text pairs</li>
+<li class="fragment">Foundation of most VLMs</li>
+</ul></li>
+<li class="fragment">Meta’s DINO/DINO-2
+<ul>
+<li class="fragment">(Self DIstillation with NO Labels)</li>
+<li class="fragment">Self-supervised on 142M images</li>
+</ul></li>
+<li class="fragment">Microsoft’s Swin
+<ul>
+<li class="fragment">Use “shifted windows” approach</li>
+<li class="fragment">Dense predication tasks (object detection and segmentation)</li>
+</ul></li>
+</ul>
+</section>
+<section id="vision-language-models-vlms" class="slide level2">
+<h2>Vision Language Models (VLMs)</h2>
+<p>ViTs by themselves are only so useful</p>
+<ul>
+<li class="fragment">VLMs
+<ul>
+<li class="fragment">A vision encoder</li>
+<li class="fragment">Adapter/projector layer</li>
+<li class="fragment">Language model (LLaMa or GPT)</li>
+</ul></li>
+<li class="fragment">VLAs (Visual Language Action Models)
+<ul>
+<li class="fragment">Same approach as VLMs, but instead of human readable text, action decoders for robot instructions</li>
+</ul></li>
+<li class="fragment">Multimodal
+<ul>
+<li class="fragment">Image-Text-to-Text</li>
+</ul></li>
+</ul>
+</section>
+<section id="use-cases-for-vlms" class="slide level2">
+<h2>Use Cases for VLMs</h2>
+<ul>
+<li class="fragment">Visual Understanding: “What’s in this image?”</li>
+<li class="fragment">Accessibility: Assisting visually impaired users</li>
+<li class="fragment">Content Moderation and Safety: Identifying harmful content</li>
+<li class="fragment">Retail: Finding products with photos</li>
+<li class="fragment">Education: Helping students understand charts, diagrams, equations</li>
+<li class="fragment">Robotics: Providing Robots with information to navigate their environment</li>
+</ul>
+</section>
+<section id="popular-vlms" class="slide level2">
+<h2>Popular VLMS</h2>
+<ul>
+<li class="fragment">Closed Source
+<ul>
+<li class="fragment">GPT4-V, Claude, Gemini Flash</li>
+</ul></li>
+<li class="fragment">Open Source
+<ul>
+<li class="fragment">LLaVa
+<ul>
+<li class="fragment">Research collaboration between University of Wisconsin-Maddison and MSR</li>
+</ul></li>
+<li class="fragment">Gemma
+<ul>
+<li class="fragment">Google’s Gemma-3</li>
+</ul></li>
+<li class="fragment">FastVLM
+<ul>
+<li class="fragment">Apple’s Fast Vision Language Model</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="demo-gemma-3-vlm" class="slide level2 center">
+<h2>Demo: Gemma-3 VLM</h2>
+<p>LMStudio / Gemma-3-27b-it GGUF for vision tasks</p>
+</section>
+<section id="demo-apples-fastvlm" class="slide level2 center">
+<h2>Demo: Apple’s FastVLM</h2>
+<p><a href="https://huggingface.co/spaces/apple/fastvlm-webgpu" class="external" target="blank">Apple FastVLM running in WebGPU</a></p>
+</section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>

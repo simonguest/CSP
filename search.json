@@ -1168,7 +1168,18 @@
     "href": "src/02/exploring_genai_p2.html#recap-of-last-weeks-lecture",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Recap of Last Week’s Lecture",
-    "text": "Recap of Last Week’s Lecture\n\nTBD",
+    "text": "Recap of Last Week’s Lecture\n\nBrief History of the Transformer\nModel evolution, explored text-to-text models\nAPI access, quantization, running locally",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#this-week",
+    "href": "src/02/exploring_genai_p2.html#this-week",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "This Week",
+    "text": "This Week\n\nTBD",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1263,22 +1274,77 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#controlnet",
-    "href": "src/02/exploring_genai_p2.html#controlnet",
+    "objectID": "src/02/exploring_genai_p2.html#adding-more-control",
+    "href": "src/02/exploring_genai_p2.html#adding-more-control",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "ControlNet",
-    "text": "ControlNet\nText-to-Image and Image-to-Image are interesting, but you don’t have that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning techniques, but expensive and risk degrading quality",
+    "section": "Adding More Control",
+    "text": "Adding More Control\n\nText-to-Image and Image-to-Image are don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#controlnet-1",
-    "href": "src/02/exploring_genai_p2.html#controlnet-1",
+    "objectID": "src/02/exploring_genai_p2.html#inpainting",
+    "href": "src/02/exploring_genai_p2.html#inpainting",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Inpainting",
+    "text": "Inpainting\nFilling in missing or masked regions of an image in a realistic way.\n\nHow do you use it?\n\nModel is given an image with certain areas masked out\nGenerates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)\n\nChallenging\n\nModel needs to understand context around the area\nGenerate content that matches the style, lighting, and perspective\nFollow a text prompt that was likely different from the original",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#outpainting",
+    "href": "src/02/exploring_genai_p2.html#outpainting",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Outpainting",
+    "text": "Outpainting\nInpainting applied to the edges of an image to extend it beyond it’s original size.\n\nHow do you use it?\n\nExpand / resize the image\nTreat the new empty regions around the image as masked areas\nUse impainting technique to fill in the regions\n\nMore challenging\n\nLess context at the edges of the image vs. center/surrounded\nNeeds to maintain the style, lighting, and perspective\nHas to be creative. Can’t just be a repetitive pattern.",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#inpainting-1",
+    "href": "src/02/exploring_genai_p2.html#inpainting-1",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Inpainting",
+    "text": "Inpainting\nPopular models\n\nStable Diffusion (Many inpainting variants)\nFlux Fill from Black Forest Labs\nLaMa: Large Mask inpainting\nIdeogram",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#replicate",
+    "href": "src/02/exploring_genai_p2.html#replicate",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Replicate",
+    "text": "Replicate\n\nSource: https://replicate.com",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#demo-inpaintingoutpainting",
+    "href": "src/02/exploring_genai_p2.html#demo-inpaintingoutpainting",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Demo: Inpainting/Outpainting",
+    "text": "Demo: Inpainting/Outpainting\nInpainting.ipynb",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#controlnet",
+    "href": "src/02/exploring_genai_p2.html#controlnet",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "ControlNet",
-    "text": "ControlNet\nIntroducing ControlNet\n\nDeveloped by Lvmin Zhang and Maneesh Agrawala at Stanford University\nPublished in February 2023 (Zhang, Rao, and Agrawala 2023)\nControlNet represented a paradigm shift from “describe what you want” to “show the structure you want.”",
+    "text": "ControlNet\nInpainting helps finer editing of images, but still “hoping that the model guesses what I mean”\n\nIntroducing ControlNet\n\nDeveloped by Lvmin Zhang and Maneesh Agrawala at Stanford University\nPublished in February 2023 (Zhang, Rao, and Agrawala 2023)\nControlNet represented a paradigm shift from “describe what you want” to “show the structure you want”.",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1307,33 +1373,55 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#controlnet-2",
-    "href": "src/02/exploring_genai_p2.html#controlnet-2",
+    "objectID": "src/02/exploring_genai_p2.html#controlnet-1",
+    "href": "src/02/exploring_genai_p2.html#controlnet-1",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "ControlNet",
-    "text": "ControlNet\nExamples of conditioning types:\n\nHuman pose (OpenPose) - skeleton/keypoint detection\nQR codes - codes blended into images\nCanny edges - line drawings and edge detection\nDepth maps - 3D structure information\nNormal maps - surface orientation\nSemantic segmentation - labeled regions\nScribbles - rough user drawings",
+    "text": "ControlNet\nExamples of conditioning types:\n\nHuman pose (OpenPose) - skeleton/keypoint detection\nCanny edges - line drawings and edge detection\nQR codes - blended into images\nDepth maps - 3D structure information\nNormal maps - surface orientation\nSemantic segmentation - labeled regions\nScribbles - rough user drawings",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#hugging-face-image-models",
-    "href": "src/02/exploring_genai_p2.html#hugging-face-image-models",
+    "objectID": "src/02/exploring_genai_p2.html#putting-this-all-together",
+    "href": "src/02/exploring_genai_p2.html#putting-this-all-together",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Hugging Face Image Models",
-    "text": "Hugging Face Image Models\n\nSource: https://huggingface.co/models",
+    "section": "Putting this all together",
+    "text": "Putting this all together\n\nTBD",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#replicate",
-    "href": "src/02/exploring_genai_p2.html#replicate",
+    "objectID": "src/02/exploring_genai_p2.html#depth-images",
+    "href": "src/02/exploring_genai_p2.html#depth-images",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Replicate",
-    "text": "Replicate\n\nSource: https://replicate.com",
+    "section": "Depth Images",
+    "text": "Depth Images",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#albedo2bprmaps-model",
+    "href": "src/02/exploring_genai_p2.html#albedo2bprmaps-model",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Albedo2bprmaps model",
+    "text": "Albedo2bprmaps model\nFor the many image models that we didn’t cover…",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#running-image-models-offline",
+    "href": "src/02/exploring_genai_p2.html#running-image-models-offline",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Running Image Models Offline",
+    "text": "Running Image Models Offline\n\nTalk about GGUF models and running in Comfy",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1345,6 +1433,94 @@
     "title": "Exploring Generative AI Models: Part 2",
     "section": "ComfyUI",
     "text": "ComfyUI\n\nSource: https://comfy.org",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#cnns-to-vision-transformer",
+    "href": "src/02/exploring_genai_p2.html#cnns-to-vision-transformer",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "CNNs to Vision Transformer",
+    "text": "CNNs to Vision Transformer\nHistorically, computer vision has used classification models called CNNs (Convolutional Neural Networks)\n\nEnter the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.” The key authors included Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, and others.\n\nTipping Point\n\nInitially, ViT didn’t outperform CNNs\nBut exceeded SOTA CNNs on larger datasets (such as Google’s JFT-300M)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#how-vision-transformers-work",
+    "href": "src/02/exploring_genai_p2.html#how-vision-transformers-work",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "How Vision Transformers Work",
+    "text": "How Vision Transformers Work\n\nSplits images into patches (16x16)\nFlatten and embed each patch\nAdd positional encodings\nProcess through transformer layers\nModel learns global relationships across the entire image vs. local convolutional layers",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#popular-vision-transformers",
+    "href": "src/02/exploring_genai_p2.html#popular-vision-transformers",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Popular Vision Transformers",
+    "text": "Popular Vision Transformers\n\nOpenAI’s CLIP\n\nTrained on 400M image-text pairs\nFoundation of most VLMs\n\nMeta’s DINO/DINO-2\n\n(Self DIstillation with NO Labels)\nSelf-supervised on 142M images\n\nMicrosoft’s Swin\n\nUse “shifted windows” approach\nDense predication tasks (object detection and segmentation)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#vision-language-models-vlms",
+    "href": "src/02/exploring_genai_p2.html#vision-language-models-vlms",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Vision Language Models (VLMs)",
+    "text": "Vision Language Models (VLMs)\nViTs by themselves are only so useful\n\nVLMs\n\nA vision encoder\nAdapter/projector layer\nLanguage model (LLaMa or GPT)\n\nVLAs (Visual Language Action Models)\n\nSame approach as VLMs, but instead of human readable text, action decoders for robot instructions\n\nMultimodal\n\nImage-Text-to-Text",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#use-cases-for-vlms",
+    "href": "src/02/exploring_genai_p2.html#use-cases-for-vlms",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Use Cases for VLMs",
+    "text": "Use Cases for VLMs\n\nVisual Understanding: “What’s in this image?”\nAccessibility: Assisting visually impaired users\nContent Moderation and Safety: Identifying harmful content\nRetail: Finding products with photos\nEducation: Helping students understand charts, diagrams, equations\nRobotics: Providing Robots with information to navigate their environment",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#popular-vlms",
+    "href": "src/02/exploring_genai_p2.html#popular-vlms",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Popular VLMS",
+    "text": "Popular VLMS\n\nClosed Source\n\nGPT4-V, Claude, Gemini Flash\n\nOpen Source\n\nLLaVa\n\nResearch collaboration between University of Wisconsin-Maddison and MSR\n\nGemma\n\nGoogle’s Gemma-3\n\nFastVLM\n\nApple’s Fast Vision Language Model",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#demo-gemma-3-vlm",
+    "href": "src/02/exploring_genai_p2.html#demo-gemma-3-vlm",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Demo: Gemma-3 VLM",
+    "text": "Demo: Gemma-3 VLM\nLMStudio / Gemma-3-27b-it GGUF for vision tasks",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#demo-apples-fastvlm",
+    "href": "src/02/exploring_genai_p2.html#demo-apples-fastvlm",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Demo: Apple’s FastVLM",
+    "text": "Demo: Apple’s FastVLM\nApple FastVLM running in WebGPU",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
