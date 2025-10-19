@@ -1179,7 +1179,7 @@
     "href": "src/02/exploring_genai_p2.html#this-week",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "This Week",
-    "text": "This Week\n\nTBD",
+    "text": "This Week\n\nDive into image-based models!\nExplore the Diffuser\nEditing images using Inpainting and ControlNet\nVision Transfomers and VLMs",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1190,7 +1190,7 @@
     "href": "src/02/exploring_genai_p2.html#images-models-text-to-image",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Images Models: Text-to-Image",
-    "text": "Images Models: Text-to-Image\nText-to-Image: “A photograph of an astronaut riding a horse.”\n\nBased on a concept called a diffuser\nTwo stage process, inspired by thermodynamics",
+    "text": "Images Models: Text-to-Image\n\n\n“A photograph of an astronaut riding a horse.”\n\nBased on a concept called a diffusion transformer\nCommonly known as a diffuser\nTwo stage process, inspired by thermodynamics",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1201,7 +1201,7 @@
     "href": "src/02/exploring_genai_p2.html#image-models-diffuser",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Image Models: Diffuser",
-    "text": "Image Models: Diffuser\n\nTraining\n\nDuring training, random noise is adding to images in steps\nModel learns to predict what noise was added (forward diffusion process)\n\nInference (process runs in reverse)\n\nStart with pure random noise (known as a seed)\nModel estimates what noise should be removed to create a realistic image\nUsing the text prompt, the model steers the process towards images that match the description",
+    "text": "Image Models: Diffuser\n\nTraining\n\nDuring training, random noise is added to images in steps\nModel learns to predict what noise was added (forward diffusion process)\n\nInference (process runs in reverse)\n\nStart with pure random noise\nModel estimates what noise should be removed to create a realistic image\nUsing the text prompt, the model steers the process towards images that match the description",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1256,7 +1256,7 @@
     "href": "src/02/exploring_genai_p2.html#images-models-image-to-image",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Images Models: Image-to-Image",
-    "text": "Images Models: Image-to-Image\nImage-to-Image: “Make this image different”\n\nOriginally solved by GAN approaches, but evolved into extension of the diffusion concept\n\nAdd noise to the original image (partial denoising)\nRegenerate it with modifications based on the prompt\nThe original image heavily influences the output structure",
+    "text": "Images Models: Image-to-Image\nImage-to-Image: “Make this image different”\n\nOriginally solved by GAN approaches, but evolved into extension of the diffuser concept\n\nAdd noise to the original image (partial denoising)\nRegenerate it with modifications based on the prompt\nThe original image heavily influences the output structure",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1274,11 +1274,22 @@
     ]
   },
   {
+    "objectID": "src/02/exploring_genai_p2.html#depth-images",
+    "href": "src/02/exploring_genai_p2.html#depth-images",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Images",
+    "text": "Depth Images\n\nTBD",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/02/exploring_genai_p2.html#adding-more-control",
     "href": "src/02/exploring_genai_p2.html#adding-more-control",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Adding More Control",
-    "text": "Adding More Control\n\nText-to-Image and Image-to-Image are don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
+    "text": "Adding More Control\n\nText-to-Image and Image-to-Image don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1289,18 +1300,7 @@
     "href": "src/02/exploring_genai_p2.html#inpainting",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Inpainting",
-    "text": "Inpainting\nFilling in missing or masked regions of an image in a realistic way.\n\nHow do you use it?\n\nModel is given an image with certain areas masked out\nGenerates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)\n\nChallenging\n\nModel needs to understand context around the area\nGenerate content that matches the style, lighting, and perspective\nFollow a text prompt that was likely different from the original",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#outpainting",
-    "href": "src/02/exploring_genai_p2.html#outpainting",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Outpainting",
-    "text": "Outpainting\nInpainting applied to the edges of an image to extend it beyond it’s original size.\n\nHow do you use it?\n\nExpand / resize the image\nTreat the new empty regions around the image as masked areas\nUse impainting technique to fill in the regions\n\nMore challenging\n\nLess context at the edges of the image vs. center/surrounded\nNeeds to maintain the style, lighting, and perspective\nHas to be creative. Can’t just be a repetitive pattern.",
+    "text": "Inpainting\n\n\nFilling in missing or masked regions of an image in a realistic way.\n\nModel is given an image with certain areas masked out\nGenerates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1311,7 +1311,73 @@
     "href": "src/02/exploring_genai_p2.html#inpainting-1",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Inpainting",
+    "text": "Inpainting\n\n\nFilling in missing or masked regions of an image in a realistic way.\n\nModel needs to understand context around the area\nGenerate content that matches the style, lighting, and perspective\nFollow a text prompt that was likely different from the original",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#outpainting",
+    "href": "src/02/exploring_genai_p2.html#outpainting",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Outpainting",
+    "text": "Outpainting\nInpainting applied to the edges of an image to extend it beyond it’s original size\n\nSource: https://replicate.com/black-forest-labs/flux-fill-pro",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#outpainting-1",
+    "href": "src/02/exploring_genai_p2.html#outpainting-1",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Outpainting",
+    "text": "Outpainting\nInpainting applied to the edges of an image to extend it beyond it’s original size\n\nSource: https://replicate.com/black-forest-labs/flux-fill-pro",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#outpainting-2",
+    "href": "src/02/exploring_genai_p2.html#outpainting-2",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Outpainting",
+    "text": "Outpainting\n\nHow does it work?\n\nSupply a prompt: “2x zoom this image”\nTreat the new empty regions around the image as masked areas\nUse impainting technique to fill in the regions",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#outpainting-3",
+    "href": "src/02/exploring_genai_p2.html#outpainting-3",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Outpainting",
+    "text": "Outpainting\n\nMore challenging\n\nLess context at the edges of the image vs. center/surrounded\nNeed to maintain the style, lighting, and perspective\nHas to be creative. Can’t just be a repetitive pattern.",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#inpainting-2",
+    "href": "src/02/exploring_genai_p2.html#inpainting-2",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Inpainting",
     "text": "Inpainting\nPopular models\n\nStable Diffusion (Many inpainting variants)\nFlux Fill from Black Forest Labs\nLaMa: Large Mask inpainting\nIdeogram",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#demo-replicate",
+    "href": "src/02/exploring_genai_p2.html#demo-replicate",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Demo: Replicate",
+    "text": "Demo: Replicate\nhttps://replicate.com",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1329,22 +1395,11 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#demo-inpaintingoutpainting",
-    "href": "src/02/exploring_genai_p2.html#demo-inpaintingoutpainting",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Demo: Inpainting/Outpainting",
-    "text": "Demo: Inpainting/Outpainting\nInpainting.ipynb",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
     "objectID": "src/02/exploring_genai_p2.html#controlnet",
     "href": "src/02/exploring_genai_p2.html#controlnet",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "ControlNet",
-    "text": "ControlNet\nInpainting helps finer editing of images, but still “hoping that the model guesses what I mean”\n\nIntroducing ControlNet\n\nDeveloped by Lvmin Zhang and Maneesh Agrawala at Stanford University\nPublished in February 2023 (Zhang, Rao, and Agrawala 2023)\nControlNet represented a paradigm shift from “describe what you want” to “show the structure you want”.",
+    "text": "ControlNet\nText-to-image is “hoping the model guesses what I mean”\n\nIntroducing ControlNet\n\nDeveloped by Lvmin Zhang and Maneesh Agrawala at Stanford University\nPublished in February 2023 (Zhang, Rao, and Agrawala 2023)\nControlNet represented a paradigm shift from “describe what you want” to “show the structure you want”.",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1384,55 +1439,11 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#putting-this-all-together",
-    "href": "src/02/exploring_genai_p2.html#putting-this-all-together",
+    "objectID": "src/02/exploring_genai_p2.html#demo-putting-this-all-together",
+    "href": "src/02/exploring_genai_p2.html#demo-putting-this-all-together",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Putting this all together",
-    "text": "Putting this all together\n\nTBD",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#depth-images",
-    "href": "src/02/exploring_genai_p2.html#depth-images",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Depth Images",
-    "text": "Depth Images",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#albedo2bprmaps-model",
-    "href": "src/02/exploring_genai_p2.html#albedo2bprmaps-model",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Albedo2bprmaps model",
-    "text": "Albedo2bprmaps model\nFor the many image models that we didn’t cover…",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#running-image-models-offline",
-    "href": "src/02/exploring_genai_p2.html#running-image-models-offline",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Running Image Models Offline",
-    "text": "Running Image Models Offline\n\nTalk about GGUF models and running in Comfy",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#comfyui",
-    "href": "src/02/exploring_genai_p2.html#comfyui",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "ComfyUI",
-    "text": "ComfyUI\n\nSource: https://comfy.org",
+    "section": "Demo: Putting this all together",
+    "text": "Demo: Putting this all together\nUsing text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials\nPBR Material Creation.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"

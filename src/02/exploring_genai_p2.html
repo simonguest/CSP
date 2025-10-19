@@ -172,28 +172,37 @@ Simon Guest
 <section id="this-week" class="slide level2">
 <h2>This Week</h2>
 <ul>
-<li class="fragment">TBD</li>
+<li class="fragment">Dive into image-based models!</li>
+<li class="fragment">Explore the Diffuser</li>
+<li class="fragment">Editing images using Inpainting and ControlNet</li>
+<li class="fragment">Vision Transfomers and VLMs</li>
 </ul>
 </section>
 <section id="images-models-text-to-image" class="slide level2">
 <h2>Images Models: Text-to-Image</h2>
-<p>Text-to-Image: “A photograph of an astronaut riding a horse.”</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>“A photograph of an astronaut riding a horse.”</p>
 <ul>
-<li class="fragment">Based on a concept called a <strong>diffuser</strong></li>
+<li class="fragment">Based on a concept called a diffusion transformer</li>
+<li class="fragment">Commonly known as a <strong>diffuser</strong></li>
 <li class="fragment">Two stage process, inspired by thermodynamics</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./images/astronaut.png"></p>
+</div></div>
 </section>
 <section id="image-models-diffuser" class="slide level2">
 <h2>Image Models: Diffuser</h2>
 <ul>
 <li class="fragment">Training
 <ul>
-<li class="fragment">During training, random noise is adding to images in steps</li>
+<li class="fragment">During training, random noise is added to images in steps</li>
 <li class="fragment">Model learns to predict what noise was added (forward diffusion process)</li>
 </ul></li>
 <li class="fragment">Inference (process runs in reverse)
 <ul>
-<li class="fragment">Start with pure random noise (known as a seed)</li>
+<li class="fragment">Start with pure random noise</li>
 <li class="fragment">Model estimates what noise should be removed to create a realistic image</li>
 <li class="fragment">Using the text prompt, the model steers the process towards images that match the description</li>
 </ul></li>
@@ -279,7 +288,7 @@ Simon Guest
 <h2>Images Models: Image-to-Image</h2>
 <p>Image-to-Image: “Make this image different”</p>
 <ul>
-<li class="fragment">Originally solved by GAN approaches, but evolved into extension of the diffusion concept
+<li class="fragment">Originally solved by GAN approaches, but evolved into extension of the diffuser concept
 <ul>
 <li class="fragment">Add noise to the original image (partial denoising)</li>
 <li class="fragment">Regenerate it with modifications based on the prompt</li>
@@ -291,10 +300,16 @@ Simon Guest
 <h2>Demo: Image to Image Process</h2>
 <p><a href="https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing" class="external" target="_blank">Diffusion Image-to-Image.ipynb</a></p>
 </section>
+<section id="depth-images" class="slide level2">
+<h2>Depth Images</h2>
+<ul>
+<li class="fragment">TBD</li>
+</ul>
+</section>
 <section id="adding-more-control" class="slide level2">
 <h2>Adding More Control</h2>
 <ul>
-<li class="fragment">Text-to-Image and Image-to-Image are don’t give you that much control
+<li class="fragment"><em>Text-to-Image</em> and <em>Image-to-Image</em> don’t give you that much control
 <ul>
 <li class="fragment">Extensive prompts (both positive and negative) can help, but only so far</li>
 <li class="fragment">Fine-tuning, but expensive and risk degrading quality</li>
@@ -308,40 +323,66 @@ Simon Guest
 </section>
 <section id="inpainting" class="slide level2">
 <h2>Inpainting</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p>Filling in missing or masked regions of an image in a realistic way.</p>
-<ul>
-<li class="fragment">How do you use it?
 <ul>
 <li class="fragment">Model is given an image with certain areas masked out</li>
 <li class="fragment">Generates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)</li>
-</ul></li>
-<li class="fragment">Challenging
+</ul>
+</div><div class="column" style="width:50%;">
+<video data-autoplay="" src="./images/cherries-oranges-bananas.mp4">
+</video>
+</div></div>
+</section>
+<section id="inpainting-1" class="slide level2">
+<h2>Inpainting</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Filling in missing or masked regions of an image in a realistic way.</p>
 <ul>
 <li class="fragment">Model needs to understand context around the area</li>
 <li class="fragment">Generate content that matches the style, lighting, and perspective</li>
 <li class="fragment">Follow a text prompt that was likely different from the original</li>
-</ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<video data-autoplay="" src="./images/cherries-oranges-bananas.mp4">
+</video>
+</div></div>
 </section>
 <section id="outpainting" class="slide level2">
 <h2>Outpainting</h2>
-<p>Inpainting applied to the edges of an image to extend it beyond it’s original size.</p>
+<p>Inpainting applied to the edges of an image to extend it beyond it’s original size</p>
+
+<img data-src="./images/outpainter1.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com/black-forest-labs/flux-fill-pro</p></section>
+<section id="outpainting-1" class="slide level2">
+<h2>Outpainting</h2>
+<p>Inpainting applied to the edges of an image to extend it beyond it’s original size</p>
+
+<img data-src="./images/outpainter2.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com/black-forest-labs/flux-fill-pro</p></section>
+<section id="outpainting-2" class="slide level2">
+<h2>Outpainting</h2>
 <ul>
-<li class="fragment">How do you use it?
+<li class="fragment">How does it work?
 <ul>
-<li class="fragment">Expand / resize the image</li>
+<li class="fragment">Supply a prompt: “2x zoom this image”</li>
 <li class="fragment">Treat the new empty regions around the image as masked areas</li>
 <li class="fragment">Use impainting technique to fill in the regions</li>
 </ul></li>
+</ul>
+</section>
+<section id="outpainting-3" class="slide level2">
+<h2>Outpainting</h2>
+<ul>
 <li class="fragment">More challenging
 <ul>
 <li class="fragment">Less context at the edges of the image vs.&nbsp;center/surrounded</li>
-<li class="fragment">Needs to maintain the style, lighting, and perspective</li>
+<li class="fragment">Need to maintain the style, lighting, and perspective</li>
 <li class="fragment">Has to be creative. Can’t just be a repetitive pattern.</li>
 </ul></li>
 </ul>
 </section>
-<section id="inpainting-1" class="slide level2">
+<section id="inpainting-2" class="slide level2">
 <h2>Inpainting</h2>
 <p>Popular models</p>
 <ul>
@@ -351,17 +392,17 @@ Simon Guest
 <li class="fragment">Ideogram</li>
 </ul>
 </section>
+<section id="demo-replicate" class="slide level2 center">
+<h2>Demo: Replicate</h2>
+<p><a href="https://replicate.com" class="external" target="_blank">https://replicate.com</a></p>
+</section>
 <section id="replicate" class="slide level2">
 <h2>Replicate</h2>
 
 <img data-src="./images/replicate.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com</p></section>
-<section id="demo-inpaintingoutpainting" class="slide level2 center">
-<h2>Demo: Inpainting/Outpainting</h2>
-<p><a href="" class="external" target="_blank">Inpainting.ipynb</a></p>
-</section>
 <section id="controlnet" class="slide level2">
 <h2>ControlNet</h2>
-<p>Inpainting helps finer editing of images, but still “hoping that the model guesses what I mean”</p>
+<p>Text-to-image is “hoping the model guesses what I mean”</p>
 <ul>
 <li class="fragment">Introducing ControlNet
 <ul>
@@ -403,37 +444,17 @@ Simon Guest
 <li class="fragment">Scribbles - rough user drawings</li>
 </ul>
 </section>
-<section id="putting-this-all-together" class="slide level2">
-<h2>Putting this all together</h2>
-<ul>
-<li class="fragment">TBD</li>
-</ul>
+<section id="demo-putting-this-all-together" class="slide level2 center">
+<h2>Demo: Putting this all together</h2>
+<p>Using text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials</p>
+<p><a href="https://colab.research.google.com/drive/1Tn38J3u4-XJ9FQv8vSS-OUXin8hvZmrq" class="external" target="_blank">PBR Material Creation.ipynb</a></p>
 </section>
-<section>
-<section id="further-exploration" class="title-slide slide level1 center">
-<h1>Further Exploration</h1>
+<section class="slide level2">
 
 </section>
-<section id="depth-images" class="slide level2">
-<h2>Depth Images</h2>
-</section>
-<section id="albedo2bprmaps-model" class="slide level2">
-<h2>Albedo2bprmaps model</h2>
-<p>For the many image models that we didn’t cover…</p>
-</section>
-<section id="running-image-models-offline" class="slide level2">
-<h2>Running Image Models Offline</h2>
-<ul>
-<li class="fragment">Talk about GGUF models and running in Comfy</li>
-</ul>
-</section>
-<section id="comfyui" class="slide level2">
-<h2>ComfyUI</h2>
-
-<img data-src="./images/comfyui.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://comfy.org</p></section></section>
 <section>
-<section id="using-transformers-for-computer-vision" class="title-slide slide level1 center">
-<h1>Using Transformers for Computer Vision</h1>
+<section id="transformers-for-computer-vision" class="title-slide slide level1 center">
+<h1>Transformers for Computer Vision</h1>
 
 </section>
 <section id="cnns-to-vision-transformer" class="slide level2">
