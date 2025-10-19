@@ -1285,11 +1285,11 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#adding-more-control",
-    "href": "src/02/exploring_genai_p2.html#adding-more-control",
+    "objectID": "src/02/exploring_genai_p2.html#more-control-1",
+    "href": "src/02/exploring_genai_p2.html#more-control-1",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Adding More Control",
-    "text": "Adding More Control\n\nText-to-Image and Image-to-Image don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
+    "section": "More Control",
+    "text": "More Control\n\nText-to-Image and Image-to-Image don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1454,7 +1454,7 @@
     "href": "src/02/exploring_genai_p2.html#cnns-to-vision-transformer",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "CNNs to Vision Transformer",
-    "text": "CNNs to Vision Transformer\nHistorically, computer vision has used classification models called CNNs (Convolutional Neural Networks)\n\nEnter the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.” The key authors included Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, and others.\n\nTipping Point\n\nInitially, ViT didn’t outperform CNNs\nBut exceeded SOTA CNNs on larger datasets (such as Google’s JFT-300M)",
+    "text": "CNNs to Vision Transformer\nHistorically, computer vision has used classification models called CNNs (Convolutional Neural Networks)\n\nEnter the Vision Transformer (ViT)\n\n“An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale” (Dosovitskiy et al. 2021)\n\nTipping Point\n\nInitially, ViTs didn’t outperform CNNs\nBut exceeded SOTA CNNs on larger datasets (such as Google’s JFT-300M)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
