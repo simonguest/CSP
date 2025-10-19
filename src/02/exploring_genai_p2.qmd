@@ -19,22 +19,34 @@ bibliography: references.bib
 
 ## This Week
 
-- TBD
+- Dive into image-based models!
+- Explore the Diffuser
+- Editing images using Inpainting and ControlNet
+- Vision Transfomers and VLMs
 
 ## Images Models: Text-to-Image
 
-Text-to-Image: "A photograph of an astronaut riding a horse."
+:::: {.columns}
 
-- Based on a concept called a **diffuser**
+::: {.column width="50%"}
+"A photograph of an astronaut riding a horse."
+
+- Based on a concept called a diffusion transformer
+- Commonly known as a **diffuser**
 - Two stage process, inspired by thermodynamics
+:::
 
+::: {.column width="50%"}
+![](./images/astronaut.png)
+:::
+::::
 ## Image Models: Diffuser
 
 - Training
-  - During training, random noise is adding to images in steps
+  - During training, random noise is added to images in steps
   - Model learns to predict what noise was added (forward diffusion process)
 - Inference (process runs in reverse)
-  - Start with pure random noise (known as a seed)
+  - Start with pure random noise
   - Model estimates what noise should be removed to create a realistic image
   - Using the text prompt, the model steers the process towards images that match the description
 
@@ -91,7 +103,7 @@ timeline
 
 Image-to-Image: "Make this image different"
 
-- Originally solved by GAN approaches, but evolved into extension of the diffusion concept
+- Originally solved by GAN approaches, but evolved into extension of the diffuser concept
   - Add noise to the original image (partial denoising)
   - Regenerate it with modifications based on the prompt
   - The original image heavily influences the output structure
@@ -100,9 +112,13 @@ Image-to-Image: "Make this image different"
 
 [Diffusion Image-to-Image.ipynb](https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing){.external target="_blank"}
 
+## Depth Images
+
+- TBD
+
 ## Adding More Control
 
-- Text-to-Image and Image-to-Image are don't give you that much control
+- *Text-to-Image* and *Image-to-Image* don't give you that much control
   - Extensive prompts (both positive and negative) can help, but only so far
   - Fine-tuning, but expensive and risk degrading quality
 
@@ -112,27 +128,57 @@ Image-to-Image: "Make this image different"
 
 ## Inpainting
 
+:::: {.columns}
+::: {.column width="50%"}
 Filling in missing or masked regions of an image in a realistic way.
 
-- How do you use it?
-  - Model is given an image with certain areas masked out
-  - Generates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)
-- Challenging
-  - Model needs to understand context around the area
-  - Generate content that matches the style, lighting, and perspective
-  - Follow a text prompt that was likely different from the original
+- Model is given an image with certain areas masked out
+- Generates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)
+:::
+::: {.column width="50%"}
+<video data-autoplay src="./images/cherries-oranges-bananas.mp4"></video>
+:::
+::::
+
+## Inpainting
+
+:::: {.columns}
+::: {.column width="50%"}
+Filling in missing or masked regions of an image in a realistic way.
+
+- Model needs to understand context around the area
+- Generate content that matches the style, lighting, and perspective
+- Follow a text prompt that was likely different from the original
+:::
+::: {.column width="50%"}
+<video data-autoplay src="./images/cherries-oranges-bananas.mp4"></video>
+:::
+::::
 
 ## Outpainting
 
-Inpainting applied to the edges of an image to extend it beyond it's original size.
+Inpainting applied to the edges of an image to extend it beyond it's original size
 
-- How do you use it?
-  - Expand / resize the image
+![Source: https://replicate.com/black-forest-labs/flux-fill-pro](./images/outpainter1.png)
+
+## Outpainting
+
+Inpainting applied to the edges of an image to extend it beyond it's original size
+
+![Source: https://replicate.com/black-forest-labs/flux-fill-pro](./images/outpainter2.png)
+
+## Outpainting
+
+- How does it work?
+  - Supply a prompt: "2x zoom this image"
   - Treat the new empty regions around the image as masked areas
   - Use impainting technique to fill in the regions
+
+## Outpainting
+
 - More challenging
   - Less context at the edges of the image vs. center/surrounded
-  - Needs to maintain the style, lighting, and perspective
+  - Need to maintain the style, lighting, and perspective
   - Has to be creative. Can't just be a repetitive pattern.
 
 ## Inpainting
@@ -144,17 +190,17 @@ Popular models
 - LaMa: Large Mask inpainting
 - Ideogram
 
+## Demo: Replicate {.center}
+
+[https://replicate.com](https://replicate.com){.external target="_blank"}
+
 ## Replicate
 
 ![Source: https://replicate.com](./images/replicate.png)
 
-## Demo: Inpainting/Outpainting {.center}
-
-[Inpainting.ipynb](){.external target="_blank"}
-
 ## ControlNet
 
-Inpainting helps finer editing of images, but still "hoping that the model guesses what I mean"
+Text-to-image is "hoping the model guesses what I mean"
 
 - Introducing ControlNet
   - Developed by Lvmin Zhang and Maneesh Agrawala at Stanford University
@@ -188,27 +234,15 @@ Examples of conditioning types:
 - Semantic segmentation - labeled regions
 - Scribbles - rough user drawings
 
-## Putting this all together
+## Demo: Putting this all together {.center}
 
-- TBD
+Using text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials
 
-# Further Exploration
+[PBR Material Creation.ipynb](https://colab.research.google.com/drive/1Tn38J3u4-XJ9FQv8vSS-OUXin8hvZmrq){.external target="_blank"}
 
-## Depth Images
+***
 
-## Albedo2bprmaps model
-
-For the many image models that we didn't cover...
-
-## Running Image Models Offline
-
-- Talk about GGUF models and running in Comfy
-
-## ComfyUI
-
-![Source: https://comfy.org](./images/comfyui.png)
-
-# Using Transformers for Computer Vision
+# Transformers for Computer Vision
 
 ## CNNs to Vision Transformer
 
