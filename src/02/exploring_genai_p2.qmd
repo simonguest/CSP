@@ -153,6 +153,30 @@ Hardware vs. Models
   - Simple/low-cost robotics
   - Control input for other images
 
+## Depth Maps
+
+Depth Map to Image (using black-forest-labs/flux-depth-pro)
+
+![](./images/campus-depth.png)
+
+## Depth Maps
+
+Depth Map to Image (using black-forest-labs/flux-depth-pro)
+
+![](./images/campus-reimagined.png)
+
+## Depth Maps
+
+Depth Map to Image (using black-forest-labs/flux-depth-pro)
+
+![](./images/campus-depth.png)
+
+## Depth Maps
+
+Depth Map to Image (using black-forest-labs/flux-depth-pro)
+
+![](./images/campus-future.png)
+
 # I Want More Control!
 
 ## I Want More Control!
@@ -297,14 +321,6 @@ Historically, computer vision has used classification models called CNNs (Convol
   - Initially, ViTs didn't outperform CNNs
   - But exceeded SOTA CNNs on larger datasets (such as Google's JFT-300M)
 
-## How Vision Transformers Work
-
-- Splits images into patches (16x16)
-- Flatten and embed each patch
-- Add positional encodings
-- Process through transformer layers
-- Model learns global relationships across the entire image vs. local convolutional layers
-
 ## Popular Vision Transformers
 
 - OpenAI's CLIP
@@ -315,7 +331,7 @@ Historically, computer vision has used classification models called CNNs (Convol
   - Self-supervised on 142M images
 - Microsoft's Swin
   - Use "shifted windows" approach
-  - Dense predication tasks (object detection and segmentation)
+  - Excels at dense predication tasks
 
 ## Vision Language Models (VLMs)
 
@@ -325,7 +341,7 @@ ViTs by themselves are only so useful
   - A vision encoder
   - Adapter/projector layer
   - Language model (LLaMa or GPT)
-- Multimodal
+- Also known as "Multimodal"
   - Image-Text-to-Text
 
 ## Demo: Gemma-3 VLM  {.center}
@@ -341,17 +357,14 @@ LMStudio / Gemma-3-27b-it GGUF for vision tasks
 - Education: Helping students understand charts, diagrams, equations
 - Robotics: Providing Robots with information to navigate their environment
 
-## Popular VLMS
+## Popular VLMs
 
 - Closed Source
   - GPT4-V, Claude, Gemini Flash
 - Open Source
-  - LLaVa
-    - Research collaboration between University of Wisconsin-Maddison and MSR
-  - Gemma
-    - Google's Gemma-3
-  - FastVLM
-    - Apple's Fast Vision Language Model
+  - LLaVa: Research collaboration between University of Wisconsin-Maddison and MSR
+  - Gemma: Google's Gemma-3
+  - FastVLM: Apple's Fast Vision Language Model
 
 ## Demo: Apple's FastVLM  {.center}
 
