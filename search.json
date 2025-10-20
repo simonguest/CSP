@@ -1274,22 +1274,66 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#depth-images",
-    "href": "src/02/exploring_genai_p2.html#depth-images",
+    "objectID": "src/02/exploring_genai_p2.html#image-to-image-can-also-be-used-for",
+    "href": "src/02/exploring_genai_p2.html#image-to-image-can-also-be-used-for",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Depth Images",
-    "text": "Depth Images\n\nTBD",
+    "section": "Image-to-Image can also be used for…",
+    "text": "Image-to-Image can also be used for…\n\nSuper resolution\nStyle transfer\nColorization (grayscale to color)\nDepth maps",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#more-control-1",
-    "href": "src/02/exploring_genai_p2.html#more-control-1",
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps",
+    "href": "src/02/exploring_genai_p2.html#depth-maps",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "More Control",
-    "text": "More Control\n\nText-to-Image and Image-to-Image don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nImages (often greyscale) where each pixel’s value represents the distance",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-1",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-1",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nImages (often greyscale) where each pixel’s value represents the distance",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-2",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-2",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nHardware vs. Models\n\nHistorically used custom hardware\n\nDepth Camera (e.g., RealSense) - ~$300-500\nModule/processing for realtime (60fps) sensing",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-3",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-3",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nHardware vs. Models\n\nImage-to-Image depth estimation models\n\nDepth Anything, MiDaS, ZoeDepth\nLow latency (MiDaS 3.1 @ 20fps on embedded GPU)\n\nUsed for\n\n3D effects/estimation\nSimple/low-cost robotics\nControl input for other images",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#i-want-more-control-1",
+    "href": "src/02/exploring_genai_p2.html#i-want-more-control-1",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "I Want More Control!",
+    "text": "I Want More Control!\n\nText-to-Image and Image-to-Image don’t give you that much control\n\nExtensive prompts (both positive and negative) can help, but only so far\nFine-tuning, but expensive and risk degrading quality\n\nTwo methods for adding more control\n\nInpainting (and Outpainting)\nControlNet",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1300,7 +1344,7 @@
     "href": "src/02/exploring_genai_p2.html#inpainting",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Inpainting",
-    "text": "Inpainting\n\n\nFilling in missing or masked regions of an image in a realistic way.\n\nModel is given an image with certain areas masked out\nGenerates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)",
+    "text": "Inpainting\n\n\nFilling in missing or masked regions of an image in a realistic way\n\nModel is given an image with certain areas masked out\nGenerates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1311,7 +1355,7 @@
     "href": "src/02/exploring_genai_p2.html#inpainting-1",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Inpainting",
-    "text": "Inpainting\n\n\nFilling in missing or masked regions of an image in a realistic way.\n\nModel needs to understand context around the area\nGenerate content that matches the style, lighting, and perspective\nFollow a text prompt that was likely different from the original",
+    "text": "Inpainting\n\n\nFilling in missing or masked regions of an image in a realistic way\n\nModel needs to understand context around the area\nGenerate content that matches the style, lighting, and perspective\nFollow a text prompt that was likely different from the original",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1344,7 +1388,7 @@
     "href": "src/02/exploring_genai_p2.html#outpainting-2",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Outpainting",
-    "text": "Outpainting\n\nHow does it work?\n\nSupply a prompt: “2x zoom this image”\nTreat the new empty regions around the image as masked areas\nUse impainting technique to fill in the regions",
+    "text": "Outpainting\n\nHow does it work?\n\nSupply a prompt: “2x zoom out this image”\nTreat the new empty regions around the image as masked areas\nUse impainting technique to fill in the regions",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1373,6 +1417,17 @@
     ]
   },
   {
+    "objectID": "src/02/exploring_genai_p2.html#introducing-replicate",
+    "href": "src/02/exploring_genai_p2.html#introducing-replicate",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Introducing Replicate",
+    "text": "Introducing Replicate\n\nSource: https://replicate.com",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/02/exploring_genai_p2.html#demo-replicate",
     "href": "src/02/exploring_genai_p2.html#demo-replicate",
     "title": "Exploring Generative AI Models: Part 2",
@@ -1384,11 +1439,11 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#replicate",
-    "href": "src/02/exploring_genai_p2.html#replicate",
+    "objectID": "src/02/exploring_genai_p2.html#demo-calling-replicate-api-from-colab",
+    "href": "src/02/exploring_genai_p2.html#demo-calling-replicate-api-from-colab",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Replicate",
-    "text": "Replicate\n\nSource: https://replicate.com",
+    "section": "Demo: Calling Replicate API from Colab",
+    "text": "Demo: Calling Replicate API from Colab\nReplicate Client.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1428,11 +1483,22 @@
     ]
   },
   {
+    "objectID": "src/02/exploring_genai_p2.html#demo-control-via-flux-kontext",
+    "href": "src/02/exploring_genai_p2.html#demo-control-via-flux-kontext",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Demo: Control via FLUX Kontext",
+    "text": "Demo: Control via FLUX Kontext\nControlNet Human Pose (FLUX Kontext).ipynb",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/02/exploring_genai_p2.html#controlnet-1",
     "href": "src/02/exploring_genai_p2.html#controlnet-1",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "ControlNet",
-    "text": "ControlNet\nExamples of conditioning types:\n\nHuman pose (OpenPose) - skeleton/keypoint detection\nCanny edges - line drawings and edge detection\nQR codes - blended into images\nDepth maps - 3D structure information\nNormal maps - surface orientation\nSemantic segmentation - labeled regions\nScribbles - rough user drawings",
+    "text": "ControlNet\nExamples of conditioning types:\n\nHuman pose (OpenPose) - skeleton/keypoint detection\nCanny edges - line drawings and edge detection\nScribbles - rough user drawings\nQR codes - blended into images\nDepth maps - 3D structure information",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1443,7 +1509,7 @@
     "href": "src/02/exploring_genai_p2.html#demo-putting-this-all-together",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Demo: Putting this all together",
-    "text": "Demo: Putting this all together\nUsing text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials\nPBR Material Creation.ipynb",
+    "text": "Demo: Putting this all together\nUsing text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials\nPBR Material Creator.ipynb",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1487,29 +1553,7 @@
     "href": "src/02/exploring_genai_p2.html#vision-language-models-vlms",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Vision Language Models (VLMs)",
-    "text": "Vision Language Models (VLMs)\nViTs by themselves are only so useful\n\nVLMs\n\nA vision encoder\nAdapter/projector layer\nLanguage model (LLaMa or GPT)\n\nVLAs (Visual Language Action Models)\n\nSame approach as VLMs, but instead of human readable text, action decoders for robot instructions\n\nMultimodal\n\nImage-Text-to-Text",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#use-cases-for-vlms",
-    "href": "src/02/exploring_genai_p2.html#use-cases-for-vlms",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Use Cases for VLMs",
-    "text": "Use Cases for VLMs\n\nVisual Understanding: “What’s in this image?”\nAccessibility: Assisting visually impaired users\nContent Moderation and Safety: Identifying harmful content\nRetail: Finding products with photos\nEducation: Helping students understand charts, diagrams, equations\nRobotics: Providing Robots with information to navigate their environment",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "src/02/exploring_genai_p2.html#popular-vlms",
-    "href": "src/02/exploring_genai_p2.html#popular-vlms",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "Popular VLMS",
-    "text": "Popular VLMS\n\nClosed Source\n\nGPT4-V, Claude, Gemini Flash\n\nOpen Source\n\nLLaVa\n\nResearch collaboration between University of Wisconsin-Maddison and MSR\n\nGemma\n\nGoogle’s Gemma-3\n\nFastVLM\n\nApple’s Fast Vision Language Model",
+    "text": "Vision Language Models (VLMs)\nViTs by themselves are only so useful\n\nVLMs\n\nA vision encoder\nAdapter/projector layer\nLanguage model (LLaMa or GPT)\n\nMultimodal\n\nImage-Text-to-Text",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1521,6 +1565,28 @@
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Demo: Gemma-3 VLM",
     "text": "Demo: Gemma-3 VLM\nLMStudio / Gemma-3-27b-it GGUF for vision tasks",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#use-cases-for-vlms",
+    "href": "src/02/exploring_genai_p2.html#use-cases-for-vlms",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Use Cases for VLMs",
+    "text": "Use Cases for VLMs\n\nVisual Understanding: “What’s in this image?”\nAccessibility: Assisting users with visual impairments\nContent Moderation and Safety: Identifying harmful content\nRetail: Finding products with photos\nEducation: Helping students understand charts, diagrams, equations\nRobotics: Providing Robots with information to navigate their environment",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#popular-vlms",
+    "href": "src/02/exploring_genai_p2.html#popular-vlms",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Popular VLMS",
+    "text": "Popular VLMS\n\nClosed Source\n\nGPT4-V, Claude, Gemini Flash\n\nOpen Source\n\nLLaVa\n\nResearch collaboration between University of Wisconsin-Maddison and MSR\n\nGemma\n\nGoogle’s Gemma-3\n\nFastVLM\n\nApple’s Fast Vision Language Model",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"

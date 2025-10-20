@@ -305,19 +305,60 @@ Simon Guest
 <h2>Demo: Image to Image Process</h2>
 <p><a href="https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing" class="external" target="_blank">Diffusion Image-to-Image.ipynb</a></p>
 </section>
-<section id="depth-images" class="slide level2">
-<h2>Depth Images</h2>
+<section id="image-to-image-can-also-be-used-for" class="slide level2">
+<h2>Image-to-Image can also be used for…</h2>
 <ul>
-<li class="fragment">TBD</li>
+<li class="fragment">Super resolution</li>
+<li class="fragment">Style transfer</li>
+<li class="fragment">Colorization (grayscale to color)</li>
+<li class="fragment">Depth maps</li>
+</ul>
+</section>
+<section id="depth-maps" class="slide level2">
+<h2>Depth Maps</h2>
+<p>Images (often greyscale) where each pixel’s value represents the distance</p>
+
+<img data-src="./images/campus.png" class="r-stretch"></section>
+<section id="depth-maps-1" class="slide level2">
+<h2>Depth Maps</h2>
+<p>Images (often greyscale) where each pixel’s value represents the distance</p>
+
+<img data-src="./images/campus-depth.png" class="r-stretch"></section>
+<section id="depth-maps-2" class="slide level2">
+<h2>Depth Maps</h2>
+<p>Hardware vs.&nbsp;Models</p>
+<ul>
+<li class="fragment">Historically used custom hardware
+<ul>
+<li class="fragment">Depth Camera (e.g., RealSense) - ~$300-500</li>
+<li class="fragment">Module/processing for realtime (60fps) sensing</li>
+</ul></li>
+</ul>
+</section>
+<section id="depth-maps-3" class="slide level2">
+<h2>Depth Maps</h2>
+<p>Hardware vs.&nbsp;Models</p>
+<ul>
+<li class="fragment">Image-to-Image depth estimation models
+<ul>
+<li class="fragment">Depth Anything, MiDaS, ZoeDepth</li>
+<li class="fragment">Low latency (MiDaS 3.1 @ 20fps on embedded GPU)</li>
+</ul></li>
+<li class="fragment">Used for
+<ul>
+<li class="fragment">3D effects/estimation</li>
+<li class="fragment">Simple/low-cost robotics</li>
+<li class="fragment">Control input for other images</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
-<section id="more-control" class="title-slide slide level1 center">
-<h1>More Control</h1>
+<section id="i-want-more-control" class="title-slide slide level1 center">
+<h1>I Want More Control!</h1>
 
 </section>
-<section id="more-control-1" class="slide level2">
-<h2>More Control</h2>
+<section id="i-want-more-control-1" class="slide level2">
+<h2>I Want More Control!</h2>
 <ul>
 <li class="fragment"><em>Text-to-Image</em> and <em>Image-to-Image</em> don’t give you that much control
 <ul>
@@ -335,7 +376,7 @@ Simon Guest
 <h2>Inpainting</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Filling in missing or masked regions of an image in a realistic way.</p>
+<p>Filling in missing or masked regions of an image in a realistic way</p>
 <ul>
 <li class="fragment">Model is given an image with certain areas masked out</li>
 <li class="fragment">Generates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)</li>
@@ -349,7 +390,7 @@ Simon Guest
 <h2>Inpainting</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Filling in missing or masked regions of an image in a realistic way.</p>
+<p>Filling in missing or masked regions of an image in a realistic way</p>
 <ul>
 <li class="fragment">Model needs to understand context around the area</li>
 <li class="fragment">Generate content that matches the style, lighting, and perspective</li>
@@ -375,7 +416,7 @@ Simon Guest
 <ul>
 <li class="fragment">How does it work?
 <ul>
-<li class="fragment">Supply a prompt: “2x zoom this image”</li>
+<li class="fragment">Supply a prompt: “2x zoom out this image”</li>
 <li class="fragment">Treat the new empty regions around the image as masked areas</li>
 <li class="fragment">Use impainting technique to fill in the regions</li>
 </ul></li>
@@ -402,14 +443,18 @@ Simon Guest
 <li class="fragment">Ideogram</li>
 </ul>
 </section>
+<section id="introducing-replicate" class="slide level2">
+<h2>Introducing Replicate</h2>
+
+<img data-src="./images/replicate.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com</p></section>
 <section id="demo-replicate" class="slide level2 center">
 <h2>Demo: Replicate</h2>
 <p><a href="https://replicate.com" class="external" target="_blank">https://replicate.com</a></p>
 </section>
-<section id="replicate" class="slide level2">
-<h2>Replicate</h2>
-
-<img data-src="./images/replicate.png" class="r-stretch quarto-figure-center"><p class="caption">Source: https://replicate.com</p></section>
+<section id="demo-calling-replicate-api-from-colab" class="slide level2 center">
+<h2>Demo: Calling Replicate API from Colab</h2>
+<p><a href="https://colab.research.google.com/drive/1WyFGPhAbUPKXAyTzWvndWSkho55XqHqw?usp=sharing" class="external" target="_blank">Replicate Client.ipynb</a></p>
+</section>
 <section id="controlnet" class="slide level2">
 <h2>ControlNet</h2>
 <p>Text-to-image is “hoping the model guesses what I mean”</p>
@@ -441,26 +486,25 @@ Simon Guest
 <h2>Demo: ControlNet Human Pose</h2>
 <p><a href="https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing" class="external" target="_blank">ControlNet Human Pose.ipynb</a></p>
 </section>
+<section id="demo-control-via-flux-kontext" class="slide level2 center">
+<h2>Demo: Control via FLUX Kontext</h2>
+<p><a href="https://colab.research.google.com/drive/1_y2emju5Sy4Z6TfhmZBgu3Q61DYGApdb?usp=sharing" class="external" target="_blank">ControlNet Human Pose (FLUX Kontext).ipynb</a></p>
+</section>
 <section id="controlnet-1" class="slide level2">
 <h2>ControlNet</h2>
 <p>Examples of conditioning types:</p>
 <ul>
 <li class="fragment">Human pose (OpenPose) - skeleton/keypoint detection</li>
 <li class="fragment">Canny edges - line drawings and edge detection</li>
+<li class="fragment">Scribbles - rough user drawings</li>
 <li class="fragment">QR codes - blended into images</li>
 <li class="fragment">Depth maps - 3D structure information</li>
-<li class="fragment">Normal maps - surface orientation</li>
-<li class="fragment">Semantic segmentation - labeled regions</li>
-<li class="fragment">Scribbles - rough user drawings</li>
 </ul>
 </section>
 <section id="demo-putting-this-all-together" class="slide level2 center">
 <h2>Demo: Putting this all together</h2>
 <p>Using text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials</p>
-<p><a href="https://colab.research.google.com/drive/1Tn38J3u4-XJ9FQv8vSS-OUXin8hvZmrq" class="external" target="_blank">PBR Material Creation.ipynb</a></p>
-</section>
-<section class="slide level2">
-
+<p><a href="https://colab.research.google.com/drive/1Tn38J3u4-XJ9FQv8vSS-OUXin8hvZmrq" class="external" target="_blank">PBR Material Creator.ipynb</a></p>
 </section></section>
 <section>
 <section id="using-transformers-for-computer-vision" class="title-slide slide level1 center">
@@ -522,21 +566,21 @@ Simon Guest
 <li class="fragment">Adapter/projector layer</li>
 <li class="fragment">Language model (LLaMa or GPT)</li>
 </ul></li>
-<li class="fragment">VLAs (Visual Language Action Models)
-<ul>
-<li class="fragment">Same approach as VLMs, but instead of human readable text, action decoders for robot instructions</li>
-</ul></li>
 <li class="fragment">Multimodal
 <ul>
 <li class="fragment">Image-Text-to-Text</li>
 </ul></li>
 </ul>
 </section>
+<section id="demo-gemma-3-vlm" class="slide level2 center">
+<h2>Demo: Gemma-3 VLM</h2>
+<p>LMStudio / Gemma-3-27b-it GGUF for vision tasks</p>
+</section>
 <section id="use-cases-for-vlms" class="slide level2">
 <h2>Use Cases for VLMs</h2>
 <ul>
 <li class="fragment">Visual Understanding: “What’s in this image?”</li>
-<li class="fragment">Accessibility: Assisting visually impaired users</li>
+<li class="fragment">Accessibility: Assisting users with visual impairments</li>
 <li class="fragment">Content Moderation and Safety: Identifying harmful content</li>
 <li class="fragment">Retail: Finding products with photos</li>
 <li class="fragment">Education: Helping students understand charts, diagrams, equations</li>
@@ -566,10 +610,6 @@ Simon Guest
 </ul></li>
 </ul></li>
 </ul>
-</section>
-<section id="demo-gemma-3-vlm" class="slide level2 center">
-<h2>Demo: Gemma-3 VLM</h2>
-<p>LMStudio / Gemma-3-27b-it GGUF for vision tasks</p>
 </section>
 <section id="demo-apples-fastvlm" class="slide level2 center">
 <h2>Demo: Apple’s FastVLM</h2>
