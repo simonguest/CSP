@@ -114,13 +114,48 @@ Image-to-Image: "Make this image different"
 
 [Diffusion Image-to-Image.ipynb](https://colab.research.google.com/drive/1MaQ-WvYOVF_wb-HpQNNsVxemG4xt6YGV?usp=sharing){.external target="_blank"}
 
-## Depth Images
+## Image-to-Image can also be used for...
 
-- TBD
+- Super resolution
+- Style transfer
+- Colorization (grayscale to color)
+- Depth maps
 
-# More Control
+## Depth Maps
 
-## More Control
+Images (often greyscale) where each pixel's value represents the distance
+
+![](./images/campus.png)
+
+## Depth Maps
+
+Images (often greyscale) where each pixel's value represents the distance
+
+![](./images/campus-depth.png)
+
+## Depth Maps
+
+Hardware vs. Models
+
+- Historically used custom hardware
+  - Depth Camera (e.g., RealSense) - ~$300-500
+  - Module/processing for realtime (60fps) sensing
+
+## Depth Maps
+
+Hardware vs. Models
+
+- Image-to-Image depth estimation models
+  - Depth Anything, MiDaS, ZoeDepth
+  - Low latency (MiDaS 3.1 @ 20fps on embedded GPU)
+- Used for
+  - 3D effects/estimation
+  - Simple/low-cost robotics
+  - Control input for other images
+
+# I Want More Control!
+
+## I Want More Control!
 
 - *Text-to-Image* and *Image-to-Image* don't give you that much control
   - Extensive prompts (both positive and negative) can help, but only so far
@@ -134,7 +169,7 @@ Image-to-Image: "Make this image different"
 
 :::: {.columns}
 ::: {.column width="50%"}
-Filling in missing or masked regions of an image in a realistic way.
+Filling in missing or masked regions of an image in a realistic way
 
 - Model is given an image with certain areas masked out
 - Generates plausible content to fill those areas based on the surrounding context (and steered by a text prompt)
@@ -148,7 +183,7 @@ Filling in missing or masked regions of an image in a realistic way.
 
 :::: {.columns}
 ::: {.column width="50%"}
-Filling in missing or masked regions of an image in a realistic way.
+Filling in missing or masked regions of an image in a realistic way
 
 - Model needs to understand context around the area
 - Generate content that matches the style, lighting, and perspective
@@ -174,7 +209,7 @@ Inpainting applied to the edges of an image to extend it beyond it's original si
 ## Outpainting
 
 - How does it work?
-  - Supply a prompt: "2x zoom this image"
+  - Supply a prompt: "2x zoom out this image"
   - Treat the new empty regions around the image as masked areas
   - Use impainting technique to fill in the regions
 
@@ -194,13 +229,17 @@ Popular models
 - LaMa: Large Mask inpainting
 - Ideogram
 
+## Introducing Replicate
+
+![Source: https://replicate.com](./images/replicate.png)
+
 ## Demo: Replicate {.center}
 
 [https://replicate.com](https://replicate.com){.external target="_blank"}
 
-## Replicate
+## Demo: Calling Replicate API from Colab{.center}
 
-![Source: https://replicate.com](./images/replicate.png)
+[Replicate Client.ipynb](https://colab.research.google.com/drive/1WyFGPhAbUPKXAyTzWvndWSkho55XqHqw?usp=sharing){.external target="_blank"}
 
 ## ControlNet
 
@@ -226,25 +265,25 @@ Text-to-image is "hoping the model guesses what I mean"
 
 [ControlNet Human Pose.ipynb](https://colab.research.google.com/drive/1uW5ix9dnHTMsoeUt38H936zYw5eYUk3u?usp=sharing){.external target="_blank"}
 
+## Demo: Control via FLUX Kontext {.center}
+
+[ControlNet Human Pose (FLUX Kontext).ipynb](https://colab.research.google.com/drive/1_y2emju5Sy4Z6TfhmZBgu3Q61DYGApdb?usp=sharing){.external target="_blank"}
+
 ## ControlNet
 
 Examples of conditioning types:
 
 - Human pose (OpenPose) - skeleton/keypoint detection
 - Canny edges - line drawings and edge detection
+- Scribbles - rough user drawings
 - QR codes - blended into images
 - Depth maps - 3D structure information
-- Normal maps - surface orientation
-- Semantic segmentation - labeled regions
-- Scribbles - rough user drawings
 
 ## Demo: Putting this all together {.center}
 
 Using text-to-image, ControlNet, inpainting, and image-to-image (depth map) to create PBR materials
 
-[PBR Material Creation.ipynb](https://colab.research.google.com/drive/1Tn38J3u4-XJ9FQv8vSS-OUXin8hvZmrq){.external target="_blank"}
-
-***
+[PBR Material Creator.ipynb](https://colab.research.google.com/drive/1Tn38J3u4-XJ9FQv8vSS-OUXin8hvZmrq){.external target="_blank"}
 
 # Using Transformers for Computer Vision
 
@@ -286,15 +325,17 @@ ViTs by themselves are only so useful
   - A vision encoder
   - Adapter/projector layer
   - Language model (LLaMa or GPT)
-- VLAs (Visual Language Action Models)
-  - Same approach as VLMs, but instead of human readable text, action decoders for robot instructions
 - Multimodal
   - Image-Text-to-Text
+
+## Demo: Gemma-3 VLM  {.center}
+
+LMStudio / Gemma-3-27b-it GGUF for vision tasks
 
 ## Use Cases for VLMs
 
 - Visual Understanding: "What's in this image?"
-- Accessibility: Assisting visually impaired users
+- Accessibility: Assisting users with visual impairments
 - Content Moderation and Safety: Identifying harmful content
 - Retail: Finding products with photos
 - Education: Helping students understand charts, diagrams, equations
@@ -311,10 +352,6 @@ ViTs by themselves are only so useful
     - Google's Gemma-3
   - FastVLM
     - Apple's Fast Vision Language Model
-
-## Demo: Gemma-3 VLM  {.center}
-
-LMStudio / Gemma-3-27b-it GGUF for vision tasks
 
 ## Demo: Apple's FastVLM  {.center}
 
