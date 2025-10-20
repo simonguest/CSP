@@ -1329,6 +1329,50 @@
     ]
   },
   {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-4",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-4",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nDepth Map to Image (using black-forest-labs/flux-depth-pro)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-5",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-5",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nDepth Map to Image (using black-forest-labs/flux-depth-pro)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-6",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-6",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nDepth Map to Image (using black-forest-labs/flux-depth-pro)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/02/exploring_genai_p2.html#depth-maps-7",
+    "href": "src/02/exploring_genai_p2.html#depth-maps-7",
+    "title": "Exploring Generative AI Models: Part 2",
+    "section": "Depth Maps",
+    "text": "Depth Maps\nDepth Map to Image (using black-forest-labs/flux-depth-pro)",
+    "crumbs": [
+      "Lecture: Exploring Generative AI Models (Part 2)",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "src/02/exploring_genai_p2.html#i-want-more-control-1",
     "href": "src/02/exploring_genai_p2.html#i-want-more-control-1",
     "title": "Exploring Generative AI Models: Part 2",
@@ -1527,22 +1571,11 @@
     ]
   },
   {
-    "objectID": "src/02/exploring_genai_p2.html#how-vision-transformers-work",
-    "href": "src/02/exploring_genai_p2.html#how-vision-transformers-work",
-    "title": "Exploring Generative AI Models: Part 2",
-    "section": "How Vision Transformers Work",
-    "text": "How Vision Transformers Work\n\nSplits images into patches (16x16)\nFlatten and embed each patch\nAdd positional encodings\nProcess through transformer layers\nModel learns global relationships across the entire image vs. local convolutional layers",
-    "crumbs": [
-      "Lecture: Exploring Generative AI Models (Part 2)",
-      "Slides"
-    ]
-  },
-  {
     "objectID": "src/02/exploring_genai_p2.html#popular-vision-transformers",
     "href": "src/02/exploring_genai_p2.html#popular-vision-transformers",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Popular Vision Transformers",
-    "text": "Popular Vision Transformers\n\nOpenAI’s CLIP\n\nTrained on 400M image-text pairs\nFoundation of most VLMs\n\nMeta’s DINO/DINO-2\n\n(Self DIstillation with NO Labels)\nSelf-supervised on 142M images\n\nMicrosoft’s Swin\n\nUse “shifted windows” approach\nDense predication tasks (object detection and segmentation)",
+    "text": "Popular Vision Transformers\n\nOpenAI’s CLIP\n\nTrained on 400M image-text pairs\nFoundation of most VLMs\n\nMeta’s DINO/DINO-2\n\n(Self DIstillation with NO Labels)\nSelf-supervised on 142M images\n\nMicrosoft’s Swin\n\nUse “shifted windows” approach\nExcels at dense predication tasks",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1553,7 +1586,7 @@
     "href": "src/02/exploring_genai_p2.html#vision-language-models-vlms",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Vision Language Models (VLMs)",
-    "text": "Vision Language Models (VLMs)\nViTs by themselves are only so useful\n\nVLMs\n\nA vision encoder\nAdapter/projector layer\nLanguage model (LLaMa or GPT)\n\nMultimodal\n\nImage-Text-to-Text",
+    "text": "Vision Language Models (VLMs)\nViTs by themselves are only so useful\n\nVLMs\n\nA vision encoder\nAdapter/projector layer\nLanguage model (LLaMa or GPT)\n\nAlso known as “Multimodal”\n\nImage-Text-to-Text",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1585,8 +1618,8 @@
     "objectID": "src/02/exploring_genai_p2.html#popular-vlms",
     "href": "src/02/exploring_genai_p2.html#popular-vlms",
     "title": "Exploring Generative AI Models: Part 2",
-    "section": "Popular VLMS",
-    "text": "Popular VLMS\n\nClosed Source\n\nGPT4-V, Claude, Gemini Flash\n\nOpen Source\n\nLLaVa\n\nResearch collaboration between University of Wisconsin-Maddison and MSR\n\nGemma\n\nGoogle’s Gemma-3\n\nFastVLM\n\nApple’s Fast Vision Language Model",
+    "section": "Popular VLMs",
+    "text": "Popular VLMs\n\nClosed Source\n\nGPT4-V, Claude, Gemini Flash\n\nOpen Source\n\nLLaVa: Research collaboration between University of Wisconsin-Maddison and MSR\nGemma: Google’s Gemma-3\nFastVLM: Apple’s Fast Vision Language Model",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
