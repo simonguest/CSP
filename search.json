@@ -1234,7 +1234,7 @@
     "href": "src/02/exploring_genai_p2.html#image-diffusion-models-in-2024",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Image Diffusion Models in 2024",
-    "text": "Image Diffusion Models in 2024\n\n\n\n\n\ntimeline\n  February 2024 : Sora (OpenAI)\n                : Text-to-video up to 60 seconds\n                : Stable Diffusion 3\n                : Improved text understanding\n  June 2024 : Stable Diffusion 3.5\n            : Multiple model sizes\n  2024 : FLUX.1 (Black Forest Labs)\n        : State-of-the-art open model\n        : Imagen 3 (Google DeepMind)\n        : Photorealistic quality",
+    "text": "Image Diffusion Models in 2024\n\n\n\n\n\ntimeline\n  February 2024 : Stable Diffusion 3\n                : Improved text understanding\n  June 2024 : Stable Diffusion 3.5\n            : Multiple model sizes\n  2024 : FLUX.1 (Black Forest Labs)\n        : State-of-the-art open model\n        : Imagen 3 (Google DeepMind)\n        : Photorealistic quality",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
@@ -1542,7 +1542,7 @@
     "href": "src/02/exploring_genai_p2.html#controlnet-1",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "ControlNet",
-    "text": "ControlNet\nExamples of conditioning types:\n\nHuman pose (OpenPose) - skeleton/keypoint detection\nCanny edges - line drawings and edge detection\nScribbles - rough user drawings\nQR codes - blended into images\nDepth maps - 3D structure information",
+    "text": "ControlNet\nExamples of conditioning types:\n\nHuman pose (OpenPose) - skeleton/keypoint detection\nDepth maps - 3D structure information\nCanny edges - line drawings and edge detection\nScribbles - rough user drawings\nQR codes - blended into images",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
