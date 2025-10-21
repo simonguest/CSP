@@ -379,4 +379,8 @@ LMStudio / Gemma-3-27b-it GGUF for vision tasks
 
 # Q&A
 
+# Topic Survey
+
+![](./images/qrcode_survey.png)
+
 # Bibliography
