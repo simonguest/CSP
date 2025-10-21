@@ -85,9 +85,7 @@ timeline
 
 ```{mermaid}
 timeline
-  February 2024 : Sora (OpenAI)
-                : Text-to-video up to 60 seconds
-                : Stable Diffusion 3
+  February 2024 : Stable Diffusion 3
                 : Improved text understanding
   June 2024 : Stable Diffusion 3.5
             : Multiple model sizes
@@ -298,10 +296,11 @@ Text-to-image is "hoping the model guesses what I mean"
 Examples of conditioning types:
 
 - Human pose (OpenPose) - skeleton/keypoint detection
+- Depth maps - 3D structure information
 - Canny edges - line drawings and edge detection
 - Scribbles - rough user drawings
 - QR codes - blended into images
-- Depth maps - 3D structure information
+
 
 ## Demo: Putting this all together {.center}
 
