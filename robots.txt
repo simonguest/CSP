@@ -1,1 +1,1 @@
-Sitemap: https://simonguest.github.io/CSP-400/sitemap.xml
+Sitemap: https://simonguest.github.io/CSP/sitemap.xml
