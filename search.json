@@ -246,7 +246,7 @@
     "href": "src/00/resources.html#demo-agent",
     "title": "Resources",
     "section": "Demo Agent",
-    "text": "Demo Agent\n\nCampus Agent Demo: https://simonguest-campus-agent.hf.space/\n\nInteractive demo of the DigiPen Campus Assistant agent\n\nCampus Agent Source Code: https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent\n\nComplete source code for the DigiPen Campus Assistant demo",
+    "text": "Demo Agent\n\nCampus Agent Demo: https://simonguest-campus-agent.hf.space/\n\nInteractive demo of the DigiPen Campus Assistant agent\n\nCampus Agent Source Code: https://github.com/simonguest/CSP/blob/main/demos/00/campus-agent\n\nComplete source code for the DigiPen Campus Assistant demo",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Resources"
@@ -310,21 +310,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "CSP-400",
+    "title": "CSP (Computer Science Project)",
     "section": "",
-    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-400 course.",
+    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-300/400 and CSP-350/450 courses.",
     "crumbs": [
-      "CSP-400"
+      "CSP (Computer Science Project)"
     ]
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
-    "title": "CSP-400",
+    "title": "CSP (Computer Science Project)",
     "section": "",
-    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-400 course.",
+    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-300/400 and CSP-350/450 courses.",
     "crumbs": [
-      "CSP-400"
+      "CSP (Computer Science Project)"
     ]
   },
   {
@@ -783,7 +783,7 @@
     "href": "src/00/ai_agents.html#resources-12",
     "title": "Introducing AI Agents",
     "section": "Resources (1/2)",
-    "text": "Resources (1/2)\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400",
+    "text": "Resources (1/2)\n\nThis slide deck, resources, links, everything:\n\n[https://simonguest.github.io/CSP(https://simonguest.github.io/CSP){.external target=“_blank”}",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -794,7 +794,7 @@
     "href": "src/00/ai_agents.html#resources-22",
     "title": "Introducing AI Agents",
     "section": "Resources (2/2)",
-    "text": "Resources (2/2)\n\nCampus agent code:\n\nhttps://github.com/simonguest/CSP-400/tree/main/demos/00/campus-agent\nClone the repo, get it running locally\nModify by adding a new agent to it\nCreate your own use case/agent in the Gradio interface",
+    "text": "Resources (2/2)\n\nCampus agent code:\n\nhttps://github.com/simonguest/CSP/tree/main/demos/00/campus-agent\nClone the repo, get it running locally\nModify by adding a new agent to it\nCreate your own use case/agent in the Gradio interface",
     "crumbs": [
       "Lecture: Introducing AI Agents",
       "Slides"
@@ -1157,7 +1157,7 @@
     "href": "src/01/exploring_genai_p1.html#resources-1",
     "title": "Exploring Generative AI Models: Part 1",
     "section": "Resources",
-    "text": "Resources\n\nThis slide deck, resources, links, notebooks, everything:\n\nhttps://simonguest.github.io/CSP-400\n(I’ll also post to the GAM-400 and CSP-300/400 channels)",
+    "text": "Resources\n\nThis slide deck, resources, links, notebooks, everything:\n\nhttps://simonguest.github.io/CSP\n(I’ll also post to the GAM-400 and CSP-300/400 channels)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 1)",
       "Slides"
@@ -1641,7 +1641,7 @@
     "href": "src/02/exploring_genai_p2.html#resources-1",
     "title": "Exploring Generative AI Models: Part 2",
     "section": "Resources",
-    "text": "Resources\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP-400\n(I’ll also post to the GAM-400 and CSP-300/400 channels)",
+    "text": "Resources\n\nThis slide deck, resources, links, everything:\n\nhttps://simonguest.github.io/CSP\n(I’ll also post to the GAM-400 and CSP-300/400 channels)",
     "crumbs": [
       "Lecture: Exploring Generative AI Models (Part 2)",
       "Slides"
