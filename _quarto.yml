@@ -11,7 +11,7 @@ format:
       light: flatly
       dark: darkly
 website:
-  title: "CSP-400"
+  title: "CSP (Computer Science Project)"
   page-navigation: true
   sidebar:
     logo: src/logos/DigiPen_Dragon_Shield_RGB_Black.png
@@ -19,7 +19,7 @@ website:
     collapse-level: 2
     search: true
     contents:
-      - text: "CSP-400"
+      - text: "CSP (Computer Science Project)"
         href: index.qmd
       - text: "---"
       - section: "Lecture: Introducing AI Agents"

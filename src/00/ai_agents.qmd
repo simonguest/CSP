@@ -370,12 +370,12 @@ building_agent = Agent(
 ## Resources (1/2)
 
 - This slide deck, resources, links, everything: 
-  - [https://simonguest.github.io/CSP-400](https://simonguest.github.io/CSP-400){.external target="_blank"}
+  - [https://simonguest.github.io/CSP(https://simonguest.github.io/CSP){.external target="_blank"}
 
 ## Resources (2/2)
 
 - Campus agent code: 
-  - [https://github.com/simonguest/CSP-400/tree/main/demos/00/campus-agent](https://github.com/simonguest/CSP-400/tree/main/demos/00/campus-agent){.external target="_blank"}
+  - [https://github.com/simonguest/CSP/tree/main/demos/00/campus-agent](https://github.com/simonguest/CSP/tree/main/demos/00/campus-agent){.external target="_blank"}
   - Clone the repo, get it running locally
   - Modify by adding a new agent to it
   - Create your own use case/agent in the Gradio interface

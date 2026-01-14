@@ -1,1 +1,1 @@
-# CSP-400
+# CSP (Computer Science Project)

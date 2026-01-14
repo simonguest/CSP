@@ -10,7 +10,7 @@ This document contains all the external resources, links, and references mention
 - **Campus Agent Demo**: [https://simonguest-campus-agent.hf.space/](https://simonguest-campus-agent.hf.space/)
   - Interactive demo of the DigiPen Campus Assistant agent
 
-- **Campus Agent Source Code**: [https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent](https://github.com/simonguest/CSP-400/blob/main/demos/00/campus-agent)
+- **Campus Agent Source Code**: [https://github.com/simonguest/CSP/blob/main/demos/00/campus-agent](https://github.com/simonguest/CSP/blob/main/demos/00/campus-agent)
   - Complete source code for the DigiPen Campus Assistant demo
 
 ## Development Tools and Platforms

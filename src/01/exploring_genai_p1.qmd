@@ -302,7 +302,7 @@ demos/01/lmstudio-client/LMStudioClient.csproj
 ## Resources
 
 - This slide deck, resources, links, notebooks, everything: 
-  - [https://simonguest.github.io/CSP-400](https://simonguest.github.io/CSP-400){.external target="_blank"}
+  - [https://simonguest.github.io/CSP](https://simonguest.github.io/CSP){.external target="_blank"}
   - (I'll also post to the GAM-400 and CSP-300/400 channels)
 
 # Q&A

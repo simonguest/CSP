@@ -1,5 +1,5 @@
-# CSP-400
+# CSP (Computer Science Project)
 
 ## About
 
-This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-400 course.
+This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-300/400 and CSP-350/450 courses.
