@@ -7,3 +7,20 @@ requires-python = ">=3.13"
 dependencies = [
     "quarto-cli>=1.7.31",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-playwright>=0.5",
+    "pytest-html>=4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# On failure: write an HTML summary and keep a Playwright trace + screenshot.
+# (pytest-playwright wipes --output each run, so keep report.html beside it.)
+addopts = """
+--html=test-results/report.html --self-contained-html
+--tracing=retain-on-failure --screenshot=only-on-failure
+--output=test-results/playwright
+"""

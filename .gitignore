@@ -17,6 +17,10 @@ node_modules
 # Pycache
 __pycache__
 
+# pytest / Playwright
+.pytest_cache
+test-results
+
 # Gradio
 .gradio
 

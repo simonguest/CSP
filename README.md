@@ -33,9 +33,10 @@ most demos include their own `README.md` with setup instructions:
 ├── index.qmd              # Site landing page
 ├── src/                   # Lecture slides (.qmd), images, and resources
 ├── demos/                 # Standalone, runnable demo projects
+├── tests/                 # Playwright smoke tests for the rendered site
 ├── .devcontainer/         # Dev Container definitions for select demos
-├── .github/workflows/     # GitHub Actions (render + publish to Pages)
-├── pyproject.toml         # Project metadata and Python dependency (quarto-cli)
+├── .github/workflows/     # GitHub Actions (test, render + publish to Pages)
+├── pyproject.toml         # Project metadata and Python dependencies
 ├── uv.lock                # Pinned dependency lockfile (uv)
 └── .python-version        # Python version pin (3.13)
 ```
@@ -65,12 +66,29 @@ uv run quarto render
 If you prefer not to use uv, install Quarto directly and run `quarto preview` /
 `quarto render` from the repository root.
 
+## Tests
+
+[`tests/`](tests/) holds Playwright browser tests (pytest) that render the site
+and check the home page loads correctly. See [`tests/README.md`](tests/README.md).
+
+```bash
+uv sync
+uv run playwright install --with-deps chromium
+uv run pytest
+```
+
+Each run writes `test-results/report.html`; failures also keep a Playwright
+trace you can open with `uv run playwright show-trace`. Details in
+[`tests/README.md`](tests/README.md).
+
 ## Publishing
 
-Every push to `main` triggers the
-[`Quarto Publish`](.github/workflows/publish-quarto.yml) GitHub Actions workflow,
-which renders the site and deploys it to the `gh-pages` branch. GitHub Pages
-serves that branch at <https://simonguest.github.io/CSP>.
+Every push to `main` and every pull request runs the
+[`Quarto Publish`](.github/workflows/publish-quarto.yml) GitHub Actions workflow.
+The `test` job renders the site and runs the Playwright tests; only if it passes
+does the `build-deploy` job (push to `main` only) deploy the rendered site to the
+`gh-pages` branch. GitHub Pages serves that branch at
+<https://simonguest.github.io/CSP>.
 
 ## Secrets
 
