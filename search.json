@@ -642,7 +642,7 @@
     "href": "index.html",
     "title": "CSP (Computer Science Project)",
     "section": "",
-    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-300/400 and CSP-350/450 courses.",
+    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 and 26/27 CSP-200/300/400 and CSP-250/350/450 courses.",
     "crumbs": [
       "CSP (Computer Science Project)"
     ]
@@ -652,7 +652,7 @@
     "href": "index.html#about",
     "title": "CSP (Computer Science Project)",
     "section": "",
-    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-300/400 and CSP-350/450 courses.",
+    "text": "This site contains a collection of slides, code, and other resources for lectures held within the 25/26 and 26/27 CSP-200/300/400 and CSP-250/350/450 courses.",
     "crumbs": [
       "CSP (Computer Science Project)"
     ]
@@ -1982,7 +1982,7 @@
     "href": "src/03/slides.html#overview",
     "title": "GitHub Best Practices",
     "section": "Overview",
-    "text": "Overview\n\nShare Ten “Best Practices” I’ve seen (or used) during my career\nTopics:\n\nRepo structure, including what not to check in\nWorking with others via branches, pull requests, and issue tracking\nFeatures that GitHub has that you might now know about: Actions and Pages",
+    "text": "Overview\n\nShare Ten “Best Practices” I’ve seen (or used) during my career\nThree areas:\n\nRepo structure, including what not to check in\nWorking with other people via branches, pull requests, and issues\nFeatures that GitHub has that you might now know about: Actions and Pages",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -1993,7 +1993,7 @@
     "href": "src/03/slides.html#why-is-this-important",
     "title": "GitHub Best Practices",
     "section": "Why Is This Important?",
-    "text": "Why Is This Important?\n\nThis semester’s project!\nSearching for a job\n\nHiring Managers will likely look at your repo/portfolio\n\nStarting a job\n\nConsistency with other engineers on your team\n\nCreating an open source project\n\nConsistency with other contributors",
+    "text": "Why Is This Important?\n\nThis semester’s project!\nSearching for a job\n\nHiring Managers will likely look at your repo/portfolio\n\nStarting a job\n\nConsistency with other engineers (or AI agents!) on your team\n\nCreating an open source project\n\nConsistency with other contributors",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -2026,7 +2026,7 @@
     "href": "src/03/slides.html#what-not-to-check-in",
     "title": "GitHub Best Practices",
     "section": "2. What Not To Check In",
-    "text": "2. What Not To Check In\n\nThe output of your project!\n\nYou can share builds via GitHub, but please not via the code tree\n\n3rd party dependencies\n\nOK to add an occasional .js in /lib, but most dependencies should be pulled in as part of your build script\nSupports multiple architectures\nEasier to upgrade\nClearer licensing\nCan run dependabot to check for vulns",
+    "text": "2. What Not To Check In\n\nThe output of your project!\n\nYou can share builds via GitHub, but please not via the code tree\n\n3rd party dependencies\n\nOK to add an occasional .js in /lib, but most dependencies should be pulled in as part of your build script",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -2037,7 +2037,7 @@
     "href": "src/03/slides.html#what-not-to-check-in-1",
     "title": "GitHub Best Practices",
     "section": "2. What Not To Check In",
-    "text": "2. What Not To Check In\n\nSecrets\n\nAPI keys and other secrets should be part of a .env file at the root\n(add .env to .gitignore)\nYou can also create .env.example to help other engineers\nUse dotenv or equivalent libraries to load these at runtime",
+    "text": "2. What Not To Check In\n\nBut why not?\n\nSupports multiple architectures\nEasier to upgrade\nClearer licensing\nCan run dependabot to check for vulnerabilities",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -2048,7 +2048,7 @@
     "href": "src/03/slides.html#what-not-to-check-in-2",
     "title": "GitHub Best Practices",
     "section": "2. What Not To Check In",
-    "text": "2. What Not To Check In\nSECRET_API_KEY=abc123",
+    "text": "2. What Not To Check In\n\nSecrets\n\nAPI keys and other secrets should be part of a .env file at the root\n(add .env to .gitignore)\nYou can also create .env.example to help other engineers\nUse dotenv or equivalent libraries to load these at runtime",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -2059,7 +2059,7 @@
     "href": "src/03/slides.html#what-not-to-check-in-3",
     "title": "GitHub Best Practices",
     "section": "2. What Not To Check In",
-    "text": "2. What Not To Check In\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv() # Loads .env as env vars\n\nSECRET_API_KEY = os.environ[\"SECRET_API_KEY\"]",
+    "text": "2. What Not To Check In\nSECRET_API_KEY=abc123",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -2070,7 +2070,7 @@
     "href": "src/03/slides.html#what-not-to-check-in-4",
     "title": "GitHub Best Practices",
     "section": "2. What Not To Check In",
-    "text": "2. What Not To Check In\n\nLarge binary files\n\nIs there another place to put these instead?\nAWS S3\nHugging Face (for AI model files)\n\nIf you must check these (&gt;100MB) in…\n\nEnable LFS (Large File Storage)\nWill create pointers to your files, stored on a separate LFS server\nReplaces pointer with file at checkout",
+    "text": "2. What Not To Check In\nimport os\nfrom dotenv import load_dotenv\n\nload_dotenv() # Loads .env as env vars\n\nSECRET_API_KEY = os.environ[\"SECRET_API_KEY\"]",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
@@ -2079,6 +2079,17 @@
   {
     "objectID": "src/03/slides.html#what-not-to-check-in-5",
     "href": "src/03/slides.html#what-not-to-check-in-5",
+    "title": "GitHub Best Practices",
+    "section": "2. What Not To Check In",
+    "text": "2. What Not To Check In\n\nLarge binary files\n\nIs there another place to put these instead?\nAWS S3\nHugging Face (for AI model files)\n\nIf you must check these (&gt;100MB) in…\n\nEnable LFS (Large File Storage)\nWill create pointers to your files, stored on a separate LFS server\nReplaces pointer with file at checkout",
+    "crumbs": [
+      "Lecture: GitHub Best Practices",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/03/slides.html#what-not-to-check-in-6",
+    "href": "src/03/slides.html#what-not-to-check-in-6",
     "title": "GitHub Best Practices",
     "section": "2. What Not To Check In",
     "text": "2. What Not To Check In\n\nEvery repo should have a .gitignore file\n\nList of RegEx patterns to exclude files/folders across your repo\nExcludes everything we’ve talked about, plus more (e.g., __pycache__/, .DS_Store)\nAI tools (e.g., Claude Code) are excellent at auto-generating .gitignore files",
