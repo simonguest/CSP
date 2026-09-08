@@ -7,15 +7,19 @@ format:
     incremental: true
     center-title-slide: true
     theme: default
+title-slide-attributes:
+  data-background-gradient: "linear-gradient(135deg, #ba1127 0%,  #850022 20%, #000000 100%)"
+  data-background-image: "backgrounds/dragon.png"
+  data-background-opacity: "0.3"
 logo: ../../src/logos/DigiPen_RGB_Red.png
 ---
 
 ## Overview
 
 - Share Ten "Best Practices" I've seen (or used) during my career
-- Topics:
+- Three areas:
   - Repo structure, including what **not** to check in
-  - Working with others via branches, pull requests, and issue tracking
+  - Working with other people via branches, pull requests, and issues
   - Features that GitHub has that you might now know about: Actions and Pages
 
 ## Why Is This Important?
@@ -24,7 +28,7 @@ logo: ../../src/logos/DigiPen_RGB_Red.png
 - Searching for a job
   - Hiring Managers will likely look at your repo/portfolio
 - Starting a job
-  - Consistency with other engineers on your team
+  - Consistency with other engineers (or AI agents!) on your team
 - Creating an open source project
   - Consistency with other contributors
 
@@ -56,10 +60,14 @@ logo: ../../src/logos/DigiPen_RGB_Red.png
   - You can share builds via GitHub, but please not via the code tree
 - 3rd party dependencies
   - OK to add an occasional .js in /lib, but most dependencies should be pulled in as part of your build script
-  - Supports multiple architectures
+
+## 2. What Not To Check In
+
+- But why not?
+  - Supports multiple architectures 
   - Easier to upgrade
   - Clearer licensing
-  - Can run dependabot to check for vulns
+  - Can run dependabot to check for vulnerabilities
 
 ## 2. What Not To Check In
 
@@ -283,3 +291,42 @@ jobs:
 - Many of these can be useful for your project this semester, personal projects, and common when working with others in open source/industry
 - This slide deck: [https://simonguest.github.io/CSP](https://simonguest.github.io/CSP){.external target="_blank"}
 - Recommend looking at popular, large open source projects - great learning experience
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap');
+
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: 'Archivo', sans-serif;
+}
+
+.reveal .slides > section > h1,
+.reveal .slides > section > h2,
+.reveal .slides > section > section > h1,
+.reveal .slides > section > section > h2 {
+  color: #ba1127;
+}
+                                                                        
+.slide-background.blurred .slide-background-content {
+  filter: blur(8px);
+}
+.slide-background.darken .slide-background-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#title-slide h1, #title-slide h2, #title-slide p, #title-slide .author,
+#title-slide .quarto-title-author-name, #title-slide .quarto-title-authors {
+  color: white !important;
+}
+.justify {
+  text-align: center;
+}
+.white, .white h1, .white h2, .white h3, .white p, .white li {
+  color: white !important;
+}
+.red, .red h1, .red h2, .red h3, .red p, .red li {
+  color:  #8B0000 !important;
+}
+</style>
