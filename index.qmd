@@ -2,4 +2,4 @@
 
 ## About
 
-This site contains a collection of slides, code, and other resources for lectures held within the 25/26 CSP-300/400 and CSP-350/450 courses.
+This site contains a collection of slides, code, and other resources for lectures held within the 25/26 and 26/27 CSP-200/300/400 and CSP-250/350/450 courses.
