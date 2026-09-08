@@ -213,22 +213,22 @@ Simon Guest
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li class="fragment">Share Ten “Best Practices” I’ve seen (or used) during my career</li>
+<li class="fragment">Share Ten “GitHub Best Practices” I’ve seen (or used) during my career</li>
 <li class="fragment">Three areas:
 <ul>
-<li class="fragment">Repo structure, including what <strong>not</strong> to check in</li>
+<li class="fragment">Repo structure</li>
 <li class="fragment">Working with other people via branches, pull requests, and issues</li>
-<li class="fragment">Features that GitHub has that you might now know about: Actions and Pages</li>
+<li class="fragment">Features that GitHub has that you might not know about: Actions and Pages</li>
 </ul></li>
 </ul>
 </section>
 <section id="why-is-this-important" class="slide level2">
-<h2>Why Is This Important?</h2>
+<h2>Why is this important?</h2>
 <ul>
 <li class="fragment">This semester’s project!</li>
 <li class="fragment">Searching for a job
 <ul>
-<li class="fragment">Hiring Managers will likely look at your repo/portfolio</li>
+<li class="fragment">Hiring managers will often look at your repo/portfolio</li>
 </ul></li>
 <li class="fragment">Starting a job
 <ul>
@@ -242,67 +242,73 @@ Simon Guest
 </section>
 <section>
 <section id="ten-best-practices" class="title-slide slide level1 center">
-<h1>Ten Best Practices</h1>
+<h1>Ten best practices</h1>
 
 </section>
 <section id="repo-structure" class="slide level2">
-<h2>1. Repo Structure</h2>
+<h2>1. Repo structure</h2>
 <ul>
 <li class="fragment">Your repo should have a consistent, easy-to-understand structure</li>
 <li class="fragment">What your repo should contain (at minimum):
 <ul>
-<li class="fragment">README.md</li>
-<li class="fragment">LICENSE</li>
-<li class="fragment">Build files (e.g., pyproject.toml, package.json, .lock files)</li>
-<li class="fragment">dotfiles for configurations (e.g., .python)</li>
+<li class="fragment"><code>README.md</code></li>
+<li class="fragment"><code>LICENSE</code></li>
+<li class="fragment">Build files (e.g., <code>pyproject.toml</code>, <code>package.json</code>, <code>.lock</code> files)</li>
+<li class="fragment">dotfiles for pins or configurations (e.g., <code>.python-version</code> or <code>.editorconfig</code>)</li>
 <li class="fragment">Consistent folder structure</li>
 </ul></li>
 </ul>
 </section>
 <section id="repo-structure-1" class="slide level2">
-<h2>1. Repo Structure</h2>
+<h2>1. Repo structure</h2>
 <ul>
 <li class="fragment">Folder naming best practices:
 <ul>
-<li class="fragment"><strong>src</strong> = Source Code</li>
-<li class="fragment"><strong>tests</strong> = Tests</li>
-<li class="fragment"><strong>docs</strong> = Docs</li>
-<li class="fragment"><strong>scripts</strong> = Scripts, esp.&nbsp;for deployment</li>
-<li class="fragment"><strong>lib</strong> = External libraries (to an extent)</li>
-<li class="fragment"><strong>dist</strong> or <strong>build</strong> = Your build files (which you should not check in…)</li>
+<li class="fragment"><strong><code>src</code></strong> = Source Code</li>
+<li class="fragment"><strong><code>tests</code></strong> = Tests</li>
+<li class="fragment"><strong><code>docs</code></strong> = Docs</li>
+<li class="fragment"><strong><code>scripts</code></strong> = Scripts, esp.&nbsp;for deployment</li>
+<li class="fragment"><strong><code>lib</code></strong> = External libraries (to an extent)</li>
+<li class="fragment"><strong><code>dist</code></strong> or <strong><code>build</code></strong> = Your output files (which you should not check in…)</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="demo" class="title-slide slide level1 center">
+<h1>Demo</h1>
+<p><a href="https://github.com/simonguest/CSP" class="external" target="_blank">CSP repo structure</a></p>
 </section>
 <section id="what-not-to-check-in" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <ul>
 <li class="fragment">The output of your project!
 <ul>
-<li class="fragment">You can share builds via GitHub, but please not via the code tree</li>
+<li class="fragment">You can share builds via GitHub (via releases), but please not via the code tree</li>
 </ul></li>
 <li class="fragment">3rd party dependencies
 <ul>
-<li class="fragment">OK to add an occasional .js in /lib, but most dependencies should be pulled in as part of your build script</li>
+<li class="fragment">OK to add an occasional <code>.js</code> in <code>/lib</code>, but most dependencies should be pulled in as part of your build script</li>
 </ul></li>
 </ul>
 </section>
 <section id="what-not-to-check-in-1" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <ul>
 <li class="fragment">But why not?
 <ul>
 <li class="fragment">Supports multiple architectures</li>
 <li class="fragment">Easier to upgrade</li>
 <li class="fragment">Clearer licensing</li>
-<li class="fragment">Can run dependabot to check for vulnerabilities</li>
+<li class="fragment">Can run <code>dependabot</code> to check for vulnerabilities</li>
 </ul></li>
 </ul>
 </section>
 <section id="what-not-to-check-in-2" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <ul>
 <li class="fragment">Secrets
 <ul>
+<li class="fragment"><em>My story…</em></li>
 <li class="fragment">API keys and other secrets should be part of a <code>.env</code> file at the root</li>
 <li class="fragment">(add <code>.env</code> to <code>.gitignore</code>)</li>
 <li class="fragment">You can also create <code>.env.example</code> to help other engineers</li>
@@ -311,11 +317,11 @@ Simon Guest
 </ul>
 </section>
 <section id="what-not-to-check-in-3" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource ini number-lines code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a aria-label="1"></a><span class="dt">SECRET_API_KEY</span><span class="ot">=</span><span class="st">abc123</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="what-not-to-check-in-4" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a aria-label="2"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
 <span id="cb2-3"><a aria-label="3"></a></span>
@@ -324,7 +330,7 @@ Simon Guest
 <span id="cb2-6"><a aria-label="6"></a>SECRET_API_KEY <span class="op">=</span> os.environ[<span class="st">"SECRET_API_KEY"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="what-not-to-check-in-5" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <ul>
 <li class="fragment">Large binary files
 <ul>
@@ -332,7 +338,7 @@ Simon Guest
 <li class="fragment">AWS S3</li>
 <li class="fragment">Hugging Face (for AI model files)</li>
 </ul></li>
-<li class="fragment">If you must check these (&gt;100MB) in…
+<li class="fragment">If must check in large files (&gt;100MB)…
 <ul>
 <li class="fragment">Enable LFS (Large File Storage)</li>
 <li class="fragment">Will create pointers to your files, stored on a separate LFS server</li>
@@ -341,51 +347,54 @@ Simon Guest
 </ul>
 </section>
 <section id="what-not-to-check-in-6" class="slide level2">
-<h2>2. What Not To Check In</h2>
+<h2>2. What not to check in</h2>
 <ul>
 <li class="fragment">Every repo should have a <code>.gitignore</code> file
 <ul>
-<li class="fragment">List of RegEx patterns to exclude files/folders across your repo</li>
+<li class="fragment">List of glob patterns to exclude files/folders across your repo</li>
 <li class="fragment">Excludes everything we’ve talked about, plus more (e.g., <code>__pycache__/</code>, <code>.DS_Store</code>)</li>
-<li class="fragment">AI tools (e.g., Claude Code) are excellent at auto-generating .gitignore files</li>
+<li class="fragment">AI tools (e.g., Claude Code) are excellent at auto-generating <code>.gitignore</code> files</li>
 </ul></li>
 </ul>
 </section>
 <section id="right-sized-branching-strategy" class="slide level2">
-<h2>3. Right-sized Branching Strategy</h2>
+<h2>3. Right-sized branching strategy</h2>
 <ul>
 <li class="fragment">Use a branching strategy that is right for the size of your team…</li>
 </ul>
 </section>
 <section id="right-sized-branching-strategy-1" class="slide level2">
-<h2>3. Right-sized Branching Strategy</h2>
+<h2>3. Right-sized branching strategy</h2>
 <ul>
 <li class="fragment">Solo Developer
 <ul>
-<li class="fragment">Small check-ins into <code>main</code> is acceptable</li>
+<li class="fragment">Small check-ins into <code>main</code> are acceptable</li>
 <li class="fragment">Use feature branches for major work, especially if working on more than one thing at a time</li>
 </ul></li>
 </ul>
 </section>
 <section id="right-sized-branching-strategy-2" class="slide level2">
-<h2>3. Right-sized Branching Strategy</h2>
+<h2>3. Right-sized branching strategy</h2>
 <ul>
 <li class="fragment">Small Team (2 or 3 engineers)
 <ul>
-<li class="fragment">Don’t check-in directly into <code>main</code></li>
+<li class="fragment">Don’t check in directly into <code>main</code>
+<ul>
+<li class="fragment">(Enable branch protection to guard against this)</li>
+</ul></li>
 <li class="fragment">Use feature branches for your own work/feature</li>
-<li class="fragment">Use <code>name/feature</code> naming convention</li>
+<li class="fragment">Use a <code>name/feature</code> naming convention</li>
 <li class="fragment">Merge (and delete!) after discussing with the rest of the team</li>
 <li class="fragment">Pull Requests (PRs) useful if remote team</li>
 </ul></li>
 </ul>
 </section>
 <section id="right-sized-branching-strategy-3" class="slide level2">
-<h2>3. Right-sized Branching Strategy</h2>
+<h2>3. Right-sized branching strategy</h2>
 <ul>
 <li class="fragment">Two-Pizza Team (6 - 8 engineers)
 <ul>
-<li class="fragment">Don’t check-in directly into <code>main</code></li>
+<li class="fragment">Don’t check in directly into <code>main</code></li>
 <li class="fragment">Use feature branches for your own work/feature</li>
 <li class="fragment">Pull Requests (PR) for majority of work</li>
 <li class="fragment">Delete branches after PR is merged</li>
@@ -393,23 +402,28 @@ Simon Guest
 </ul>
 </section>
 <section id="right-sized-branching-strategy-4" class="slide level2">
-<h2>3. Right-sized Branching Strategy</h2>
+<h2>3. Right-sized branching strategy</h2>
 <ul>
 <li class="fragment">Exceptions (Amazon production sites)
 <ul>
-<li class="fragment">Setup a feature flag for your work</li>
-<li class="fragment">Check-in to <code>main</code> with feature flag disabled by default</li>
+<li class="fragment">Set up a feature flag for your work</li>
+<li class="fragment">Check in to <code>main</code> with feature flag disabled by default</li>
 <li class="fragment">Enable feature flag (and remove flag conditionals) to release to production</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="demo-1" class="title-slide slide level1 center">
+<h1>Demo</h1>
+<p>Branching strategies in the CSP repo</p>
 </section>
-<section id="main-is-always-production-ready" class="slide level2">
-<h2>4. Main Is Always Production Ready</h2>
+<section id="always-be-production-ready" class="slide level2">
+<h2>4. Always be production ready</h2>
 <ul>
-<li class="fragment">Don’t break <code>main</code>
+<li class="fragment">Don’t break <code>main</code>!
 <ul>
 <li class="fragment">You’ll annoy your team members :)</li>
-<li class="fragment">You want <code>main</code> be in a workable/demoable state at all times</li>
+<li class="fragment">You want <code>main</code> to be in a workable/demo-able state at all times</li>
 <li class="fragment">Build systems will build from <code>main</code> - and you don’t want to break them either</li>
 </ul></li>
 <li class="fragment">Risk of breaking <code>main</code>?
@@ -418,8 +432,8 @@ Simon Guest
 </ul></li>
 </ul>
 </section>
-<section id="frequent-small-commits-and-rebasing" class="slide level2">
-<h2>5. Frequent, Small Commits and Rebasing</h2>
+<section id="frequent-small-commits-and-good-messages" class="slide level2">
+<h2>5. Frequent, small commits, and good messages</h2>
 <ul>
 <li class="fragment">Commit frequently (either to <code>main</code> or your feature branch)
 <ul>
@@ -431,8 +445,17 @@ Simon Guest
 </ul></li>
 </ul>
 </section>
-<section id="good-pull-request-pr-hygene" class="slide level2">
-<h2>6. Good Pull Request (PR) Hygene</h2>
+<section id="frequent-small-commits-and-good-messages-1" class="slide level2">
+<h2>5. Frequent, small commits, and good messages</h2>
+<ul>
+<li class="fragment">Avoid <code>fix</code>, <code>stuff</code>, <code>asdf</code></li>
+<li class="fragment">50-character summary of what you changed</li>
+<li class="fragment">Focus on the <em>why</em> not the <em>what</em></li>
+<li class="fragment">Use <code>Fixes #xxx</code> to link commits to issues</li>
+</ul>
+</section>
+<section id="good-pull-request-pr-hygiene" class="slide level2">
+<h2>6. Good pull request (PR) hygiene</h2>
 <ul>
 <li class="fragment">Small, focused PRs
 <ul>
@@ -443,21 +466,21 @@ Simon Guest
 </ul></li>
 </ul>
 </section>
-<section id="good-pull-request-pr-hygene-1" class="slide level2">
-<h2>6. Good Pull Request (PR) Hygene</h2>
+<section id="good-pull-request-pr-hygiene-1" class="slide level2">
+<h2>6. Good pull request (PR) hygiene</h2>
 <ul>
 <li class="fragment">Clear PR descriptions
 <ul>
 <li class="fragment">What the PR does and <strong>why</strong></li>
 <li class="fragment">Include context and link to existing issues (see later section)</li>
 <li class="fragment">Before/after screenshots can be useful</li>
-<li class="fragment">Ask for areas that you want feedback on vs.&nbsp;generic</li>
+<li class="fragment">Call out the specific areas where you want feedback</li>
 <li class="fragment">Templates can help maintain consistency</li>
 </ul></li>
 </ul>
 </section>
-<section id="good-pull-request-pr-hygene-2" class="slide level2">
-<h2>6. Good Pull Request (PR) Hygene</h2>
+<section id="good-pull-request-pr-hygiene-2" class="slide level2">
+<h2>6. Good pull request (PR) hygiene</h2>
 <ul>
 <li class="fragment">Respond to PR feedback constructively
 <ul>
@@ -465,9 +488,14 @@ Simon Guest
 <li class="fragment">Push updates promptly - especially important for open source projects</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="demo-2" class="title-slide slide level1 center">
+<h1>Demo</h1>
+<p><a href="https://github.com/code-dot-org/code-dot-org/pull/75122" class="external" target="_blank">Example PR</a></p>
 </section>
 <section id="issue-and-project-tracking" class="slide level2">
-<h2>7. Issue and Project Tracking</h2>
+<h2>7. Issue and project tracking</h2>
 <ul>
 <li class="fragment">GitHub’s Issue and Project Tracking
 <ul>
@@ -475,12 +503,17 @@ Simon Guest
 <li class="fragment">Useful for small teams who can choose their own tools</li>
 <li class="fragment">Use labels to tag issues as “bugs” or “enhancements”</li>
 <li class="fragment">When you hear a good idea, file as a GitHub issue/enhancement</li>
-<li class="fragment">Can be useful to triage/prioritize what to work on next</li>
+<li class="fragment">Can be useful to triage/prioritize</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="demo-3" class="title-slide slide level1 center">
+<h1>Demo</h1>
+<p>Adding example issues to CSP repo</p>
 </section>
 <section id="automating-workflows" class="slide level2">
-<h2>8. Automating Workflows</h2>
+<h2>8. Automating workflows</h2>
 <ul>
 <li class="fragment">A commit to <code>main</code> (or a PR merge into <code>main</code>) should trigger a workflow
 <ul>
@@ -493,18 +526,18 @@ Simon Guest
 </ul>
 </section>
 <section id="automating-workflows-1" class="slide level2">
-<h2>8. Automating Workflows</h2>
+<h2>8. Automating workflows</h2>
 <ul>
 <li class="fragment">GitHub Actions
 <ul>
 <li class="fragment">Container-based workflows that run on GitHub’s servers</li>
 <li class="fragment">Free for open source projects</li>
-<li class="fragment"><code>.github/workflows/*.yaml</code> get executed on commit</li>
+<li class="fragment"><code>.github/workflows/*.yml</code> get executed on push</li>
 </ul></li>
 </ul>
 </section>
 <section id="automating-workflows-2" class="slide level2">
-<h2>8. Automating Workflows</h2>
+<h2>8. Automating workflows</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a aria-label="1"></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb3-2"><a aria-label="2"></a><span class="at">  </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
 <span id="cb3-3"><a aria-label="3"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
@@ -550,12 +583,17 @@ Simon Guest
 <li class="fragment">Accessed via <code>https://[username].github.io/[reponame]</code></li>
 <li class="fragment">Published manually or automatically via GitHub Actions</li>
 <li class="fragment">Static web content only (HTML, JS, CSS, etc.)</li>
-<li class="fragment">No server side capabilities</li>
+<li class="fragment">No server-side capabilities</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="demo-4" class="title-slide slide level1 center">
+<h1>Demo</h1>
+<p>GitHub Actions and Pages for the CSP repo</p>
 </section>
 <section id="repo-documentation" class="slide level2">
-<h2>10. Repo Documentation</h2>
+<h2>10. Repo documentation</h2>
 <ul>
 <li class="fragment">Good documentation starts with <code>README.md</code>
 <ul>
@@ -568,30 +606,30 @@ Simon Guest
 </ul>
 </section>
 <section id="repo-documentation-1" class="slide level2">
-<h2>10. Repo Documentation</h2>
+<h2>10. Repo documentation</h2>
 <ul>
 <li class="fragment"><code>README.md</code> files in sub-folders for large components or areas of the repo
 <ul>
 <li class="fragment">e.g., <code>/examples</code> to describe what examples show</li>
 </ul></li>
-<li class="fragment"><code>ARCHITECUTURE.md</code> file
+<li class="fragment"><code>ARCHITECTURE.md</code> file
 <ul>
 <li class="fragment">Can be useful for large systems / deployments</li>
 </ul></li>
 <li class="fragment"><code>LICENSE</code> file
 <ul>
-<li class="fragment">Important to share what open source license you are using</li>
+<li class="fragment">No license == All rights reserved; nobody can legally reuse your code</li>
 </ul></li>
 </ul>
 </section>
 <section id="repo-documentation-2" class="slide level2">
-<h2>10. Repo Documentation</h2>
+<h2>10. Repo documentation</h2>
 <ul>
 <li class="fragment">Personal <code>README.md</code> file
 <ul>
 <li class="fragment">Can be used as a “Welcome” page when anyone views your GitHub profile</li>
 <li class="fragment">Useful for portfolios, highlighting other work beyond your repos</li>
-<li class="fragment">To setup, create a new repo with the same name as your GitHub username
+<li class="fragment">To set up, create a new repo with the same name as your GitHub username
 <ul>
 <li class="fragment">Make public and add a top-level <code>README.md</code> file</li>
 </ul></li>
@@ -612,10 +650,10 @@ Simon Guest
 <li class="fragment">Recommend looking at popular, large open source projects - great learning experience</li>
 </ul>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .reveal .slides > section > h1,
