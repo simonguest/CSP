@@ -16,74 +16,79 @@ logo: ../../src/logos/DigiPen_RGB_Red.png
 
 ## Overview
 
-- Share Ten "Best Practices" I've seen (or used) during my career
+- Share Ten "GitHub Best Practices" I've seen (or used) during my career
 - Three areas:
-  - Repo structure, including what **not** to check in
+  - Repo structure
   - Working with other people via branches, pull requests, and issues
-  - Features that GitHub has that you might now know about: Actions and Pages
+  - Features that GitHub has that you might not know about: Actions and Pages
 
-## Why Is This Important?
+## Why is this important?
 
 - This semester's project!
 - Searching for a job
-  - Hiring Managers will likely look at your repo/portfolio
+  - Hiring managers will often look at your repo/portfolio
 - Starting a job
   - Consistency with other engineers (or AI agents!) on your team
 - Creating an open source project
   - Consistency with other contributors
 
-# Ten Best Practices
+# Ten best practices
 
-## 1. Repo Structure
+## 1. Repo structure
 
 - Your repo should have a consistent, easy-to-understand structure
 - What your repo should contain (at minimum):
-  - README.md
-  - LICENSE
-  - Build files (e.g., pyproject.toml, package.json, .lock files)
-  - dotfiles for configurations (e.g., .python)
+  - `README.md`
+  - `LICENSE`
+  - Build files (e.g., `pyproject.toml`, `package.json`, `.lock` files)
+  - dotfiles for pins or configurations (e.g., `.python-version` or `.editorconfig`)
   - Consistent folder structure
 
-## 1. Repo Structure
+## 1. Repo structure
 
 - Folder naming best practices:
-  - **src** = Source Code
-  - **tests** = Tests
-  - **docs** = Docs
-  - **scripts** = Scripts, esp. for deployment
-  - **lib** = External libraries (to an extent)
-  - **dist** or **build** = Your build files (which you should not check in...)
+  - **`src`** = Source Code
+  - **`tests`** = Tests
+  - **`docs`** = Docs
+  - **`scripts`** = Scripts, esp. for deployment
+  - **`lib`** = External libraries (to an extent)
+  - **`dist`** or **`build`** = Your output files (which you should not check in...)
 
-## 2. What Not To Check In
+# Demo
+
+[CSP repo structure](https://github.com/simonguest/CSP){.external target="_blank"}
+
+## 2. What not to check in
 
 - The output of your project!
-  - You can share builds via GitHub, but please not via the code tree
+  - You can share builds via GitHub (via releases), but please not via the code tree
 - 3rd party dependencies
-  - OK to add an occasional .js in /lib, but most dependencies should be pulled in as part of your build script
+  - OK to add an occasional `.js` in `/lib`, but most dependencies should be pulled in as part of your build script
 
-## 2. What Not To Check In
+## 2. What not to check in
 
 - But why not?
   - Supports multiple architectures 
   - Easier to upgrade
   - Clearer licensing
-  - Can run dependabot to check for vulnerabilities
+  - Can run `dependabot` to check for vulnerabilities
 
-## 2. What Not To Check In
+## 2. What not to check in
 
 - Secrets
+  - *My story...*
   - API keys and other secrets should be part of a `.env` file at the root
   - (add `.env` to `.gitignore`)
   - You can also create `.env.example` to help other engineers
   - Use `dotenv` or equivalent libraries to load these at runtime
 
-## 2. What Not To Check In
+## 2. What not to check in
 
 ```ini
 SECRET_API_KEY=abc123
 ```
 
-## 2. What Not To Check In
+## 2. What not to check in
 
 ```python
 import os
@@ -94,68 +99,73 @@ load_dotenv() # Loads .env as env vars
 SECRET_API_KEY = os.environ["SECRET_API_KEY"]
 ```
 
-## 2. What Not To Check In
+## 2. What not to check in
 
 - Large binary files
   - Is there another place to put these instead?
   - AWS S3
   - Hugging Face (for AI model files)
-- If you must check these (>100MB) in...
+- If must check in large files (>100MB)...
   - Enable LFS (Large File Storage)
   - Will create pointers to your files, stored on a separate LFS server
   - Replaces pointer with file at checkout
 
-## 2. What Not To Check In
+## 2. What not to check in
 
 - Every repo should have a `.gitignore` file
-  - List of RegEx patterns to exclude files/folders across your repo
+  - List of glob patterns to exclude files/folders across your repo
   - Excludes everything we've talked about, plus more (e.g., `__pycache__/`, `.DS_Store`)
-  - AI tools (e.g., Claude Code) are excellent at auto-generating .gitignore files
+  - AI tools (e.g., Claude Code) are excellent at auto-generating `.gitignore` files
 
-## 3. Right-sized Branching Strategy
+## 3. Right-sized branching strategy
 
 - Use a branching strategy that is right for the size of your team...
 
-## 3. Right-sized Branching Strategy
+## 3. Right-sized branching strategy
 
 - Solo Developer
-  - Small check-ins into `main` is acceptable
+  - Small check-ins into `main` are acceptable
   - Use feature branches for major work, especially if working on more than one thing at a time
 
-## 3. Right-sized Branching Strategy
+## 3. Right-sized branching strategy
 
 - Small Team (2 or 3 engineers)
-  - Don't check-in directly into `main`
+  - Don't check in directly into `main`
+    - (Enable branch protection to guard against this)
   - Use feature branches for your own work/feature
-  - Use `name/feature` naming convention
+  - Use a `name/feature` naming convention
   - Merge (and delete!) after discussing with the rest of the team
   - Pull Requests (PRs) useful if remote team
 
-## 3. Right-sized Branching Strategy
+## 3. Right-sized branching strategy
 
 - Two-Pizza Team (6 - 8 engineers)
-  - Don't check-in directly into `main`
+  - Don't check in directly into `main`
   - Use feature branches for your own work/feature
   - Pull Requests (PR) for majority of work
   - Delete branches after PR is merged
 
-## 3. Right-sized Branching Strategy
+## 3. Right-sized branching strategy
 
 - Exceptions (Amazon production sites)
-  - Setup a feature flag for your work
-  - Check-in to `main` with feature flag disabled by default
+  - Set up a feature flag for your work
+  - Check in to `main` with feature flag disabled by default
   - Enable feature flag (and remove flag conditionals) to release to production
 
-## 4. Main Is Always Production Ready
+# Demo
 
-- Don't break `main`
+Branching strategies in the CSP repo
+
+## 4. Always be production ready
+
+- Don't break `main`!
   - You'll annoy your team members :)
-  - You want `main` be in a workable/demoable state at all times
+  - You want `main` to be in a workable/demo-able state at all times
   - Build systems will build from `main` - and you don't want to break them either
 - Risk of breaking `main`?
   - Work on a feature branch instead
 
-## 5. Frequent, Small Commits and Rebasing
+## 5. Frequent, small commits, and good messages
 
 - Commit frequently (either to `main` or your feature branch)
   - Multiple times per day
@@ -164,7 +174,14 @@ SECRET_API_KEY = os.environ["SECRET_API_KEY"]
   - Creates a culture where imperfection is OK
   - (Plus, you can squash commits on merge)
 
-## 6. Good Pull Request (PR) Hygene
+## 5. Frequent, small commits, and good messages
+
+- Avoid `fix`, `stuff`, `asdf`
+- 50-character summary of what you changed
+- Focus on the *why* not the *what*
+- Use `Fixes #xxx` to link commits to issues
+
+## 6. Good pull request (PR) hygiene
 
 - Small, focused PRs
   - PRs should be <400 lines, single feature
@@ -172,31 +189,39 @@ SECRET_API_KEY = os.environ["SECRET_API_KEY"]
   - Makes it easier to review
   - Makes it easier to revert
 
-## 6. Good Pull Request (PR) Hygene
+## 6. Good pull request (PR) hygiene
 
 - Clear PR descriptions
   - What the PR does and **why**
   - Include context and link to existing issues (see later section)
   - Before/after screenshots can be useful
-  - Ask for areas that you want feedback on vs. generic
+  - Call out the specific areas where you want feedback
   - Templates can help maintain consistency
 
-## 6. Good Pull Request (PR) Hygene
+## 6. Good pull request (PR) hygiene
 
 - Respond to PR feedback constructively
   - Engage, even if you disagree
   - Push updates promptly - especially important for open source projects
 
-## 7. Issue and Project Tracking
+# Demo
+
+[Example PR](https://github.com/code-dot-org/code-dot-org/pull/75122){.external target="_blank"}
+
+## 7. Issue and project tracking
 
 - GitHub's Issue and Project Tracking
   - Critical for open source projects (this is where issues will get logged)
   - Useful for small teams who can choose their own tools
   - Use labels to tag issues as "bugs" or "enhancements"
   - When you hear a good idea, file as a GitHub issue/enhancement
-  - Can be useful to triage/prioritize what to work on next
+  - Can be useful to triage/prioritize
 
-## 8. Automating Workflows
+# Demo
+
+Adding example issues to CSP repo
+
+## 8. Automating workflows
 
 - A commit to `main` (or a PR merge into `main`) should trigger a workflow
   - Run the linter on your code
@@ -205,14 +230,14 @@ SECRET_API_KEY = os.environ["SECRET_API_KEY"]
   - Deploy to staging/production servers
   - Email you (the team) when things go wrong (e.g., the build breaks)
 
-## 8. Automating Workflows
+## 8. Automating workflows
 
 - GitHub Actions
   - Container-based workflows that run on GitHub's servers
   - Free for open source projects
-  - `.github/workflows/*.yaml` get executed on commit
+  - `.github/workflows/*.yml` get executed on push
 
-## 8. Automating Workflows
+## 8. Automating workflows
 
 ```yaml
 on:
@@ -255,9 +280,13 @@ jobs:
   - Accessed via `https://[username].github.io/[reponame]`
   - Published manually or automatically via GitHub Actions
   - Static web content only (HTML, JS, CSS, etc.)
-  - No server side capabilities
+  - No server-side capabilities
 
-## 10. Repo Documentation
+# Demo
+
+GitHub Actions and Pages for the CSP repo
+
+## 10. Repo documentation
 
 - Good documentation starts with `README.md`
   - Clear description of how the repo works
@@ -266,21 +295,21 @@ jobs:
   - How to contribute (if open source project)
   - Code snippets
 
-## 10. Repo Documentation
+## 10. Repo documentation
 
 - `README.md` files in sub-folders for large components or areas of the repo
   - e.g., `/examples` to describe what examples show
-- `ARCHITECUTURE.md` file
+- `ARCHITECTURE.md` file
   - Can be useful for large systems / deployments
 - `LICENSE` file
-  - Important to share what open source license you are using
+  - No license == All rights reserved; nobody can legally reuse your code
 
-## 10. Repo Documentation
+## 10. Repo documentation
 
 - Personal `README.md` file
   - Can be used as a "Welcome" page when anyone views your GitHub profile
   - Useful for portfolios, highlighting other work beyond your repos
-  - To setup, create a new repo with the same name as your GitHub username
+  - To set up, create a new repo with the same name as your GitHub username
     - Make public and add a top-level `README.md` file
 
 # Summary
@@ -294,10 +323,10 @@ jobs:
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .reveal .slides > section > h1,
