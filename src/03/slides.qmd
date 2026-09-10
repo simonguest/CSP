@@ -267,7 +267,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-## 9. GitHub Pages
+## 9. GitHub Pages - Test
 
 - A convenient way to host content related to your repo
   - Simple demo app or examples
