@@ -2264,19 +2264,19 @@
     ]
   },
   {
-    "objectID": "src/03/slides.html#github-pages",
-    "href": "src/03/slides.html#github-pages",
+    "objectID": "src/03/slides.html#github-pages---test",
+    "href": "src/03/slides.html#github-pages---test",
     "title": "GitHub Best Practices",
-    "section": "9. GitHub Pages",
-    "text": "9. GitHub Pages\n\nA convenient way to host content related to your repo\n\nSimple demo app or examples\nDoc pages for your open source library",
+    "section": "9. GitHub Pages - Test",
+    "text": "9. GitHub Pages - Test\n\nA convenient way to host content related to your repo\n\nSimple demo app or examples\nDoc pages for your open source library",
     "crumbs": [
       "Lecture: GitHub Best Practices",
       "Slides"
     ]
   },
   {
-    "objectID": "src/03/slides.html#github-pages-1",
-    "href": "src/03/slides.html#github-pages-1",
+    "objectID": "src/03/slides.html#github-pages",
+    "href": "src/03/slides.html#github-pages",
     "title": "GitHub Best Practices",
     "section": "9. GitHub Pages",
     "text": "9. GitHub Pages\n\nGitHub Pages\n\nCustom branch of your repo (gh-pages) that gets published to GitHub servers\nAccessed via https://[username].github.io/[reponame]\nPublished manually or automatically via GitHub Actions\nStatic web content only (HTML, JS, CSS, etc.)\nNo server-side capabilities",
