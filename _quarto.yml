@@ -53,6 +53,11 @@ website:
           - text: "Slides"
             href: src/04/slides.qmd
             target: blank
+      - section: "Lecture: AI Coding Agents"
+        contents:
+          - text: "Slides"
+            href: src/05/slides.qmd
+            target: blank
       - section: "Networking Protocols"
         contents:
           - text: "WebSockets"

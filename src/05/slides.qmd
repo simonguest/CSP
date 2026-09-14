@@ -1,0 +1,265 @@
+---
+title: "AI Coding Agents"
+author: "Simon Guest"
+format:
+  revealjs:
+    slide-number: true
+    incremental: true
+    center-title-slide: true
+    theme: default
+title-slide-attributes:
+  data-background-gradient: "linear-gradient(135deg, #ba1127 0%,  #850022 20%, #000000 100%)"
+  data-background-image: "backgrounds/dragon.png"
+  data-background-opacity: "0.3"
+logo: ../../src/logos/DigiPen_RGB_Red.png
+---
+
+## A brief history
+
+- Before agents, models had to learn code in the first place:
+  - **2020 — GPT-3** (OpenAI): not trained specifically on code, but surprised researchers by generating coherent snippets anyway
+  - **2021 — OpenAI Codex**: GPT-3 fine-tuned on 54M GitHub repos (~159GB of Python)
+  - **2021 — GitHub Copilot technical preview**: first public coding agent, powered by Codex
+  - **2022 — DeepMind AlphaCode**: trained on competitive-programming problems, reached roughly median human performance in contests for code generation
+
+## A brief history
+
+- While the models were trained on code, the interaction was still basic:
+  - Glorified auto-complete
+  - Limited ability to ask questions about the codebase
+  - Many context limit challenges - i.e., trying to understand the whole of the repo in window
+
+## A brief history
+
+- Two major developments in 2023 onwards:
+  - Context windows grew from 4k → 128k → 1M+ tokens — models could reason across entire codebases
+  - Introduction of the **harness** or **agent**
+  - Devin, Aider, Cursor: agents that could read files, make edits, and run tests
+  - Has since evolved into Claude Code, GitHub Copilot Agent Mode: multi-step reasoning, not just one-shot suggestions
+
+## What is a coding agent?
+
+- TBD
+
+## How do you use a coding agent?
+
+- TBD
+- CLI/TUI
+- IDE integration
+- Through desktop app
+- Remote control
+
+## How do you use a coding agent?
+
+- Introduce CLAUDE.md / AGENTS.md and SKILLS.md
+
+# Demo
+
+- Demo of ???
+
+## "Vibe coding"
+
+- Coined by AI researcher Andrej Karpathy in early 2025
+- "fully gives into the vibes"
+- Focuses on the creative direction and outcomes vs. the individual lines of syntax
+
+## "Vibe coding"
+
+- Can be tempting:
+  - Create an issue in GitHub, send an agent to work on it, direct it from your mobile phone
+  - But, IMO you lose control of the architecture
+  - Analogy to the Winchester Mystery House
+
+## "Vibe coding"
+
+![](./images/winchester.png){.lightbox}
+
+## Agents as "power tools"
+
+- I prefer "power tool" approach:
+  - Hand-build the architecture / frame out the house
+  - Then use AI to fill in the details
+
+## Agents as "power tools"
+
+![](./images/house_frame.png){.lightbox}
+
+## Agents as "power tools"
+
+- Mapping this to Claude Code
+  - **CLAUDE.md** should describe the architecture of the system (analogy: house frame)
+  - **SKILL.md** should describe each area that Claude can contribute to (analogy: working on each room)
+
+## Agents as "power tools"
+
+- TBD
+- What's fun is that we are all still figuring out how to use these new tools!
+
+## Introducing my coding agent lifecycle
+
+- 7 steps
+- Lifecycle: Plan, Act, Test, Abort, Review, Commit, Clear
+
+## Introducing my coding agent lifecycle
+
+- **Plan**
+  - Write the specification for the feature
+  - Be descriptive, bullet points help
+  - Ask the agent to validate/question the approach
+  - *"What questions and/or clarifications do you have?"*
+  - Push back on things that seem incorrect
+
+## TBD
+
+- TBD: Provide example of a good feature specification
+
+## Introducing my coding agent lifecycle
+
+- **Act**
+  - Once happy with the specification, implement
+  - Watch carefully for file changes/updates
+  - Correct approach mid-stream
+  - *"I think there's a 3rd party library for that..."*
+
+## Introducing my coding agent lifecycle
+
+- **Test**
+  - Test the feature locally / manually
+  - Build a complete test suite
+  - (Agents are really good at writing tests)
+  - Have the agent run it's own tests after the feature (you can put this into the CLAUDE.md file)
+
+## Introducing my coding agent lifecycle
+
+- **Abort**
+  - Sometimes, things don't work as expected!
+  - It can be challenging to fix before exhausting the context window
+  - And many coding agents will "spin out of control"
+  - `git stash`, clear context (new session), update the feature spec, and restart
+
+## Introducing my coding agent lifecycle
+
+- **Review**
+  - What did it generate?
+  - Are the tests written well / did it run the test suite?
+  - Does CLAUDE.md need to be updated? Any new skills to create from this feature?
+    - Auto-compact if approaching ~100K (hard limit at 150K)
+
+## Introducing my coding agent lifecycle
+
+- **Commit**
+  - I do the committing!!!
+
+## Introducing my coding agent lifecycle
+
+- **Clear**
+  - Once CLAUDE.md and feature is committed, clear context (`/new` in Claude Code)
+  - Analogy: 50 First Dates movie
+
+## Other ways of incorporating agents into your codebase
+
+- TBD
+- Ask for general guidance on an existing repo/architecture
+- Provide feedback on PRs
+- React to an issue and generate a fix
+- Writing tests for an existing repo
+- Repetitive tasks that you need to do manually (e.g., image background generation)
+
+## Coding agents anti-patterns / What I've seen go wrong
+
+- Doing too much (e.g., shutting down my dev server to test)
+- Making tests too fragile (e.g., testing on production data which changed)
+- 
+
+## Options and costs
+
+- TBD - overview of options
+- price comparisons
+- A good place to talk about token usage and token maxxing
+
+## How about local, open-source models/agents?
+
+- **OpenCode** is an open-source, terminal-based AI coding agent
+  - Runs entirely locally using any OpenAI-compatible API server (e.g., LM Studio)
+  - Reads and edits files, runs shell commands, and iterates on code
+- **Model-agnostic** Swap in any local model (Qwen, DeepSeek, Llama, etc.) via a config file
+
+# Demo
+
+OpenCode running with local model
+
+## Qwen3.5 vs Frontier Models
+
+| Benchmark | Qwen3.5-27B | GPT-5-mini | GPT-OSS-120B |
+|---|---|---|---|
+| MMLU-Pro | 86.1% | 83.7% | 80.8% |
+| GPQA Diamond | **85.5%** | 82.8% | 80.1% |
+| SWE-bench Verified | **72.4%** | 72.0% | 62.0% |
+| LiveCodeBench v6 | 80.7% | 80.5% | **82.7%** |
+
+## Gemma 4 vs Frontier Models
+
+| Benchmark | Gemma 4 31B | Gemini 2.5 Pro | Claude 4 Opus |
+|---|---|---|---|
+| MMLU-Pro | 85.2% | — | — |
+| GPQA Diamond | **84.3%** | **86.4%** | 79.6% |
+| LiveCodeBench v6 | 80.0% | 72.5% | 48.9% |
+| AIME 2026 | 89.2% | — | — |
+
+## Qwen3 Coding vs SOTA (SWE-bench)
+
+| Model | SWE-bench Verified | Open? |
+|---|---|---|
+| Claude Opus 4.5 | 77.8% | No |
+| Qwen3.5-27B | 72.4% | Yes |
+| Claude Sonnet 4 | 70.4% | No |
+| Qwen3-Coder (480B) | 69.6% | Yes |
+| GPT-OSS-120B | 62.0% | Partially |
+
+## Using coding agents in CSP
+
+- TBD
+- How Prof. Bede and I will be evaluating this
+- Acceptable to use
+	- Also won’t be penalized if don’t use
+- If use, provide full transcripts at each milestone presentation
+
+# Q&A
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: 'Inter', sans-serif;
+}
+
+.reveal .slides > section > h1,
+.reveal .slides > section > h2,
+.reveal .slides > section > section > h1,
+.reveal .slides > section > section > h2 {
+  color: #ba1127;
+}
+                                                                        
+.slide-background.blurred .slide-background-content {
+  filter: blur(8px);
+}
+.slide-background.darken .slide-background-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#title-slide h1, #title-slide h2, #title-slide p, #title-slide .author,
+#title-slide .quarto-title-author-name, #title-slide .quarto-title-authors {
+  color: white !important;
+}
+.justify {
+  text-align: center;
+}
+.white, .white h1, .white h2, .white h3, .white p, .white li {
+  color: white !important;
+}
+.red, .red h1, .red h2, .red h3, .red p, .red li {
+  color:  #8B0000 !important;
+}
+</style>
