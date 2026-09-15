@@ -147,75 +147,158 @@ Simon Guest
 </div>
 
 </section>
-<section id="a-brief-history" class="slide level2">
-<h2>A brief history</h2>
+<section id="software-transformation" class="slide level2">
+<h2>Software transformation</h2>
 <ul>
-<li class="fragment">Before agents, models had to learn code in the first place:
-<ul>
-<li class="fragment"><strong>2020 — GPT-3</strong> (OpenAI): not trained specifically on code, but surprised researchers by generating coherent snippets anyway</li>
-<li class="fragment"><strong>2021 — OpenAI Codex</strong>: GPT-3 fine-tuned on 54M GitHub repos (~159GB of Python)</li>
-<li class="fragment"><strong>2021 — GitHub Copilot technical preview</strong>: first public coding agent, powered by Codex</li>
-<li class="fragment"><strong>2022 — DeepMind AlphaCode</strong>: trained on competitive-programming problems, reached roughly median human performance in contests for code generation</li>
-</ul></li>
+<li class="fragment">In the past 12 months, coding agents have transformed decades-old methods of writing software</li>
+<li class="fragment">As of July 2026, <strong>90% of professional developers are using coding agents weekly</strong> (source: JetBrains Dev Ecosystem survey)</li>
+<li class="fragment"><strong>68% of them using agents daily</strong></li>
 </ul>
 </section>
-<section id="a-brief-history-1" class="slide level2">
-<h2>A brief history</h2>
+<section id="software-transformation-1" class="slide level2">
+<h2>Software transformation</h2>
 <ul>
-<li class="fragment">While the models were trained on code, the interaction was still basic:
+<li class="fragment">Rapid acceleration of coding tools</li>
+<li class="fragment">Claude Code used by 40% of developers (from 18% in Jan 2026)</li>
+<li class="fragment">Codex used by 16% of developers (from 3% in Jan 2026)</li>
+<li class="fragment">Claude Code creator, Boris Cherny, stated that 100% of his contributions to Claude Code are written by Claude Code</li>
+<li class="fragment">80% of code at Anthropic is written by Claude Code (as of May 2026)</li>
+</ul>
+</section>
+<section id="how-did-we-get-here" class="slide level2">
+<h2>How did we get here?</h2>
+<ul>
+<li class="fragment"><strong>2020 - GPT-3</strong> (OpenAI): not trained specifically on code, but surprised researchers by generating coherent snippets</li>
+<li class="fragment"><strong>2021 - OpenAI Codex</strong>: GPT-3 fine-tuned on 54M GitHub repos (~159GB of Python)</li>
+<li class="fragment"><strong>2021 - GitHub Copilot technical preview</strong>: first public coding agent, powered by Codex</li>
+</ul>
+</section>
+<section id="how-did-we-get-here-1" class="slide level2">
+<h2>How did we get here?</h2>
+<ul>
+<li class="fragment">While the models were trained on code, the developer experience was still basic:
 <ul>
 <li class="fragment">Glorified auto-complete</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-did-we-get-here-2" class="slide level2">
+<h2>How did we get here?</h2>
+<p><a href="images/copilot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/copilot.png"></a></p>
+</section>
+<section id="how-did-we-get-here-3" class="slide level2">
+<h2>How did we get here?</h2>
+<ul>
+<li class="fragment">In addition…
+<ul>
 <li class="fragment">Limited ability to ask questions about the codebase</li>
-<li class="fragment">Many context limit challenges - i.e., trying to understand the whole of the repo in window</li>
+<li class="fragment">Many context limit challenges
+<ul>
+<li class="fragment">Trying to understand the whole of the repo in window was virtually impossible</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
-<section id="a-brief-history-2" class="slide level2">
-<h2>A brief history</h2>
+<section id="how-did-we-get-here-4" class="slide level2">
+<h2>How did we get here?</h2>
 <ul>
-<li class="fragment">Two major developments in 2023 onwards:
+<li class="fragment">Two major developments in 2023+:
 <ul>
-<li class="fragment">Context windows grew from 4k → 128k → 1M+ tokens — models could reason across entire codebases</li>
-<li class="fragment">Introduction of the <strong>harness</strong> or <strong>agent</strong></li>
-<li class="fragment">Devin, Aider, Cursor: agents that could read files, make edits, and run tests</li>
-<li class="fragment">Has since evolved into Claude Code, GitHub Copilot Agent Mode: multi-step reasoning, not just one-shot suggestions</li>
+<li class="fragment">Context windows grew from 4k → 128k → 1M+ tokens</li>
+<li class="fragment">Models could reason across entire codebases</li>
+<li class="fragment">Introduction of the <strong>coding harness</strong> or now most commonly known, <strong>coding agent</strong></li>
 </ul></li>
 </ul>
 </section>
-<section id="what-is-a-coding-agent" class="slide level2">
-<h2>What is a coding agent?</h2>
+<section id="how-did-we-get-here-5" class="slide level2">
+<h2>How did we get here?</h2>
 <ul>
-<li class="fragment">TBD</li>
+<li class="fragment">Early coding agents
+<ul>
+<li class="fragment">Devin, Aider, Cursor
+<ul>
+<li class="fragment">Agents that could read files, make edits, and run tests with limited human intervention</li>
+</ul></li>
+<li class="fragment">Showed promise on benchmarks (18% on SWE-Bench) but…
+<ul>
+<li class="fragment">Explicit plan and work modes</li>
+<li class="fragment">Often one-shot suggestions that ran in a loop</li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
-<section id="how-do-you-use-a-coding-agent" class="slide level2">
-<h2>How do you use a coding agent?</h2>
+<section id="todays-coding-agents" class="slide level2">
+<h2>Today’s coding agents</h2>
 <ul>
-<li class="fragment">TBD</li>
-<li class="fragment">CLI/TUI</li>
-<li class="fragment">IDE integration</li>
-<li class="fragment">Through desktop app</li>
-<li class="fragment">Remote control</li>
+<li class="fragment">Multi-step planners and reasoners</li>
+<li class="fragment">Tool access (bash, web, python, etc.)</li>
+<li class="fragment">Manage their context (through memory, skills, etc.)</li>
+<li class="fragment">Manage their reasoning effort (model selection)</li>
+<li class="fragment">Often delegate to multiple, background agents for tasks</li>
 </ul>
 </section>
-<section id="how-do-you-use-a-coding-agent-1" class="slide level2">
-<h2>How do you use a coding agent?</h2>
+<section id="using-a-coding-agent" class="slide level2">
+<h2>Using a coding agent</h2>
+<p><a href="images/claude-code.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/claude-code.png"></a></p>
+</section>
+<section id="using-a-coding-agent---cli" class="slide level2">
+<h2>Using a coding agent - CLI</h2>
+<p><a href="images/cli.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/cli.png"></a></p>
+</section>
+<section id="using-a-coding-agent---ide" class="slide level2">
+<h2>Using a coding agent - IDE</h2>
+<p><a href="images/ide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/ide.png"></a></p>
+</section>
+<section id="using-a-coding-agent---desktop" class="slide level2">
+<h2>Using a coding agent - Desktop</h2>
+<p><a href="images/desktop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images/desktop.png"></a></p>
+</section>
+<section id="using-a-coding-agent---mobile" class="slide level2">
+<h2>Using a coding agent - Mobile</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/mobile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/mobile.png" class="quarto-figure quarto-figure-center" width="300"></a></p>
+</figure>
+</div>
+</section>
+<section id="components-of-a-coding-agent" class="slide level2">
+<h2>Components of a coding agent</h2>
 <ul>
-<li class="fragment">Introduce CLAUDE.md / AGENTS.md and SKILLS.md</li>
+<li class="fragment"><code>CLAUDE.md</code> (<code>AGENTS.md</code>)
+<ul>
+<li class="fragment">Injected at the start of every conversation</li>
+<li class="fragment">Introduces the coding agent to your project/repo/architecture</li>
+<li class="fragment">Also used for style conventions/preferences</li>
+<li class="fragment">Can have multiple <code>CLAUDE.md</code>/<code>AGENTS.md</code> files in hierarchy</li>
+<li class="fragment"><a href="https://agents.md/#examples" class="external" target="_blank">Examples</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="components-of-a-coding-agent-1" class="slide level2">
+<h2>Components of a coding agent</h2>
+<ul>
+<li class="fragment"><code>SKILL.md</code>
+<ul>
+<li class="fragment">Separate skill file, loaded on-demand by the agent</li>
+<li class="fragment">Used for defining how specific features are developed
+<ul>
+<li class="fragment">New web components for a site</li>
+<li class="fragment">How content should be translated/localized</li>
+</ul></li>
+<li class="fragment">Helps reduce the size of <code>CLAUDE.md</code>/<code>AGENTS.md</code></li>
+</ul></li>
 </ul>
 </section>
 <section>
 <section id="demo" class="title-slide slide level1 center">
 <h1>Demo</h1>
-<ul>
-<li class="fragment">Demo of ???</li>
-</ul>
+<p>Using Claude Code to build a simple todo app</p>
 </section>
 <section id="vibe-coding" class="slide level2">
 <h2>“Vibe coding”</h2>
 <ul>
 <li class="fragment">Coined by AI researcher Andrej Karpathy in early 2025</li>
-<li class="fragment">“fully gives into the vibes”</li>
+<li class="fragment"><em>“fully gives into the vibes”</em></li>
 <li class="fragment">Focuses on the creative direction and outcomes vs.&nbsp;the individual lines of syntax</li>
 </ul>
 </section>
@@ -224,171 +307,288 @@ Simon Guest
 <ul>
 <li class="fragment">Can be tempting:
 <ul>
-<li class="fragment">Create an issue in GitHub, send an agent to work on it, direct it from your mobile phone</li>
-<li class="fragment">But, IMO you lose control of the architecture</li>
+<li class="fragment">Create an issue in GitHub, send a coding agent to work on it, monitor it from your mobile phone</li>
+<li class="fragment"><strong>But,</strong> you lose control of the architecture</li>
 <li class="fragment">Analogy to the Winchester Mystery House</li>
 </ul></li>
 </ul>
 </section>
 <section id="vibe-coding-2" class="slide level2">
 <h2>“Vibe coding”</h2>
-<p><a href="./images/winchester.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="./images/winchester.png"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="./images/winchester.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="./images/winchester.png" class="quarto-figure quarto-figure-center" width="800"></a></p>
+</figure>
+</div>
 </section>
 <section id="agents-as-power-tools" class="slide level2">
 <h2>Agents as “power tools”</h2>
 <ul>
 <li class="fragment">I prefer “power tool” approach:
 <ul>
-<li class="fragment">Hand-build the architecture / frame out the house</li>
-<li class="fragment">Then use AI to fill in the details</li>
+<li class="fragment">Own the architecture / frame out the house</li>
+<li class="fragment">Carefully hand-build / build the frame</li>
+<li class="fragment">Then use AI to fill in the details for each room</li>
 </ul></li>
 </ul>
 </section>
 <section id="agents-as-power-tools-1" class="slide level2">
 <h2>Agents as “power tools”</h2>
-<p><a href="./images/house_frame.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="./images/house_frame.png"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="./images/house_frame.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="./images/house_frame.png" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
 </section>
 <section id="agents-as-power-tools-2" class="slide level2">
 <h2>Agents as “power tools”</h2>
 <ul>
 <li class="fragment">Mapping this to Claude Code
 <ul>
-<li class="fragment"><strong>CLAUDE.md</strong> should describe the architecture of the system (analogy: house frame)</li>
-<li class="fragment"><strong>SKILL.md</strong> should describe each area that Claude can contribute to (analogy: working on each room)</li>
+<li class="fragment"><code>CLAUDE.md</code> should describe the architecture of the system (analogy: house frame)</li>
+<li class="fragment"><code>SKILL.md</code> should describe each area that Claude can contribute to (analogy: working on each room)</li>
 </ul></li>
 </ul>
 </section>
-<section id="agents-as-power-tools-3" class="slide level2">
-<h2>Agents as “power tools”</h2>
+<section id="introducing-my-lifecycle" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
-<li class="fragment">TBD</li>
-<li class="fragment">What’s fun is that we are all still figuring out how to use these new tools!</li>
+<li class="fragment">I’ve been writing software for 25+ years</li>
+<li class="fragment">Shipped multiple products at Microsoft, IBM, SAP, Amazon, Code.org, and others</li>
+<li class="fragment">Today, Claude is writing close to 100% of my code
+<ul>
+<li class="fragment">In many ways, that’s really scary!</li>
+</ul></li>
+<li class="fragment">Many professional developers are still working out the best way to work with coding agents
+<ul>
+<li class="fragment">I’ve found the following lifecycle works (for me)</li>
+</ul></li>
 </ul>
 </section>
-<section id="introducing-my-coding-agent-lifecycle" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-1" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
-<li class="fragment">7 steps</li>
-<li class="fragment">Lifecycle: Plan, Act, Test, Abort, Review, Commit, Clear</li>
+<li class="fragment"><strong>Plan</strong> - plan a feature</li>
+<li class="fragment"><strong>Act</strong> - build the feature</li>
+<li class="fragment"><strong>Test</strong> - test the feature</li>
+<li class="fragment"><strong>Abort</strong> - abort the session if needed</li>
+<li class="fragment"><strong>Review</strong> - carefully review what changed</li>
+<li class="fragment"><strong>Commit</strong> - commit to source control</li>
+<li class="fragment"><strong>Clear</strong> - clear the current conversation</li>
 </ul>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-1" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-2" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Plan</strong>
 <ul>
-<li class="fragment">Write the specification for the feature</li>
-<li class="fragment">Be descriptive, bullet points help</li>
+<li class="fragment">Start by writing the specification for the feature</li>
+<li class="fragment">Separate mark down file, descriptive, bullet points help</li>
 <li class="fragment">Ask the agent to validate/question the approach</li>
 <li class="fragment"><em>“What questions and/or clarifications do you have?”</em></li>
 <li class="fragment">Push back on things that seem incorrect</li>
 </ul></li>
 </ul>
 </section>
-<section id="tbd" class="slide level2">
-<h2>TBD</h2>
-<ul>
-<li class="fragment">TBD: Provide example of a good feature specification</li>
-</ul>
+<section id="introducing-my-lifecycle-3" class="slide level2">
+<h2>Introducing my lifecycle</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/specification.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/specification.png" class="quarto-figure quarto-figure-center" width="500"></a></p>
+</figure>
+</div>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-2" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-4" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Act</strong>
 <ul>
-<li class="fragment">Once happy with the specification, implement</li>
+<li class="fragment">Once happy with the specification, ask Claude to implement</li>
 <li class="fragment">Watch carefully for file changes/updates</li>
 <li class="fragment">Correct approach mid-stream</li>
-<li class="fragment"><em>“I think there’s a 3rd party library for that…”</em></li>
+<li class="fragment"><em>“One minute - I think there’s a 3rd party library for that…”</em></li>
 </ul></li>
 </ul>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-3" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-5" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Test</strong>
 <ul>
 <li class="fragment">Test the feature locally / manually</li>
 <li class="fragment">Build a complete test suite</li>
 <li class="fragment">(Agents are really good at writing tests)</li>
-<li class="fragment">Have the agent run it’s own tests after the feature (you can put this into the CLAUDE.md file)</li>
+<li class="fragment">Have the agent run it’s own tests after the feature (you can put this into the <code>CLAUDE.md</code> file)</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="demo-1" class="title-slide slide level1 center">
+<h1>Demo</h1>
+<p>Test suite example</p>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-4" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-6" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Abort</strong>
 <ul>
 <li class="fragment">Sometimes, things don’t work as expected!</li>
 <li class="fragment">It can be challenging to fix before exhausting the context window</li>
-<li class="fragment">And many coding agents will “spin out of control”</li>
+<li class="fragment">And often coding agents will “spin out of control”</li>
 <li class="fragment"><code>git stash</code>, clear context (new session), update the feature spec, and restart</li>
 </ul></li>
 </ul>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-5" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-7" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Review</strong>
 <ul>
-<li class="fragment">What did it generate?</li>
-<li class="fragment">Are the tests written well / did it run the test suite?</li>
-<li class="fragment">Does CLAUDE.md need to be updated? Any new skills to create from this feature?
-<ul>
+<li class="fragment">What did the agent generate?</li>
+<li class="fragment">Are the tests well written / did it run the test suite?</li>
+<li class="fragment">Does <code>CLAUDE.md</code> need to be updated? Any new skills to create from this feature?</li>
 <li class="fragment">Auto-compact if approaching ~100K (hard limit at 150K)</li>
-</ul></li>
 </ul></li>
 </ul>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-6" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-8" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Commit</strong>
 <ul>
-<li class="fragment">I do the committing!!!</li>
+<li class="fragment">I choose what to commit and when!</li>
+<li class="fragment">(I give access to the <code>git</code> command line for history access, but forbid the agent permission to commit on my behalf)</li>
 </ul></li>
 </ul>
 </section>
-<section id="introducing-my-coding-agent-lifecycle-7" class="slide level2">
-<h2>Introducing my coding agent lifecycle</h2>
+<section id="introducing-my-lifecycle-9" class="slide level2">
+<h2>Introducing my lifecycle</h2>
 <ul>
 <li class="fragment"><strong>Clear</strong>
 <ul>
-<li class="fragment">Once CLAUDE.md and feature is committed, clear context (<code>/new</code> in Claude Code)</li>
+<li class="fragment">Once <code>CLAUDE.md</code> and feature is committed, clear context (<code>/new</code> in Claude Code)</li>
 <li class="fragment">Analogy: 50 First Dates movie</li>
 </ul></li>
 </ul>
 </section>
-<section id="other-ways-of-incorporating-agents-into-your-codebase" class="slide level2">
-<h2>Other ways of incorporating agents into your codebase</h2>
+<section id="introducing-my-lifecycle-10" class="slide level2">
+<h2>Introducing my lifecycle</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/fifty-first-dates.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="images/fifty-first-dates.jpg" class="quarto-figure quarto-figure-center" width="400"></a></p>
+</figure>
+</div>
+</section>
+<section id="other-ways-of-using-agents" class="slide level2">
+<h2>Other ways of using agents</h2>
 <ul>
-<li class="fragment">TBD</li>
 <li class="fragment">Ask for general guidance on an existing repo/architecture</li>
-<li class="fragment">Provide feedback on PRs</li>
-<li class="fragment">React to an issue and generate a fix</li>
-<li class="fragment">Writing tests for an existing repo</li>
+<li class="fragment">Writing tests for an existing repo (especially if you don’t have any)</li>
 <li class="fragment">Repetitive tasks that you need to do manually (e.g., image background generation)</li>
+<li class="fragment">Synthetic data generation (e.g., sample json files)</li>
 </ul>
 </section>
-<section id="coding-agents-anti-patterns-what-ive-seen-go-wrong" class="slide level2">
-<h2>Coding agents anti-patterns / What I’ve seen go wrong</h2>
+<section id="coding-agents-anti-patterns" class="slide level2">
+<h2>Coding agents anti-patterns</h2>
 <ul>
-<li class="fragment">Doing too much (e.g., shutting down my dev server to test)</li>
-<li class="fragment">Making tests too fragile (e.g., testing on production data which changed)</li>
-<li class="fragment"></li>
+<li class="fragment">Doing too much
+<ul>
+<li class="fragment">e.g., “I’ve created a README.md file for you”</li>
+</ul></li>
+<li class="fragment">Wanting too much access
+<ul>
+<li class="fragment">e.g., gating on tool usage / token cost / shutting down my dev server</li>
+</ul></li>
+<li class="fragment">Fragile tests
+<ul>
+<li class="fragment">e.g., creating tests that used production data which changed</li>
+</ul></li>
 </ul>
 </section>
 <section id="options-and-costs" class="slide level2">
 <h2>Options and costs</h2>
 <ul>
-<li class="fragment">TBD - overview of options</li>
-<li class="fragment">price comparisons</li>
-<li class="fragment">A good place to talk about token usage and token maxxing</li>
+<li class="fragment">Many different agents. Most popular (in order):
+<ul>
+<li class="fragment"><strong>Claude Code</strong></li>
+<li class="fragment"><strong>GitHub Copilot</strong></li>
+<li class="fragment"><strong>OpenAI Codex</strong></li>
+<li class="fragment"><strong>Cursor</strong></li>
+<li class="fragment"><strong>JetBrains Junie</strong></li>
+<li class="fragment"><strong>Google Antigravity</strong></li>
+</ul></li>
 </ul>
 </section>
-<section id="how-about-local-open-source-modelsagents" class="slide level2">
-<h2>How about local, open-source models/agents?</h2>
+<section id="options-and-costs-1" class="slide level2">
+<h2>Options and costs</h2>
+
+<img data-src="images/comparing_agents.webp" class="r-stretch"></section>
+<section id="options-and-costs-2" class="slide level2">
+<h2>Options and costs</h2>
+<ul>
+<li class="fragment">Monthly subscription
+<ul>
+<li class="fragment">Subs run between $20/mo - $200/mo</li>
+<li class="fragment">Daily/weekly max token limits</li>
+<li class="fragment">Option to “top up” if you go over</li>
+</ul></li>
+</ul>
+</section>
+<section id="options-and-costs-3" class="slide level2">
+<h2>Options and costs</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/claude-costs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="images/claude-costs.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="options-and-costs-4" class="slide level2">
+<h2>Options and costs</h2>
+<ul>
+<li class="fragment">Pay-as-you-go API
+<ul>
+<li class="fragment">Either with developer account or via OpenRouter</li>
+<li class="fragment">No monthly commitment, but much higher costs</li>
+<li class="fragment">$20 -&gt; ~$2K if tokens are managed well</li>
+<li class="fragment">OpenRouter does have much cheaper options
+<ul>
+<li class="fragment">Sonnet 5 = $2/M input; $10/M output</li>
+<li class="fragment">Qwen 3.8 = $0.15/M input; $1.875/M output</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="options-and-costs-5" class="slide level2">
+<h2>Options and costs</h2>
+<ul>
+<li class="fragment">“Tokenmaxxing” - org-based developer leaderboards</li>
+<li class="fragment">Being frugal with tokens
+<ul>
+<li class="fragment">Don’t vibe code your app!</li>
+<li class="fragment">Choose models carefully (Sonnet vs.&nbsp;Opus vs.&nbsp;Fable)</li>
+<li class="fragment">Spread requests throughout the day</li>
+<li class="fragment">Limit access to testing tools (e.g., Chrome browser access)</li>
+</ul></li>
+</ul>
+</section>
+<section id="can-i-run-coding-agents-locally" class="slide level2">
+<h2>Can I run coding agents locally?</h2>
+<ul>
+<li class="fragment">Yes, albeit with many caveats:
+<ul>
+<li class="fragment">You’ll need a well-spec’d laptop</li>
+<li class="fragment">Token generation will be slower</li>
+<li class="fragment">Models have much smaller context windows</li>
+</ul></li>
+<li class="fragment">Good for small, focused features
+<ul>
+<li class="fragment">Great for long-running, synthetic data generation</li>
+<li class="fragment">Offline access with no API costs</li>
+</ul></li>
+</ul>
+</section>
+<section id="can-i-run-coding-agents-locally-1" class="slide level2">
+<h2>Can I run coding agents locally?</h2>
 <ul>
 <li class="fragment"><strong>OpenCode</strong> is an open-source, terminal-based AI coding agent
 <ul>
@@ -399,137 +599,20 @@ Simon Guest
 </ul>
 </section></section>
 <section>
-<section id="demo-1" class="title-slide slide level1 center">
+<section id="demo-2" class="title-slide slide level1 center">
 <h1>Demo</h1>
 <p>OpenCode running with local model</p>
-</section>
-<section id="qwen3.5-vs-frontier-models" class="slide level2">
-<h2>Qwen3.5 vs Frontier Models</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Benchmark</th>
-<th>Qwen3.5-27B</th>
-<th>GPT-5-mini</th>
-<th>GPT-OSS-120B</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>MMLU-Pro</td>
-<td>86.1%</td>
-<td>83.7%</td>
-<td>80.8%</td>
-</tr>
-<tr class="even">
-<td>GPQA Diamond</td>
-<td><strong>85.5%</strong></td>
-<td>82.8%</td>
-<td>80.1%</td>
-</tr>
-<tr class="odd">
-<td>SWE-bench Verified</td>
-<td><strong>72.4%</strong></td>
-<td>72.0%</td>
-<td>62.0%</td>
-</tr>
-<tr class="even">
-<td>LiveCodeBench v6</td>
-<td>80.7%</td>
-<td>80.5%</td>
-<td><strong>82.7%</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="gemma-4-vs-frontier-models" class="slide level2">
-<h2>Gemma 4 vs Frontier Models</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Benchmark</th>
-<th>Gemma 4 31B</th>
-<th>Gemini 2.5 Pro</th>
-<th>Claude 4 Opus</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>MMLU-Pro</td>
-<td>85.2%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr class="even">
-<td>GPQA Diamond</td>
-<td><strong>84.3%</strong></td>
-<td><strong>86.4%</strong></td>
-<td>79.6%</td>
-</tr>
-<tr class="odd">
-<td>LiveCodeBench v6</td>
-<td>80.0%</td>
-<td>72.5%</td>
-<td>48.9%</td>
-</tr>
-<tr class="even">
-<td>AIME 2026</td>
-<td>89.2%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="qwen3-coding-vs-sota-swe-bench" class="slide level2">
-<h2>Qwen3 Coding vs SOTA (SWE-bench)</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Model</th>
-<th>SWE-bench Verified</th>
-<th>Open?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Claude Opus 4.5</td>
-<td>77.8%</td>
-<td>No</td>
-</tr>
-<tr class="even">
-<td>Qwen3.5-27B</td>
-<td>72.4%</td>
-<td>Yes</td>
-</tr>
-<tr class="odd">
-<td>Claude Sonnet 4</td>
-<td>70.4%</td>
-<td>No</td>
-</tr>
-<tr class="even">
-<td>Qwen3-Coder (480B)</td>
-<td>69.6%</td>
-<td>Yes</td>
-</tr>
-<tr class="odd">
-<td>GPT-OSS-120B</td>
-<td>62.0%</td>
-<td>Partially</td>
-</tr>
-</tbody>
-</table>
 </section>
 <section id="using-coding-agents-in-csp" class="slide level2">
 <h2>Using coding agents in CSP</h2>
 <ul>
-<li class="fragment">TBD</li>
-<li class="fragment">How Prof.&nbsp;Bede and I will be evaluating this</li>
-<li class="fragment">Acceptable to use
+<li class="fragment">Our guidelines for using coding agents in CSP
 <ul>
-<li class="fragment">Also won’t be penalized if don’t use</li>
+<li class="fragment">Don’t vibe code your project!</li>
+<li class="fragment">Remember the house frame analogy - you’ll want to create this by hand first</li>
+<li class="fragment">If using a coding agent, we will require overview of usage (and conversation transcripts) at each milestone presentation</li>
+<li class="fragment">You/your team is responsible for costs</li>
 </ul></li>
-<li class="fragment">If use, provide full transcripts at each milestone presentation</li>
 </ul>
 </section></section>
 <section id="qa" class="title-slide slide level1 center">

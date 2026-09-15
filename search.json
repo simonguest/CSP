@@ -55,66 +55,176 @@
     ]
   },
   {
-    "objectID": "src/05/slides.html#a-brief-history",
-    "href": "src/05/slides.html#a-brief-history",
+    "objectID": "src/05/slides.html#software-transformation",
+    "href": "src/05/slides.html#software-transformation",
     "title": "AI Coding Agents",
-    "section": "A brief history",
-    "text": "A brief history\n\nBefore agents, models had to learn code in the first place:\n\n2020 — GPT-3 (OpenAI): not trained specifically on code, but surprised researchers by generating coherent snippets anyway\n2021 — OpenAI Codex: GPT-3 fine-tuned on 54M GitHub repos (~159GB of Python)\n2021 — GitHub Copilot technical preview: first public coding agent, powered by Codex\n2022 — DeepMind AlphaCode: trained on competitive-programming problems, reached roughly median human performance in contests for code generation",
+    "section": "Software transformation",
+    "text": "Software transformation\n\nIn the past 12 months, coding agents have transformed decades-old methods of writing software\nAs of July 2026, 90% of professional developers are using coding agents weekly (source: JetBrains Dev Ecosystem survey)\n68% of them using agents daily",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#a-brief-history-1",
-    "href": "src/05/slides.html#a-brief-history-1",
+    "objectID": "src/05/slides.html#software-transformation-1",
+    "href": "src/05/slides.html#software-transformation-1",
     "title": "AI Coding Agents",
-    "section": "A brief history",
-    "text": "A brief history\n\nWhile the models were trained on code, the interaction was still basic:\n\nGlorified auto-complete\nLimited ability to ask questions about the codebase\nMany context limit challenges - i.e., trying to understand the whole of the repo in window",
+    "section": "Software transformation",
+    "text": "Software transformation\n\nRapid acceleration of coding tools\nClaude Code used by 40% of developers (from 18% in Jan 2026)\nCodex used by 16% of developers (from 3% in Jan 2026)\nClaude Code creator, Boris Cherny, stated that 100% of his contributions to Claude Code are written by Claude Code\n80% of code at Anthropic is written by Claude Code (as of May 2026)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#a-brief-history-2",
-    "href": "src/05/slides.html#a-brief-history-2",
+    "objectID": "src/05/slides.html#how-did-we-get-here",
+    "href": "src/05/slides.html#how-did-we-get-here",
     "title": "AI Coding Agents",
-    "section": "A brief history",
-    "text": "A brief history\n\nTwo major developments in 2023 onwards:\n\nContext windows grew from 4k → 128k → 1M+ tokens — models could reason across entire codebases\nIntroduction of the harness or agent\nDevin, Aider, Cursor: agents that could read files, make edits, and run tests\nHas since evolved into Claude Code, GitHub Copilot Agent Mode: multi-step reasoning, not just one-shot suggestions",
+    "section": "How did we get here?",
+    "text": "How did we get here?\n\n2020 - GPT-3 (OpenAI): not trained specifically on code, but surprised researchers by generating coherent snippets\n2021 - OpenAI Codex: GPT-3 fine-tuned on 54M GitHub repos (~159GB of Python)\n2021 - GitHub Copilot technical preview: first public coding agent, powered by Codex",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#what-is-a-coding-agent",
-    "href": "src/05/slides.html#what-is-a-coding-agent",
+    "objectID": "src/05/slides.html#how-did-we-get-here-1",
+    "href": "src/05/slides.html#how-did-we-get-here-1",
     "title": "AI Coding Agents",
-    "section": "What is a coding agent?",
-    "text": "What is a coding agent?\n\nTBD",
+    "section": "How did we get here?",
+    "text": "How did we get here?\n\nWhile the models were trained on code, the developer experience was still basic:\n\nGlorified auto-complete",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#how-do-you-use-a-coding-agent",
-    "href": "src/05/slides.html#how-do-you-use-a-coding-agent",
+    "objectID": "src/05/slides.html#how-did-we-get-here-2",
+    "href": "src/05/slides.html#how-did-we-get-here-2",
     "title": "AI Coding Agents",
-    "section": "How do you use a coding agent?",
-    "text": "How do you use a coding agent?\n\nTBD\nCLI/TUI\nIDE integration\nThrough desktop app\nRemote control",
+    "section": "How did we get here?",
+    "text": "How did we get here?",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#how-do-you-use-a-coding-agent-1",
-    "href": "src/05/slides.html#how-do-you-use-a-coding-agent-1",
+    "objectID": "src/05/slides.html#how-did-we-get-here-3",
+    "href": "src/05/slides.html#how-did-we-get-here-3",
     "title": "AI Coding Agents",
-    "section": "How do you use a coding agent?",
-    "text": "How do you use a coding agent?\n\nIntroduce CLAUDE.md / AGENTS.md and SKILLS.md",
+    "section": "How did we get here?",
+    "text": "How did we get here?\n\nIn addition…\n\nLimited ability to ask questions about the codebase\nMany context limit challenges\n\nTrying to understand the whole of the repo in window was virtually impossible",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#how-did-we-get-here-4",
+    "href": "src/05/slides.html#how-did-we-get-here-4",
+    "title": "AI Coding Agents",
+    "section": "How did we get here?",
+    "text": "How did we get here?\n\nTwo major developments in 2023+:\n\nContext windows grew from 4k → 128k → 1M+ tokens\nModels could reason across entire codebases\nIntroduction of the coding harness or now most commonly known, coding agent",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#how-did-we-get-here-5",
+    "href": "src/05/slides.html#how-did-we-get-here-5",
+    "title": "AI Coding Agents",
+    "section": "How did we get here?",
+    "text": "How did we get here?\n\nEarly coding agents\n\nDevin, Aider, Cursor\n\nAgents that could read files, make edits, and run tests with limited human intervention\n\nShowed promise on benchmarks (18% on SWE-Bench) but…\n\nExplicit plan and work modes\nOften one-shot suggestions that ran in a loop",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#todays-coding-agents",
+    "href": "src/05/slides.html#todays-coding-agents",
+    "title": "AI Coding Agents",
+    "section": "Today’s coding agents",
+    "text": "Today’s coding agents\n\nMulti-step planners and reasoners\nTool access (bash, web, python, etc.)\nManage their context (through memory, skills, etc.)\nManage their reasoning effort (model selection)\nOften delegate to multiple, background agents for tasks",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#using-a-coding-agent",
+    "href": "src/05/slides.html#using-a-coding-agent",
+    "title": "AI Coding Agents",
+    "section": "Using a coding agent",
+    "text": "Using a coding agent",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#using-a-coding-agent---cli",
+    "href": "src/05/slides.html#using-a-coding-agent---cli",
+    "title": "AI Coding Agents",
+    "section": "Using a coding agent - CLI",
+    "text": "Using a coding agent - CLI",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#using-a-coding-agent---ide",
+    "href": "src/05/slides.html#using-a-coding-agent---ide",
+    "title": "AI Coding Agents",
+    "section": "Using a coding agent - IDE",
+    "text": "Using a coding agent - IDE",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#using-a-coding-agent---desktop",
+    "href": "src/05/slides.html#using-a-coding-agent---desktop",
+    "title": "AI Coding Agents",
+    "section": "Using a coding agent - Desktop",
+    "text": "Using a coding agent - Desktop",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#using-a-coding-agent---mobile",
+    "href": "src/05/slides.html#using-a-coding-agent---mobile",
+    "title": "AI Coding Agents",
+    "section": "Using a coding agent - Mobile",
+    "text": "Using a coding agent - Mobile",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#components-of-a-coding-agent",
+    "href": "src/05/slides.html#components-of-a-coding-agent",
+    "title": "AI Coding Agents",
+    "section": "Components of a coding agent",
+    "text": "Components of a coding agent\n\nCLAUDE.md (AGENTS.md)\n\nInjected at the start of every conversation\nIntroduces the coding agent to your project/repo/architecture\nAlso used for style conventions/preferences\nCan have multiple CLAUDE.md/AGENTS.md files in hierarchy\nExamples",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#components-of-a-coding-agent-1",
+    "href": "src/05/slides.html#components-of-a-coding-agent-1",
+    "title": "AI Coding Agents",
+    "section": "Components of a coding agent",
+    "text": "Components of a coding agent\n\nSKILL.md\n\nSeparate skill file, loaded on-demand by the agent\nUsed for defining how specific features are developed\n\nNew web components for a site\nHow content should be translated/localized\n\nHelps reduce the size of CLAUDE.md/AGENTS.md",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -136,7 +246,7 @@
     "href": "src/05/slides.html#vibe-coding-1",
     "title": "AI Coding Agents",
     "section": "“Vibe coding”",
-    "text": "“Vibe coding”\n\nCan be tempting:\n\nCreate an issue in GitHub, send an agent to work on it, direct it from your mobile phone\nBut, IMO you lose control of the architecture\nAnalogy to the Winchester Mystery House",
+    "text": "“Vibe coding”\n\nCan be tempting:\n\nCreate an issue in GitHub, send a coding agent to work on it, monitor it from your mobile phone\nBut, you lose control of the architecture\nAnalogy to the Winchester Mystery House",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -158,7 +268,7 @@
     "href": "src/05/slides.html#agents-as-power-tools",
     "title": "AI Coding Agents",
     "section": "Agents as “power tools”",
-    "text": "Agents as “power tools”\n\nI prefer “power tool” approach:\n\nHand-build the architecture / frame out the house\nThen use AI to fill in the details",
+    "text": "Agents as “power tools”\n\nI prefer “power tool” approach:\n\nOwn the architecture / frame out the house\nCarefully hand-build / build the frame\nThen use AI to fill in the details for each room",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -187,132 +297,143 @@
     ]
   },
   {
-    "objectID": "src/05/slides.html#agents-as-power-tools-3",
-    "href": "src/05/slides.html#agents-as-power-tools-3",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle",
+    "href": "src/05/slides.html#introducing-my-lifecycle",
     "title": "AI Coding Agents",
-    "section": "Agents as “power tools”",
-    "text": "Agents as “power tools”\n\nTBD\nWhat’s fun is that we are all still figuring out how to use these new tools!",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nI’ve been writing software for 25+ years\nShipped multiple products at Microsoft, IBM, SAP, Amazon, Code.org, and others\nToday, Claude is writing close to 100% of my code\n\nIn many ways, that’s really scary!\n\nMany professional developers are still working out the best way to work with coding agents\n\nI’ve found the following lifecycle works (for me)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-1",
+    "href": "src/05/slides.html#introducing-my-lifecycle-1",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\n7 steps\nLifecycle: Plan, Act, Test, Abort, Review, Commit, Clear",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nPlan - plan a feature\nAct - build the feature\nTest - test the feature\nAbort - abort the session if needed\nReview - carefully review what changed\nCommit - commit to source control\nClear - clear the current conversation",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-1",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-1",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-2",
+    "href": "src/05/slides.html#introducing-my-lifecycle-2",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nPlan\n\nWrite the specification for the feature\nBe descriptive, bullet points help\nAsk the agent to validate/question the approach\n“What questions and/or clarifications do you have?”\nPush back on things that seem incorrect",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nPlan\n\nStart by writing the specification for the feature\nSeparate mark down file, descriptive, bullet points help\nAsk the agent to validate/question the approach\n“What questions and/or clarifications do you have?”\nPush back on things that seem incorrect",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#tbd",
-    "href": "src/05/slides.html#tbd",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-3",
+    "href": "src/05/slides.html#introducing-my-lifecycle-3",
     "title": "AI Coding Agents",
-    "section": "TBD",
-    "text": "TBD\n\nTBD: Provide example of a good feature specification",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-2",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-2",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-4",
+    "href": "src/05/slides.html#introducing-my-lifecycle-4",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nAct\n\nOnce happy with the specification, implement\nWatch carefully for file changes/updates\nCorrect approach mid-stream\n“I think there’s a 3rd party library for that…”",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nAct\n\nOnce happy with the specification, ask Claude to implement\nWatch carefully for file changes/updates\nCorrect approach mid-stream\n“One minute - I think there’s a 3rd party library for that…”",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-3",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-3",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-5",
+    "href": "src/05/slides.html#introducing-my-lifecycle-5",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nTest\n\nTest the feature locally / manually\nBuild a complete test suite\n(Agents are really good at writing tests)\nHave the agent run it’s own tests after the feature (you can put this into the CLAUDE.md file)",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nTest\n\nTest the feature locally / manually\nBuild a complete test suite\n(Agents are really good at writing tests)\nHave the agent run it’s own tests after the feature (you can put this into the CLAUDE.md file)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-4",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-4",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-6",
+    "href": "src/05/slides.html#introducing-my-lifecycle-6",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nAbort\n\nSometimes, things don’t work as expected!\nIt can be challenging to fix before exhausting the context window\nAnd many coding agents will “spin out of control”\ngit stash, clear context (new session), update the feature spec, and restart",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nAbort\n\nSometimes, things don’t work as expected!\nIt can be challenging to fix before exhausting the context window\nAnd often coding agents will “spin out of control”\ngit stash, clear context (new session), update the feature spec, and restart",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-5",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-5",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-7",
+    "href": "src/05/slides.html#introducing-my-lifecycle-7",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nReview\n\nWhat did it generate?\nAre the tests written well / did it run the test suite?\nDoes CLAUDE.md need to be updated? Any new skills to create from this feature?\n\nAuto-compact if approaching ~100K (hard limit at 150K)",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nReview\n\nWhat did the agent generate?\nAre the tests well written / did it run the test suite?\nDoes CLAUDE.md need to be updated? Any new skills to create from this feature?\nAuto-compact if approaching ~100K (hard limit at 150K)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-6",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-6",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-8",
+    "href": "src/05/slides.html#introducing-my-lifecycle-8",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nCommit\n\nI do the committing!!!",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nCommit\n\nI choose what to commit and when!\n(I give access to the git command line for history access, but forbid the agent permission to commit on my behalf)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#introducing-my-coding-agent-lifecycle-7",
-    "href": "src/05/slides.html#introducing-my-coding-agent-lifecycle-7",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-9",
+    "href": "src/05/slides.html#introducing-my-lifecycle-9",
     "title": "AI Coding Agents",
-    "section": "Introducing my coding agent lifecycle",
-    "text": "Introducing my coding agent lifecycle\n\nClear\n\nOnce CLAUDE.md and feature is committed, clear context (/new in Claude Code)\nAnalogy: 50 First Dates movie",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle\n\nClear\n\nOnce CLAUDE.md and feature is committed, clear context (/new in Claude Code)\nAnalogy: 50 First Dates movie",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#other-ways-of-incorporating-agents-into-your-codebase",
-    "href": "src/05/slides.html#other-ways-of-incorporating-agents-into-your-codebase",
+    "objectID": "src/05/slides.html#introducing-my-lifecycle-10",
+    "href": "src/05/slides.html#introducing-my-lifecycle-10",
     "title": "AI Coding Agents",
-    "section": "Other ways of incorporating agents into your codebase",
-    "text": "Other ways of incorporating agents into your codebase\n\nTBD\nAsk for general guidance on an existing repo/architecture\nProvide feedback on PRs\nReact to an issue and generate a fix\nWriting tests for an existing repo\nRepetitive tasks that you need to do manually (e.g., image background generation)",
+    "section": "Introducing my lifecycle",
+    "text": "Introducing my lifecycle",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#coding-agents-anti-patterns-what-ive-seen-go-wrong",
-    "href": "src/05/slides.html#coding-agents-anti-patterns-what-ive-seen-go-wrong",
+    "objectID": "src/05/slides.html#other-ways-of-using-agents",
+    "href": "src/05/slides.html#other-ways-of-using-agents",
     "title": "AI Coding Agents",
-    "section": "Coding agents anti-patterns / What I’ve seen go wrong",
-    "text": "Coding agents anti-patterns / What I’ve seen go wrong\n\nDoing too much (e.g., shutting down my dev server to test)\nMaking tests too fragile (e.g., testing on production data which changed)",
+    "section": "Other ways of using agents",
+    "text": "Other ways of using agents\n\nAsk for general guidance on an existing repo/architecture\nWriting tests for an existing repo (especially if you don’t have any)\nRepetitive tasks that you need to do manually (e.g., image background generation)\nSynthetic data generation (e.g., sample json files)",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#coding-agents-anti-patterns",
+    "href": "src/05/slides.html#coding-agents-anti-patterns",
+    "title": "AI Coding Agents",
+    "section": "Coding agents anti-patterns",
+    "text": "Coding agents anti-patterns\n\nDoing too much\n\ne.g., “I’ve created a README.md file for you”\n\nWanting too much access\n\ne.g., gating on tool usage / token cost / shutting down my dev server\n\nFragile tests\n\ne.g., creating tests that used production data which changed",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -323,51 +444,84 @@
     "href": "src/05/slides.html#options-and-costs",
     "title": "AI Coding Agents",
     "section": "Options and costs",
-    "text": "Options and costs\n\nTBD - overview of options\nprice comparisons\nA good place to talk about token usage and token maxxing",
+    "text": "Options and costs\n\nMany different agents. Most popular (in order):\n\nClaude Code\nGitHub Copilot\nOpenAI Codex\nCursor\nJetBrains Junie\nGoogle Antigravity",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#how-about-local-open-source-modelsagents",
-    "href": "src/05/slides.html#how-about-local-open-source-modelsagents",
+    "objectID": "src/05/slides.html#options-and-costs-1",
+    "href": "src/05/slides.html#options-and-costs-1",
     "title": "AI Coding Agents",
-    "section": "How about local, open-source models/agents?",
-    "text": "How about local, open-source models/agents?\n\nOpenCode is an open-source, terminal-based AI coding agent\n\nRuns entirely locally using any OpenAI-compatible API server (e.g., LM Studio)\nReads and edits files, runs shell commands, and iterates on code\n\nModel-agnostic Swap in any local model (Qwen, DeepSeek, Llama, etc.) via a config file",
+    "section": "Options and costs",
+    "text": "Options and costs",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#qwen3.5-vs-frontier-models",
-    "href": "src/05/slides.html#qwen3.5-vs-frontier-models",
+    "objectID": "src/05/slides.html#options-and-costs-2",
+    "href": "src/05/slides.html#options-and-costs-2",
     "title": "AI Coding Agents",
-    "section": "Qwen3.5 vs Frontier Models",
-    "text": "Qwen3.5 vs Frontier Models\n\n\n\nBenchmark\nQwen3.5-27B\nGPT-5-mini\nGPT-OSS-120B\n\n\n\n\nMMLU-Pro\n86.1%\n83.7%\n80.8%\n\n\nGPQA Diamond\n85.5%\n82.8%\n80.1%\n\n\nSWE-bench Verified\n72.4%\n72.0%\n62.0%\n\n\nLiveCodeBench v6\n80.7%\n80.5%\n82.7%",
+    "section": "Options and costs",
+    "text": "Options and costs\n\nMonthly subscription\n\nSubs run between $20/mo - $200/mo\nDaily/weekly max token limits\nOption to “top up” if you go over",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#gemma-4-vs-frontier-models",
-    "href": "src/05/slides.html#gemma-4-vs-frontier-models",
+    "objectID": "src/05/slides.html#options-and-costs-3",
+    "href": "src/05/slides.html#options-and-costs-3",
     "title": "AI Coding Agents",
-    "section": "Gemma 4 vs Frontier Models",
-    "text": "Gemma 4 vs Frontier Models\n\n\n\nBenchmark\nGemma 4 31B\nGemini 2.5 Pro\nClaude 4 Opus\n\n\n\n\nMMLU-Pro\n85.2%\n—\n—\n\n\nGPQA Diamond\n84.3%\n86.4%\n79.6%\n\n\nLiveCodeBench v6\n80.0%\n72.5%\n48.9%\n\n\nAIME 2026\n89.2%\n—\n—",
+    "section": "Options and costs",
+    "text": "Options and costs",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
     ]
   },
   {
-    "objectID": "src/05/slides.html#qwen3-coding-vs-sota-swe-bench",
-    "href": "src/05/slides.html#qwen3-coding-vs-sota-swe-bench",
+    "objectID": "src/05/slides.html#options-and-costs-4",
+    "href": "src/05/slides.html#options-and-costs-4",
     "title": "AI Coding Agents",
-    "section": "Qwen3 Coding vs SOTA (SWE-bench)",
-    "text": "Qwen3 Coding vs SOTA (SWE-bench)\n\n\n\nModel\nSWE-bench Verified\nOpen?\n\n\n\n\nClaude Opus 4.5\n77.8%\nNo\n\n\nQwen3.5-27B\n72.4%\nYes\n\n\nClaude Sonnet 4\n70.4%\nNo\n\n\nQwen3-Coder (480B)\n69.6%\nYes\n\n\nGPT-OSS-120B\n62.0%\nPartially",
+    "section": "Options and costs",
+    "text": "Options and costs\n\nPay-as-you-go API\n\nEither with developer account or via OpenRouter\nNo monthly commitment, but much higher costs\n$20 -&gt; ~$2K if tokens are managed well\nOpenRouter does have much cheaper options\n\nSonnet 5 = $2/M input; $10/M output\nQwen 3.8 = $0.15/M input; $1.875/M output",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#options-and-costs-5",
+    "href": "src/05/slides.html#options-and-costs-5",
+    "title": "AI Coding Agents",
+    "section": "Options and costs",
+    "text": "Options and costs\n\n“Tokenmaxxing” - org-based developer leaderboards\nBeing frugal with tokens\n\nDon’t vibe code your app!\nChoose models carefully (Sonnet vs. Opus vs. Fable)\nSpread requests throughout the day\nLimit access to testing tools (e.g., Chrome browser access)",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#can-i-run-coding-agents-locally",
+    "href": "src/05/slides.html#can-i-run-coding-agents-locally",
+    "title": "AI Coding Agents",
+    "section": "Can I run coding agents locally?",
+    "text": "Can I run coding agents locally?\n\nYes, albeit with many caveats:\n\nYou’ll need a well-spec’d laptop\nToken generation will be slower\nModels have much smaller context windows\n\nGood for small, focused features\n\nGreat for long-running, synthetic data generation\nOffline access with no API costs",
+    "crumbs": [
+      "Lecture: AI Coding Agents",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "src/05/slides.html#can-i-run-coding-agents-locally-1",
+    "href": "src/05/slides.html#can-i-run-coding-agents-locally-1",
+    "title": "AI Coding Agents",
+    "section": "Can I run coding agents locally?",
+    "text": "Can I run coding agents locally?\n\nOpenCode is an open-source, terminal-based AI coding agent\n\nRuns entirely locally using any OpenAI-compatible API server (e.g., LM Studio)\nReads and edits files, runs shell commands, and iterates on code\n\nModel-agnostic Swap in any local model (Qwen, DeepSeek, Llama, etc.) via a config file",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -378,7 +532,7 @@
     "href": "src/05/slides.html#using-coding-agents-in-csp",
     "title": "AI Coding Agents",
     "section": "Using coding agents in CSP",
-    "text": "Using coding agents in CSP\n\nTBD\nHow Prof. Bede and I will be evaluating this\nAcceptable to use\n\nAlso won’t be penalized if don’t use\n\nIf use, provide full transcripts at each milestone presentation",
+    "text": "Using coding agents in CSP\n\nOur guidelines for using coding agents in CSP\n\nDon’t vibe code your project!\nRemember the house frame analogy - you’ll want to create this by hand first\nIf using a coding agent, we will require overview of usage (and conversation transcripts) at each milestone presentation\nYou/your team is responsible for costs",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
