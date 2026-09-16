@@ -127,6 +127,8 @@ Using Claude Code to build a simple todo app
 - Can be tempting:
   - Create an issue in GitHub, send a coding agent to work on it, monitor it from your mobile phone
   - **But,** you lose control of the architecture
+  - *"Don't let AI build faster than you are capable of understanding"*
+    - https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/
   - Analogy to the Winchester Mystery House
 
 ## "Vibe coding"
@@ -194,9 +196,9 @@ Using Claude Code to build a simple todo app
 
 - **Test**
   - Test the feature locally / manually
-  - Build a complete test suite
+  - Build a complete test suite - I would recommend Playwright
   - (Agents are really good at writing tests)
-  - Have the agent run it's own tests after the feature (you can put this into the `CLAUDE.md` file)
+  - Have the agent run it's own tests after the feature (you can specify this into the `CLAUDE.md` file)
 
 # Demo
 
@@ -239,6 +241,7 @@ Test suite example
 - Ask for general guidance on an existing repo/architecture
 - Writing tests for an existing repo (especially if you don't have any)
 - Repetitive tasks that you need to do manually (e.g., image background generation)
+- Configuration / infrastructure files (e.g., .gitignore)
 - Synthetic data generation (e.g., sample json files)
 
 ## Coding agents anti-patterns
@@ -249,6 +252,8 @@ Test suite example
   - e.g., gating on tool usage / token cost / shutting down my dev server
 - Fragile tests
   - e.g., creating tests that used production data which changed
+- CSS
+  - Much better now, but often CSS overhangs and misalignment
 
 ## Options and costs
 
