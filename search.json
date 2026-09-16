@@ -246,7 +246,7 @@
     "href": "src/05/slides.html#vibe-coding-1",
     "title": "AI Coding Agents",
     "section": "“Vibe coding”",
-    "text": "“Vibe coding”\n\nCan be tempting:\n\nCreate an issue in GitHub, send a coding agent to work on it, monitor it from your mobile phone\nBut, you lose control of the architecture\nAnalogy to the Winchester Mystery House",
+    "text": "“Vibe coding”\n\nCan be tempting:\n\nCreate an issue in GitHub, send a coding agent to work on it, monitor it from your mobile phone\nBut, you lose control of the architecture\n“Don’t let AI build faster than you are capable of understanding”\n\nhttps://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/\n\nAnalogy to the Winchester Mystery House",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -356,7 +356,7 @@
     "href": "src/05/slides.html#introducing-my-lifecycle-5",
     "title": "AI Coding Agents",
     "section": "Introducing my lifecycle",
-    "text": "Introducing my lifecycle\n\nTest\n\nTest the feature locally / manually\nBuild a complete test suite\n(Agents are really good at writing tests)\nHave the agent run it’s own tests after the feature (you can put this into the CLAUDE.md file)",
+    "text": "Introducing my lifecycle\n\nTest\n\nTest the feature locally / manually\nBuild a complete test suite - I would recommend Playwright\n(Agents are really good at writing tests)\nHave the agent run it’s own tests after the feature (you can specify this into the CLAUDE.md file)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -422,7 +422,7 @@
     "href": "src/05/slides.html#other-ways-of-using-agents",
     "title": "AI Coding Agents",
     "section": "Other ways of using agents",
-    "text": "Other ways of using agents\n\nAsk for general guidance on an existing repo/architecture\nWriting tests for an existing repo (especially if you don’t have any)\nRepetitive tasks that you need to do manually (e.g., image background generation)\nSynthetic data generation (e.g., sample json files)",
+    "text": "Other ways of using agents\n\nAsk for general guidance on an existing repo/architecture\nWriting tests for an existing repo (especially if you don’t have any)\nRepetitive tasks that you need to do manually (e.g., image background generation)\nConfiguration / infrastructure files (e.g., .gitignore)\nSynthetic data generation (e.g., sample json files)",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
@@ -433,7 +433,7 @@
     "href": "src/05/slides.html#coding-agents-anti-patterns",
     "title": "AI Coding Agents",
     "section": "Coding agents anti-patterns",
-    "text": "Coding agents anti-patterns\n\nDoing too much\n\ne.g., “I’ve created a README.md file for you”\n\nWanting too much access\n\ne.g., gating on tool usage / token cost / shutting down my dev server\n\nFragile tests\n\ne.g., creating tests that used production data which changed",
+    "text": "Coding agents anti-patterns\n\nDoing too much\n\ne.g., “I’ve created a README.md file for you”\n\nWanting too much access\n\ne.g., gating on tool usage / token cost / shutting down my dev server\n\nFragile tests\n\ne.g., creating tests that used production data which changed\n\nCSS\n\nMuch better now, but often CSS overhangs and misalignment",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
