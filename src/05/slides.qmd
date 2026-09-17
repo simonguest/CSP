@@ -306,8 +306,8 @@ Test suite example
   - Token generation will be slower
   - Models have much smaller context windows
 - Good for small, focused features
-  - Great for long-running, synthetic data generation
-  - Offline access with no API costs
+- Great for long-running, synthetic data generation
+- Offline access with no API costs
 
 ## Can I run coding agents locally?
 
