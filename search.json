@@ -510,7 +510,7 @@
     "href": "src/05/slides.html#can-i-run-coding-agents-locally",
     "title": "AI Coding Agents",
     "section": "Can I run coding agents locally?",
-    "text": "Can I run coding agents locally?\n\nYes, albeit with many caveats:\n\nYou’ll need a well-spec’d laptop\nToken generation will be slower\nModels have much smaller context windows\n\nGood for small, focused features\n\nGreat for long-running, synthetic data generation\nOffline access with no API costs",
+    "text": "Can I run coding agents locally?\n\nYes, albeit with many caveats:\n\nYou’ll need a well-spec’d laptop\nToken generation will be slower\nModels have much smaller context windows\n\nGood for small, focused features\nGreat for long-running, synthetic data generation\nOffline access with no API costs",
     "crumbs": [
       "Lecture: AI Coding Agents",
       "Slides"
