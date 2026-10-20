@@ -58,6 +58,11 @@ website:
           - text: "Slides"
             href: src/05/slides.qmd
             target: blank
+      - section: "Lecture: Running Computer Vision Models"
+        contents:
+          - text: "Slides"
+            href: src/06/slides.qmd
+            target: blank
       - section: "Networking Protocols"
         contents:
           - text: "WebSockets"

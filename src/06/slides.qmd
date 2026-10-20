@@ -1,0 +1,190 @@
+---
+title: "Running Computer Vision Models"
+author: "Simon Guest"
+format:
+  revealjs:
+    slide-number: true
+    incremental: true
+    center-title-slide: true
+    theme: default
+title-slide-attributes:
+  data-background-gradient: "linear-gradient(135deg, #ba1127 0%,  #850022 20%, #000000 100%)"
+  data-background-image: "backgrounds/dragon.png"
+  data-background-opacity: "0.3"
+logo: ../../src/logos/DigiPen_RGB_Red.png
+---
+
+## Recap
+
+- CNNs are the backbone of most computer vision models
+- Many different model architectures
+- Different computer vision "tasks" - from image classification to depth estimation
+
+## How do we run these models?
+
+- A better question to ask is "Where do we run these models?"
+
+## Running models on the edge
+
+- Most realtime computer vision tasks need to run on the "edge"
+  - Dedicated hardware, very close to the camera source
+  - e.g., Raspberry Pi with camera or your iPhone
+  - Model inference on the edge; only results (detections, metadata) sent back to the server
+
+## Running models on the edge
+
+- Why not stream the video feed back to a central server?
+  - **Bandwidth** - very high for video data streams
+  - **Latency** - many applications need to react quickly
+
+## Running models on the edge
+
+- This introduces two requirements:
+  - Models need to be interoperable to run on different hardware platforms
+  - Models need to be optimized to run on lower-powered devices (e.g., quantization)
+
+## Running models on the edge
+
+- Four popular formats:
+  - TensorRT - NVIDIA's inference engine for NVIDIA GPUs (e.g., Jetson)
+  - Core ML - Apple's framework for iOS, macOS, and other Apple devices
+  - LiteRT (formerly TFLite) - Google's lightweight runtime for mobile and embedded
+  - ONNX - Open, interoperable format from Microsoft and Meta
+
+## ONNX
+
+- Open Neural Network Exchange
+  - Open standard created by Microsoft and Facebook (2017)
+  - Now governed by the Linux Foundation (LF AI & Data)
+- Model saved as a computation graph (`.onnx` file)
+  - Built from a standard set of operators, so any compatible runtime can run it
+- Export from most frameworks (PyTorch, TensorFlow, scikit-learn)
+
+## ONNX
+
+- ONNX Runtime runs models almost anywhere
+  - Windows, Linux, macOS, iOS, Android, and the browser
+  - Uses the hardware's accelerators (e.g., CUDA, TensorRT, Core ML)
+- Also supports quantization (e.g., FP32 to INT8)
+
+## Acquiring these models
+
+- Convert from the original model format (e.g., PyTorch) to desired format
+
+  ```python
+  import torch, torchvision
+
+  model = torchvision.models.resnet18(weights="DEFAULT").eval()
+  dummy_input = torch.randn(1, 3, 224, 224)  # batch, channels, height, width
+  torch.onnx.export(model, dummy_input, "resnet18.onnx")
+  ```
+
+## Acquiring these models 
+
+- Download a model that has already been converted
+  - [Hugging Face models filtered by ONNX](https://huggingface.co/models?library=onnx){.external target="blank"}
+
+## ONNX in the Browser
+
+- With similar constraints to edge hardware, ONNX models can also run in the browser!
+- How this works:
+  - Download ONNX model from Hugging Face
+  - Load the model into OpenCV's dnn module
+  - Create a detect function to run the model and map to classes
+  - Bind the detect function to the Webcam (if running on a live stream)
+
+# Demos
+
+MNIST, Quick Draw!, Object Detection, Gesture Recognition, and Depth Estimation
+
+# Challenges with computer vision
+
+## Challenges with computer vision
+
+- While many CV models are amazing, computer vision in real world environments can be challenging
+  - Power/compute
+  - Lens design and lighting
+  - Object tracking and persistence
+
+## Power/compute
+
+- Models will always run slower (or consume more power) than you would like
+  - Example: Camera setup on 12V vehicle battery
+- Mitigation:
+  - Optimizing the model (input layer size, output classes) for the hardware stack
+  - Testing on actual hardware as soon as possible
+
+## Lens design and lighting
+
+- Edge camera lens is often different to the lens used to train the model
+  - Example: Wider FOV for device lens vs. training lens
+- Different lighting conditions can negatively impact detection rates
+  - Example: Detecting road objects in daytime/nighttime/rainy conditions
+
+## Lens design and lighting 
+
+- Mitigation:
+  - Train your models using the same camera as you'll use on the edge (record and label your own training videos)
+  - Ensure your training data includes a variety of different lighting conditions
+
+## Object tracking and persistence
+
+- Many models can be used with a separate tracker (such as ByteTrack), but persistence when occluded can be challenging
+  - Example: Stop signs occluded by trees or road objects with windshield wiper
+- Mitigation:
+  - Start with ByteTrack and training data. Implement relative localization if not enough.
+  - Use projected paths and/or boundaries to determine unique objects
+
+## Summary
+
+- Realtime CV models usually run on the edge, close to the camera
+  - Saves bandwidth and reduces latency
+- Edge models need to be interoperable and optimized
+  - Popular formats: TensorRT, Core ML, LiteRT, and ONNX
+  - ONNX is an open standard that runs almost anywhere, including the browser
+
+## Summary 
+
+- Convert models from PyTorch, or download pre-converted models from Hugging Face
+- Real world challenges: power/compute, lens and lighting, and object tracking
+  - Test early on actual hardware, with the actual camera, in real conditions
+
+# Q&A
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: 'Inter', sans-serif;
+}
+
+.reveal .slides > section > h1,
+.reveal .slides > section > h2,
+.reveal .slides > section > section > h1,
+.reveal .slides > section > section > h2 {
+  color: #ba1127;
+}
+                                                                        
+.slide-background.blurred .slide-background-content {
+  filter: blur(8px);
+}
+.slide-background.darken .slide-background-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#title-slide h1, #title-slide h2, #title-slide p, #title-slide .author,
+#title-slide .quarto-title-author-name, #title-slide .quarto-title-authors {
+  color: white !important;
+}
+.justify {
+  text-align: center;
+}
+.white, .white h1, .white h2, .white h3, .white p, .white li {
+  color: white !important;
+}
+.red, .red h1, .red h2, .red h3, .red p, .red li {
+  color:  #8B0000 !important;
+}
+</style>
