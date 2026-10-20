@@ -14,5 +14,6 @@ The demo app will be a simple todo app with the following features:
 - The web interface should be based on Vuetify's standard components. It should also be responsive to mobile devices. A red theme seems like it might fit well for a todo app.
 - We only have limited time in the presentation, so don't worry about creating or running any tests - we'll do this later.
 - Even though we won't have a full test suite, feel free to install and use Playwright to validate the app (instead of the Chrome browser extension)
+- Place all of the files in /Users/simon/Courses/DigiPen/CSP/src/05/app
 
 Do you have any questions about the above? Are there areas that I'm potentially missing or do you have other recommendations?

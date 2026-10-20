@@ -8,5 +8,6 @@
     "revealjs",
     "rgba",
     "theend"
-  ]
+  ],
+  "dotnet.suppressSdkInstallView": true
 }
