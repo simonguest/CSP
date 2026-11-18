@@ -206,7 +206,7 @@ The audio system leverages OpenAL Soft with a custom DSP chain for reverb, occlu
 
 ## How To End {.blurred background-image="backgrounds/theend.png" background-opacity="0.2"}
 
-- Endings can be abrupt
+- Avoid abrupt endings
 - Short conclusion of what you covered
 - Takeaways for your audience
 
